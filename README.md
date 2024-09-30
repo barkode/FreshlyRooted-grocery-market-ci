@@ -64,8 +64,9 @@ What to include in the README write up?
 >3. **Use Tables where appropriate**
 >4. **Include screenshots where possible**
 
->[!IMPORTANT] Key Takeaways
+>[!IMPORTANT]
 >
+>Key Takeaways
 >1. Keep it simple | Focus on MVP
 >2. The Assessor is your Customer, follow their brief
 >3. Always focus on Pass Criteria first!
