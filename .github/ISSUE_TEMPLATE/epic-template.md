@@ -9,5 +9,7 @@ assignees: ''
 
 SUMMARY: 
 
-- [ ] USER STORY 1
-- [ ] USER STORY 2
+- [ ] #USER STORY 1
+- [ ] #USER STORY 2
+- [ ] #USER STORY 3
+- [ ] #USER STORY 4
