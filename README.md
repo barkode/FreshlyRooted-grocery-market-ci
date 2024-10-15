@@ -8,6 +8,27 @@ FreshlyRooted is your trusted online grocery market, designed for those who prio
 sustainability. We bring the best of nature directly to your doorstep, offering a wide selection of fresh, organic, and
 nutrient-rich products—from farm-fresh produce to pantry staples, high-quality proteins, and all-natural snacks.
 
+# Contents
+
+- [FreshlyRooted Market](#freshlyrooted-market)
+    - [Deployed Link](#deployed-link)
+- [Contents](#contents)
+    - [Agile Methodology](#agile-methodology)
+        - [Overview](#overview)
+        - [MoSCoW Prioritization](#moscow-prioritization)
+        - [GitHub Projects](#github-projects)
+        - [EPICS](#epics)
+
+
+## Agile Methodology
+
+### Overview
+
+Agile methodology is a project management approach centered on adaptability, collaboration, and consistent progress
+toward well-defined goals. It’s particularly effective in software development, where requirements and solutions evolve
+through the combined efforts of self-organizing, cross-functional teams. Agile emphasizes delivering frequent,
+incremental updates that improve quality and enable rapid response to changing needs.
+
 What to include in the README write up?
 
 1. Project Rationale
