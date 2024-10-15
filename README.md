@@ -58,6 +58,7 @@ An Epic is a large segment of work broken down into smaller user stories. In thi
 - [EPIC 11: SEO & Marketing](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/76)
 - [EPIC 12: User Experience Optimization](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/77)
 - [EPIC 13: Quality Assurance and Documentation](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/78)
+- [EPIC 14 : Error Handling and Custom Error Pages](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/82)
 
 [Back to Top](#contents)
 
@@ -136,6 +137,9 @@ This project aims to create a robust, user-friendly platform that caters to both
 - [#55](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/55) - As a **Shopper**, I want to be able to **access a Favorites page so that shows all of my saved items** so that I can **view them in one place**.
 - [#56](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/56) - As a **Shopper**, I want to be able to **remove items from my favorites** so that I can **manage the list and only keep items I’m interested in**.
 - [#57](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/57) - As a **Shopper**, I want **my favorites list to be saved to my user account** so that I can **access it across multiple devices**.
+- [#79](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/79) - As a **Shopper**, I want be able to **see a user-friendly 404 error page when a page is not found**, so that I **understand the page doesn’t exist and can easily navigate back to the main site**.
+- [#80](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/80) - As a **Shopper**, I want to be able to **see a custom 403 error page if I attempt to access a restricted area** so that **I understand why I cannot access the page and can be redirected to relevant areas**.
+- [#81](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/81) - As a As a **Shopper**, I want to be able to **see a custom 500 error page when there is a server error** so that **I know the issue is on the site and not on my end, with steps on what to do next**.
 
 [Back to Top](#contents)
 
@@ -177,26 +181,26 @@ This project aims to create a robust, user-friendly platform that caters to both
 ## Website Goals and Objectives
 
 - **Enhance User Experience:**
-  - Design a user-friendly interface that is intuitive, visually appealing, and easy to navigate.
-  - Ensure the platform is fully responsive and accessible on all devices, including desktops, tablets, and smartphones.
+    - Design a user-friendly interface that is intuitive, visually appealing, and easy to navigate.
+    - Ensure the platform is fully responsive and accessible on all devices, including desktops, tablets, and smartphones.
 - **Facilitate Developer Showcase:**
-  - Enable registered users to create, edit, and manage posts and comments easily.
-  - Introduce features that promote user engagement, such as the ability to like, favorite, and share content.
+    - Enable registered users to create, edit, and manage posts and comments easily.
+    - Introduce features that promote user engagement, such as the ability to like, favorite, and share content.
 - **Optimize Performance and Accessibility:**
-  - Fine-tune the platform for fast loading times and quick responses to user actions.
-  - Adhere to accessibility standards to ensure an inclusive experience for all users.
+    - Fine-tune the platform for fast loading times and quick responses to user actions.
+    - Adhere to accessibility standards to ensure an inclusive experience for all users.
 - **Support Continuous Improvement and Scalability:**
-  - Employ Agile development methodologies to deliver high-quality features and updates continuously.
-  - Architect the database and infrastructure to efficiently handle increased traffic and user growth.
+    - Employ Agile development methodologies to deliver high-quality features and updates continuously.
+    - Architect the database and infrastructure to efficiently handle increased traffic and user growth.
 - **Ensure Security and Reliability:**
-  - Implement strong authentication and authorization protocols to protect user data.
-  - Conduct regular code validation and security testing to maintain a stable, secure application.
+    - Implement strong authentication and authorization protocols to protect user data.
+    - Conduct regular code validation and security testing to maintain a stable, secure application.
 - **Streamline Payment and Checkout:**
-  - Develop a smooth and secure payment process to enhance the checkout experience.
-  - Provide multiple payment options and ensure compliance with payment security standards.
+    - Develop a smooth and secure payment process to enhance the checkout experience.
+    - Provide multiple payment options and ensure compliance with payment security standards.
 - **Encourage Community Engagement and Feedback:**
-  - Create channels for users to provide feedback, report issues, and suggest enhancements.
-  - Actively respond to user feedback and integrate improvements to continually refine the platform.
+    - Create channels for users to provide feedback, report issues, and suggest enhancements.
+    - Actively respond to user feedback and integrate improvements to continually refine the platform.
 
 [Back to Top](#contents)
 
@@ -223,6 +227,16 @@ This project aims to create a robust, user-friendly platform that caters to both
 The platform's wireframes offer a visual blueprint of the application's layout and structure, detailing the positioning of essential elements like navigation menus, user profiles, content sections, and interactive features. They serve as a foundation for creating a cohesive and user-friendly interface, guiding both the design and development stages. Following thorough testing, some adjustments were made, resulting in minor deviations from the initial wireframes in the live version of the platform to enhance usability and functionality.
 
 [Wireframes]()
+
+[Back to top](#contents)
+
+## Database Schema
+
+The database schema outlines the structure and relationships between key tables for the platform.
+
+This schema was generated using [dbdiagram.io](https://dbdiagram.io/).
+
+![Database Schema]()
 
 [Back to top](#contents)
 
