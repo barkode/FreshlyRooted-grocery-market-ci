@@ -210,7 +210,34 @@ purpose, guiding the development toward a user-centered solution.
 
 [Back to Top](#contents)
 
+#### Site User Stories
 
+- [#24](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/24) - As a **Site User**, I want to be able to
+  **easily register for an account** so that I can **have a personal account and view my profile**.
+- [#25](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/25) - As a **Site User**, I want to be able to
+  **easily log in or out** so that I can **access my personal account information**.
+- [#26](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/26) - As a **Site User**, I want to be able to
+  **easily recover my password if I forget it** so that I can **regain access to my account**.
+- [#27](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/27) - As a **Site User**, I want to be able to
+  **receive an email confirmation after registering** so that I can **verify my account registration**.
+- [#28](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/28) - As a **Site User**, I want to be able to
+  a **personalized profile** where I can **view my order history, confirmations, and save payment information**.
+- [#29](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/29) - As a **Site User**, I want to be able to
+  **update my account details like address, email, and phone number**, so that I can **keep my account information
+  accurate**.
+- [#60](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/60) - As a **Site User**, I want to be able to
+  **subscribe to a newsletter** so that I can **receive updates, promotions, and valuable content directly to my inbox
+  **.
+- [#62](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/62) - As a **Site User**, I want **the
+  accessibility features to be improved** so that **all users, including those with disabilities, have equal access and
+  usability on the site**.
+- [#63](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/63) - As a **Site User**, I want to be able to
+  **see the visual elements across the platform to be uniform** so that I can **enjoy a cohesive and pleasant user
+  interface experience**.
+- [#64](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/64) - As a **Site User**, I want to be able to
+  **navigate the platform smoothly** so that I can **intuitively locate relevant sections and features**.
+
+[Back to Top](#contents)
 
 
 
