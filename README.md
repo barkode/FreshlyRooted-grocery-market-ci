@@ -70,6 +70,120 @@ significant component of the platform's development, ensuring all necessary func
 
 [Back to Top](#contents)
 
+### User Stories
+
+This project aims to create a robust, user-friendly platform that caters to both visitors and registered users,
+prioritizing a seamless experience. The platform will facilitate content creation and management, showcase developer
+profiles, and enable interactive opportunities. The following user stories capture the core functionalities and their
+purpose, guiding the development toward a user-centered solution.
+
+[Back to Top](#contents)
+
+### Developer Stories
+
+- [#11](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/11) - As a **developer**, I want **to create
+  layouts** so that I can **visually represent the view and structure of the application**.
+
+- [#12](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/12) - As a **developer**, I want to **adopt
+  Agile methodology** so that I can **deliver a high-quality product that aligns with user needs**.
+
+- [#13](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/13) - As a **developer**, I want to be able
+  to *
+  *create visually engaging and responsive designs** so that users can **easily navigate the website and access relevant
+  information**.
+
+- [#14](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/14) - As a **developer**, I want to be able to
+  design an efficient database schema so than I can **store and manage platform content, ensuring optimal performance,
+  scalability, and flexibility**.
+
+- [#15](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/15) - As a **developer**, I want to be able to
+  **set up and configure Django** so that I can **create a functioning application**.
+
+- [#16](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/16) - As a **developer**, I want to be able to
+  **deploy the Django app to Heroku** so that I can **verify the initial setup is functional**.
+
+- [#17](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/17) - As a **developer**, I want to be able to
+  **deploy the Django app to Heroku** so that I can **verify the initial setup
+  is functional**.
+
+- [#59](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/59) - As a **Developer**, I want to be able to
+  **improve the website's search engine optimization (SEO)** so that **it ranks higher in search engine results and
+  attracts more organic traffic**.
+
+- [#61](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/61) - As a **Developer**, I want **the
+  platform to load quickly and respond quickly to user interactions** so that users can **ensure a flawless experience
+  **.
+
+- [#65](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/65) - As a **Developer**, I want to be able to
+  **improve the website's search engine optimization (SEO)** so that **it ranks higher in search engine results and
+  attracts more organic traffic**.
+
+- [#66](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/66) - As a **Developer**, I **strive to
+  maintain thorough documentation** so that I can **facilitate seamless future code maintenance**.
+
+- [#67](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/67) - As a **Developer**, I want to be able to
+  **deploy the application to Heroku** so **that it is accessible to users online**.
+
+- [#68](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/68) - As a **Developer**, I want to **ensure
+  that the application meets performance and accessibility standards** so that it **provides a seamless experience for
+  all users and performs optimally**.
+
+- [#69](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/69) - As a **Developer**, I want to **ensure
+  that user stories are thoroughly tested** so that they **meet acceptance criteria and deliver the expected
+  functionality**.
+
+[Back to Top](#contents)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+
 What to include in the README write up?
 
 1. Project Rationale
