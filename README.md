@@ -19,7 +19,6 @@ nutrient-rich products—from farm-fresh produce to pantry staples, high-quality
         - [GitHub Projects](#github-projects)
         - [EPICS](#epics)
 
-
 ## Agile Methodology
 
 ### Overview
@@ -28,6 +27,48 @@ Agile methodology is a project management approach centered on adaptability, col
 toward well-defined goals. It’s particularly effective in software development, where requirements and solutions evolve
 through the combined efforts of self-organizing, cross-functional teams. Agile emphasizes delivering frequent,
 incremental updates that improve quality and enable rapid response to changing needs.
+
+[Back to Top](#contents)
+
+### MoSCoW Prioritization
+
+The MoSCoW prioritization technique is a framework used to evaluate the importance of various project features and
+tasks. It organizes items into four categories: Must Have, Should Have, Could Have, and Won't Have. This method supports
+efficient time management by ensuring that the most critical features are prioritized and completed before others.
+
+[Back to Top](#contents)
+
+### GitHub Projects
+
+GitHub Projects offers a structured approach to task management and progress tracking through project boards. Each board
+represents an EPIC, with columns reflecting task statuses like To Do, In Progress, On Hold, Done, and Bugs. Tasks are
+systematically organized using labels to indicate the assigned user, priority level, and associated sprint, enabling
+efficient team collaboration and streamlined project oversight.
+
+![Kanban Board]()
+
+[Back to Top](#contents)
+
+### EPICS
+
+An Epic is a large segment of work broken down into smaller user stories. In this project, each Epic represents a
+significant component of the platform's development, ensuring all necessary functionalities are fully covered.
+
+- [EPIC 1: Application Design, Architecture, and Agile Development Setup](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/1)
+- [EPIC 2: Initial Project Setup, Cloud Integration, and Early Deployment](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/2)
+- [EPIC 3: Viewing and Navigation](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/3)
+- [EPIC 4: Registration and User Accounts](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/4)
+- [EPIC 5: Sorting and Searching](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/5)
+- [EPIC 6: Purchasing and Checkout](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/6)
+- [EPIC 7: Admin and Store Management](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/7)
+- [EPIC 8: User Notifications and Support](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/8)
+- [EPIC 9: Promotions and Discounts](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/9)
+- [EPIC 10: Wishlist and Favorites](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/10)
+- [EPIC 11: SEO & Marketing](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/76)
+- [EPIC 12: User Experience Optimization](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/77)
+- [EPIC 13: Quality Assurance and Documentation](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/78)
+
+[Back to Top](#contents)
 
 What to include in the README write up?
 
