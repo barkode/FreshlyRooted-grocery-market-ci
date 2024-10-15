@@ -37,7 +37,9 @@ The MoSCoW prioritization technique is a framework used to evaluate the importan
 
 GitHub Projects offers a structured approach to task management and progress tracking through project boards. Each board represents an EPIC, with columns reflecting task statuses like To Do, In Progress, On Hold, Done, and Bugs. Tasks are systematically organized using labels to indicate the assigned user, priority level, and associated sprint, enabling efficient team collaboration and streamlined project oversight.
 
-![Kanban Board]()
+![Kanban Board](/docs/kanban-board.png)
+
+[Link to Kanban Board](https://github.com/users/barkode/projects/8/views/1)
 
 [Back to Top](#contents)
 
@@ -226,7 +228,32 @@ This project aims to create a robust, user-friendly platform that caters to both
 
 The platform's wireframes offer a visual blueprint of the application's layout and structure, detailing the positioning of essential elements like navigation menus, user profiles, content sections, and interactive features. They serve as a foundation for creating a cohesive and user-friendly interface, guiding both the design and development stages. Following thorough testing, some adjustments were made, resulting in minor deviations from the initial wireframes in the live version of the platform to enhance usability and functionality.
 
-[Wireframes]()
+<details>
+<summary>Desktop warframes</summary>
+
+![Desktop warframe 1](docs/desktop-wf-1.png)
+
+![Desktop warframe 2](docs/desktop-wf-2.png)
+
+![Desktop warframe 3](docs/desktop-wf-3.png)
+
+![Desktop warframe 4](docs/desktop-wf-4.png)
+
+![Desktop warframe 5](docs/desktop-wf-5.png)
+
+</details>
+
+<br/>
+
+<details>
+<summary>Mobile warframes</summary>
+
+![Mobile warframe 1](docs/mobile-wf-1.png)
+
+![Mobile warframe 2](docs/mobile-wf-2.png)
+
+</details>
+
 
 [Back to top](#contents)
 
