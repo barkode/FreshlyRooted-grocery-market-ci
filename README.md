@@ -37,7 +37,7 @@ The MoSCoW prioritization technique is a framework used to evaluate the importan
 
 GitHub Projects offers a structured approach to task management and progress tracking through project boards. Each board represents an EPIC, with columns reflecting task statuses like To Do, In Progress, On Hold, Done, and Bugs. Tasks are systematically organized using labels to indicate the assigned user, priority level, and associated sprint, enabling efficient team collaboration and streamlined project oversight.
 
-![Kanban Board](/docs/kanban-board.png)
+![Kanban Board](/docs/images/kanban-board.png)
 
 [Link to Kanban Board](https://github.com/users/barkode/projects/8/views/1)
 
@@ -231,15 +231,15 @@ The platform's wireframes offer a visual blueprint of the application's layout a
 <details>
 <summary>Desktop warframes</summary>
 
-![Desktop warframe 1](docs/desktop-wf-1.png)
+![Desktop warframe 1](docs/images/desktop-wf-1.png)
 
-![Desktop warframe 2](docs/desktop-wf-2.png)
+![Desktop warframe 2](docs/images/desktop-wf-2.png)
 
-![Desktop warframe 3](docs/desktop-wf-3.png)
+![Desktop warframe 3](docs/images/desktop-wf-3.png)
 
-![Desktop warframe 4](docs/desktop-wf-4.png)
+![Desktop warframe 4](docs/images/desktop-wf-4.png)
 
-![Desktop warframe 5](docs/desktop-wf-5.png)
+![Desktop warframe 5](docs/images/desktop-wf-5.png)
 
 </details>
 
@@ -248,9 +248,9 @@ The platform's wireframes offer a visual blueprint of the application's layout a
 <details>
 <summary>Mobile warframes</summary>
 
-![Mobile warframe 1](docs/mobile-wf-1.png)
+![Mobile warframe 1](docs/images/mobile-wf-1.png)
 
-![Mobile warframe 2](docs/mobile-wf-2.png)
+![Mobile warframe 2](docs/images/mobile-wf-2.png)
 
 </details>
 
@@ -261,9 +261,22 @@ The platform's wireframes offer a visual blueprint of the application's layout a
 
 The database schema outlines the structure and relationships between key tables for the platform.
 
-This schema was generated using [dbdiagram.io](https://dbdiagram.io/).
+This schema was generated using [lucid.app](https://lucid.app/).
+
+<details>
+<summary>Start database diagram</summary>
+
+![Database Schema](docs/images/start-database-diagram.png)
+
+</details>
+
+<details>
+<summary>Finish database diagram</summary>
 
 ![Database Schema]()
+
+</details>
+
 
 [Back to top](#contents)
 
