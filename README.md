@@ -4,10 +4,6 @@
 
 ### [Deployed Link]()
 
-FreshlyRooted is your trusted online grocery market, designed for those who prioritize health, quality, and
-sustainability. We bring the best of nature directly to your doorstep, offering a wide selection of fresh, organic, and
-nutrient-rich products—from farm-fresh produce to pantry staples, high-quality proteins, and all-natural snacks.
-
 # Contents
 
 - [FreshlyRooted Market](#freshlyrooted-market)
@@ -18,6 +14,87 @@ nutrient-rich products—from farm-fresh produce to pantry staples, high-quality
         - [MoSCoW Prioritization](#moscow-prioritization)
         - [GitHub Projects](#github-projects)
         - [EPICS](#epics)
+        - [User Stories](#user-stories)
+            - [Developer Stories](#developer-stories)
+            - [Shopper Stories](#shopper-stories)
+            - [Site User Stories](#site-user-stories)
+            - [Store Owner Stories](#store-owner-stories)
+    - [Website Goals and Objectives](#website-goals-and-objectives)
+    - [Target Audience](#target-audience)
+    - [Wireframes](#wireframes)
+    - [Database Schema](#database-schema)
+    - [Design Choices](#design-choices)
+        - [Typography](#typography)
+        - [Colour Scheme](#colour-scheme)
+        - [Images](#images)
+        - [Responsiveness](#responsiveness)
+    - [Security Measures and Protective Design](#security-measures-and-protective-design)
+        - [User Authentication](#user-authentication)
+        - [Password Management](#password-management)
+        - [Form Validation](#form-validation)
+        - [Database Security](#database-security)
+    - [E-Commerce Business Model](#e-commerce-business-model)
+    - [Marketing Strategies](#marketing-strategies)
+        - [Search Engine Optimisation](#search-engine-optimisation)
+        - [SEO Strategies](#seo-strategies)
+        - [Social Media](#social-media)
+        - [Newsletter Marketing](#newsletter-marketing)
+    - [Features](#features)
+        - [Header](#header)
+        - [Footer](#footer)
+        - [Customer Information](#customer-information)
+        - [About](#about)
+        - [Landing Page](#landing-page)
+        - [User Account Pages](#user-account-pages)
+            - [Sign Up Page](#sign-up-page)
+            - [Log In Page](#log-in-page)
+            - [Log Out Page](#log-out-page)
+        - [Profile Page](#profile-page)
+            - [Account Information](#account-information)
+            - [Order History](#order-history)
+            - [User Favorites](#user-favorites)
+            - [Account Security](#account-security)
+        - [All Products](#all-products)
+        - [Product Details](#product-details)
+        - [Reviews](#reviews)
+        - [Search Results](#search-results)
+        - [Special Offers](#special-offers)
+        - [Shopping Cart](#shopping-cart)
+        - [Checkout](#checkout)
+        - [Order Confirmation](#order-confirmation)
+        - [Product Management](#product-management)
+            - [Dashboard](#dashboard)
+            - [Products](#products)
+            - [Categories](#categories)
+            - [Coupons](#coupons)
+            - [Orders](#orders)
+        - [Custom Error Pages](#custom-error-pages)
+    - [Django Admin Portal](#django-admin-portal)
+        - [Future Features](#future-features)
+    - [Deployment](#deployment)
+        - [AWS Cloud Service](#aws-cloud-service)
+            - [To integrate AWS, follow steps](#to-integrate-aws-follow-steps)
+                - [Create and Configure an S3 Bucket](#create-and-configure-an-s3-bucket)
+                - [Configure IAM (Identity and Access Management)](#configure-iam-identity-and-access-management)
+                - [Final AWS Setup and Heroku Integration](#final-aws-setup-and-heroku-integration)
+        - [Stripe](#stripe)
+            - [Steps for Stripe Integration](#steps-for-stripe-integration)
+            - [Testing Stripe Payments](#testing-stripe-payments)
+        - [GMAIL](#gmail)
+            - [Steps for Gmail Integration](#steps-for-gmail-integration)
+            - [Security and Compliance](#security-and-compliance)
+        - [Deployment Process with Heroku](#deployment-process-with-heroku)
+        - [To fork the project](#to-fork-the-project)
+        - [To clone the project](#to-clone-the-project)
+    - [Testing](#testing)
+    - [Technology](#technology)
+        - [Languages](#languages)
+        - [Frameworks](#frameworks)
+        - [Python Libraries](#python-libraries)
+        - [Programs](#programs)
+        - [Payment Service](#payment-service)
+        - [Cloud Storage](#cloud-storage)
+    - [Credits](#credits)
 
 ## Agile Methodology
 
@@ -277,139 +354,598 @@ This schema was generated using [lucid.app](https://lucid.app/).
 
 </details>
 
+[Back to top](#contents)
+
+## Design Choices
+
+### Typography
 
 [Back to top](#contents)
 
+### Colour Scheme
 
+![Coolors Scheme]()
 
+[Back to top](#contents)
 
+### Images
 
+[Back to top](#contents)
 
+### Responsiveness
 
+![Breakpoints]()
 
+[Back to top](#contents)
 
+## Security Measures and Protective Design
 
+### User Authentication
 
+[Back to top](#contents)
 
+### Password Management
 
+[Back to top](#contents)
 
+### Form Validation
 
+[Back to top](#contents)
 
+### Database Security
 
+[Back to top](#contents)
 
+## E-Commerce Business Model
 
+1. **Direct-to-Consumer Sales**
 
+2. **Diverse Product Range**
 
+3. **Digital Marketing and SEO**
 
+4. **Logistics and Fulfillment**
 
+5. **Customer Engagement and Retention**
 
+## Marketing Strategies
 
+### Search Engine Optimisation
 
+### SEO Strategies
 
+1. **Effective Use of Headings:**
 
+2. **Keyword Emphasis:**
 
+3. **Image Optimization:**
 
+4. **Optimize External Links:**
 
+5. **Sitemap Inclusion:**
 
+6. **Control Search Engine Crawling:**
 
+7. **Template Blocks for Meta Descriptions:**
 
+### Social Media
 
+1. **Content Sharing:**
 
+2. **Community Engagement:**
 
+3. **Promotional Campaigns:**
 
+4. **Events and Announcements:**
 
+5. **User-Generated Content:**
 
+6. **Analytics and Insights:**
 
+![Facebook]()
 
+### Newsletter Marketing
 
+1. **Build Subscriber List
+2. **Create Content
+3. **Schedule Newsletters
+4. **Automate Emails
+5. **Track Results
+6. **Test and Personalize
 
+[Back to top](#contents)
 
+## Features
 
+[Back to top](#contents)
 
+### Header
 
-***
+[Back to top](#contents)
 
-What to include in the README write up?
+### Footer
 
-1. Project Rationale
+[Back to top](#contents)
 
-- A well defined and clear Purpose and Goal
-- What is your Target Audience
-- How are their needs addressed by the Purpose of the Application
+### Customer Information
 
-2. Business and Customer Goals
+[Back to top](#contents)
 
-- Document Purpose and the Value to Users and Business
-- Document Purpose Testing, how is it met?
-- Map Project Goals to User Stories, which User Story is mapped to which goal.
+### About
 
-3. UI/UX Design
+[Back to top](#contents)
 
-- Wireframes, Colour Schema
-- Any mockups created as part of the design process
-- How were they followed through to implementation
+### Landing Page
 
-4. Database Design
+[Back to top](#contents)
 
-- Build the ERD diagram
-- Explain any relationships between tables (models)
+### User Account Pages
 
-5. Marketing
+[Back to top](#contents)
 
-- Document the eCommerce business model underlying your application
-- Document Purpose of the Application
-- Is it B2B or B2C Focused?
-- Core business intents
-- Marketing Strategies for the Application
+#### Sign Up Page
 
-6. Facebook Mockup
+[Back to top](#contents)
 
-7. User Stories
+#### Log In Page
 
-- User Stories in README.MD
-- Issues in Github Project
-- Include Acceptance Criteria
+[Back to top](#contents)
 
-8. Manual Testing
+#### Log Out Page
 
-- Responsiveness Testing
-- Browser Compatibility Testing
-- Bugs resolved and unresolved
-- Lighthouse testing outcomes
-- Code Validation
-- User Stories Testing
-- Features Testing
+[Back to top](#contents)
 
-9. Technologies Used
-
-- Frameworks, Libraries and Programs Used
-
-10. References and Credits
-
-- Boutique Ado boilerplate can be included here
-- Any additional tutorials followed should be linked here
-- Media and Content used for educational purposes should also be linked here.
-
-11. Procedures
-
-- Prerequisites, installs. IDE, etc.
-- Forking, Cloning and Local Deployment of the Repository
-- Heroku app creation
-- AWS S3 Bucket Creation
-- Stripe Configuration
-
-> [!TIP]
->
->1. **Make your README write up VISUAL!**
->2. **Share Test Cases**
->3. **Use Tables where appropriate**
->4. **Include screenshots where possible**
-
-> [!IMPORTANT]
->
->Key Takeaways
->1. Keep it simple | Focus on MVP
->2. The Assessor is your Customer, follow their brief
->3. Always focus on Pass Criteria first!
->4. Ensure to fully complete Boutique Ado before starting your project. Use that knowledge.
->5. Remember, Github Project, Wireframes, ERD should be the first three things to do before you code.
+### Profile Page
+
+[Back to top](#contents)
+
+#### Account Information
+
+[Back to top](#contents)
+
+#### Order History
+
+[Back to top](#contents)
+
+#### User Favorites
+
+[Back to top](#contents)
+
+#### Account Security
+
+[Back to top](#contents)
+
+### All Products
+
+[Back to top](#contents)
+
+### Product Details
+
+[Back to top](#contents)
+
+### Reviews
+
+[Back to top](#contents)
+
+### Search Results
+
+[Back to top](#contents)
+
+### Special Offers
+
+[Back to top](#contents)
+
+### Shopping Cart
+
+[Back to top](#contents)
+
+### Checkout
+
+[Back to top](#contents)
+
+### Order Confirmation
+
+[Back to top](#contents)
+
+### Product Management
+
+[Back to top](#contents)
+
+#### Dashboard
+
+[Back to top](#contents)
+
+#### Products
+
+[Back to top](#contents)
+
+#### Categories
+
+[Back to top](#contents)
+
+#### Coupons
+
+[Back to top](#contents)
+
+#### Orders
+
+[Back to top](#contents)
+
+### Custom Error Pages
+
+[Back to top](#contents)
+
+## Django Admin Portal
+
+Django Admin Portal allows superuser to manage content and users of the website. The admin view is customized to reflect the scope of this project.
+
+![Django Admin Portal](/docs/readme-md/features/admin-view.png)
+
+[Back to top](#contents)
+
+### Future Features
+
+[Back to top](#contents)
+
+## Deployment
+
+[Back to top](#contents)
+
+### AWS Cloud Service
+
+#### To integrate AWS, follow steps
+
+##### Create and Configure an S3 Bucket
+
+1. **Access AWS:**
+
+    - Go to [aws.amazon.com](https://aws.amazon.com/) and log in to your AWS Management Console.
+
+2. **Create an S3 Bucket:**
+
+    - Search for "S3" in the AWS Management Console and create a new bucket.
+    - Name the bucket to match your Heroku app name and select the region closest to your target audience.
+
+3. **Set Public Access and Ownership:**
+
+    - Uncheck the "Block all public access" option and acknowledge that the bucket will be public (required for compatibility with Heroku).
+    - Under "Object Ownership," ensure "ACLs enabled" and "Bucket owner preferred" are selected.
+
+4. **Enable Static Website Hosting:**
+
+    - In the "Properties" tab, enable static website hosting.
+    - Set `index.html` as the index document and `error.html` as the error document, then click "Save."
+
+5. **Configure CORS (Cross-Origin Resource Sharing):**
+
+    - In the "Permissions" tab, add the following CORS configuration:
+
+   json
+
+   Copy code
+
+   `[
+  {
+    "AllowedHeaders": ["Authorization"],
+    "AllowedMethods": ["GET"],
+    "AllowedOrigins": ["*"],
+    "ExposeHeaders": []
+  }
+]`
+
+    - Copy your bucket's **ARN** (Amazon Resource Name).
+
+6. **Add a Bucket Policy:**
+
+    - Go to the "Bucket Policy" tab and click on the "Policy Generator" link.
+    - Configure the policy:
+        - **Policy Type:** S3 Bucket Policy
+        - **Effect:** Allow
+        - **Principal:** \*
+        - **Actions:** `s3:GetObject`
+        - **ARN:** Paste your bucket's ARN
+    - Click "Add Statement" and "Generate Policy."
+    - Copy the generated policy and paste it into the "Bucket Policy Editor":
+
+   json
+
+   Copy code
+
+   ````{
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Principal": "*",
+         "Action": "s3:GetObject",
+         "Resource": "arn:aws:s3:::your-bucket-name/*"
+       }
+     ]
+   }```
+
+   -   Ensure the `Resource` field ends with `/*` and click "Save."
+   ````
+
+7. **Adjust Access Control List (ACL):**
+
+    - In the "Access Control List" (ACL) section, click "Edit" and enable "List" for Everyone (public access). Accept the warning prompt.
+    - If the edit option is disabled, ensure the "Object Ownership" settings have ACLs enabled.
+
+[Back to top](#contents)
+
+##### Configure IAM (Identity and Access Management)
+
+1. **Create a User Group:**
+
+    - Navigate to the IAM service and select "User Groups."
+    - Click "Create New Group," and name it appropriately (e.g., ``).
+
+2. **Attach Policies to the Group:**
+
+    - Select the newly created group and go to the "Permissions" tab.
+    - Click "Add Permissions" > "Attach Policies."
+    - In the "JSON" tab, click "Import Managed Policy" and search for `AmazonS3FullAccess`.
+    - Import the policy and modify it to limit access to your specific bucket:
+
+   json
+
+   Copy code
+
+   ````{
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Action": "s3:*",
+         "Resource": [
+           "arn:aws:s3:::your-bucket-name",
+           "arn:aws:s3:::your-bucket-name/*"
+         ]
+       }
+     ]
+   }```
+
+   -   Click "Review Policy" and name it (e.g., `your-policy`), then click "Create Policy."
+   ````
+
+3. **Add Users and Assign Permissions:**
+
+    - Go back to "User Groups," select your group, and click "Attach Policy."
+    - Select your custom policy (e.g., `your-policy`) and attach it.
+    - Click "Add User" and name it appropriately (e.g., `your-user-name`).
+    - Select "Programmatic Access" and add the user to your group.
+    - Download the CSV file containing the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+
+[Back to top](#contents)
+
+##### Final AWS Setup and Heroku Integration
+
+1. **Update Heroku Configurations:**
+
+    - Remove `DISABLE_COLLECTSTATIC` from Heroku Config Vars to enable AWS management of static files.
+
+2. **Create Media Directory:**
+
+    - Within your S3 bucket, create a new folder named `media`.
+    - Upload your media files into this folder and set "Public read access."
+
+3. **Security Reminder:**
+
+    - Ensure all sensitive information (like AWS credentials) is securely stored and not hard-coded into your source code.
+
+[Back to top](#contents)
+
+### Stripe
+
+[Back to top](#contents)
+
+#### Steps for Stripe Integration
+
+1. **Create a Stripe Account:**
+
+    - Go to [stripe.com](https://stripe.com) and create an account. Log in to your Stripe dashboard.
+
+2. **Obtain API Keys:**
+
+    - From your Stripe dashboard, locate the "API Keys" section under "Developers."
+    - Retrieve the following keys:
+        - **STRIPE_PUBLIC_KEY**: Your Publishable Key (starts with `pk`)
+        - **STRIPE_SECRET_KEY**: Your Secret Key (starts with `sk`)
+    - These keys will be used to authenticate your application with Stripe.
+
+3. **Configure Webhooks for Payment Events:**
+
+    - To handle scenarios where a user may close the payment page prematurely, set up Stripe Webhooks to receive real-time payment updates.
+    - In your Stripe dashboard:
+        - Navigate to "Developers" and select "Webhooks."
+        - Click "Add Endpoint."
+        - Enter your endpoint URL (e.g., ``).
+        - Select "Receive all events" to capture all relevant payment events.
+        - Click "Add Endpoint" to complete the process.
+        - This will generate a new key:
+        - **STRIPE_WH_SECRET**: Your Webhook Signing Secret (starts with `wh`).
+
+[Back to top](#contents)
+
+#### Testing Stripe Payments
+
+1. **Test Mode:**
+
+    - Stripe provides a test mode to simulate payment transactions.
+    - Use the following test card details for interactive testing:
+        - **Card Number:** `4242 4242 4242 4242`
+        - **Expiry Date:** Any valid future date (e.g., `12/34`)
+        - **CVC:** Any three-digit number (or four digits for American Express)
+        - **Other Fields:** Use any value for other fields.
+
+2. **Security Reminder:**
+
+    - Ensure all Stripe API keys and Webhook Signing Secrets are stored securely, and never hard-code them in your source code.
+
+[Back to top](#contents)
+
+### GMAIL
+
+[Back to top](#contents)
+
+#### Steps for Gmail Integration
+
+1. **Create and Access Gmail Account:**
+
+    - Ensure you have an active Gmail (Google) account. Log in to your account.
+
+2. **Enable Two-Factor Authentication (2FA):**
+
+    - Go to your Google Account by clicking on your profile icon in the top-right corner and selecting "Manage Your Google Account."
+    - Navigate to the **Security** tab on the left sidebar.
+    - Under the "Signing in to Google" section, enable **2-Step Verification**. Follow the prompts to verify your password and activate 2FA.
+
+3. **Generate an App Password:**
+
+    - After enabling 2FA, stay on the **Security** page and select **App passwords**.
+    - Re-enter your password if prompted.
+    - Choose **Mail** as the app type and select **Other (Custom name)** for the device type. Enter a relevant name (e.g., "Your Django App").
+    - Click **Generate** to create a 16-character app password (API key). **Note:** This password will only be displayed once, so save it securely.
+
+4. **Configure Email Settings in Your Application:**
+
+    - Update your application's email settings with the following credentials:
+        - **EMAIL_HOST_USER**: Your Gmail address (e.g., `your-email@gmail.com`)
+        - **EMAIL_HOST_PASSWORD**: The 16-character app password generated from Gmail.
+
+[Back to top](#contents)
+
+#### Security and Compliance
+
+- Ensure that your Gmail credentials, especially the app password, are stored securely and not hard-coded in your source code. Consider using environment variables or a secure secrets manager for this purpose.
+
+[Back to top](#contents)
+
+### Deployment Process with Heroku
+
+1. Navigate to the [Heroku website](https://www.heroku.com/) and either [log in](https://id.heroku.com/login) to your existing account or [sign up](https://signup.heroku.com/) for a new account.
+2. From the dashboard, click the "New" button in the upper right corner and select "Create new App" from the drop-down menu.
+3. Provide a unique name for your application in the "App name" field.
+    - Heroku will indicate the name's availability with a green checkmark.
+4. Select the appropriate region ("United States" or "Europe") from the "Choose a region" dropdown, based on your target user base.
+5. Click the "Create app" button to proceed.
+6. On the next screen, navigate to the "Settings" tab located at the top center of the page.
+7. In the "Config Vars" section, click on the "Reveal config Vars" button to display the environment variable configuration interface.
+8. Input the necessary environment variables typically stored in your local `env.py` file. For this deployment, you will need to configure the following variables:
+
+```
+    -   **SECRET_KEY**: xxxx
+    -   **AWS_ACCESS_KEY_ID**: xxxx
+    -   **AWS_SECRET_ACCESS_KEY**: xxxx
+    -   **AWS_STORAGE_BUCKET_NAME**: xxxx
+    -   **EMAIL_HOST_PASS**: xxxx
+    -   **EMAIL_HOST_USER**: xxxx
+    -   **DATABASE_URL**: xxxx
+    -   **STRIPE_PUBLIC_KEY**: xxxx
+    -   **STRIPE_SECRET_KEY**: xxxx
+    -   **STRIPE_WH_SECRET**: xxxx
+    -   **USE_AWS**: True
+```
+
+9. Enter each variable name in the "KEY" field and its corresponding value in the "VALUE" field.
+10. Return to the top of the page and select the "Deploy" tab.
+11. In the "Deployment method" section, choose "GitHub."
+12. Under "Connect to GitHub," click the "Search" button, locate your project repository, and click "Connect."
+13. Scroll down and click the "Deploy Branch" button to initiate the deployment.
+14. Consider enabling the automatic deployment option to allow Heroku to deploy your app automatically with each push to the GitHub repository.
+15. A build log will appear at the bottom of the screen. Upon successful deployment, a link to your application will be provided.
+
+**Important!**: Ensure that your Heroku app URL is added to the `ALLOWED_HOSTS` setting in the `settings.py` file. Additionally, verify that the `DEBUG` setting is set to `False`, and the `requirements.txt` and `Procfile` are up to date and committed to GitHub.
+
+[Back to top](#contents)
+
+### To fork the project
+
+Forking the **GitHub** repository allows you to create a duplicate of a local repository. This is done so that modifications to the copy can be performed without compromising the original repository.
+
+- Log in to **GitHub**.
+
+- Locate the repository.
+
+- Click to open it.
+
+- The fork button is located on the right side of the repository menu.
+
+- To copy the repository to your **GitHub** account, click the button.
+
+[Back to top](#contents)
+
+### To clone the project
+
+- Log in to **GitHub**.
+
+- Navigate to the main page of the repository and click **Code**.
+
+- Copy the **URL** for the repository.
+
+- Open your local **IDE**.
+
+- Change the current working directory to the location where you want the cloned directory.
+
+- Type git clone, and then paste the **URL** you copied earlier.
+
+- Press **Enter** to create your local clone.
+
+_Any changes required to the website, they can be made, committed and pushed to GitHub._
+
+[Back to top](#contents)
+
+## Testing
+
+[TESTING.md](TESTING.md) file.
+
+[Back to top](#contents)
+
+## Technology
+
+### Languages
+
+- [Python](https://www.python.org/)
+- [Markdown](https://en.wikipedia.org/wiki/Markdown)
+- [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML5 'HTML')
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS 'CSS')
+- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript 'JS')
+
+[Back to top](#contents)
+
+### Frameworks
+
+- [Django](https://www.djangoproject.com/): Django is the main Python framework used in the development of this project. It provides a robust and scalable architecture for building web applications.
+
+[Back to top](#contents)
+
+### Python Libraries
+
+- [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html): Authentication library used to create user accounts, providing features such as registration, login, and social authentication.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): Used to manage Django forms, making form rendering in templates simpler and more elegant.
+- [Django Countries](https://pypi.org/project/django-countries/): Library used to provide country choices for use with forms and a country field for models.
+- [Pillow](https://pypi.org/project/Pillow/): Used to add image processing capabilities.
+
+[Back to top](#contents)
+
+### Programs
+
+- [Balsamiq](https://balsamiq.com/): Wireframing tool used to generate wireframe images, allowing for quick and easy visualization of the application's layout and design.
+- [Bootstrap](https://getbootstrap.com): CSS framework used for developing responsiveness and styling, offering a wide range of pre-designed components and utilities.
+- [Google Chrome](https://developer.chrome.com/docs/devtools/): Used for overall development and tweaking, including testing responsiveness, debugging, and performance profiling.
+
+[Back to top](#contents)
+
+### Payment Service
+
+- [Stripe](https://stripe.com/en-gb-nl) was used to process all online payments transactions.
+
+### Cloud Storage
+
+- [Amazon Web Service S3](https://aws.amazon.com/s3/) was used to store all static and media files in production.
+
+[Back to top](#contents)
+
+## Credits
+
+[Back to top](#contents)
