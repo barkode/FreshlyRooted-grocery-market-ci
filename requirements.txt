@@ -5,7 +5,9 @@ django-allauth==65.0.2
 django-countries==7.6.1
 django-crispy-forms==2.3
 django-humanize==0.1.2
+gunicorn==23.0.0
 humanize==4.11.0
+packaging==24.1
 pillow==11.0.0
 psycopg2==2.9.10
 python-dotenv==1.0.1
