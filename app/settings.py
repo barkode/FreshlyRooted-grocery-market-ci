@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 
+from django.template.defaultfilters import default
 from dotenv import load_dotenv
 
 # Take environment variables from .env.
@@ -45,8 +46,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
     'crispy_forms',
     'crispy_bootstrap5',
 ]
@@ -101,7 +104,7 @@ AUTHENTICATION_BACKENDS = [
 
 WSGI_APPLICATION = 'app.wsgi.application'
 
-SITE_ID = int(os.getenv('SITE_ID', default=1))
+SITE_ID = int(os.getenv('SITE_ID', '1'))
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
