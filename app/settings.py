@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS').split(',')) if not 'DEVELOPMENT' in os.environ else ['localhost', '127.0.0.1',]
+ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS', 'localhost, 127.0.0.1').split(',')) if not 'DEVELOPMENT' in os.environ else ['localhost', '127.0.0.1',]
 
 CSRF_TRUSTED_ORIGINS = list(os.getenv('CSRF_TRUSTED_ORIGINS').split(',')) if not 'DEVELOPMENT' in os.environ else []
 
@@ -147,7 +147,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = os.getenv('LANGUAGE_CODE', 'en-us')
 
 TIME_ZONE = 'UTC'
 
@@ -178,12 +178,11 @@ if 'USE_AWS' in os.environ:  # If USE_AWS exist than apply AWS settings
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
         }
-
     # S3 Configuration
-    AWS_STORAGE_BUCKET_NAME = 'ckz8780-boutique-ado'
-    AWS_S3_REGION_NAME = os.getenv('AWS_S3_REGION_NAME', default='eu-west-1')
-    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME', None)
+    AWS_S3_REGION_NAME = os.getenv('AWS_S3_REGION_NAME', None)
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', None)
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', None)
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
     # Static and Media files settings
@@ -199,6 +198,7 @@ else:
     # WhiteNoise for development
     MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
     STATIC_URL = '/static/'
     MEDIA_URL = '/media/'
 
@@ -213,14 +213,13 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', default='')
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', default='<EMAIL>')
 
 # Email Settings
-
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'freshrooted@example.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = os.getenv('EMAIL_HOST', default='smtp.gmail.com')
-    EMAIL_PORT = os.getenv('EMAIL_PORT', default='587')
+    EMAIL_PORT = int(os.getenv('EMAIL_PORT', default='587'))
     EMAIL_USE_TLS = True
     EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', default='')
     EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', default='')
