@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'crispy_bootstrap5',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -113,7 +114,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if 'DATABASE_HOST' in os.environ and 'DATABASE_NAME' in os.environ and 'DATABASE_PASSWORD' in os.environ:
+if 'DATABASE_HOST' in os.environ:
     DATABASES = {
         'default': {
             "ENGINE": "django.db.backends.postgresql_psycopg2",
@@ -178,7 +179,33 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Stripe
+# AWS and white settings
+
+if 'USE_AWS' in os.environ:  # If USE_AWS exist than apply AWS settings
+    # AWS Cache parameters
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+        }
+
+    # S3 Configuration
+    AWS_STORAGE_BUCKET_NAME = 'ckz8780-boutique-ado'
+    AWS_S3_REGION_NAME = os.getenv('AWS_S3_REGION_NAME', default='eu-west-1')
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and Media files settings
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'  # Custom class for saving static files
+    STATICFILES_DIRECTORY = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'  # Custom class for saving media files
+    MEDIAFILES_DIRECTORY = 'media'
+
+    # URL's for static and media files
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_DIRECTORY}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_DIRECTORY}/'
+
+# Stripe settings
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'usd'
@@ -186,3 +213,16 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', default='')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', default='')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', default='')
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', default='<EMAIL>')
+
+# Email Settings
+
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'freshrooted@example.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = os.getenv('EMAIL_HOST', default='smtp.gmail.com')
+    EMAIL_PORT = os.getenv('EMAIL_PORT', default='587')
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', default='')
+    EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', default='')
