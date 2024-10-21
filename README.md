@@ -46,13 +46,10 @@
         - [About](#about)
         - [Landing Page](#landing-page)
         - [User Account Pages](#user-account-pages)
-            - [Sign Up Page](#sign-up-page)
-            - [Log In Page](#log-in-page)
-            - [Log Out Page](#log-out-page)
         - [Profile Page](#profile-page)
             - [Account Information](#account-information)
             - [Order History](#order-history)
-            - [User Favorites](#user-favorites)
+            - [User Wishlist](#user-wishlist)
             - [Account Security](#account-security)
         - [All Products](#all-products)
         - [Product Details](#product-details)
@@ -66,23 +63,24 @@
             - [Dashboard](#dashboard)
             - [Products](#products)
             - [Categories](#categories)
+            - [Genres](#genres)
+            - [Authors](#authors)
             - [Coupons](#coupons)
             - [Orders](#orders)
         - [Custom Error Pages](#custom-error-pages)
     - [Django Admin Portal](#django-admin-portal)
-        - [Future Features](#future-features)
+    - [Future Features](#future-features)
     - [Deployment](#deployment)
         - [AWS Cloud Service](#aws-cloud-service)
-            - [To integrate AWS, follow steps](#to-integrate-aws-follow-steps)
-                - [Create and Configure an S3 Bucket](#create-and-configure-an-s3-bucket)
-                - [Configure IAM (Identity and Access Management)](#configure-iam-identity-and-access-management)
-                - [Final AWS Setup and Heroku Integration](#final-aws-setup-and-heroku-integration)
+            - [1. Create and Configure an S3 Bucket](#1-create-and-configure-an-s3-bucket)
+            - [**2. Configure IAM (Identity and Access Management):**](#2-configure-iam-identity-and-access-management)
+            - [**3. Final AWS Setup and Heroku Integration:**](#3-final-aws-setup-and-heroku-integration)
         - [Stripe](#stripe)
-            - [Steps for Stripe Integration](#steps-for-stripe-integration)
-            - [Testing Stripe Payments](#testing-stripe-payments)
+            - [**Steps for Stripe Integration:**](#steps-for-stripe-integration)
+            - [**Testing Stripe Payments:**](#testing-stripe-payments)
         - [GMAIL](#gmail)
-            - [Steps for Gmail Integration](#steps-for-gmail-integration)
-            - [Security and Compliance](#security-and-compliance)
+            - [**Steps for Gmail Integration:**](#steps-for-gmail-integration)
+            - [**Security and Compliance:**](#security-and-compliance)
         - [Deployment Process with Heroku](#deployment-process-with-heroku)
         - [To fork the project](#to-fork-the-project)
         - [To clone the project](#to-clone-the-project)
@@ -95,6 +93,7 @@
         - [Payment Service](#payment-service)
         - [Cloud Storage](#cloud-storage)
     - [Credits](#credits)
+    - [Disclaimer](#disclaimer)
 
 ## Agile Methodology
 
@@ -925,6 +924,7 @@ _Any changes required to the website, they can be made, committed and pushed to 
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): Used to manage Django forms, making form rendering in templates simpler and more elegant.
 - [Django Countries](https://pypi.org/project/django-countries/): Library used to provide country choices for use with forms and a country field for models.
 - [Pillow](https://pypi.org/project/Pillow/): Used to add image processing capabilities.
+- [Humanize](https://pypi.org/project/humanize/): Used for turning a number into a fuzzy human-readable duration ("3 minutes ago")
 
 [Back to top](#contents)
 
@@ -947,5 +947,11 @@ _Any changes required to the website, they can be made, committed and pushed to 
 [Back to top](#contents)
 
 ## Credits
+
+[Back to top](#contents)
+
+## Disclaimer
+
+_FreshlyRooted Market is dedicated to providing free, reliable information and resources to its community. This project is not driven by monetary profit, but rather by a commitment to share knowledge and support well-being. Every effort has been made to properly credit and reference all images, data, and materials used. Any photographs or other media have been obtained through free and accessible sources in accordance with usage agreements, ensuring that all content is responsibly sourced._
 
 [Back to top](#contents)
