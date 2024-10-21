@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'storages',
+    'home',
     ]
 
 MIDDLEWARE = [
@@ -201,6 +202,7 @@ if 'USE_AWS' in os.environ:  # If USE_AWS exist than apply AWS settings
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_DIRECTORY}/'
 else:
     # WhiteNoise for development
+    INSTALLED_APPS.insert(0,'whitenoise.runserver_nostatic')
     MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
     STORAGES = {
         "staticfiles": {
