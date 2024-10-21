@@ -31,7 +31,7 @@ DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS').split(',')) if not 'DEVELOPMENT' in os.environ else ['localhost', '127.0.0.1',]
 
-print(ALLOWED_HOSTS)
+CSRF_TRUSTED_ORIGINS = list(os.getenv('CSRF_TRUSTED_ORIGINS').split(',')) if not 'DEVELOPMENT' in os.environ else []
 
 # Application definition
 
@@ -67,11 +67,6 @@ ROOT_URLCONF = 'app.urls'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeinstitute-ide.net",
-    "https://*.herokuapp.com",
-    ]
 
 TEMPLATES = [
     {
@@ -200,6 +195,13 @@ if 'USE_AWS' in os.environ:  # If USE_AWS exist than apply AWS settings
     # URL's for static and media files
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_DIRECTORY}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_DIRECTORY}/'
+else:
+    # WhiteNoise for development
+    MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STATIC_URL = '/static/'
+    MEDIA_URL = '/media/'
+
 
 # Stripe settings
 FREE_DELIVERY_THRESHOLD = 50
