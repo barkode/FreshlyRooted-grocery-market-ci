@@ -101,7 +101,7 @@
                     <div class="primary-menu">
                         <ul class="menu biolife-menu clone-main-menu clone-primary-menu">
                             <!-- Home menu -->
-                            <li class="menu-item"><a href="#">Home</a></li>
+                            <li class="menu-item"><a href="{% url 'home:home' %}">Home</a></li>
                             <!-- Shop menu -->
                             <li class="menu-item menu-item menu-item-has-children has-megamenu">
                                 <a href="#" class="menu-name" data-title="Shop">Shop
@@ -335,24 +335,21 @@
                                 </form>
                             </div>
                         </div>
-                        
-                        
-                        
-                        <!-- Login button -->
-{#                        <div class="login-item">#}
-{#                            <div class="login-link"><i class="biolife-icon icon-login"></i></div>#}
-{#                        </div>#}
-
                         <div class="btn-group login-item">
-                            <button type="button" class="dropdown-toggle login-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="dropdown-toggle login-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="biolife-icon icon-login"></i><span class="caret"></span>
-                            </button>
+                            </div>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <li><a href="#" class="dropdown-item">Product Management</a></li>
+                                {% endif %}
+                                <li><a href="#" class="dropdown-item">My profile</a></li>
+                                <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                            {% else %}
+                                <li><a href="{% url 'account_signup' %}">Register</a></li>
+                                <li><a href="{% url 'account_login' %}">Login</a></li>
+                            {% endif %}
                             </ul>
                         </div>
                         
