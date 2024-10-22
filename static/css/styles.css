@@ -1,0 +1,4 @@
+/* Temporary header background */
+.header-area.layout-02 .header-middle:not(.pre-sticky) {
+	background-color: orangered;
+}
