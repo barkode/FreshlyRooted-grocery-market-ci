@@ -36,7 +36,7 @@
 
     {% block extra_js %}{% endblock %}
 
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'tmp/assets/images/favicon.png' %}"/>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png' %}"/>
 
     <title>Fresh Rooted {% block extra_title %}{% endblock %}</title>
 </head>
@@ -56,6 +56,7 @@
 <!-- HEADER -->
 
 <header id="header" class="header-area style-01 layout-02">
+    {% block header_top %}{% endblock %}
     <div class="header-top bg-main hidden-xs">
         <div class="container">
             <div class="top-bar left">
@@ -307,8 +308,7 @@
 
                 <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
                     <a href="home-02.html" class="biolife-logo"><img
-                            src="{% static 'tmp/assets/images/organic-2.png' %}" alt="biolife logo" width="135"
-                            height="34"></a>
+                            src="{% static '/images/logo-no-background.png' %}" alt="biolife logo"></a>
                 </div>
                 <div class="col-lg-5 col-md-4 col-sm-6 col-xs-6">
                     <div class="biolife-cart-info">
@@ -335,9 +335,32 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="login-item">
-                            <div class="login-link"><i class="biolife-icon icon-login"></i></div>
+                        
+                        
+                        
+                        <!-- Login button -->
+{#                        <div class="login-item">#}
+{#                            <div class="login-link"><i class="biolife-icon icon-login"></i></div>#}
+{#                        </div>#}
+
+                        <div class="btn-group login-item">
+                            <button type="button" class="dropdown-toggle login-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="biolife-icon icon-login"></i><span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
                         </div>
+                        
+                        
+                        
+                        
+                        
+                        <!-- Wishlist -->
                         <div class="wishlist-block hidden-sm hidden-xs">
                             <a href="#" class="link-to">
                                     <span class="icon-qty-combine">
@@ -541,7 +564,7 @@
     <div class="message-container"></div>
 {% endif %}
 
-{% block page_header %}{% endblock %}
+{% block after_header %}{% endblock %}
 
 <div class="page-contain">
 
@@ -564,8 +587,8 @@
                 <div class="col-lg-4 col-xs-12">
                     <section class="footer-item">
                         <a href="home-02.html" class="logo footer-logo"><img
-                                src="{% static 'tmp/assets/images/organic-2-footer.png' %}"
-                                alt="freshlyrooted logo" width="135" height="34"></a>
+                                src="{% static 'images/logo-no-background.png' %}"
+                                alt="freshlyrooted logo" width="200"></a>
                         <div class="footer-phone-info mode-02">
                             <i class="biolife-icon icon-head-phone"></i>
                             <p class="r-info">
