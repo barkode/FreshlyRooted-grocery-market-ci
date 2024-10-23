@@ -35,7 +35,6 @@ ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS', 'localhost;127.0.0.1').split(';'
 # CSRF_TRUSTED_ORIGINS = list(os.getenv('CSRF_TRUSTED_ORIGINS').split(';')) if not 'DEVELOPMENT' in os.environ else ['http://localhost', 'http://127.0.0.1']
 CSRF_TRUSTED_ORIGINS = list(os.getenv('CSRF_TRUSTED_ORIGINS', 'http://localhost;http://127.0.0.1').split(';'))
 
-
 # Application definition
 
 INSTALLED_APPS = [
