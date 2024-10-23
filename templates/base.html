@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="{% static 'tmp/assets/css/font-awesome.min.css' %}">
         <link rel="stylesheet" href="{% static 'tmp/assets/css/nice-select.css' %}">
         <link rel="stylesheet" href="{% static 'tmp/assets/css/style.css' %}">
-        <link rel="stylesheet" href="{% static 'tmp/assets/css/slick.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/slick.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     {% endblock %}
 
@@ -336,27 +336,23 @@
                             </div>
                         </div>
                         <div class="btn-group login-item">
-                            <div class="dropdown-toggle login-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="dropdown-toggle login-link" data-toggle="dropdown" aria-haspopup="true"
+                                 aria-expanded="false">
                                 <i class="biolife-icon icon-login"></i><span class="caret"></span>
                             </div>
                             <ul class="dropdown-menu">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <li><a href="#" class="dropdown-item">Product Management</a></li>
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <li><a href="#" class="dropdown-item">Product Management</a></li>
+                                    {% endif %}
+                                    <li><a href="#" class="dropdown-item">My profile</a></li>
+                                    <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                                {% else %}
+                                    <li><a href="{% url 'account_signup' %}">Register</a></li>
+                                    <li><a href="{% url 'account_login' %}">Login</a></li>
                                 {% endif %}
-                                <li><a href="#" class="dropdown-item">My profile</a></li>
-                                <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
-                            {% else %}
-                                <li><a href="{% url 'account_signup' %}">Register</a></li>
-                                <li><a href="{% url 'account_login' %}">Login</a></li>
-                            {% endif %}
                             </ul>
                         </div>
-                        
-                        
-                        
-                        
-                        
                         <!-- Wishlist -->
                         <div class="wishlist-block hidden-sm hidden-xs">
                             <a href="#" class="link-to">
@@ -366,6 +362,7 @@
                                     </span>
                             </a>
                         </div>
+                        <!-- Cart -->
                         <div class="minicart-block">
                             <div class="minicart-contain">
                                 <a href="javascript:void(0)" class="link-to">
@@ -374,7 +371,12 @@
                                                 <span class="qty">8</span>
                                             </span>
                                     <span class="title">My Cart -</span>
-                                    <span class="sub-total">$0.00</span>
+                                    <span class="sub-total {% if True %}text-info font-weight-bold{% endif %}">
+                                        {% if grand_total %}
+                                    	${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        $0.00
+                                    {% endif %}</span>
                                 </a>
                                 <div class="cart-content">
                                     <div class="cart-inner">
@@ -543,6 +545,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Mobile Menu -->
                         <div class="mobile-menu-toggle">
                             <a class="btn-toggle" data-object="open-mobile-menu" href="javascript:void(0)">
                                 <span></span>
@@ -567,7 +570,6 @@
 
     <!-- Main content -->
     <div id="main-content" class="main-content">
-
 
 
         {% block content %}{% endblock %}
@@ -953,11 +955,11 @@
 
 {% block postload_js %}
     <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
     <script src="{% static 'tmp/bs3.4.1/bootstrap.min.js' %}"></script>
     <script src="{% static 'tmp/assets/js/jquery.countdown.min.js' %}"></script>
     <script src="{% static 'tmp/assets/js/jquery.nice-select.min.js' %}"></script>
     <script src="{% static 'tmp/assets/js/jquery.nicescroll.min.js' %}"></script>
-    <script src="{% static 'tmp/assets/js/slick.min.js' %}"></script>
     <script src="{% static 'tmp/assets/js/biolife.framework.js' %}"></script>
     <script src="{% static 'tmp/assets/js/functions.js' %}"></script>
 {% endblock %}
