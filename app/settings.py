@@ -30,14 +30,11 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
 # ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS').split(',')) if not 'DEVELOPMENT' in os.environ else ['localhost', '127.0.0.1']
-# ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS', 'localhost;127.0.0.1').split(';'))
+ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS', 'localhost;127.0.0.1').split(';'))
 
 # CSRF_TRUSTED_ORIGINS = list(os.getenv('CSRF_TRUSTED_ORIGINS').split(';')) if not 'DEVELOPMENT' in os.environ else ['http://localhost', 'http://127.0.0.1']
-# CSRF_TRUSTED_ORIGINS = list(os.getenv('CSRF_TRUSTED_ORIGINS', 'http://localhost;http://127.0.0.1').split(';'))
+CSRF_TRUSTED_ORIGINS = list(os.getenv('CSRF_TRUSTED_ORIGINS', 'http://localhost;http://127.0.0.1').split(';'))
 
-ALLOWED_HOSTS = ['.codeinstitute.net','.herokuapp.com','localhost']
-
-CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net', 'https://*.herokuapp.com']
 
 # Application definition
 
