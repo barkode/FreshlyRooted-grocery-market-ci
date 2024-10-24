@@ -170,7 +170,7 @@ USE_TZ = True
 STATICFILES_DIRS = (BASE_DIR / 'static',)
 
 # MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+# MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -206,11 +206,15 @@ else:
     INSTALLED_APPS.insert(0,'whitenoise.runserver_nostatic')
     MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
     STORAGES = {
+        "default": {
+            "BACKEND": "django.core.files.storage.FileSystemStorage",
+            },
         "staticfiles": {
             "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage", }}
     STATIC_ROOT = BASE_DIR / 'staticfiles'
     STATIC_URL = '/static/'
     MEDIA_URL = '/media/'
+    MEDIA_ROOT = BASE_DIR / 'media'  # Set the local media root
 
 # Stripe settings
 FREE_DELIVERY_THRESHOLD = 50
