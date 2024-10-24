@@ -29,12 +29,14 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
+# LOGING variable
+IS_LOGGING = os.getenv('IS_LOGGING', 'False').lower() == 'true'
+
 # ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS').split(',')) if not 'DEVELOPMENT' in os.environ else ['localhost', '127.0.0.1']
 ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS', 'localhost;127.0.0.1').split(';'))
 
 # CSRF_TRUSTED_ORIGINS = list(os.getenv('CSRF_TRUSTED_ORIGINS').split(';')) if not 'DEVELOPMENT' in os.environ else ['http://localhost', 'http://127.0.0.1']
 CSRF_TRUSTED_ORIGINS = list(os.getenv('CSRF_TRUSTED_ORIGINS', 'http://localhost;http://127.0.0.1').split(';'))
-
 
 # Application definition
 
@@ -178,8 +180,8 @@ STATICFILES_DIRS = (BASE_DIR / 'static',)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # AWS and white settings
-
 if 'USE_AWS' in os.environ:  # If USE_AWS exist than apply AWS settings
+    MIDDLEWARE.insert(0, 'utils.is_aws_aviable_middleware.AWSCheckMiddleware')
     # AWS Cache parameters
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
@@ -203,7 +205,7 @@ if 'USE_AWS' in os.environ:  # If USE_AWS exist than apply AWS settings
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_DIRECTORY}/'
 else:
     # WhiteNoise for development
-    INSTALLED_APPS.insert(0,'whitenoise.runserver_nostatic')
+    INSTALLED_APPS.insert(0, 'whitenoise.runserver_nostatic')
     MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
     STORAGES = {
         "default": {
@@ -236,3 +238,29 @@ else:
     EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
+
+# Add logging settings
+if IS_LOGGING:
+    LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'handlers': {
+            'file': {
+                'level': 'INFO',  # Logging level (INFO, DEBUG, ERROR)
+                'class': 'logging.FileHandler',
+                'filename': os.path.join(BASE_DIR, 'logs/aws_availability.log'),  # Лог-файл
+                },
+            },
+        'loggers': {
+            'django': {
+                'handlers': ['file'],
+                'level': 'INFO',
+                'propagate': True,
+                },
+            'aws_check': {  # AWS checker logger
+                'handlers': ['file'],
+                'level': 'INFO',
+                'propagate': False,
+                },
+            },
+        }
