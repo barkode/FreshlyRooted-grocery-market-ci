@@ -1,0 +1,342 @@
+[
+  {
+    "model": "products.measurement",
+    "pk": 1,
+    "fields": {
+      "name": "Kilogram",
+      "abbreviation": "kg",
+      "description": "Kilogram (kg): Used for heavy or bulk items like fruits, vegetables, grains, etc.",
+      "measurement_type": 1
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 2,
+    "fields": {
+      "name": "Gram",
+      "abbreviation": "g",
+      "description": "Gram (g): Typically used for smaller quantities like spices, nuts, or packaged goods.",
+      "measurement_type": 1
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 3,
+    "fields": {
+      "name": "Milligram",
+      "abbreviation": "mg",
+      "description": "Milligram (mg): For extremely small quantities, commonly seen in vitamins or supplements.",
+      "measurement_type": 1
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 4,
+    "fields": {
+      "name": "Pound",
+      "abbreviation": "lb",
+      "description": "Pound (lb): Used in some countries, often for meat or produce.",
+      "measurement_type": 1
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 5,
+    "fields": {
+      "name": "Ounce",
+      "abbreviation": "oz",
+      "description": "Ounce (oz): Commonly used for smaller weights, especially in prepackaged goods.",
+      "measurement_type": 1
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 6,
+    "fields": {
+      "name": "Liter",
+      "abbreviation": "L",
+      "description": "Liter (L): Common for beverages, milk, and other liquids.",
+      "measurement_type": 2
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 7,
+    "fields": {
+      "name": "Milliliter",
+      "abbreviation": "mL",
+      "description": "Milliliter (mL): Used for small quantities of liquids, like sauces or beverages.",
+      "measurement_type": 2
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 8,
+    "fields": {
+      "name": "Cubic Meter",
+      "abbreviation": "m³",
+      "description": "Cubic Meter (m³): Typically used for very large volumes of liquid or bulk materials, rare in retail.",
+      "measurement_type": 2
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 9,
+    "fields": {
+      "name": "Gallon",
+      "abbreviation": "gal",
+      "description": "Gallon (gal): Common in some countries, especially for milk, fuel, or large beverage containers.",
+      "measurement_type": 2
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 10,
+    "fields": {
+      "name": "Quart",
+      "abbreviation": "qt",
+      "description": "Quart (qt): Used in some countries, mainly for liquids.",
+      "measurement_type": 2
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 11,
+    "fields": {
+      "name": "Pint",
+      "abbreviation": "pt",
+      "description": "Pint (pt): Common for beverages, ice cream, or sauces.",
+      "measurement_type": 2
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 12,
+    "fields": {
+      "name": "Fluid Ounce",
+      "abbreviation": "fl oz",
+      "description": "Fluid Ounce (fl oz): Used for smaller liquid quantities.",
+      "measurement_type": 2
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 13,
+    "fields": {
+      "name": "Cubic Centimeter",
+      "abbreviation": "cc",
+      "description": "Cubic Centimeter (cc): Used for very small quantities, often in the medical or scientific fields.",
+      "measurement_type": 3
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 14,
+    "fields": {
+      "name": "Teaspoon",
+      "abbreviation": "tsp",
+      "description": "Teaspoon (tsp): Often used for baking ingredients or spices.",
+      "measurement_type": 3
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 15,
+    "fields": {
+      "name": "Tablespoon",
+      "abbreviation": "tbsp",
+      "description": "Tablespoon (tbsp): Slightly larger, used for dry ingredients in baking or cooking.",
+      "measurement_type": 3
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 16,
+    "fields": {
+      "name": "Cup",
+      "abbreviation": "cup",
+      "description": "Cup: Often used for both liquid and dry ingredients in baking.",
+      "measurement_type": 3
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 17,
+    "fields": {
+      "name": "Peck",
+      "abbreviation": "pk",
+      "description": "Peck (pk): Rare, but used for larger quantities of dry goods like apples.",
+      "measurement_type": 3
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 18,
+    "fields": {
+      "name": "Bushel",
+      "abbreviation": "bu",
+      "description": "Bushel (bu): Also rare, used for large volumes of dry goods, e.g., grains, fruits.",
+      "measurement_type": 3
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 19,
+    "fields": {
+      "name": "Meter",
+      "abbreviation": "m",
+      "description": "Meter (m): Rare but sometimes used for items like fabric or certain packaging.",
+      "measurement_type": 4
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 20,
+    "fields": {
+      "name": "Centimeter",
+      "abbreviation": "cm",
+      "description": "Centimeter (cm): Can be used for small, measurable items like rope or ribbon.",
+      "measurement_type": 4
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 21,
+    "fields": {
+      "name": "Inch",
+      "abbreviation": "in",
+      "description": "Inch (in): Also used for small items or packaging materials.",
+      "measurement_type": 4
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 22,
+    "fields": {
+      "name": "Piece",
+      "abbreviation": "pc",
+      "description": "Piece (pc): Often used for items sold individually like fruits (e.g., 1 apple) or prepackaged goods.",
+      "measurement_type": 5
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 23,
+    "fields": {
+      "name": "Pack",
+      "abbreviation": "pk",
+      "description": "Pack (pk): Used for bundled items like a pack of water bottles, eggs, or candy.",
+      "measurement_type": 5
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 24,
+    "fields": {
+      "name": "Dozen",
+      "abbreviation": "dz",
+      "description": "Dozen (dz): For items like eggs, often sold in multiples of twelve.",
+      "measurement_type": 5
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 25,
+    "fields": {
+      "name": "Pair",
+      "abbreviation": "pr",
+      "description": "Pair (pr): Used when two items come together, like gloves or shoes.",
+      "measurement_type": 5
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 26,
+    "fields": {
+      "name": "Tray",
+      "abbreviation": "tray",
+      "description": "Tray: For items sold in a tray, like a tray of fruit or baked goods.",
+      "measurement_type": 5
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 27,
+    "fields": {
+      "name": "Case",
+      "abbreviation": "case",
+      "description": "Case (case): Bulk packaging, commonly for drinks or canned goods.",
+      "measurement_type": 5
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 28,
+    "fields": {
+      "name": "Box",
+      "abbreviation": "box",
+      "description": "Box (box): For pre-packaged goods like cereal or snacks.",
+      "measurement_type": 5
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 29,
+    "fields": {
+      "name": "Bottle",
+      "abbreviation": "bottle",
+      "description": "Bottle (bottle): For liquids like wine, sauces, or soft drinks.",
+      "measurement_type": 5
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 30,
+    "fields": {
+      "name": "Can",
+      "abbreviation": "can",
+      "description": "Can (can): For items sold in cans, like soda, beans, or soup.",
+      "measurement_type": 5
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 31,
+    "fields": {
+      "name": "Bag",
+      "abbreviation": "bag",
+      "description": "Bag (bag): For products sold in bags, like rice, chips, or snacks.",
+      "measurement_type": 5
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 32,
+    "fields": {
+      "name": "Jar",
+      "abbreviation": "jar",
+      "description": "Jar (jar): For goods like jam, honey, or pickles.",
+      "measurement_type": 5
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 33,
+    "fields": {
+      "name": "Carton",
+      "abbreviation": "carton",
+      "description": "Carton (carton): For products like eggs or juice.",
+      "measurement_type": 5
+    }
+  },
+  {
+    "model": "products.measurement",
+    "pk": 34,
+    "fields": {
+      "name": "Slice",
+      "abbreviation": "slice",
+      "description": "Slice (slice): For items like sliced bread or cheese.",
+      "measurement_type": 5
+    }
+  }
+]
