@@ -104,20 +104,18 @@
                                                 <h4 class="product-title"><a href="#" class="pr-name">{{ product.name}}</a></h4>
                                                 <div class="price">
                                                     <ins><span class="price-amount"><span
-                                                            class="currencySymbol">£</span>85.00</span>
+                                                            class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.price }}</span>
                                                     </ins>
                                                     <del><span class="price-amount"><span
-                                                            class="currencySymbol">£</span>105.00</span>
+                                                            class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.discount }}</span>
                                                     </del>
                                                 </div>
                                                 <div class="shipping-info">
-                                                    <p class="shipping-day">3-Day Shipping</p>
+                                                    <p class="shipping-day">{{ product.shipping.name}}</p>
                                                     <p class="for-today">Free Pickup Today</p>
                                                 </div>
                                                 <div class="slide-down-box">
-                                                    <p class="message">All products are carefully selected to ensure
-                                                        food
-                                                        safety.</p>
+                                                    <p class="message">{{ product.message }}</p>
                                                     <div class="buttons">
                                                         <a href="#" class="btn wishlist-btn"><i class="fa fa-heart"
                                                                                                 aria-hidden="true"></i></a>

@@ -1,7 +1,6 @@
 from django.contrib import admin
 
-from .models import Category, Measurement, MeasurementType, Product, ProductMessage, ShippingDay, Currency
-
+from .models import Category, Measurement, MeasurementType, Product, ProductMessage, Shipping, Currency
 
 # Register your models here.
 
@@ -10,8 +9,11 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'friendly_name',)
     ordering = ('name', 'friendly_name',)
 
+
+
 class MeasurementAdmin(admin.ModelAdmin):
     list_display = ('name', 'abbreviation', 'measurement_type',)
+
 
 
 class MeasurementTypeAdmin(admin.ModelAdmin):
@@ -25,9 +27,19 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 
-admin.site.register(Currency)
-admin.site.register(ProductMessage)
-admin.site.register(ShippingDay)
+class ProductMessageAdmin(admin.ModelAdmin):
+    pass
+
+class ShippingAdmin(admin.ModelAdmin):
+    pass
+
+class CurrencyAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Currency, CurrencyAdmin)
+admin.site.register(ProductMessage, ProductMessageAdmin)
+admin.site.register(Shipping, ShippingAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Measurement, MeasurementAdmin)
 admin.site.register(MeasurementType, MeasurementTypeAdmin)

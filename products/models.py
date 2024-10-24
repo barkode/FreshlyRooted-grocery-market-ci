@@ -46,7 +46,7 @@ class Measurement(models.Model):
         return f"{self.name} | ({self.abbreviation})"
 
 
-class ShippingDay(models.Model):
+class Shipping(models.Model):
     name = models.CharField(max_length=50)
     days = models.PositiveIntegerField()  # e.g., the number of days for shipping
 
@@ -85,10 +85,10 @@ class Product(models.Model):
     slug = models.SlugField(max_length=150, unique=True, blank=True, null=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True,
                                  blank=True)
-    shipping_day = models.ForeignKey(ShippingDay, on_delete=models.SET_NULL, null=True, blank=True)
+    shipping = models.ForeignKey(Shipping, on_delete=models.SET_NULL, null=True, blank=True)
     message = models.ForeignKey(ProductMessage, on_delete=models.SET_NULL, null=True, blank=True)
     currency = models.ForeignKey(Currency, on_delete=models.SET_NULL, null=True, blank=True)
-    discount_percent = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    discount = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
 
     class Meta:
         ordering = ["-added_date"]
