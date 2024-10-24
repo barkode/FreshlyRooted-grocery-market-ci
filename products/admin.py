@@ -7,20 +7,21 @@ from .models import Category, Measurement, MeasurementType, Product
 
 class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
-    list_display = ('name', 'friendly_name')
+    list_display = ('name', 'friendly_name',)
+    ordering = ('name', 'friendly_name',)
 
 
 class ProductAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
-    list_display = ('sku', 'name', 'category', 'price', 'rating', 'image')
-
+    list_display = ('sku', 'name', 'category', 'price', 'rating', 'image',)
+    ordering = ('sku', 'name', 'category', 'rating',)
 
 class MeasurementAdmin(admin.ModelAdmin):
-    list_display = ('name', 'abbreviation', 'measurement_type')
+    list_display = ('name', 'abbreviation', 'measurement_type',)
 
 
 class MeasurementTypeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'measurement_type')
+    list_display = ('name', 'measurement_type',)
 
 
 admin.site.register(Product, ProductAdmin)
