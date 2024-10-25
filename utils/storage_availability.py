@@ -5,7 +5,7 @@ import boto3
 from botocore.exceptions import EndpointConnectionError, NoCredentialsError, ClientError
 
 # Get logger
-logger = logging.getLogger('aws_check')
+logger = logging.getLogger('storage_check')
 
 
 def is_aws_available():

@@ -29,14 +29,36 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
+# DEVELOPMENT Settings
+DEVELOPMENT  = os.getenv('DEVELOPMENT', 'False').lower() == 'true'
+
 # LOGING variable
 IS_LOGGING = os.getenv('IS_LOGGING', 'False').lower() == 'true'
 
-# ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS').split(',')) if not 'DEVELOPMENT' in os.environ else ['localhost', '127.0.0.1']
-ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS', 'localhost;127.0.0.1').split(';'))
+# Use external storage parameter
+USE_STORAGE = os.getenv('USE_STORAGE', 'False').lower() == 'true'
 
-# CSRF_TRUSTED_ORIGINS = list(os.getenv('CSRF_TRUSTED_ORIGINS').split(';')) if not 'DEVELOPMENT' in os.environ else ['http://localhost', 'http://127.0.0.1']
-CSRF_TRUSTED_ORIGINS = list(os.getenv('CSRF_TRUSTED_ORIGINS', 'http://localhost;http://127.0.0.1').split(';'))
+# Site ID
+SITE_ID = int(os.getenv('SITE_ID', '1'))
+
+
+if DEVELOPMENT:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1',]
+    CSRF_TRUSTED_ORIGINS = ['http://localhost', 'http://127.0.0.1',]
+    # Email settings
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'freshrooted@example.com'
+else:
+    ALLOWED_HOSTS = list(os.getenv('ALLOWED_HOSTS').split(';'))
+    CSRF_TRUSTED_ORIGINS = list(os.getenv('CSRF_TRUSTED_ORIGINS').split(';'))
+    # Email settings
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
+    EMAIL_PORT = int(os.getenv('EMAIL_PORT', '587'))
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+    DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
 
 # Application definition
 
@@ -103,7 +125,7 @@ AUTHENTICATION_BACKENDS = [
 
 WSGI_APPLICATION = 'app.wsgi.application'
 
-SITE_ID = int(os.getenv('SITE_ID', '1'))
+
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -180,7 +202,7 @@ STATICFILES_DIRS = (BASE_DIR / 'static',)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # AWS and white settings
-if 'USE_STORAGE' in os.environ:  # If USE_STORAGE exist than apply Cloud storage settings
+if USE_STORAGE:
     MIDDLEWARE.insert(0, 'utils.storage_check_middleware.StorageCheckMiddleware')
 else:
     # WhiteNoise for development
@@ -207,19 +229,6 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', None)
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', None)
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', None)
 
-# Email Settings
-if 'DEVELOPMENT' in os.environ:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'freshrooted@example.com'
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
-    EMAIL_PORT = int(os.getenv('EMAIL_PORT', '587'))
-    EMAIL_USE_TLS = True
-    EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-    EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-    DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
-
 # Add logging settings
 if IS_LOGGING:
     LOGGING = {
@@ -229,16 +238,11 @@ if IS_LOGGING:
             'file': {
                 'level': 'INFO',  # Logging level (INFO, DEBUG, ERROR)
                 'class': 'logging.FileHandler',
-                'filename': os.path.join(BASE_DIR, 'logs/aws_availability.log'),  # Лог-файл
+                'filename': os.path.join(BASE_DIR, 'logs/storage_check.log'),
                 },
             },
         'loggers': {
-            'django': {
-                'handlers': ['file'],
-                'level': 'INFO',
-                'propagate': True,
-                },
-            'aws_check': {  # AWS checker logger
+            'storage_check': {
                 'handlers': ['file'],
                 'level': 'INFO',
                 'propagate': False,
