@@ -168,7 +168,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-# STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = (BASE_DIR / 'static',)
 
 # MEDIA_URL = '/media/'
@@ -180,39 +180,20 @@ STATICFILES_DIRS = (BASE_DIR / 'static',)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # AWS and white settings
-if 'USE_AWS' in os.environ:  # If USE_AWS exist than apply AWS settings
-    MIDDLEWARE.insert(0, 'utils.is_aws_aviable_middleware.AWSCheckMiddleware')
-    # AWS Cache parameters
-    AWS_S3_OBJECT_PARAMETERS = {
-        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-        'CacheControl': 'max-age=94608000',
-        }
-    # S3 Configuration
-    AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME', None)
-    AWS_S3_REGION_NAME = os.getenv('AWS_S3_REGION_NAME', None)
-    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', None)
-    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', None)
-    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
-
-    # Static and Media files settings
-    STATICFILES_STORAGE = 'custom_storages.StaticStorage'  # Custom class for saving static files
-    STATICFILES_DIRECTORY = 'static'
-    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'  # Custom class for saving media files
-    MEDIAFILES_DIRECTORY = 'media'
-
-    # URL's for static and media files
-    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_DIRECTORY}/'
-    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_DIRECTORY}/'
+if 'USE_STORAGE' in os.environ:  # If USE_STORAGE exist than apply Cloud storage settings
+    MIDDLEWARE.insert(0, 'utils.storage_check_middleware.StorageCheckMiddleware')
 else:
     # WhiteNoise for development
     INSTALLED_APPS.insert(0, 'whitenoise.runserver_nostatic')
-    MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+    MIDDLEWARE.insert(2, 'whitenoise.middleware.WhiteNoiseMiddleware')
     STORAGES = {
         "default": {
             "BACKEND": "django.core.files.storage.FileSystemStorage",
             },
         "staticfiles": {
-            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage", }}
+            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+            }
+        }
     STATIC_ROOT = BASE_DIR / 'staticfiles'
     STATIC_URL = '/static/'
     MEDIA_URL = '/media/'
