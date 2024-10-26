@@ -17,7 +17,7 @@
                 </a>
             {% else %}
                 <a href="#" class="link-to-product">
-                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" width="270" height="270"
+                    <img src="{% static 'images/noimage.png' %}" alt="{{ product.name }}" width="270" height="270"
                          class="product-thumnail">
                 </a>
             {% endif %}
@@ -37,16 +37,12 @@
             <div class="shipping-info">
                 {% if product.shipping.name %}
                     <p class="shipping-day">{{ product.shipping.name }}</p>
-                {% else %}
-                    <p class="shipping-day"></p>
                 {% endif %}
                 <p class="for-today">Free Pickup Today</p>
             </div>
             <div class="slide-down-box">
                 {% if product.message %}
                     <p class="message">{{ product.message }}</p>
-                {% else %}
-                    <p class="message"></p>
                 {% endif %}
                 <div class="buttons">
                     <a href="#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
