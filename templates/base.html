@@ -58,19 +58,18 @@
 {% endif %}
 
 {% block after_header %}{% endblock %}
-<main>
-    <div class="page-contain">
 
-        <!-- Main content -->
-        <div id="main-content" class="main-content">
-            {% block content %}{% endblock %}
-        </div>
-    </div>
+<!-- Main content -->
+<main>
+
+    {% block content %}{% endblock %}
+
 </main>
 
-
 <!-- FOOTER -->
-{% include 'includes/footer.html' %}
+<footer id="footer" class="footer layout-01">
+    {% include 'includes/footer.html' %}
+</footer>
 
 <!--Footer For Mobile-->
 {% include 'includes/footer_mobile_menu.html' %}
