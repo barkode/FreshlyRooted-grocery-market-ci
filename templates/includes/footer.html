@@ -7,24 +7,12 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-xs-12">
                     <section class="footer-item">
-                        <a href="{% url 'home' %}" class="logo footer-logo"><img
-                                src="{% static 'images/logo-biolife-1.png' %}" alt="FreshlyRooted Market" width="135"
-                                height="34"></a>
-                        <div class="footer-phone-info mode-03">
-                            <i class="biolife-icon icon-head-phone"></i>
-                            <p class="r-info">
-                                <span>Got Questions ?</span>
-                                <span class="number">(700)  9001-1909  (900) 689 -66</span>
-                            </p>
-                        </div>
-                        <div class="contact-info-block footer-layout simple-info">
-                            <h4 class="title">Contact info</h4>
-                            <div class="info-item">
-                                <img src="{% static 'tmp/assets/images/location-icon.png' %}" width="22" height="26"
-                                     alt="" class="icon">
-                                <p class="desc">7563 St. Vicent Place, Glasgow, Greater Newyork NH7689, UK </p>
-                            </div>
-                        </div>
+
+                        {% include 'includes/footer_logo_block.html' %}
+
+                        {% include 'includes/footer_phone_info_block.html' %}
+
+                        {% include 'includes/footer_contact_info_block.html' %}
 
                         {% include 'includes/footer_social_media_links.html' %}
 
