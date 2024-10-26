@@ -2,50 +2,45 @@
 {% load static %}
 
 {% block content %}
-    <div class="main-slide block-slider">
-        <ul class="biolife-carousel nav-none-on-mobile" data-slick='{"arrows": true, "dots": false, "slidesMargin": 0, "slidesToShow": 1, "infinite": true, "speed": 800}' >
-            <li>
-                <div class="slide-contain slider-opt03__layout01 mode-02 slide-bgr-01">
-                    <div class="media"></div>
-                    <div class="text-content">
-                        <i class="first-line">Pomegranate</i>
-                        <h3 class="second-line">Fresh Juice. 100% Organic</h3>
-                        <p class="third-line">A blend of freshly squeezed green apple & fruits</p>
-                        <p class="buttons">
-                            <a href="#" class="btn btn-bold">Shop now</a>
-                            <a href="#" class="btn btn-thin">View lookbook</a>
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="slide-contain slider-opt03__layout01 mode-02 slide-bgr-02">
-                    <div class="media"></div>
-                    <div class="text-content">
-                        <i class="first-line">Pomegranate</i>
-                        <h3 class="second-line">Fresh Juice. 100% Organic</h3>
-                        <p class="third-line">A blend of freshly squeezed green apple & fruits</p>
-                        <p class="buttons">
-                            <a href="#" class="btn btn-bold">Shop now</a>
-                            <a href="#" class="btn btn-thin">View lookbook</a>
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="slide-contain slider-opt03__layout01 mode-02 slide-bgr-03">
-                    <div class="media"></div>
-                    <div class="text-content">
-                        <i class="first-line">Pomegranate</i>
-                        <h3 class="second-line">Fresh Juice. 100% Organic</h3>
-                        <p class="third-line">A blend of freshly squeezed green apple & fruits</p>
-                        <p class="buttons">
-                            <a href="#" class="btn btn-bold">Shop now</a>
-                            <a href="#" class="btn btn-thin">View lookbook</a>
-                        </p>
-                    </div>
-                </div>
-            </li>
-        </ul>
+    <div class="page-contain">
+
+        <!-- Main content -->
+        <div id="main-content" class="main-content">
+
+            <!-- Block 01: Main slide block-->
+            {% include 'includes/home_main_slide_block.html' %}
+
+
+            <!-- Block 02: Grid Banners-->
+            {% include 'includes/home_grid_banners_block.html' %}
+
+            <!-- Block 03: Product Tab-->
+            {% include 'includes/home_product_tab_block.html' with position='upper'%}
+
+            <!-- Block 04: Banners-->
+            {% include 'includes/home_banners_block.html' %}
+
+            <!-- Block 05: Banner Promotion-->
+            {% include 'includes/home_banner_promotion_block.html' %}
+
+            <!-- Block 06: Product Tab-->
+            {% include 'includes/home_product_tab_block.html' with position='bottom' %}
+
+            <!-- Block 07: Blog posts-->
+            {% include 'includes/home_blog_posts_block.html' %}
+
+            <!-- Block 08: Advance Product-->
+            {% include 'includes/home_advance_product_block.html' %}
+
+
+            <!-- Block 09: Instagram-->
+            {% include 'includes/home_instagram_block.html' %}
+
+
+            <!-- Block 10: Brands-->
+            {% include 'includes/home_brands_block.html' %}
+
+        </div>
+
     </div>
 {% endblock %}
