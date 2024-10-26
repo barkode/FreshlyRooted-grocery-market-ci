@@ -93,7 +93,7 @@
                         <div class="row">
                             <ul class="products-list">
 
-                                {% for product in product %}
+                                {% for product in products %}
                                     {% include 'includes/products_product_card.html' with product=product %}
                                 {% empty %}
                                     {% include 'includes/products_no_products.html' %}

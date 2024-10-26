@@ -1,39 +1,58 @@
 {% load static %}
 
-<li class="product-item col-lg-2 col-md-3 col-sm-4 col-xs-6">
+<li class="product-item col-lg-3 col-md-3 col-sm-4 col-xs-6">
     <div class="contain-product layout-default">
+        <div>
+            {% if product.rating %}
+                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+            {% else %}
+                <small class="text-muted">No Rating</small>
+            {% endif %}
+        </div>
         <div class="product-thumb">
-            <a href="#" class="link-to-product">
-                <img src="{{ product.image.url}}" alt="dd" width="270"
-                     height="270" class="product-thumnail">
-            </a>
+            {% if  product.image %}
+                <a href="#" class="link-to-product">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" width="270" height="270"
+                         class="product-thumnail">
+                </a>
+            {% else %}
+                <a href="#" class="link-to-product">
+                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" width="270" height="270"
+                         class="product-thumnail">
+                </a>
+            {% endif %}
         </div>
         <div class="info">
             <b class="categories">{{ product.category }}</b>
-            <h4 class="product-title"><a href="#" class="pr-name">{{ product.name}}</a></h4>
+            <h4 class="product-title"><a href="#" class="pr-name">{{ product.name }}</a></h4>
             <div class="price">
                 <ins><span class="price-amount"><span
-                        class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.price }}</span>
-                </ins>
-                <del><span class="price-amount"><span
-                        class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.discount }}</span>
-                </del>
+                        class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.price }}</span></ins>
+                {% if product.discount %}
+                    <del><span class="price-amount"><span
+                            class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.discount }}</span>
+                    </del>
+                {% endif %}
             </div>
             <div class="shipping-info">
-                <p class="shipping-day">{{ product.shipping.name}}</p>
+                {% if product.shipping.name %}
+                    <p class="shipping-day">{{ product.shipping.name }}</p>
+                {% else %}
+                    <p class="shipping-day"></p>
+                {% endif %}
                 <p class="for-today">Free Pickup Today</p>
             </div>
             <div class="slide-down-box">
-                <p class="message">{{ product.message }}</p>
+                {% if product.message %}
+                    <p class="message">{{ product.message }}</p>
+                {% else %}
+                    <p class="message"></p>
+                {% endif %}
                 <div class="buttons">
-                    <a href="#" class="btn wishlist-btn"><i class="fa fa-heart"
-                                                            aria-hidden="true"></i></a>
-                    <a href="#" class="btn add-to-cart-btn"><i
-                            class="fa fa-cart-arrow-down" aria-hidden="true"></i>add
-                        to
-                        cart</a>
-                    <a href="#" class="btn compare-btn"><i class="fa fa-random"
-                                                           aria-hidden="true"></i></a>
+                    <a href="#" class="btn wishlist-btn"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                    <a href="#" class="btn add-to-cart-btn"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>add
+                        to cart</a>
+                    <a href="#" class="btn compare-btn"><i class="fa fa-random" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
