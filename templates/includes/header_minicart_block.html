@@ -1,29 +1,31 @@
 {% load static %}
 
-<div class="minicart-block">
+<div class="minicart-block layout-02">
     <div class="minicart-contain">
-        <a href="javascript:void(0)" class="link-to">
-                                            <span class="icon-qty-combine">
-                                                <i class="icon-cart-mini biolife-icon"></i>
-                                                <span class="qty">8</span>
-                                            </span>
-            <span class="title">My Cart -</span>
-            <span class="sub-total {% if True %}text-info font-weight-bold{% endif %}">
-                                        {% if grand_total %}
-                                            ${{ grand_total|floatformat:2 }}
-                                        {% else %}
-                                            $0.00
-                                        {% endif %}</span>
-        </a>
+        <div class="icon-contain">
+            <div class="span-index">
+                <i class="icon-cart-mini biolife-icon"></i>
+                <span class="qty">8</span>
+                <span class="sub-total {% if True %}text-info font-weight-bold{% endif %}"></span>
+                <span class="sub-total {% if grand_total %}text-info font-weight-bold{% endif %}">
+                    0 items -
+                    {% if grand_total %}
+                        ${{ grand_total|floatformat:2 }}
+                    {% else %}
+                        $0.00
+                    {% endif %}
+                </span>
+            </div>
+            <a href="#" class="btn-to-cart">Go</a>
+        </div>
         <div class="cart-content">
             <div class="cart-inner">
                 <ul class="products">
                     <li>
                         <div class="minicart-item">
                             <div class="thumb">
-                                <a href="#"><img
-                                        src="{% static 'tmp/assets/images/minicart/pr-01.jpg' %}"
-                                        width="90" height="90" alt="National Fresh"></a>
+                                <a href="#"><img src="{% static 'tmp/assets/images/minicart/pr-01.jpg' %}" width="90"
+                                                 height="90" alt="National Fresh"></a>
                             </div>
                             <div class="left-info">
                                 <div class="product-title"><a href="#" class="product-name">National
@@ -36,9 +38,8 @@
                                 </div>
                                 <div class="qty">
                                     <label for="cart[id123][qty]">Qty:</label>
-                                    <input type="number" class="input-qty"
-                                           name="cart[id123][qty]" id="cart[id123][qty]"
-                                           value="1" disabled>
+                                    <input type="number" class="input-qty" name="cart[id123][qty]"
+                                           id="cart[id123][qty]" value="1" disabled>
                                 </div>
                             </div>
                             <div class="action">
@@ -52,9 +53,8 @@
                     <li>
                         <div class="minicart-item">
                             <div class="thumb">
-                                <a href="#"><img
-                                        src="{% static 'tmp/assets/images/minicart/pr-02.jpg' %}"
-                                        width="90" height="90" alt="National Fresh"></a>
+                                <a href="#"><img src="{% static 'tmp/assets/images/minicart/pr-02.jpg' %}" width="90"
+                                                 height="90" alt="National Fresh"></a>
                             </div>
                             <div class="left-info">
                                 <div class="product-title"><a href="#" class="product-name">National
@@ -67,9 +67,8 @@
                                 </div>
                                 <div class="qty">
                                     <label for="cart[id124][qty]">Qty:</label>
-                                    <input type="number" class="input-qty"
-                                           name="cart[id124][qty]" id="cart[id124][qty]"
-                                           value="1" disabled>
+                                    <input type="number" class="input-qty" name="cart[id124][qty]"
+                                           id="cart[id124][qty]" value="1" disabled>
                                 </div>
                             </div>
                             <div class="action">
@@ -83,9 +82,8 @@
                     <li>
                         <div class="minicart-item">
                             <div class="thumb">
-                                <a href="#"><img
-                                        src="{% static 'tmp/assets/images/minicart/pr-03.jpg' %}"
-                                        width="90" height="90" alt="National Fresh"></a>
+                                <a href="#"><img src="{% static 'tmp/assets/images/minicart/pr-03.jpg' %}" width="90"
+                                                 height="90" alt="National Fresh"></a>
                             </div>
                             <div class="left-info">
                                 <div class="product-title"><a href="#" class="product-name">National
@@ -98,9 +96,8 @@
                                 </div>
                                 <div class="qty">
                                     <label for="cart[id125][qty]">Qty:</label>
-                                    <input type="number" class="input-qty"
-                                           name="cart[id125][qty]" id="cart[id125][qty]"
-                                           value="1" disabled>
+                                    <input type="number" class="input-qty" name="cart[id125][qty]"
+                                           id="cart[id125][qty]" value="1" disabled>
                                 </div>
                             </div>
                             <div class="action">
@@ -114,9 +111,8 @@
                     <li>
                         <div class="minicart-item">
                             <div class="thumb">
-                                <a href="#"><img
-                                        src="{% static 'tmp/assets/images/minicart/pr-04.jpg' %}"
-                                        width="90" height="90" alt="National Fresh"></a>
+                                <a href="#"><img src="{% static 'tmp/assets/images/minicart/pr-04.jpg' %}" width="90"
+                                                 height="90" alt="National Fresh"></a>
                             </div>
                             <div class="left-info">
                                 <div class="product-title"><a href="#" class="product-name">National
@@ -129,9 +125,8 @@
                                 </div>
                                 <div class="qty">
                                     <label for="cart[id126][qty]">Qty:</label>
-                                    <input type="number" class="input-qty"
-                                           name="cart[id126][qty]" id="cart[id126][qty]"
-                                           value="1" disabled>
+                                    <input type="number" class="input-qty" name="cart[id126][qty]"
+                                           id="cart[id126][qty]" value="1" disabled>
                                 </div>
                             </div>
                             <div class="action">
@@ -145,9 +140,8 @@
                     <li>
                         <div class="minicart-item">
                             <div class="thumb">
-                                <a href="#"><img
-                                        src="{% static 'tmp/assets/images/minicart/pr-05.jpg' %}"
-                                        width="90" height="90" alt="National Fresh"></a>
+                                <a href="#"><img src="{% static 'tmp/assets/images/minicart/pr-05.jpg' %}" width="90"
+                                                 height="90" alt="National Fresh"></a>
                             </div>
                             <div class="left-info">
                                 <div class="product-title"><a href="#" class="product-name">National
@@ -160,9 +154,8 @@
                                 </div>
                                 <div class="qty">
                                     <label for="cart[id127][qty]">Qty:</label>
-                                    <input type="number" class="input-qty"
-                                           name="cart[id127][qty]" id="cart[id127][qty]"
-                                           value="1" disabled>
+                                    <input type="number" class="input-qty" name="cart[id127][qty]"
+                                           id="cart[id127][qty]" value="1" disabled>
                                 </div>
                             </div>
                             <div class="action">
