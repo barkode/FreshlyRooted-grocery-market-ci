@@ -38,6 +38,9 @@ IS_LOGGING = os.getenv('IS_LOGGING', 'False').lower() == 'true'
 # Use external storage parameter
 USE_STORAGE = os.getenv('USE_STORAGE', 'False').lower() == 'true'
 
+# Use external database
+USE_DATABASE = os.getenv('USE_DATABASE', 'False').lower() == 'true'
+
 # Site ID
 SITE_ID = int(os.getenv('SITE_ID', '1'))
 
@@ -100,7 +103,12 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates', BASE_DIR / 'templates/allauth', ],
+        'DIRS': [
+            BASE_DIR / 'templates',
+            BASE_DIR / 'templates/allauth',
+            BASE_DIR / 'home/templates/home',
+            BASE_DIR / 'products/templates/products',
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -108,7 +116,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media',
                 ],
             },
         },
@@ -140,7 +147,7 @@ LOGIN_REDIRECT_URL = '/'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if 'DATABASE_HOST' in os.environ:
+if USE_DATABASE:
     DATABASES = {
         'default': {
             "ENGINE": "django.db.backends.postgresql_psycopg2",
