@@ -380,9 +380,9 @@
                 <div class="primary-menu">
                     <ul class="menu biolife-menu clone-main-menu clone-primary-menu" id="primary-menu"
                         data-menuname="main menu">
-                        <li class="menu-item"><a href="#">Home</a></li>
+                        <li class="menu-item"><a href="{% url 'home:home' %}">Home</a></li>
                         <li class="menu-item menu-item-has-children has-megamenu">
-                            <a href="#" class="menu-name" data-title="Shop">Shop</a>
+                        <a href="{% url 'products:products' %}" class="menu-name" data-title="Shop">Shop</a>
                             <div class="wrap-megamenu lg-width-900 md-full-width">
                                 <div class="mega-content">
                                     <div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
@@ -558,7 +558,7 @@
             </div>
             <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                 <div class="logo-for-mobile hidden-lg hidden-md">
-                    <a href="{% url 'home:home' %}" class="biolife-logo"><img src="assets/images/logo-biolife-1.png"
+                    <a href="{% url 'home:home' %}" class="biolife-logo"><img src="{% static 'images/logo-no-background.png' %}"
                                                                          alt="biolife logo" width="135" height="36"></a>
                 </div>
                 <div class="biolife-cart-info center-align-mobile">
