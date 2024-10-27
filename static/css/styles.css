@@ -196,6 +196,11 @@ body.top-refine-opened .top-functions-area .flt-item.group-on-mobile .wrap-selec
 	border-color: #90bf2a;
 }
 
+.minicart-block.layout-02 .span-index .qty {
+	background-color: #05a503;
+}
+
+
 .dropdown-toggle.login-link {
 	line-height: inherit;
 	border: none;
