@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="container">
+    <nav class="biolife-nav">
+        <ul>
+            <li class="nav-item"><a href="{% url 'home:home' %}" class="permal-link">Home</a></li>
+
+            {% if category %}
+                <li class="nav-item"><a href="#" class="permal-link">{{ product.category.name }}</a></li>
+            {% endif %}
+
+            {% if item %}
+                <li class="nav-item"><span class="current-page">{{ product.name }}</span></li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
