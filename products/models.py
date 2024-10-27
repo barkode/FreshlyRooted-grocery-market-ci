@@ -25,6 +25,27 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
+class SubCategory(models.Model):
+    name = models.CharField(max_length=254, unique=True)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+    slug = models.SlugField(max_length=150, unique=True, blank=True, null=True)
+
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
+
 
 class MeasurementType(models.Model):
     name = models.CharField(max_length=50)
@@ -72,6 +93,7 @@ class Currency(models.Model):
 class Product(models.Model):
     added_date = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
+    sub_category = models.ForeignKey(SubCategory, on_delete=models.SET_NULL, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True, default='noimage.png')
     image_url = models.URLField(max_length=1024, null=True, blank=True)
