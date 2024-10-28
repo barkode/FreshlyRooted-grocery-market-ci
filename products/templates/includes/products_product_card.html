@@ -23,8 +23,8 @@
             {% endif %}
         </div>
         <div class="info">
-            <b class="categories">{{ product.category }}</b>
-            <h4 class="product-title"><a href="#" class="pr-name">{{ product.name }}</a></h4>
+            <b class="categories">{{ product.category.friendly_name|default:product.category.name }}</b>
+            <h4 class="product-title"><a href="#" class="pr-name">{{ product.friendly.name }}</a></h4>
             <div class="price">
                 <ins><span class="price-amount"><span
                         class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.price }}</span></ins>

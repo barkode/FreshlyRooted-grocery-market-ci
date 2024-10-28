@@ -37,7 +37,7 @@
                             <p class="star-rating"><span class="width-80percent"></span></p>
                             <span class="review-count">(04 Reviews)</span>
                             <span class="qa-text">Q&amp;A</span>
-                            <b class="category">By: Natural food</b>
+                            <b class="category">By: {{ product.category.friendly_name|default:product.category.name }}</b>
                         </div>
                         <span class="sku">Sku: {{ product.sku }}</span>
                         <p class="excerpt">{{ product.description }}</p>

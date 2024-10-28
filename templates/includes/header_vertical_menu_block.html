@@ -1,17 +1,17 @@
 {% load static %}
 
-{% if header_menu|lower == 'fruit-&-nut-gifts' %}
+{% if header_menu|lower == 'fruit-nut-gifts' %}
     <li class="menu-item">
-        <a href="#" class="menu-title">
+        <a href="{% url 'products:products' %}?category=fruit,nut,gift" class="menu-title">
             <i class="biolife-icon icon-fruits"></i>
-            Fruit & Nut Gifts
+            Fruit &amp; Nut Gifts
         </a>
     </li>
 {% endif %}
 
 {% if header_menu|lower == 'vegetables' %}
     <li class="menu-item">
-        <a href="#" class="menu-title">
+        <a href="{% url 'products:products' %}?category=vegetables" class="menu-title">
             <i class="biolife-icon icon-broccoli-1"></i>
             Vegetables
         </a>
@@ -20,7 +20,7 @@
 
 {% if header_menu|lower == 'fresh-berries' %}
     <li class="menu-item">
-        <a href="#" class="menu-title">
+        <a href="{% url 'products:products' %}?category=fresh,berries" class="menu-title">
             <i class="biolife-icon icon-grape"></i>
             Fresh Berries
         </a>
@@ -28,22 +28,26 @@
 {% endif %}
 
 {% if header_menu|lower == 'ocean-foods' %}
-    <li class="menu-item"><a href="#" class="menu-name" data-title="Ocean Foods"><i
-            class="biolife-icon icon-fish"></i>Ocean Foods</a></li>
+    <li class="menu-item">
+        <a href="{% url 'products:products' %}?category=ocean,foods">
+            <i class="biolife-icon icon-fish"></i>
+            Ocean Foods
+        </a>
+    </li>
 {% endif %}
 
-{% if header_menu|lower == 'butter-&-eggs' %}
+{% if header_menu|lower == 'butter-eggs' %}
     <li class="menu-item">
-        <a href="#" class="menu-title">
+        <a href="{% url 'products:products' %}?category=butter,eggs" class="menu-title">
             <i class="biolife-icon icon-honey"></i>
-            Butter & Eggs
+            Butter &amp; Eggs
         </a>
     </li>
 {% endif %}
 
 {% if header_menu|lower == 'fastfood' %}
     <li class="menu-item">
-        <a href="#" class="menu-title">
+        <a href="{% url 'products:products' %}?category=fastfood" class="menu-title">
             <i class="biolife-icon icon-fast-food"></i>
             Fastfood
         </a>
@@ -52,7 +56,7 @@
 
 {% if header_menu|lower == 'fresh-meat' %}
     <li class="menu-item">
-        <a href="#" class="menu-title">
+        <a href="{% url 'products:products'%}?category=fresh,meat" class="menu-title">
             <i class="biolife-icon icon-beef"></i>
             Fresh Meat
         </a>
@@ -61,36 +65,36 @@
 
 {% if header_menu|lower == 'fresh-onion' %}
     <li class="menu-item">
-        <a href="#" class="menu-title">
+        <a href="{% url 'products:products'%}?category=fresh,onion" class="menu-title">
             <i class="biolife-icon icon-onions"></i>
             Fresh Onion
         </a>
     </li>
 {% endif %}
 
-{% if header_menu|lower == 'papaya-&-crisps' %}
+{% if header_menu|lower == 'papaya-crisps' %}
     <li class="menu-item">
-        <a href="#" class="menu-title">
+        <a href="{% url 'products:products'%}?category=papaya,crisps" class="menu-title">
             <i class="biolife-icon icon-avocado"></i>
-            Papaya & Crisps
+            Papaya &amp; Crisps
         </a>
     </li>
 {% endif %}
 
 {% if header_menu|lower == 'oatmeal' %}
     <li class="menu-item">
-        <a href="#" class="menu-title">
+        <a href="{% url 'products:products'%}?category=oatmeal" class="menu-title">
             <i class="biolife-icon icon-contain"></i>
             Oatmeal
         </a>
     </li>
 {% endif %}
 
-{% if header_menu|lower == 'fresh-bananas-&-plantains' %}
+{% if header_menu|lower == 'fresh-bananas-plantains' %}
     <li class="menu-item">
-        <a href="#" class="menu-title">
+        <a href="{% url 'products:products'%}?category=fresh,bananas,plantains" class="menu-title">
             <i class="biolife-icon icon-fresh-juice"></i>
-            Fresh Bananas & Plantains
+            Fresh Bananas &amp; Plantains
         </a>
     </li>
 {% endif %}
