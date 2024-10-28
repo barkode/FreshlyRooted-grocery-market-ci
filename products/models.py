@@ -84,7 +84,11 @@ class Currency(models.Model):
 class Product(models.Model):
     added_date = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(
-        Category, on_delete=models.SET_NULL, null=True, blank=True, related_name="category"
+        Category,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="category",
     )
     description = models.TextField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True, default="noimage.png")
@@ -131,5 +135,4 @@ class Product(models.Model):
         return unique_slug
 
     def __str__(self):
-        abbreviation = self.measurement.abbreviation if self.measurement else "N/A"
-        return f"{self.name} | ({self.measurement_value} | {abbreviation})"
+        return self.name

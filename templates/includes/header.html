@@ -86,6 +86,7 @@
                     <ul class="menu biolife-menu clone-main-menu clone-primary-menu" id="primary-menu"
                         data-menuname="main menu">
                         {% include 'includes/header_horizontal_menu_block.html' with header_menu='home' %}
+                        {% include 'includes/header_horizontal_menu_block.html' with header_menu='all_products' %}
 {#                        {% include 'includes/header_horizontal_menu_block.html' with header_menu='shop' %}#}
 {#                        {% include 'includes/header_horizontal_menu_block.html' with header_menu='product' %}#}
                         {% include 'includes/header_horizontal_menu_block.html' with header_menu='blog' %}
@@ -96,7 +97,7 @@
             <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
                 <div class="logo-for-mobile hidden-lg hidden-md">
                     <a href="{% url 'home:home' %}" class="biolife-logo"><img src="{% static 'images/logo-no-background.png' %}"
-                                                                         alt="biolife logo" width="135" height="36"></a>
+                                                                         alt="Freshly Rooted Market" width="135" height="36"></a>
                 </div>
                 <div class="biolife-cart-info center-align-mobile">
                     <!-- Mobile search -->
