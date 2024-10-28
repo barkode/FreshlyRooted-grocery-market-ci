@@ -34,12 +34,6 @@ class Category(models.Model):
         return self.friendly_name
 
 
-class SubCategory(Category):
-    class Meta:
-        verbose_name = "Sub Category"
-        verbose_name_plural = "Sub Categories"
-
-
 class MeasurementType(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(null=True, blank=True)
@@ -91,9 +85,6 @@ class Product(models.Model):
     added_date = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, null=True, blank=True, related_name="category"
-    )
-    sub_category = models.ForeignKey(
-        SubCategory, on_delete=models.SET_NULL, null=True, blank=True, related_name="sub_category"
     )
     description = models.TextField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True, default="noimage.png")

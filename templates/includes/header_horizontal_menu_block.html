@@ -188,6 +188,25 @@
     <li class="menu-item"><a href="contact.html">Contact</a></li>
 {% endif %}
 
+{% if header_menu|lower == 'all_dep' %}
+    <li class="menu-item menu-item-has-children has-child">
+        <a href="#" class="menu-name" data-title="Product">Product</a>
+        <ul class="sub-menu">
+            {% include 'includes/header_vertical_menu_block.html' with header_menu='fruit-&-nut-gifts' %}
+            {% include 'includes/header_vertical_menu_block.html' with header_menu='vegetables' %}
+            {% include 'includes/header_vertical_menu_block.html' with header_menu='fresh-berries' %}
+            {% include 'includes/header_vertical_menu_block.html' with header_menu='ocean-foods' %}
+            {% include 'includes/header_vertical_menu_block.html' with header_menu='butter-&-eggs' %}
+            {% include 'includes/header_vertical_menu_block.html' with header_menu='fastfood' %}
+            {% include 'includes/header_vertical_menu_block.html' with header_menu='fresh-meat' %}
+            {% include 'includes/header_vertical_menu_block.html' with header_menu='fresh-onion' %}
+            {% include 'includes/header_vertical_menu_block.html' with header_menu='papaya-&-crisps' %}
+            {% include 'includes/header_vertical_menu_block.html' with header_menu='oatmeal' %}
+            {% include 'includes/header_vertical_menu_block.html' with header_menu='fresh-bananas-&-plantains' %}
+        </ul>
+    </li>
+{% endif %}
+
 
 
 
