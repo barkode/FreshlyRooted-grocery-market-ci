@@ -24,9 +24,11 @@ def all_products(request):
         }
 
     if request.GET:
-        if 'sort' in request.GET:
+        if 'sort' in request.GET and sort_options.get(request.GET['sort']):
             sortkey = request.GET.get('sort', 'default')
             products = products.order_by(sort_options[sortkey])
+        else:
+            products = products.order_by(sort_options['default'])
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
