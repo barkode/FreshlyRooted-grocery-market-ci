@@ -1,6 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
+
 <html class="no-js" lang="en">
 
 <head>
@@ -31,8 +32,7 @@
 
     {% block extra_css %}{% endblock %}
 
-    {% block core_js %}
-    {% endblock %}
+    {% block core_js %}{% endblock %}
 
     {% block extra_js %}{% endblock %}
 
@@ -40,6 +40,7 @@
 
     <title>Fresh Rooted {% block extra_title %}{% endblock %}</title>
 </head>
+
 <body class="biolife-body">
 
 <!-- Preloader -->
@@ -59,8 +60,10 @@
 
 <!-- Main content -->
 <main style="margin-top: 270px;">
+
     {% block content %}{% endblock %}
 </main>
+
 <!-- FOOTER -->
 <footer id="footer" class="footer layout-01">
     {% include 'includes/footer.html' %}
