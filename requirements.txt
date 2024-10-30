@@ -1,7 +1,7 @@
 asgiref==3.8.1
 black==24.10.0
-boto3==1.35.49
-botocore==1.35.49
+boto3==1.35.51
+botocore==1.35.51
 certifi==2024.8.30
 charset-normalizer==3.4.0
 click==8.1.7
@@ -29,10 +29,10 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 requests==2.32.3
 s3transfer==0.10.3
-setuptools==75.2.0
+setuptools==75.3.0
 six==1.16.0
 sqlparse==0.5.1
 typing_extensions==4.12.2
 tzdata==2024.2
 urllib3==2.2.3
-whitenoise==6.8.1
+whitenoise==6.8.2
