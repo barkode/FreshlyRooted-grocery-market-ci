@@ -17,7 +17,7 @@
         <div class="wrap-selectors">
             <div class="selector-item orderby-selector">
                 <form method="get" action="{% url 'products:products' %}">
-                    <select name="sort" class="orderby" aria-label="Shop order" onchange="this.form.submit()">
+                    <select name="sort" class="orderby" aria-label="Shop order" onchange="this.form.submit()" id="sort-selector">
                         <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by ...
                         </option>
                         <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low

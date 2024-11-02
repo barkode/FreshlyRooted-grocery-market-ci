@@ -134,5 +134,11 @@ class Product(models.Model):
             num += 1
         return unique_slug
 
+    def sell_price(self):
+        if self.discount and self.discount > 0:
+            return round(self.price - self.price * self.discount / 100, 2)
+
+        return self.price
+
     def __str__(self):
         return self.name
