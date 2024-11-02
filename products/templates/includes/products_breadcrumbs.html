@@ -5,12 +5,8 @@
         <ul>
             <li class="nav-item"><a href="{% url 'home:home' %}" class="permal-link">Home</a></li>
 
-            {% if category %}
-                <li class="nav-item"><a href="#" class="permal-link">{{ product.category.name }}</a></li>
-            {% endif %}
-
-            {% if item %}
-                <li class="nav-item"><span class="current-page">{{ product.name }}</span></li>
+            {% if product.category %}
+                <li class="nav-item"><a href="{% url 'products:products' %}?category={{ product.category.name }}" class="permal-link">{{ product.category.friendly_name }}</a></li>
             {% endif %}
         </ul>
     </nav>

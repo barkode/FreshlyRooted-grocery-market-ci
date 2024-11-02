@@ -23,16 +23,21 @@
             {% endif %}
         </div>
         <div class="info">
-            <b href="" class="categories">{{ product.category.friendly_name|default:product.category.name }}</b>
+            <b class="categories">{{ product.category.friendly_name|default:product.category.name }}</b>
             <h4 class="product-title"><a href="{% url 'products:product_detail' product.id %}"
                                          class="pr-name">{{ product.name }}</a></h4>
             <div class="price">
-                <ins><span class="price-amount"><span
-                        class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.price }}</span></ins>
-                {% if product.discount %}
+                {% if product.discount > 0 %}
+                    <ins><span class="price-amount"><span
+                            class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.sell_price }}</span>
+                    </ins>
                     <del><span class="price-amount"><span
-                            class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.discount }}</span>
+                            class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.price }}</span>
                     </del>
+                {% else %}
+                    <ins><span class="price-amount"><span
+                            class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.sell_price }}</span>
+                    </ins>
                 {% endif %}
             </div>
             <div class="shipping-info">

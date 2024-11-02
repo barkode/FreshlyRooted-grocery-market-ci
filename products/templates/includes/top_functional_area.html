@@ -2,55 +2,13 @@
 
 <div id="top-functions-area" class="top-functions-area">
     <!-- Refine -->
-    <div class="flt-item to-left group-on-mobile">
-        <span class="flt-title">Refine</span>
-        <a href="#" class="icon-for-mobile">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
+    <div class="flt-item to-left">
         <div class="wrap-selectors">
-            <form action="#" name="frm-refine" method="get">
-                <span class="title-for-mobile">Refine Products By</span>
-                <div data-title="Price:" class="selector-item">
-                    <select name="price" class="selector">
-                        <option value="all">Price</option>
-                        <option value="class-1st">Less than 5$</option>
-                        <option value="class-2nd">$5-10$</option>
-                        <option value="class-3rd">$10-20$</option>
-                        <option value="class-4th">$20-45$</option>
-                        <option value="class-5th">$45-100$</option>
-                        <option value="class-6th">$100-150$</option>
-                        <option value="class-7th">More than 150$</option>
-                    </select>
-                </div>
-
-                <div data-title="Brand:" class="selector-item">
-                    <select name="brad" class="selector">
-                        <option value="all">Top brands</option>
-                        <option value="br2">Brand first</option>
-                        <option value="br3">Brand second</option>
-                        <option value="br4">Brand third</option>
-                        <option value="br5">Brand fourth</option>
-                        <option value="br6">Brand fiveth</option>
-                    </select>
-                </div>
-
-                <div data-title="Avalability:" class="selector-item">
-                    <select name="ability" class="selector">
-                        <option value="all">Availability</option>
-                        <option value="vl2">Availability 1</option>
-                        <option value="vl3">Availability 2</option>
-                        <option value="vl4">Availability 3</option>
-                        <option value="vl5">Availability 4</option>
-                        <option value="vl6">Availability 5</option>
-                    </select>
-                </div>
-
-                <p class="btn-for-mobile">
-                    <button type="submit" class="btn-submit">Go</button>
-                </p>
-            </form>
+            {% if search_term or current_categories or current_sorting != 'None_None' %}
+                <span class="small">Go to <a href="{% url 'products:products' %}">All Products</a> | </span>
+            {% endif %}
+            {{ products|length }} Products {% if search_term %} found for
+            <strong>"{{ search_term }}"</strong>{% endif %}
         </div>
     </div>
     <!-- Sort -->
@@ -60,11 +18,32 @@
             <div class="selector-item orderby-selector">
                 <form method="get" action="{% url 'products:products' %}">
                     <select name="sort" class="orderby" aria-label="Shop order" onchange="this.form.submit()">
-                        <option value="default" {% if request.GET.sort == 'default' %}selected{% endif %}>Default sorting</option>
-                        <option value="rating" {% if request.GET.sort == 'rating' %}selected{% endif %}>Average rating</option>
-                        <option value="date" {% if request.GET.sort == 'date' %}selected{% endif %}>Newness</option>
-                        <option value="price_asc" {% if request.GET.sort == 'price_asc' %}selected{% endif %}>price: low to high</option>
-                        <option value="price_desc" {% if request.GET.sort == 'price_desc' %}selected{% endif %}>price: high to low</option>
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by ...
+                        </option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low
+                            to high)
+                        </option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                            (high to low)
+                        </option>
+                        <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating
+                            (low to high)
+                        </option>
+                        <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating
+                            (high to low)
+                        </option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A to
+                            Z)
+                        </option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z to
+                            A)
+                        </option>
+                        <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                            Category (A to Z)
+                        </option>
+                        <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
+                            Category (Z to A)
+                        </option>
                     </select>
                 </form>
             </div>
