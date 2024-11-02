@@ -7,95 +7,97 @@
 # Contents
 
 <!-- TOC -->
+
 * [FreshlyRooted Market](#freshlyrooted-market)
     * [Deployed Link](#deployed-link)
 * [Contents](#contents)
-  * [Agile Methodology](#agile-methodology)
-    * [Overview](#overview)
-    * [MoSCoW Prioritization](#moscow-prioritization)
-    * [GitHub Projects](#github-projects)
-    * [EPICS](#epics)
-    * [User Stories](#user-stories)
-      * [Developer Stories](#developer-stories)
-      * [Shopper Stories](#shopper-stories)
-      * [Site User Stories](#site-user-stories)
-      * [Store Owner Stories](#store-owner-stories)
-  * [Website Goals and Objectives](#website-goals-and-objectives)
-  * [Target Audience](#target-audience)
-  * [Wireframes](#wireframes)
-  * [Database Schema](#database-schema)
-  * [Design Choices](#design-choices)
-    * [Typography](#typography)
-    * [Colour Scheme](#colour-scheme)
-    * [Images](#images)
-    * [Responsiveness](#responsiveness)
-  * [Security Measures and Protective Design](#security-measures-and-protective-design)
-    * [User Authentication](#user-authentication)
-    * [Password Management](#password-management)
-    * [Form Validation](#form-validation)
-    * [Database Security](#database-security)
-  * [E-Commerce Business Model](#e-commerce-business-model)
-  * [Marketing Strategies](#marketing-strategies)
-    * [Search Engine Optimisation](#search-engine-optimisation)
-    * [SEO Strategies](#seo-strategies)
-    * [Social Media](#social-media)
-    * [Newsletter Marketing](#newsletter-marketing)
-  * [Features](#features)
-    * [Header](#header)
-    * [Footer](#footer)
-    * [Customer Information](#customer-information)
-    * [About](#about)
-    * [Landing Page](#landing-page)
-    * [User Account Pages](#user-account-pages)
-      * [Sign Up Page](#sign-up-page)
-      * [Log In Page](#log-in-page)
-      * [Log Out Page](#log-out-page)
-    * [Profile Page](#profile-page)
-      * [Account Information](#account-information)
-      * [Order History](#order-history)
-      * [User Favorites](#user-favorites)
-      * [Account Security](#account-security)
-    * [All Products](#all-products)
-    * [Product Details](#product-details)
-    * [Reviews](#reviews)
-    * [Search Results](#search-results)
-    * [Special Offers](#special-offers)
-    * [Shopping Cart](#shopping-cart)
-    * [Checkout](#checkout)
-    * [Order Confirmation](#order-confirmation)
-    * [Product Management](#product-management)
-      * [Dashboard](#dashboard)
-      * [Products](#products)
-      * [Categories](#categories)
-      * [Coupons](#coupons)
-      * [Orders](#orders)
-    * [Custom Error Pages](#custom-error-pages)
-  * [Django Admin Portal](#django-admin-portal)
-    * [Future Features](#future-features)
-  * [Deployment](#deployment)
-    * [AWS Cloud Service](#aws-cloud-service)
-      * [Create and Configure an S3 Bucket](#create-and-configure-an-s3-bucket)
-      * [Configure IAM (Identity and Access Management)](#configure-iam-identity-and-access-management)
-      * [Final AWS Setup and Heroku Integration](#final-aws-setup-and-heroku-integration)
-    * [Stripe](#stripe)
-      * [Steps for Stripe Integration](#steps-for-stripe-integration)
-      * [Testing Stripe Payments](#testing-stripe-payments)
-    * [GMAIL](#gmail)
-      * [Steps for Gmail Integration](#steps-for-gmail-integration)
-      * [Security and Compliance](#security-and-compliance)
-    * [Deployment Process with Heroku](#deployment-process-with-heroku)
-    * [To fork the project](#to-fork-the-project)
-    * [To clone the project](#to-clone-the-project)
-  * [Testing](#testing)
-  * [Technology](#technology)
-    * [Languages](#languages)
-    * [Frameworks](#frameworks)
-    * [Python Libraries](#python-libraries)
-    * [Programs](#programs)
-    * [Payment Service](#payment-service)
-    * [Cloud Storage](#cloud-storage)
-  * [Credits](#credits)
-  * [Disclaimer](#disclaimer)
+    * [Agile Methodology](#agile-methodology)
+        * [Overview](#overview)
+        * [MoSCoW Prioritization](#moscow-prioritization)
+        * [GitHub Projects](#github-projects)
+        * [EPICS](#epics)
+        * [User Stories](#user-stories)
+            * [Developer Stories](#developer-stories)
+            * [Shopper Stories](#shopper-stories)
+            * [Site User Stories](#site-user-stories)
+            * [Store Owner Stories](#store-owner-stories)
+    * [Website Goals and Objectives](#website-goals-and-objectives)
+    * [Target Audience](#target-audience)
+    * [Wireframes](#wireframes)
+    * [Database Schema](#database-schema)
+    * [Design Choices](#design-choices)
+        * [Typography](#typography)
+        * [Colour Scheme](#colour-scheme)
+        * [Images](#images)
+        * [Responsiveness](#responsiveness)
+    * [Security Measures and Protective Design](#security-measures-and-protective-design)
+        * [User Authentication](#user-authentication)
+        * [Password Management](#password-management)
+        * [Form Validation](#form-validation)
+        * [Database Security](#database-security)
+    * [E-Commerce Business Model](#e-commerce-business-model)
+    * [Marketing Strategies](#marketing-strategies)
+        * [Search Engine Optimisation](#search-engine-optimisation)
+        * [SEO Strategies](#seo-strategies)
+        * [Social Media](#social-media)
+        * [Newsletter Marketing](#newsletter-marketing)
+    * [Features](#features)
+        * [Header](#header)
+        * [Footer](#footer)
+        * [Customer Information](#customer-information)
+        * [About](#about)
+        * [Landing Page](#landing-page)
+        * [User Account Pages](#user-account-pages)
+            * [Sign Up Page](#sign-up-page)
+            * [Log In Page](#log-in-page)
+            * [Log Out Page](#log-out-page)
+        * [Profile Page](#profile-page)
+            * [Account Information](#account-information)
+            * [Order History](#order-history)
+            * [User Favorites](#user-favorites)
+            * [Account Security](#account-security)
+        * [All Products](#all-products)
+        * [Product Details](#product-details)
+        * [Reviews](#reviews)
+        * [Search Results](#search-results)
+        * [Special Offers](#special-offers)
+        * [Shopping Cart](#shopping-cart)
+        * [Checkout](#checkout)
+        * [Order Confirmation](#order-confirmation)
+        * [Product Management](#product-management)
+            * [Dashboard](#dashboard)
+            * [Products](#products)
+            * [Categories](#categories)
+            * [Coupons](#coupons)
+            * [Orders](#orders)
+        * [Custom Error Pages](#custom-error-pages)
+    * [Django Admin Portal](#django-admin-portal)
+        * [Future Features](#future-features)
+    * [Deployment](#deployment)
+        * [AWS Cloud Service](#aws-cloud-service)
+            * [Create and Configure an S3 Bucket](#create-and-configure-an-s3-bucket)
+            * [Configure IAM (Identity and Access Management)](#configure-iam-identity-and-access-management)
+            * [Final AWS Setup and Heroku Integration](#final-aws-setup-and-heroku-integration)
+        * [Stripe](#stripe)
+            * [Steps for Stripe Integration](#steps-for-stripe-integration)
+            * [Testing Stripe Payments](#testing-stripe-payments)
+        * [GMAIL](#gmail)
+            * [Steps for Gmail Integration](#steps-for-gmail-integration)
+            * [Security and Compliance](#security-and-compliance)
+        * [Deployment Process with Heroku](#deployment-process-with-heroku)
+        * [To fork the project](#to-fork-the-project)
+        * [To clone the project](#to-clone-the-project)
+    * [Testing](#testing)
+    * [Technology](#technology)
+        * [Languages](#languages)
+        * [Frameworks](#frameworks)
+        * [Python Libraries](#python-libraries)
+        * [Programs](#programs)
+        * [Payment Service](#payment-service)
+        * [Cloud Storage](#cloud-storage)
+    * [Credits](#credits)
+    * [Disclaimer](#disclaimer)
+
 <!-- TOC -->
 
 ## Agile Methodology
@@ -387,7 +389,8 @@ purpose, guiding the development toward a user-centered solution.
 
 ## Target Audience
 
-[Our online healthy food grocery market](https://freshly-rooted-market-190d6a54a9aa.herokuapp.com/) is designed for individuals and families who prioritize wellness,
+[Our online healthy food grocery market](https://freshly-rooted-market-190d6a54a9aa.herokuapp.com/) is designed for
+individuals and families who prioritize wellness,
 sustainability, and the convenience of wholesome eating. Our target audience includes:
 
 **Health-Conscious Shoppers** - People who seek nutrient-dense, organic, and minimally processed foods that support a
@@ -487,7 +490,18 @@ This schema was generated using [lucid.app](https://lucid.app/).
 
 ### Responsiveness
 
-![Breakpoints]()
+My website is designed to be responsive, adapting smoothly to different screen sizes and device types. This is achieved
+through the use of CSS media queries with Bootstrap's breakpoints, ensuring an optimal user experience on all devices.
+
+| Breackpoint       | Class | Dimensions |
+|-------------------|-------|------------|
+| X-Small           | None  | < 576px    |
+| Small             | sm    | ≥ 576px    |
+| Medium            | md    | ≥ 768px    |
+| Large             | lg    | ≥ 992px    |
+| Extra Large       | xl    | ≥ 1200px   |
+| Extra extra Large | xxl   | ≥ 1400px   |
+
 
 [Back to top](#contents)
 
@@ -745,6 +759,7 @@ To integrate AWS, follow steps:
      }
    ]
     ```
+
 - Copy your bucket's **ARN** (Amazon Resource Name).
 
 
@@ -773,7 +788,8 @@ To integrate AWS, follow steps:
      ]
    }
     ```
--   Ensure the `Resource` field ends with `/*` and click "Save."
+
+- Ensure the `Resource` field ends with `/*` and click "Save."
 
 
 7. **Adjust Access Control List (ACL):**
@@ -813,7 +829,8 @@ To integrate AWS, follow steps:
      ]
    }
     ```
--   Click "Review Policy" and name it (e.g., `your-policy`), then click "Create Policy."
+
+- Click "Review Policy" and name it (e.g., `your-policy`), then click "Create Policy."
 
 
 3. **Add Users and Assign Permissions:**
@@ -981,6 +998,7 @@ EMAIL_HOST_USER = "put email smtp username here"
 EMAIL_HOST_PASSWORD = "put email smtp password here"
 DEFAULT_FROM_EMAIL = "put email from here"
 ```
+
 9. Enter each variable name in the "KEY" field and its corresponding value in the "VALUE" field.
 10. Return to the top of the page and select the "Deploy" tab.
 11. In the "Deployment method" section, choose "GitHub."
