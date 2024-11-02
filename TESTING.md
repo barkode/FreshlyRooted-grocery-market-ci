@@ -30,26 +30,27 @@ For testing the deployed versions, I utilized external websites
 like [Responsive Design Checker](https://responsivedesignchecker.com/)
 and [Am I Responsive](https://ui.dev/amiresponsive) to obtain a unified view across various device breakpoints.
 
-Additionally, I used the [Google Chrome Mobile Simulator extension](https://chromewebstore.google.com/detail/mobile-simulator-responsi/ckejmhbmlajgoklhgbapkiccekfoccmk) to evaluate responsiveness on more specialized
+Additionally, I used
+the [Google Chrome Mobile Simulator extension](https://chromewebstore.google.com/detail/mobile-simulator-responsi/ckejmhbmlajgoklhgbapkiccekfoccmk)
+to evaluate responsiveness on more specialized
 devices. I examined device samples for navigation, element alignment, content layout, and functionality issues across
 different breakpoints.
 
 Test Results:
 
-| Size | Device Example     | Navigation | Element Alignments | Content Placement | Functionality | Notes                             |
-| ---- | ------------------ | ---------- | ------------------ | ----------------- | ------------- | --------------------------------- |
-| sm   | Samsung Galaxy S20 | &check;    | &check;            | &check;           | &check;       |                                   |
+| Size | Device Example     | Navigation | Element Alignments | Content Placement | Functionality | Notes |
+|------|--------------------|------------|--------------------|-------------------|---------------|-------|
+| sm   | Samsung Galaxy S20 | &check;    | &check;            | &check;           | &check;       |       |
 | sm   | iPhone 11 PRO      | &check;    | &check;            | &check;           | &check;       |
 | sm   | iPhone 13 PRO MAX  | &check;    | &check;            | &check;           | &check;       |
-| md   | iPad MINI          | &check;    | &check;            | &check;           | &check;       |                                   |
-| md   | Galaxy Tab S7      | &check;    | &check;            | &check;           | &check;       |                                   |
-| md   | iPad Air           | &check;    | &check;            | &check;           | &check;       |                                   |
-| lg   | iPad Pro           | &check;    | &check;            | &check;           | &check;       |  |
-| xl   | Mackbook Air       | &check;    | &check;            | &check;           | &check;       |                                   |
-| xl   | HP Stream Laptop   | &check;    | &check;            | &check;           | &check;       |                                   |
-| xxl  | Dell Lattitude     | &check;    | &check;            | &check;           | &check;       |                                   |
-| xxl  | Desktop            | &check;    | &check;            | &check;           | &check;       |                                   |
-
+| md   | iPad MINI          | &check;    | &check;            | &check;           | &check;       |       |
+| md   | Galaxy Tab S7      | &check;    | &check;            | &check;           | &check;       |       |
+| md   | iPad Air           | &check;    | &check;            | &check;           | &check;       |       |
+| lg   | iPad Pro           | &check;    | &check;            | &check;           | &check;       |       |
+| xl   | Mackbook Air       | &check;    | &check;            | &check;           | &check;       |       |
+| xl   | HP Stream Laptop   | &check;    | &check;            | &check;           | &check;       |       |
+| xxl  | Dell Lattitude     | &check;    | &check;            | &check;           | &check;       |       |
+| xxl  | Desktop            | &check;    | &check;            | &check;           | &check;       |       |
 
 [Back to top](#contents)
 
@@ -57,7 +58,7 @@ Test Results:
 
 ### HTML
 
-The recommended [HTML W3C Validator](https://validator.w3.org) to validate all of the project's HTML files.
+The recommended [HTML W3C Validator](https://validator.w3.org) to validate all the project's HTML files.
 
 This is the process which was followed of validating an HTML file by direct input:
 
@@ -90,10 +91,6 @@ accessibility.
 
 No major errors were found when validating JavaScript through [Jshint](https://jshint.com/).
 
-Jshint retruned one note that `bootstrap` variable is undefined. This can be ignored because `bootstrap.Modal` relies on
-bootstrap being a globally defined object, which Bootstrap itself provides. STRIPE and Mailchimp scripts were obtained
-directly from the origins so no errors were taken into consideration in order to avoid interference with intended
-fuctionality.
 
 <details>
 
@@ -150,6 +147,75 @@ assess the application's robustness in handling errors and exceptions.
 
 The deployed project was tested on the most popular browsers for compatibility issues.
 No major issues identified.
+
+<table>
+    <thead>    
+        <tr> 
+            <th rowspan="2">Page</th> 
+            <th colspan="5">Mobile</th> 
+            <th colspan="5">Tablet</th> 
+            <th colspan="5">Desktop</th> 
+            <th rowspan="2">Note</th> 
+        </tr>
+        <tr> 
+            <th>Edge</th>
+            <th>Firefox</th>
+            <th>Chrome</th>
+            <th>Opera</th>
+            <th>Safari</th>
+            <th>Edge</th>
+            <th>Firefox</th>
+            <th>Chrome</th>
+            <th>Opera</th>
+            <th>Safari</th>
+            <th>Edge</th>
+            <th>Firefox</th>
+            <th>Chrome</th>
+            <th>Opera</th>
+            <th>Safari</th>
+        </tr>
+    </thead>
+    <tbody>    
+        <tr>
+            <td>Home</td>
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✗</td> 
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✗</td>
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✗</td> 
+            <td>Test issue on Safari</td>
+        </tr>
+        <tr>
+            <td>Contact</td>
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✗</td> 
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✗</td> 
+            <td>✓</td>
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>✗</td> 
+            <td>✓</td> 
+            <td>✓</td> 
+            <td>Issue on Opera in Tablet</td>
+        </tr>
+    </tbody>
+</table>
 
 [Browser Testing Results]()
 
