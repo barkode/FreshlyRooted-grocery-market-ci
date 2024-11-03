@@ -1,12 +1,17 @@
 {% load static %}
 
+
 <div class="container">
     <nav class="biolife-nav">
         <ul>
-            <li class="nav-item"><a href="{% url 'home:home' %}" class="permal-link">Home</a></li>
+            {% breadcrumb page_name product as breadcrumbs %}
+            {% for name, url in breadcrumbs %}
+                <li class="nav-item"><a href="{% url 'home:home' %}" class="permal-link">Home</a></li>
+            {% endfor %}
 
             {% if product.category %}
-                <li class="nav-item"><a href="{% url 'products:products' %}?category={{ product.category.name }}" class="permal-link">{{ product.category.friendly_name }}</a></li>
+                <li class="nav-item"><a href="{% url 'products:products' %}?category={{ product.category.name }}"
+                                        class="permal-link">{{ product.category.friendly_name }}</a></li>
             {% endif %}
         </ul>
     </nav>
