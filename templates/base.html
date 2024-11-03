@@ -59,7 +59,7 @@
 {% block after_header %}{% endblock %}
 
 <!-- Main content -->
-<main style="margin-top: 270px;">
+<main {% if request.resolver_match.url_name != 'home' %}style="margin-top: 270px;{% endif %} ">
 
     {% block content %}{% endblock %}
 </main>
