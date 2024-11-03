@@ -16,7 +16,7 @@
                     {% endif %}
                 </span>
             </div>
-            <a href="#" class="btn-to-cart">Go</a>
+            <a href="{% url 'cart:view_cart' %}" class="btn-to-cart">Go</a>
         </div>
         <div class="cart-content">
             <div class="cart-inner">
@@ -168,7 +168,7 @@
                     </li>
                 </ul>
                 <p class="btn-control">
-                    <a href="#" class="btn view-cart">view cart</a>
+                    <a href="{% url 'cart:view_cart' %}" class="btn view-cart">view cart</a>
                     <a href="#" class="btn">checkout</a>
                 </p>
             </div>
