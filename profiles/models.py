@@ -6,37 +6,6 @@ from django_countries.fields import CountryField
 
 
 class UserProfile(models.Model):
-    """
-
-    class UserProfile(models.Model):
-        A model to store additional information for a user profile.
-
-        Attributes:
-        user : OneToOneField
-            A one-to-one relationship to the User model, ensures each user has one UserProfile.
-        default_phone_number : CharField
-            Stores the default phone number of the user, can be null or blank.
-        default_country : CountryField
-            Stores the default country of the user, can be null or blank.
-        default_postcode : CharField
-            Stores the default postcode of the user, can be null or blank.
-        default_city : CharField
-            Stores the default city of the user, can be null or blank.
-        default_street_address1 : CharField
-            Stores the first line of the default street address of the user, can be null or blank.
-        default_street_address2 : CharField
-            Stores the second line of the default street address of the user, can be null or blank.
-        default_county : CharField
-            Stores the default county of the user, can be null or blank.
-        default_profile_image : ImageField
-            Stores the default profile image of the user, can be null or blank.
-        default_bio : TextField
-            Stores the default bio of the user, can be null or blank, up to 500 characters.
-        default_location : CharField
-            Stores the default location of the user, can be null or blank.
-        default_birth_date : DateField
-            Stores the default birth date of the user, can be null or blank.
-    """
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)
