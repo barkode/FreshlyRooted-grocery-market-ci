@@ -1,11 +1,11 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.db.models.functions import Lower
 from django.shortcuts import get_object_or_404, redirect, render, reverse
 
 from .forms import ProductForm
 from .models import Category, Product
-from django.db.models.functions import Lower
 
 
 # Create your views here.
@@ -15,38 +15,40 @@ def all_products(request):
     """A view to show all products, including sorting and search queries"""
 
     products = Product.objects.all()
-    query = None
-    categories = None
-    sort = None
-    direction = None
+    query = request.GET.get("q", None)
+    categories = request.GET.get("category", None)
+    sort = request.GET.get("sort", None)
+    direction = request.GET.get("direction", None)
 
-    if request.GET:
-        if "sort" in request.GET:
-            sortkey = request.GET["sort"]
-            sort = sortkey
-            if sortkey == "name":
-                sortkey = "lower_name"
-                products = products.annotate(lower_name=Lower("name"))
-            if sortkey == "category":
-                sortkey = "category__name"
-            if "direction" in request.GET:
-                direction = request.GET["direction"]
-                if direction == "desc":
-                    sortkey = f"-{sortkey}"
+    if sort:
+        sortkey = sort
+        sort = sortkey
+        if sortkey == "name" or sortkey == "reset":
+            sortkey = "lower_name"
+            products = products.annotate(lower_name=Lower("name"))
+        if sortkey == "category":
+            sortkey = "category__name"
+
+        if direction:
+            if direction == "desc":
+                sortkey = f"-{sortkey}"
             products = products.order_by(sortkey)
 
-        if "category" in request.GET:
-            categories = request.GET["category"].split(",")
+        if categories:
+            categories = categories.split(",")
             products = products.filter(category__slug__in=categories)
             categories = Category.objects.filter(slug__in=categories)
 
-        if "q" in request.GET:
-            query = request.GET["q"]
+        if query:
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse("products"))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = (
+                Q(name__icontains=query)
+                | Q(description__icontains=query)
+                | Q(category__name__icontains=query)
+            )
             products = products.filter(queries)
 
     current_sorting = f"{sort}_{direction}"
