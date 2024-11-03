@@ -9,7 +9,7 @@ from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
-from cart.contexts import bag_contents
+from cart.contexts import cart_contents
 
 import stripe
 import json
@@ -115,7 +115,7 @@ def checkout(request):
             messages.error(request, "There's nothing in your cart at the moment")
             return redirect(reverse("products"))
 
-        current_bag = bag_contents(request)
+        current_bag = cart_contents(request)
         total = current_bag["grand_total"]
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
