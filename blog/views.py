@@ -21,11 +21,11 @@ class PostList(generic.ListView):
 
     **Template:**
 
-    :template:`blog/index.html`
+    :template:`blog/cart.html`
     """
 
     queryset = Post.objects.filter(status=1)
-    template_name = "blog/index.html"
+    template_name = "blog/cart.html"
     paginate_by = 6
 
 
