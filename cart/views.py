@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
+from django.shortcuts import get_object_or_404, HttpResponse, redirect, render, reverse
 
 from products.models import Product
 
@@ -19,42 +19,43 @@ def add_to_cart(request, item_id):
     size = None
     if "product_size" in request.POST:
         size = request.POST["product_size"]
-    bag = request.session.get("cart", {})
+    cart = request.session.get("cart", {})
 
     if size:
-        if item_id in list(bag.keys()):
-            if size in bag[item_id]["items_by_size"].keys():
-                bag[item_id]["items_by_size"][size] += quantity
+        if item_id in list(cart.keys()):
+            if size in cart[item_id]["items_by_size"].keys():
+                cart[item_id]["items_by_size"][size] += quantity
                 messages.success(
                     request,
                     (
                         f"Updated size {size.upper()} "
                         f"{product.name} quantity to "
-                        f'{bag[item_id]["items_by_size"][size]}'
+                        f'{cart[item_id]["items_by_size"][size]}'
                     ),
                 )
             else:
-                bag[item_id]["items_by_size"][size] = quantity
+                cart[item_id]["items_by_size"][size] = quantity
                 messages.success(
                     request,
-                    (f"Added size {size.upper()} " f"{product.name} to your cart"),
+                    f"Added size {size.upper()} " f"{product.name} to your cart",
                 )
         else:
-            bag[item_id] = {"items_by_size": {size: quantity}}
+            cart[item_id] = {"items_by_size": {size: quantity}}
             messages.success(
-                request, (f"Added size {size.upper()} " f"{product.name} to your cart")
+                request, f"Added size {size.upper()} " f"{product.name} to your cart"
             )
     else:
-        if item_id in list(bag.keys()):
-            bag[item_id] += quantity
+        if item_id in list(cart.keys()):
+            cart[item_id] += quantity
             messages.success(
-                request, (f"Updated {product.name} " f"quantity to {bag[item_id]}")
+                request, f"Updated {product.name} " f"quantity to {cart[item_id]}"
             )
         else:
-            bag[item_id] = quantity
+            cart[item_id] = quantity
             messages.success(request, f"Added {product.name} to your cart")
 
-    request.session["cart"] = bag
+    request.session["cart"] = cart
+    print(request.session["cart"])
     return redirect(redirect_url)
 
 
@@ -66,39 +67,39 @@ def adjust_cart(request, item_id):
     size = None
     if "product_size" in request.POST:
         size = request.POST["product_size"]
-    bag = request.session.get("cart", {})
+    cart = request.session.get("cart", {})
 
     if size:
         if quantity > 0:
-            bag[item_id]["items_by_size"][size] = quantity
+            cart[item_id]["items_by_size"][size] = quantity
             messages.success(
                 request,
                 (
                     f"Updated size {size.upper()} "
                     f"{product.name} quantity to "
-                    f'{bag[item_id]["items_by_size"][size]}'
+                    f'{cart[item_id]["items_by_size"][size]}'
                 ),
             )
         else:
-            del bag[item_id]["items_by_size"][size]
-            if not bag[item_id]["items_by_size"]:
-                bag.pop(item_id)
+            del cart[item_id]["items_by_size"][size]
+            if not cart[item_id]["items_by_size"]:
+                cart.pop(item_id)
             messages.success(
                 request,
-                (f"Removed size {size.upper()} " f"{product.name} from your cart"),
+                f"Removed size {size.upper()} " f"{product.name} from your cart",
             )
     else:
         if quantity > 0:
-            bag[item_id] = quantity
+            cart[item_id] = quantity
             messages.success(
-                request, (f"Updated {product.name} " f"quantity to {bag[item_id]}")
+                request, f"Updated {product.name} " f"quantity to {cart[item_id]}"
             )
         else:
-            bag.pop(item_id)
-            messages.success(request, (f"Removed {product.name} " f"from your cart"))
+            cart.pop(item_id)
+            messages.success(request, f"Removed {product.name} " f"from your cart")
 
-    request.session["cart"] = bag
-    return redirect(reverse("view_bag"))
+    request.session["cart"] = cart
+    return redirect(reverse("view_cart"))
 
 
 def remove_from_cart(request, item_id):
@@ -109,21 +110,21 @@ def remove_from_cart(request, item_id):
         size = None
         if "product_size" in request.POST:
             size = request.POST["product_size"]
-        bag = request.session.get("cart", {})
+        cart = request.session.get("cart", {})
 
         if size:
-            del bag[item_id]["items_by_size"][size]
-            if not bag[item_id]["items_by_size"]:
-                bag.pop(item_id)
+            del cart[item_id]["items_by_size"][size]
+            if not cart[item_id]["items_by_size"]:
+                cart.pop(item_id)
             messages.success(
                 request,
-                (f"Removed size {size.upper()} " f"{product.name} from your cart"),
+                f"Removed size {size.upper()} " f"{product.name} from your cart",
             )
         else:
-            bag.pop(item_id)
+            cart.pop(item_id)
             messages.success(request, f"Removed {product.name} from your cart")
 
-        request.session["cart"] = bag
+        request.session["cart"] = cart
         return HttpResponse(status=200)
 
     except Exception as e:
