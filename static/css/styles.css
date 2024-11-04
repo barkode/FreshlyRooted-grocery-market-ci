@@ -225,3 +225,16 @@ body.top-refine-opened .top-functions-area .flt-item.group-on-mobile .wrap-selec
 .sumary-product .action-form .buttons .add-to-cart-btn :hover{
 	background-color: #444444;
 }
+
+/* Review */
+.width-100percent{ width: 100%;}
+.width-90percent{ width: 90%;}
+.width-80percent{ width: 80%;}
+.width-70percent{ width: 70%;}
+.width-60percent{ width: 60%;}
+.width-50percent{ width: 50%;}
+.width-40percent{ width: 40%;}
+.width-30percent{ width: 30%;}
+.width-20percent{ width: 20%;}
+.width-10percent{ width: 10%;}
+.min-height-346px{ min-height: 346px;}
