@@ -209,11 +209,19 @@ body.top-refine-opened .top-functions-area .flt-item.group-on-mobile .wrap-selec
 
 .dropdown-toggle.login-link:hover,
 .dropdown-toggle.login-link:focus,
-.dropdown-toggle.login-link:active{
+.dropdown-toggle.login-link:active {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
 .page-contain.category-page.no-sidebar {
 	padding-top: 30px;
+}
+
+.sumary-product .action-form .buttons .add-to-cart-btn {
+	width: 100%;
+}
+
+.sumary-product .action-form .buttons .add-to-cart-btn :hover{
+	background-color: #444444;
 }
