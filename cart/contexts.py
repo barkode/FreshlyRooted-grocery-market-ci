@@ -14,19 +14,22 @@ def cart_contents(request):
     for item_id, item_data in cart.items():
         if isinstance(item_data, int):
             product = get_object_or_404(Product, pk=item_id)
-            total += Decimal(item_data) * product.price
+            currency_symbol = product.currency.symbol
+            total += Decimal(item_data) * product.sell_price()
             product_count += item_data
             cart_items.append(
                 {
                     "item_id": item_id,
                     "quantity": item_data,
                     "product": product,
+                    "currency_symbol": currency_symbol,
                 }
             )
         else:
             product = get_object_or_404(Product, pk=item_id)
+            currency_symbol = product.currency.symbol
             for size, quantity in item_data["items_by_size"].items():
-                total += quantity * product.price
+                total += quantity * product.sell_price()
                 product_count += quantity
                 cart_items.append(
                     {
@@ -34,6 +37,7 @@ def cart_contents(request):
                         "quantity": quantity,
                         "product": product,
                         "size": size,
+                        "currency_symbol": currency_symbol,
                     }
                 )
 
