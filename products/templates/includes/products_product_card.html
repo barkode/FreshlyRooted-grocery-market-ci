@@ -2,15 +2,12 @@
 
 <li class="product-item col-lg-3 col-md-3 col-sm-4 col-xs-6">
     <div class="contain-product layout-default">
-        <div>
-            {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-            {% else %}
-                <small class="text-muted">No Rating</small>
-            {% endif %}
+        <div class="rating small">
+            <p class="star-rating"><span class="{{ product.get_rating_class }}"></span></p>
         </div>
         <div class="product-thumb">
-            {% if  product.image %}
+            {% if product.image %}
+
                 <a href="{% url 'products:product_detail' product.id %}" class="link-to-product">
                     <img src="{{ product.image.url }}" alt="{{ product.name }}" width="270" height="270"
                          class="product-thumnail">
@@ -34,9 +31,13 @@
                     <del><span class="price-amount"><span
                             class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.price }}</span>
                     </del>
+                    <ins><span class="price-amount"> &nbsp;/&nbsp;{{ product.measurement.abbreviation }}</span>
+                    </ins>
                 {% else %}
                     <ins><span class="price-amount"><span
                             class="currencySymbol">{{ product.currency.symbol }} </span>{{ product.sell_price }}</span>
+                    </ins>
+                    <ins><span class="price-amount"> &nbsp;/&nbsp;{{ product.measurement.abbreviation }}</span>
                     </ins>
                 {% endif %}
             </div>

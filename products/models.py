@@ -140,5 +140,11 @@ class Product(models.Model):
 
         return self.price
 
+    def get_rating_class(self):
+        if self.rating is None:
+            return "width-0percent"
+        percentage = (float(self.rating) / 5) * 100
+        return f"width-{int((percentage // 20) * 20)}percent"
+
     def __str__(self):
         return self.name
