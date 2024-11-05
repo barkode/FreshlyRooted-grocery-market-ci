@@ -132,6 +132,7 @@ TEMPLATES = [
             ],
             "libraries": {
                 "breadcrumb_tags": "templatetags.breadcrumb_tags",
+                "cart_tools_tags": "cart.templatetags.cart_tags",
             },
         },
     },
