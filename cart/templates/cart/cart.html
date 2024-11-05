@@ -50,7 +50,14 @@
                                                             {% endif %}
                                                         </figure>
                                                     </span>
-                                                    <a class="prd-name" href="{% url 'products:products' %}{{ item.product.id }}">{{ item.product.name }}</a>
+                                                    <a class="prd-name" href="
+
+
+
+
+
+
+                                                            {% url 'products:products' %}{{ item.product.id }}">{{ item.product.name }}</a>
                                                     <div class="action">
                                                         <a href="#" class="edit"><i class="fa fa-pencil"
                                                                                     aria-hidden="true"></i></a>
@@ -131,7 +138,8 @@
                         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                             <div class="shpcart-subtotal-block">
                                 <div class="subtotal-line">
-                                    <b class="stt-name">Subtotal <span class="sub">({{ product_count }}&nbsp;items)</span></b>
+                                    <b class="stt-name">Subtotal <span
+                                            class="sub">({{ product_count }}&nbsp;items)</span></b>
                                     <span class="stt-price">${{ total|floatformat:2 }}</span>
                                 </div>
                                 <div class="subtotal-line">
@@ -152,13 +160,20 @@
                                                 <span class="index">$0</span>
                                             </td>
                                             <td class="mid-position">
+
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: {{ progress_percentage }}%"
-                                                         aria-valuenow="{{ progress_percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar" role="progressbar"
+                                                         style="width: {{ progress_percentage|floatformat:0 }}%"
+                                                         aria-valuenow="{{ progress_percentage|floatformat:0 }}"
+                                                         aria-valuemin="0"
+                                                         aria-valuemax="100">
+                                                    </div>
                                                 </div>
+
+
                                             </td>
                                             <td class="last-position">
-                                                <span class="index">${{free_delivery_threshold}}</span>
+                                                <span class="index">${{ free_delivery_threshold }}</span>
                                             </td>
                                         </tr>
                                     </table>
