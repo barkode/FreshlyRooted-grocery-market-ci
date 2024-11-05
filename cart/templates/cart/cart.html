@@ -30,7 +30,7 @@
                                         </thead>
                                         <tbody>
                                         {% for item in cart_items %}
-                                            <tr class="cart_item">
+                                            <tr class="cart-item">
                                                 <td class="product-thumbnail" data-title="Product Name">
                                                     <span class="prd-thumb">
                                                         <figure>
@@ -117,7 +117,9 @@
                                                 <a href="{% url 'products:products' %}" class="btn back-to-shop">Back to
                                                     Shop</a>
                                                 <button class="btn btn-update" type="submit" disabled>update</button>
-                                                <button class="btn btn-clear" type="reset">clear all</button>
+                                                <button class="btn btn-clear" type="reset" id="clearCartBtn">
+                                                    clear all
+                                                </button>
                                             </td>
                                         </tr>
                                         </tfoot>
@@ -179,4 +181,32 @@
         </div>
     </div>
 
+{% endblock %}
+
+{#TODO: Delete this part before deploy production#}
+
+{% block postload_js %}
+    {{ block.super }}
+    <script>
+        document.getElementById('clearCartBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            if (confirm('Are you sure you want to clear your cart?')) {
+                // Додаємо анімацію перед очищенням
+                const cartItems = document.querySelectorAll('.cart-item');
+
+                cartItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.transition = 'all 0.5s ease';
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateX(100px)';
+                    }, index * 100);
+                });
+
+                // Переходимо на URL очищення після завершення анімації
+                setTimeout(() => {
+                    window.location.href = '{% url 'cart:clear_cart' %}';
+                }, cartItems.length * 100 + 500);
+            }
+        });</script>
 {% endblock %}

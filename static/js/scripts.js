@@ -59,3 +59,25 @@ document.addEventListener('click', (e) => {
         }
     }
 });
+
+document.getElementById('clearCartBtn').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (confirm('Are you sure you want to clear your cart?')) {
+        // Додаємо анімацію перед очищенням
+        const cartItems = document.querySelectorAll('.cart-item');
+
+        cartItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.style.transition = 'all 0.5s ease';
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(100px)';
+            }, index * 100);
+        });
+
+        // Переходимо на URL очищення після завершення анімації
+        setTimeout(() => {
+            window.location.href = "{% url 'cart:clear_cart' %}";
+        }, cartItems.length * 100 + 500);
+    }
+});

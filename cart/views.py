@@ -98,7 +98,7 @@ def adjust_cart(request, item_id):
             messages.success(request, f"Removed {product.name} " f"from your cart")
 
     request.session["cart"] = cart
-    return redirect(reverse("view_cart"))
+    return redirect(reverse("cart:view_cart"))
 
 
 def remove_from_cart(request, item_id):
@@ -128,4 +128,19 @@ def remove_from_cart(request, item_id):
 
     except Exception as e:
         messages.error(request, f"Error removing item: {e}")
+        return HttpResponse(status=500)
+
+
+def clear_cart(request):
+    """Remove all items from the shopping cart"""
+    try:
+        cart = request.session.get("cart", {})
+        cart.clear()
+        request.session["cart"] = cart
+        messages.success(request, "Your cart has been cleared")
+
+        return redirect(reverse("cart:view_cart"))
+
+    except Exception as e:
+        messages.error(request, f"Error clearing cart: {e}")
         return HttpResponse(status=500)
