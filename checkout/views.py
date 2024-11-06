@@ -23,7 +23,7 @@ def cache_checkout_data(request):
         stripe.PaymentIntent.modify(
             pid,
             metadata={
-                "cart": json.dumps(request.session.get("cart", {})),
+                "bag": json.dumps(request.session.get("bag", {})),
                 "save_info": request.POST.get("save_info"),
                 "username": request.user,
             },
@@ -46,7 +46,7 @@ def checkout(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == "POST":
-        bag = request.session.get("cart", {})
+        bag = request.session.get("bag", {})
 
         form_data = {
             "full_name": request.POST["full_name"],
@@ -90,7 +90,7 @@ def checkout(request):
                     messages.error(
                         request,
                         (
-                            "One of the products in your cart wasn't "
+                            "One of the products in your bag wasn't "
                             "found in our database. "
                             "Please call us for assistance!"
                         ),
@@ -110,9 +110,9 @@ def checkout(request):
                 ),
             )
     else:
-        bag = request.session.get("cart", {})
+        bag = request.session.get("bag", {})
         if not bag:
-            messages.error(request, "There's nothing in your cart at the moment")
+            messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse("products"))
 
         current_bag = cart_contents(request)
@@ -202,8 +202,8 @@ def checkout_success(request, order_number):
         email will be sent to {order.email}.",
     )
 
-    if "cart" in request.session:
-        del request.session["cart"]
+    if "bag" in request.session:
+        del request.session["bag"]
 
     template = "checkout/checkout_success.html"
     context = {

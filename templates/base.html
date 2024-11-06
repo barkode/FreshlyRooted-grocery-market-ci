@@ -53,7 +53,21 @@
 </header>
 
 {% if messages %}
-    <div class="message-container"></div>
+    <div class="message-container">
+        {% for message in messages %}
+            {% with message.level as level %}
+                {% if level == 40 %}
+                    {% include 'includes/toasts/toast_error.html' %}
+                {% elif level == 30 %}
+                    {% include 'includes/toasts/toast_warning.html' %}
+                {% elif level == 25 %}
+                    {% include 'includes/toasts/toast_success.html' %}
+                {% else %}
+                    {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+            {% endwith %}
+        {% endfor %}
+    </div>
 {% endif %}
 
 {% block after_header %}{% endblock %}
@@ -76,10 +90,7 @@
 {% include 'includes/mobile_global_menu.html' %}
 
 <!--Newletter Popup-->
-{#{% include 'includes/newletter_popup.html' %}#}
-
-<!--Quickview Popup-->
-{#{% include 'includes/quickview_popup.html' %}#}
+{#{% include 'includes/newsletter_popup.html' %}#}
 
 <!-- Scroll Top Button -->
 {% include 'includes/scroll_to_top_btn.html' %}
@@ -87,13 +98,13 @@
 {% block postload_js %}
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/slick.min.js' %}"></script>
-{#    <script src="{% static 'tmp/bs3.4.1/bootstrap.min.js' %}"></script>#}
+    {#    <script src="{% static 'tmp/bs3.4.1/bootstrap.min.js' %}"></script>#}
     <script src="{% static 'tmp/assets/js/jquery.countdown.min.js' %}"></script>
     <script src="{% static 'tmp/assets/js/jquery.nice-select.min.js' %}"></script>
     <script src="{% static 'tmp/assets/js/jquery.nicescroll.min.js' %}"></script>
     <script src="{% static 'tmp/assets/js/biolife.framework.js' %}"></script>
     <script src="{% static 'tmp/assets/js/functions.js' %}"></script>
-{#    <script src="{% static 'js/scripts.js' %}"></script>#}
+    {#    <script src="{% static 'js/scripts.js' %}"></script>#}
 {% endblock %}
 </body>
 
