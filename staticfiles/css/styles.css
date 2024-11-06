@@ -196,6 +196,11 @@ body.top-refine-opened .top-functions-area .flt-item.group-on-mobile .wrap-selec
 	border-color: #90bf2a;
 }
 
+.minicart-block.layout-02 .span-index .qty {
+	background-color: #05a503;
+}
+
+
 .dropdown-toggle.login-link {
 	line-height: inherit;
 	border: none;
@@ -204,11 +209,136 @@ body.top-refine-opened .top-functions-area .flt-item.group-on-mobile .wrap-selec
 
 .dropdown-toggle.login-link:hover,
 .dropdown-toggle.login-link:focus,
-.dropdown-toggle.login-link:active{
+.dropdown-toggle.login-link:active {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
 .page-contain.category-page.no-sidebar {
 	padding-top: 30px;
+}
+
+.sumary-product .action-form .buttons .add-to-cart-btn {
+	width: 100%;
+}
+
+.sumary-product .action-form .buttons .add-to-cart-btn :hover {
+	background-color: #444444;
+}
+
+.contain-product.layout-default .slide-down-box .buttons .add-to-cart-btn {
+	width: 100%;
+}
+
+.contain-product.layout-default .slide-down-box .buttons .add-to-cart-btn:hover {
+	background-color: #444444;
+}
+
+/* Review */
+.width-100percent {
+	width: 100%;
+}
+
+.width-90percent {
+	width: 90%;
+}
+
+.width-80percent {
+	width: 80%;
+}
+
+.width-70percent {
+	width: 70%;
+}
+
+.width-60percent {
+	width: 60%;
+}
+
+.width-50percent {
+	width: 50%;
+}
+
+.width-40percent {
+	width: 40%;
+}
+
+.width-30percent {
+	width: 30%;
+}
+
+.width-20percent {
+	width: 20%;
+}
+
+.width-10percent {
+	width: 10%;
+}
+
+.min-height-346px {
+	min-height: 346px;
+}
+
+.rating.small {
+	position: absolute;
+	z-index: 1000;
+	top: 10px;
+	left: 20px;
+}
+
+.prd-sku {
+	font-weight: 600;
+	color: #222222;
+
+}
+
+.quantity-box.type1 .qty-input input {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 18px;
+	color: #888888;
+	text-align: center;
+	background-color: #f3f3f3;
+	line-height: 1;
+	width: 106px;
+	padding: 9px 33px 8px 22px;
+	height: 38px;
+}
+
+.product-subtotal {
+	padding: 20px 0 30px 5px;
+}
+
+.remove.delete-item,
+.edit.update-item {
+	font-size: 16px;
+	display: inline-block;
+	color: #444444;
+	line-height: 16px;
+	padding: 0 5px;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.remove.delete-item:hover,
+.edit.update-item:hover {
+	color: #e73918;
+}
+
+#clearCartBtn {
+	background-color: #90bf2a !important;
+	color: #ffffff !important;
+}
+
+#clearCartBtn:hover {
+	background-color: #444444 !important;
+	color: #ffffff !important;
+
+}
+
+.message-notice {
+	position: fixed;
+	top: 72px;
+	right: 20px;
+	z-index: 9999;
 }
