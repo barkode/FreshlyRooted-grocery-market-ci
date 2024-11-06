@@ -29,7 +29,7 @@
                                     <tbody>
                                     {% for item in cart_items %}
                                         <form method="post" action="{% url 'cart:adjust_cart' item.item_id %}"
-                                              class="cart-form">
+                                              class="cart-form" name="cart_form" id="cart_form_{{ item.item_id }}">
                                             {% csrf_token %}
                                             <tr class="cart-item">
                                                 <td class="product-thumbnail" data-title="Product Name">
@@ -90,7 +90,8 @@
                                                 <td class="product-quantity" data-title="Quantity">
                                                     <div class="quantity-box type1">
                                                         <div class="qty-input">
-                                                            <input type="text" name="quantity"
+                                                            <input type="text"
+                                                                   name="quantity"
                                                                    value="{{ item.quantity }}"
                                                                    data-max_value="20"
                                                                    data-min_value="1"
@@ -195,69 +196,74 @@
 {% block postload_js %}
     {{ block.super }}
     <script>
-        document.getElementById('clearCartBtn').addEventListener('click', function (e) {
-            e.preventDefault();
-
-            if (confirm('Are you sure you want to clear your cart?')) {
-                const cartItems = document.querySelectorAll('.cart-item');
-
-                cartItems.forEach((item, index) => {
-                    setTimeout(() => {
-                        item.style.transition = 'all 0.5s ease';
-                        item.style.opacity = '0';
-                        item.style.transform = 'translateX(100px)';
-                    }, index * 100);
-                });
-                setTimeout(() => {
-                    window.location.href = '{% url 'cart:clear_cart' %}';
-                }, cartItems.length * 100 + 500);
-            }
-        });
-
-        document.querySelectorAll('.update-item').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const form = document.querySelector('.cart-form');
-                if (form) {
-                    form.submit();
-                }
-            });
-        });
-
-        // Remove item and reload on click
-        document.querySelectorAll('.remove-item').forEach(button => {
-            button.addEventListener('click', async (e) => {
-                // Prevent default action
-                e.preventDefault();
-
-                // Get necessary data
-                const csrfToken = "{{ csrf_token }}";
-                const itemId = button.id.split('remove_')[1];
-                {#const productSize = button.dataset.product_size;#}
-                const url = `/cart/remove/${itemId}/`;
-
-                // Create form data
-                const formData = new FormData();
-                formData.append('csrfmiddlewaretoken', csrfToken);
-                {#formData.append('product_size', productSize);#}
-
-                try {
-                    // Send POST request
-                    const response = await fetch(url, {
-                        method: 'POST',
-                        body: formData
-                    });
-
-                    // Handle response
-                    if (response.ok) {
-                        location.reload();
-                    } else {
-                        console.error('Failed to remove item:', response.statusText);
+        document.addEventListener("DOMContentLoaded", () => {
+            const clearCartBtn = document.getElementById('clearCartBtn');
+            if (clearCartBtn) {
+                clearCartBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (confirm('Are you sure you want to clear your cart?')) {
+                        const cartItems = document.querySelectorAll('.cart-item');
+                        cartItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.style.transition = 'all 0.5s ease';
+                                item.style.opacity = '0';
+                                item.style.transform = 'translateX(100px)';
+                            }, index * 100);
+                        });
+                        setTimeout(() => {
+                            window.location.href = '{% url 'cart:clear_cart' %}';
+                        }, cartItems.length * 100 + 500);
                     }
-                } catch (error) {
-                    console.error('Error removing item:', error);
-                }
-            });
+                });
+            }
+
+            const updateItemsList = document.querySelectorAll('.update-item');
+            if (updateItemsList.length > 0) {
+                updateItemsList.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const form = document.querySelector('.cart-form');
+                        if (form) {
+                            form.submit();
+                        }
+                    });
+                });
+            }
+
+            const deleteItemsList = document.querySelectorAll('.delete-item');
+            if (deleteItemsList.length > 0) {
+                deleteItemsList.forEach(link => {
+                    link.addEventListener('click', async (e) => {
+                        e.preventDefault();
+                        const csrfToken = "{{ csrf_token }}";
+                        const itemId = link.dataset.item_id.split('remove_')[1];
+                        // Validate itemId
+                        if (!itemId) {
+                            console.error('Invalid item ID');
+                            return;
+                        }
+                        const url = `/cart/remove/${itemId}/`;
+                        // Create form data
+                        const formData = new FormData();
+                        formData.append('csrfmiddlewaretoken', csrfToken);
+                        try {
+                            // Send POST request
+                            const response = await fetch(url, {
+                                method: 'POST',
+                                body: formData
+                            });
+                            // Handle response
+                            if (response.ok) {
+                                location.reload();
+                            } else {
+                                console.error('Failed to remove item:', response.statusText);
+                            }
+                        } catch (error) {
+                            console.error('Error removing item:', error);
+                        }
+                    });
+                });
+            }
         });
 
 
