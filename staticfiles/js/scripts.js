@@ -1,7 +1,7 @@
 // Scroll to top
 const btnScrollTop = document.querySelector('.btn-scroll-top');
 const windowElement = window;
-const preLoader = document.getElementById('biof-loading');
+const preLoader = document.getElementById('loading');
 
 if (btnScrollTop) {
     windowElement.addEventListener('scroll', () => {
@@ -31,7 +31,7 @@ windowElement.addEventListener('load', () => {
         }, 3000);
     }
 });
-
+// Add quantity button
 document.addEventListener('click', (e) => {
 
     if (!e.target.closest('.qty-input .qty-btn')) return;
@@ -60,7 +60,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
-
+// Clear Cart functionality
 const clearCartBtn = document.getElementById('clearCartBtn');
 if (clearCartBtn) {
     clearCartBtn.addEventListener('click', function (e) {
@@ -75,13 +75,13 @@ if (clearCartBtn) {
                 }, index * 100);
             });
             setTimeout(() => {
-                window.location.href = '{% url '
-                cart:clear_cart
-                ' %}';
+                window.location.href = "{% url 'cart:clear_cart' %}";
             }, cartItems.length * 100 + 500);
         }
     });
 }
+
+//  Edit item button
 const updateItemsList = document.querySelectorAll('.update-item');
 if (updateItemsList.length > 0) {
     updateItemsList.forEach(link => {
@@ -95,6 +95,7 @@ if (updateItemsList.length > 0) {
     });
 }
 
+// Delete item button
 const deleteItemsList = document.querySelectorAll('.delete-item');
 if (deleteItemsList.length > 0) {
     deleteItemsList.forEach(link => {
