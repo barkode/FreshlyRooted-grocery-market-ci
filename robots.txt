@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /accounts/
+Disallow: /cart/
+Sitemap: https://freshly-rooted-market-190d6a54a9aa.herokuapp.com/sitemap.xml
