@@ -1,27 +1,24 @@
 // Scroll to top
-const btnScrollTop = document.querySelector('.btn-scroll-top');
-const windowElement = window;
-const preLoader = document.getElementById('biof-loading');
 
-if (btnScrollTop) {
-    windowElement.addEventListener('scroll', () => {
-        if (windowElement.scrollY >= 800) {
-            btnScrollTop.classList.add('showUp');
-        } else {
-            btnScrollTop.classList.remove('showUp');
-        }
-    });
+window.addEventListener('scroll', () => {
+    const btnScrollTop = document.querySelector('.btn-scroll-top');
+    if (windowElement.scrollY >= 800) {
+        btnScrollTop.classList.add('showUp');
+    } else {
+        btnScrollTop.classList.remove('showUp');
+    }
+});
 
-    btnScrollTop.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+btnScrollTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
-}
+});
 
 // Preload handle
-windowElement.addEventListener('load', () => {
+window.addEventListener('load', () => {
+    const preLoader = document.querySelector('.loading');
     console.log('Preloader loaded');
     if (preLoader) {
         console.log('Preloader found');

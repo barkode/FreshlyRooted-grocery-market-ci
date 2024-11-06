@@ -109,8 +109,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "app.urls"
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 TEMPLATES = [
     {
@@ -129,6 +129,10 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "cart.contexts.cart_contents",
+            ],
+            "builtins": [
+                "crispy_forms.templatetags.crispy_forms_tags",
+                "crispy_forms.templatetags.crispy_forms_field",
             ],
             "libraries": {
                 "breadcrumb_tags": "templatetags.breadcrumb_tags",
