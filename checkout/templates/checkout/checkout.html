@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_filters %}
 {% load static %}
 {% load cart_tags %}
 
@@ -153,47 +154,155 @@
                     <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
                         <div class="checkout-progress-wrap">
                             <ul class="steps">
-                                <li class="step 1st">
-                                    <div class="checkout-act active">
-                                        <h3 class="title-box"><span class="number">1</span>Customer</h3>
-                                        <div class="box-content">
-                                            <p class="txt-desc">Checking out as a <a class="pmlink" href="#">Guest?</a>
-                                                You’ll be able to save your details to create an account with us later.
-                                            </p>
-                                            <div class="login-on-checkout">
-                                                <form action="#" name="frm-login" method="post">
+                                <form action="#" name="frm-login" method="post">
+                                    {% csrf_token %}
+                                    <li>
+                                        <div class="checkout-act detail">
+                                            <h3 class="title-box">Detail</h3>
+{#                                            <div class="box-content">#}
+{#                                                <p class="txt-desc">#}
+{#                                                    Already have an account?#}
+{#                                                    <a href="#" class="link-forward">#}
+{#                                                        SIGN IN#}
+{#                                                    </a>#}
+{#                                                    now. If No, you can#}
+{#                                                    <a href="#" class="link-forward">#}
+{#                                                        REGISTER HERE#}
+{#                                                    </a>#}
+{#                                                </p>#}
+{#                                            </div>#}
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkout-act">
+                                            <div class="box-content">
+                                                <div class="login-on-checkout">
                                                     <p class="form-row">
-                                                        <label for="input_email">Email Address</label>
-                                                        <input type="email" name="email" id="input_email" value=""
-                                                               placeholder="Your email">
-                                                        <button type="submit" name="btn-sbmt" class="btn">Continue As
-                                                            Guest
-                                                        </button>
+                                                        {{ order_form.full_name | as_crispy_field }}
                                                     </p>
-                                                    <p class="form-row">
-                                                        <input type="checkbox" name="subcribe" id="input_subcribe">
-                                                        <label for="input_subcribe">Subscribe to our newsletter</label>
-                                                    </p>
-                                                    <p class="msg">Already have an account? <a href="#"
-                                                                                               class="link-forward">Sign
-                                                        in now</a></p>
-                                                </form>
+                                                </div>
                                             </div>
                                         </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkout-act">
+                                            <div class="box-content">
+                                                <div class="login-on-checkout">
+                                                    <p class="form-row">
+                                                        {{ order_form.email | as_crispy_field }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkout-act">
+                                            <div class="box-content">
+                                                <div class="login-on-checkout">
+                                                    <p class="form-row">
+                                                        {{ order_form.phone_number | as_crispy_field }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkout-act">
+                                            <div class="box-content">
+                                                <div class="login-on-checkout">
+                                                    <p class="form-row">
+                                                        {{ order_form.street_address1 | as_crispy_field }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkout-act">
+                                            <div class="box-content">
+                                                <div class="login-on-checkout">
+                                                    <p class="form-row">
+                                                        {{ order_form.street_address2 | as_crispy_field }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkout-act">
+                                            <div class="box-content">
+                                                <div class="login-on-checkout">
+                                                    <p class="form-row">
+                                                        {{ order_form.town_or_city | as_crispy_field }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkout-act">
+                                            <div class="box-content">
+                                                <div class="login-on-checkout">
+                                                    <p class="form-row">
+                                                        {{ order_form.county | as_crispy_field }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkout-act">
+                                            <div class="box-content">
+                                                <div class="login-on-checkout">
+                                                    <p class="form-row">
+                                                        {{ order_form.postcode | as_crispy_field }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkout-act">
+                                            <div class="box-content">
+                                                <div class="login-on-checkout">
+                                                    <p class="form-row">
+                                                        {{ order_form.country | as_crispy_field }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <div class="form-check form-check-inline float-right mr-0">
+                                        {% if user.is_authenticated %}
+                                            <label class="form-check-label" for="id-save-info">Save this delivery
+                                                information to my profile</label>
+                                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info"
+                                                   name="save-info" checked>
+                                        {% else %}
+                                            <label class="form-check-label" for="id-save-info">
+                                                <a class="text-info" href="{% url 'account_signup' %}">Create an
+                                                    account</a> or
+                                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save
+                                                this information
+                                            </label>
+                                        {% endif %}
                                     </div>
-                                </li>
-                                <li class="step 2nd">
-                                    <div class="checkout-act"><h3 class="title-box"><span class="number">2</span>Shipping
-                                    </h3></div>
-                                </li>
-                                <li class="step 3rd">
-                                    <div class="checkout-act"><h3 class="title-box"><span class="number">3</span>Billing
-                                    </h3></div>
-                                </li>
-                                <li class="step 4th">
-                                    <div class="checkout-act"><h3 class="title-box"><span class="number">4</span>Payment
-                                    </h3></div>
-                                </li>
+                                    <div class="login-on-checkout btn-section-checkout">
+                                        <div class="form-row">
+                                            <button type="button" class="btn"
+                                                    onclick="location.href='{% url 'cart:view_cart' %}'">
+                                                Return to Cart
+                                            </button>
+                                        </div>
+                                        <div class="form-row">
+                                            <button type="button" class="btn"
+                                                    onclick="location.href='{% url 'checkout:checkout' %}'">Complete
+                                                Order
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </form>
                             </ul>
                         </div>
                     </div>
@@ -272,16 +381,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="login-on-checkout btn-section-checkout">
-                            <div class="form-row">
-                                <button type="button" class="btn" onclick="location.href='{% url 'cart:view_cart' %}'">Return to Cart
-                                </button>
-                            </div>
-                            <div class="form-row">
-                                <button type="button" class="btn" onclick="location.href='{% url 'checkout:checkout' %}'">Complete Order</button>
-                            </div>
 
-                        </div>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,38 @@
 .login-on-checkout.btn-section-checkout {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0 0 0 70px;
+}
+
+.checkout-progress-wrap .steps li + li {
+	border-top: none;
+	margin-top: 0;
+}
+
+.checkout-progress-wrap .steps li {
+	padding: 10px 0 10px;
+}
+
+.steps:first-child {
+	margin-top: 50px;
+}
+
+.checkout-act.detail {
+	padding: 0 0 0 70px;
+}
+
+[name="country"] {
+	width: 100%;
+	border: 1px solid #e6e6e6;
+	border-radius: 0;
+	padding: 7px 20px;
+	max-width: 100%;
+	outline: none;
+	color: inherit;
+}
+
+.form-check.form-check-inline.float-right.mr-0 {
+	padding: 0 0 0 70px;
+	text-align: center;
 }
