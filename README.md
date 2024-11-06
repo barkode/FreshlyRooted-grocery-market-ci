@@ -968,36 +968,44 @@ To integrate AWS, follow steps:
 6. On the next screen, navigate to the "Settings" tab located at the top center of the page.
 7. In the "Config Vars" section, click on the "Reveal config Vars" button to display the environment variable
    configuration interface.
-8. Input the necessary environment variables typically stored in your local `env.py` file. For this deployment, you will
+8. Input the necessary environment variables typically stored in your local `.env` file. For this deployment, you will
    need to configure the following variables:
 
+[Example file](env.example)
+
 ```shell
-DEBUG = "True"
-DEVELOPMENT = "True"
-SITE_ID = "1"
-LANGUAGE_CODE = "en-us"
-DJANGO_SECRET_KEY = "put django secret key here"
-DATABASE_NAME = "put database name here"
-DATABASE_USER = "put database username here"
-DATABASE_PASSWORD = "put database password here"
-DATABASE_HOST = "put database host address here"
-DATABASE_PORT = "put database port here"
-ALLOWED_HOSTS = ".example1.com;.example2.com"
-CSRF_TRUSTED_ORIGINS = "https://*.example1.com;https://*.example2.com"
-STRIPE_PUBLIC_KEY = "put stripe public key here"
-STRIPE_SECRET_KEY = "put stripe secret key here"
-STRIPE_WH_SECRET = "put stripe sh secret here"
-USE_AWS = "True"
-AWS_STORAGE_BUCKET_NAME = "put aws storage bucket name here"
-AWS_S3_REGION_NAME = "put aws s3 region name here"
-AWS_ACCESS_KEY_ID = "put aws access key id here"
-AWS_SECRET_ACCESS_KEY = "put aws secret access key here"
-EMAIL_HOST = "put email smtp host here"
-EMAIL_PORT = "put email smtp port here"
-EMAIL_HOST_USER = "put email smtp username here"
-EMAIL_HOST_PASSWORD = "put email smtp password here"
-DEFAULT_FROM_EMAIL = "put email from here"
+DEBUG = False
+DEVELOPMENT = False
+USE_STORAGE = True
+USE_DATABASE = True
+IS_LOGGING = False
+LANGUAGE_CODE = 'en-us'
+SITE_ID = 1
+DJANGO_SECRET_KEY = 'your-secret-key'
+DATABASE_NAME = 'mydatabase'
+DATABASE_USER = 'dbuser'
+DATABASE_PASSWORD = 'password'
+DATABASE_HOST = 'localhost'
+DATABASE_PORT = '5432'
+ALLOWED_HOSTS = ['example.com', 'localhost']
+CSRF_TRUSTED_ORIGINS = ['https://example.com']
+STRIPE_PUBLIC_KEY = 'your-stripe-public-key'
+STRIPE_SECRET_KEY = 'your-stripe-secret-key'
+STRIPE_WH_SECRET = 'your-stripe-webhook-secret'
+AWS_STORAGE_BUCKET_NAME = 'your-bucket-name'
+AWS_S3_REGION_NAME = 'us-west-2'
+AWS_ACCESS_KEY_ID = 'your-access-key-id'
+AWS_SECRET_ACCESS_KEY = 'your-secret-access-key'
+CLOUDINARY_CLOUD_NAME = 'your-cloud-name'
+CLOUDINARY_API_KEY = 'your-cloudinary-api-key'
+CLOUDINARY_API_SECRET = 'your-cloudinary-api-secret'
+EMAIL_HOST = 'smtp.example.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'user@example.com'
+EMAIL_HOST_PASSWORD = 'email-password'
+DEFAULT_FROM_EMAIL = 'webmaster@localhost'
 ```
+
 
 9. Enter each variable name in the "KEY" field and its corresponding value in the "VALUE" field.
 10. Return to the top of the page and select the "Deploy" tab.
