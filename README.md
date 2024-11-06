@@ -502,7 +502,6 @@ through the use of CSS media queries with Bootstrap's breakpoints, ensuring an o
 | Extra Large       | xl    | ≥ 1200px   |
 | Extra extra Large | xxl   | ≥ 1400px   |
 
-
 [Back to top](#contents)
 
 ## Security Measures and Protective Design
@@ -968,10 +967,9 @@ To integrate AWS, follow steps:
 6. On the next screen, navigate to the "Settings" tab located at the top center of the page.
 7. In the "Config Vars" section, click on the "Reveal config Vars" button to display the environment variable
    configuration interface.
-8. Input the necessary environment variables typically stored in your local `.env` file. For this deployment, you will
+8. Input the necessary environment variables typically stored in your local [.env](env.example) file. For this
+   deployment, you will
    need to configure the following variables:
-
-[Example file](env.example)
 
 ```shell
 DEBUG = False
@@ -1005,7 +1003,6 @@ EMAIL_HOST_USER = 'user@example.com'
 EMAIL_HOST_PASSWORD = 'email-password'
 DEFAULT_FROM_EMAIL = 'webmaster@localhost'
 ```
-
 
 9. Enter each variable name in the "KEY" field and its corresponding value in the "VALUE" field.
 10. Return to the top of the page and select the "Deploy" tab.
