@@ -1,5 +1,5 @@
 .login-on-checkout.btn-section-checkout {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }

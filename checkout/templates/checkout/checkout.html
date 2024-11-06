@@ -274,14 +274,11 @@
                         </div>
                         <div class="login-on-checkout btn-section-checkout">
                             <div class="form-row">
-                                <button type="submit" name="btn-sbmt" class="btn">Continue As
-                                    Guest
+                                <button type="button" class="btn" onclick="location.href='{% url 'cart:view_cart' %}'">Return to Cart
                                 </button>
                             </div>
                             <div class="form-row">
-                                <button type="submit" name="btn-sbmt" class="btn">Continue As
-                                    Guest
-                                </button>
+                                <button type="button" class="btn" onclick="location.href='{% url 'checkout:checkout' %}'">Complete Order</button>
                             </div>
 
                         </div>
