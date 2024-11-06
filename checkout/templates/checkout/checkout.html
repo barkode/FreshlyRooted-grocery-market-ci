@@ -1,144 +1,300 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load cart_tags %}
 
-<!--Navigation section-->
-<div class="container">
-    <nav class="biolife-nav">
-        <ul>
-            <li class="nav-item"><a href="index-2.html" class="permal-link">Home</a></li>
-            <li class="nav-item"><span class="current-page">ShoppingCart</span></li>
-        </ul>
-    </nav>
-</div>
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
 
-<div class="page-contain checkout">
 
-    <!-- Main content -->
-    <div id="main-content" class="main-content">
-        <div class="container sm-margin-top-37px">
-            <div class="row">
+{% block content_1 %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font mb-4">Checkout</h2>
+                <hr>
+            </div>
+        </div>
 
-                <!--checkout progress box-->
-                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
-                    <div class="checkout-progress-wrap">
-                        <ul class="steps">
-                            <li class="step 1st">
-                                <div class="checkout-act active">
-                                    <h3 class="title-box"><span class="number">1</span>Customer</h3>
-                                    <div class="box-content">
-                                        <p class="txt-desc">Checking out as a <a class="pmlink" href="#">Guest?</a> You’ll be able to save your details to create an account with us later.</p>
-                                        <div class="login-on-checkout">
-                                            <form action="#" name="frm-login" method="post">
-                                                <p class="form-row">
-                                                    <label for="input_email">Email Address</label>
-                                                    <input type="email" name="email" id="input_email" value="" placeholder="Your email">
-                                                    <button type="submit" name="btn-sbmt" class="btn">Continue As Guest</button>
-                                                </p>
-                                                <p class="form-row">
-                                                    <input type="checkbox" name="subcribe" id="input_subcribe" >
-                                                    <label for="input_subcribe">Subscribe to our newsletter</label>
-                                                </p>
-                                                <p class="msg">Already have an account? <a href="#" class="link-forward">Sign in now</a></p>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="step 2nd">
-                                <div class="checkout-act"><h3 class="title-box"><span class="number">2</span>Shipping</h3></div>
-                            </li>
-                            <li class="step 3rd">
-                                <div class="checkout-act"><h3 class="title-box"><span class="number">3</span>Billing</h3></div>
-                            </li>
-                            <li class="step 4th">
-                                <div class="checkout-act"><h3 class="title-box"><span class="number">4</span>Payment</h3></div>
-                            </li>
-                        </ul>
+        <div class="row">
+            <div class="col-12 col-lg-6 order-lg-last mb-5">
+                <p class="text-muted">Order Summary ({{ product_count }})</p>
+                <div class="row">
+                    <div class="col-7 offset-2">
+                        <p class="mb-1 mt-0 small text-muted">Item</p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                     </div>
                 </div>
-
-                <!--Order Summary-->
-                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 sm-padding-top-48px sm-margin-bottom-0 xs-margin-bottom-15px">
-                    <div class="order-summary sm-margin-bottom-80px">
-                        <div class="title-block">
-                            <h3 class="title">Order Summary</h3>
-                            <a href="#" class="link-forward">Edit cart</a>
+                {% for item in cart_items %}
+                    <div class="row">
+                        <div class="col-2 mb-1">
+                            <a href="{% url 'products:product_detail' item.product.id %}">
+                                {% if item.product.image %}
+                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.slug }}">
+                                {% else %}
+                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.slug }}">
+                                {% endif %}
+                            </a>
                         </div>
-                        <div class="cart-list-box short-type">
-                            <span class="number">2 items</span>
-                            <ul class="cart-list">
-                                <li class="cart-elem">
-                                    <div class="cart-item">
-                                        <div class="product-thumb">
-                                            <a class="prd-thumb" href="#">
-                                                <figure><img src="assets/images/shippingcart/pr-01.jpg" width="113" height="113" alt="shop-cart" ></figure>
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <span class="txt-quantity">1X</span>
-                                            <a href="#" class="pr-name">National Fresh Fruit</a>
-                                        </div>
-                                        <div class="price price-contain">
-                                            <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                            <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="cart-elem">
-                                    <div class="cart-item">
-                                        <div class="product-thumb">
-                                            <a class="prd-thumb" href="#">
-                                                <figure><img src="assets/images/shippingcart/pr-02.jpg" width="113" height="113" alt="shop-cart" ></figure>
-                                            </a>
-                                        </div>
-                                        <div class="info">
-                                            <span class="txt-quantity">1X</span>
-                                            <a href="#" class="pr-name">National Fresh Fruit</a>
-                                        </div>
-                                        <div class="price price-contain">
-                                            <ins><span class="price-amount"><span class="currencySymbol">£</span>85.00</span></ins>
-                                            <del><span class="price-amount"><span class="currencySymbol">£</span>95.00</span></del>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="subtotal">
-                                <li>
-                                    <div class="subtotal-line">
-                                        <b class="stt-name">Subtotal</b>
-                                        <span class="stt-price">£170.00</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="subtotal-line">
-                                        <b class="stt-name">Shipping</b>
-                                        <span class="stt-price">£20.00</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="subtotal-line">
-                                        <b class="stt-name">Tax</b>
-                                        <span class="stt-price">£0.00</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="subtotal-line">
-                                        <a href="#" class="link-forward">Promo/Gift Certificate</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="subtotal-line">
-                                        <b class="stt-name">total:</b>
-                                        <span class="stt-price">£190.00</span>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="col-7">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                        <div class="col-3 text-right">
+                            <p class="my-0 small text-muted"><span
+                                    class="currencySymbol">{{ item.product.currency.symbol }} </span>${{ item.product.sell_price|multiply:item.quantity|floatformat:2 }}
+                            </p>
                         </div>
                     </div>
+                {% endfor %}
+                <hr class="my-0">
+                <div class="row text-black text-right">
+                    <div class="col-7 offset-2">
+                        <p class="my-0">Order Total:</p>
+                        <p class="my-0">Delivery:</p>
+                        <p class="my-0">Grand Total:</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="my-0">${{ total | floatformat:2 }}</p>
+                        <p class="my-0">${{ delivery | floatformat:2 }}</p>
+                        <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                    </div>
                 </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <p class="text-muted">Please fill out the form below to complete your order</p>
+                <form action="{% url 'checkout:checkout' %}" method="POST" id="payment-form">
+                    {% csrf_token %}
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
+                    </fieldset>
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
+                        {{ order_form.phone_number | as_crispy_field }}
+                        {{ order_form.street_address1 | as_crispy_field }}
+                        {{ order_form.street_address2 | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.county | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
+                        <div class="form-check form-check-inline float-right mr-0">
+                            {% if user.is_authenticated %}
+                                <label class="form-check-label" for="id-save-info">Save this delivery information to my
+                                    profile</label>
+                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info"
+                                       name="save-info" checked>
+                            {% else %}
+                                <label class="form-check-label" for="id-save-info">
+                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this
+                                    information
+                                </label>
+                            {% endif %}
+                        </div>
+                    </fieldset>
+                    <fieldset class="px-3">
+                        <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                        <!-- A Stripe card element will go here -->
+                        <div class="mb-3" id="card-element"></div>
+                        <!-- Used to display form errors -->
+                        <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <!-- Pass the client secret to the view so we can get the payment intent id -->
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                    </fieldset>
 
+                    <div class="submit-button text-right mt-5 mb-2">
+                        <a href="{% url 'cart:view_cart' %}" class="btn btn-outline-black rounded-0">
+							<span class="icon">
+								<i class="fas fa-chevron-left"></i>
+							</span>
+                            <span class="font-weight-bold">Adjust Cart</span>
+                        </a>
+                        <button id="submit-button" class="btn btn-black rounded-0">
+                            <span class="font-weight-bold">Complete Order</span>
+                            <span class="icon">
+								<i class="fas fa-lock"></i>
+							</span>
+                        </button>
+                        <p class="small text-danger my-0">
+							<span class="icon">
+								<i class="fas fa-exclamation-circle"></i>
+							</span>
+                            <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                        </p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</div>
+    <div id="loading-overlay">
+        <h1 class="text-light logo-font loading-spinner">
+            <span class="icon">
+                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+            </span>
+        </h1>
+    </div>
+{% endblock %}
 
+{% block content %}
+    <div class="page-contain checkout">
+
+        <!-- Main content -->
+        <div id="main-content" class="main-content">
+            <div class="container sm-margin-top-37px">
+                <div class="row">
+
+                    <!--checkout progress box-->
+                    <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                        <div class="checkout-progress-wrap">
+                            <ul class="steps">
+                                <li class="step 1st">
+                                    <div class="checkout-act active">
+                                        <h3 class="title-box"><span class="number">1</span>Customer</h3>
+                                        <div class="box-content">
+                                            <p class="txt-desc">Checking out as a <a class="pmlink" href="#">Guest?</a>
+                                                You’ll be able to save your details to create an account with us later.
+                                            </p>
+                                            <div class="login-on-checkout">
+                                                <form action="#" name="frm-login" method="post">
+                                                    <p class="form-row">
+                                                        <label for="input_email">Email Address</label>
+                                                        <input type="email" name="email" id="input_email" value=""
+                                                               placeholder="Your email">
+                                                        <button type="submit" name="btn-sbmt" class="btn">Continue As
+                                                            Guest
+                                                        </button>
+                                                    </p>
+                                                    <p class="form-row">
+                                                        <input type="checkbox" name="subcribe" id="input_subcribe">
+                                                        <label for="input_subcribe">Subscribe to our newsletter</label>
+                                                    </p>
+                                                    <p class="msg">Already have an account? <a href="#"
+                                                                                               class="link-forward">Sign
+                                                        in now</a></p>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="step 2nd">
+                                    <div class="checkout-act"><h3 class="title-box"><span class="number">2</span>Shipping
+                                    </h3></div>
+                                </li>
+                                <li class="step 3rd">
+                                    <div class="checkout-act"><h3 class="title-box"><span class="number">3</span>Billing
+                                    </h3></div>
+                                </li>
+                                <li class="step 4th">
+                                    <div class="checkout-act"><h3 class="title-box"><span class="number">4</span>Payment
+                                    </h3></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Order Summary-->
+                    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 sm-padding-top-48px sm-margin-bottom-0 xs-margin-bottom-15px">
+                        <div class="order-summary sm-margin-bottom-80px">
+                            <div class="title-block">
+                                <h3 class="title">Order Summary</h3>
+                                <a href="{% url 'cart:view_cart' %}" class="link-forward">Edit cart</a>
+                            </div>
+                            <div class="cart-list-box short-type">
+                                <span class="number">{{ product_count }}&nbsp;items</span>
+                                <ul class="cart-list">
+                                    {% for item in cart_items %}
+                                        <li class="cart-elem">
+                                            <div class="cart-item">
+                                                <div class="product-thumb">
+
+                                                    <figure>
+                                                        {% if item.product.image %}
+                                                            <img src="{{ item.product.image.url }}"
+                                                                 alt="{{ item.product.name }}" width="113" height="113">
+                                                        {% else %}
+                                                            <img src="{{ MEDIA_URL }}noimage.png"
+                                                                 alt="{{ item.product.name }}" width="113" height="113">
+                                                        {% endif %}
+                                                    </figure>
+
+                                                </div>
+                                                <div class="info">
+                                                    <span class="txt-quantity">{{ item.quantity }}&nbsp;X&nbsp;</span>
+                                                    <a href="#" class="pr-name">{{ item.product.name }}</a>
+                                                </div>
+                                                <div class="price price-contain">
+                                                    {% if item.product.discount > 0 %}
+                                                        <ins><span class="price-amount"><span
+                                                                class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ item.product.sell_price|multiply:item.quantity|floatformat:2 }}</span>
+                                                        </ins>
+                                                        <del><span class="price-amount"><span
+                                                                class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ item.product.price|multiply:item.quantity|floatformat:2 }}</span>
+                                                        </del>
+                                                    {% else %}
+                                                        <ins><span class="price-amount"><span
+                                                                class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ item.product.sell_price|multiply:item.quantity|floatformat:2 }}</span>
+                                                        </ins>
+                                                    {% endif %}
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                                <ul class="subtotal">
+                                    <li>
+                                        <div class="subtotal-line">
+                                            <b class="stt-name">Subtotal</b>
+                                            <span class="stt-price"><span
+                                                    class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ total|floatformat:2 }}</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="subtotal-line">
+                                            <b class="stt-name">Shipping</b>
+                                            <span class="stt-price"><span
+                                                    class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ delivery|floatformat:2 }}</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="subtotal-line">
+                                            <b class="stt-name">total:</b>
+                                            <span class="stt-price"><span
+                                                    class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ grand_total|floatformat:2 }}</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="login-on-checkout btn-section-checkout">
+                            <div class="form-row">
+                                <button type="submit" name="btn-sbmt" class="btn">Continue As
+                                    Guest
+                                </button>
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" name="btn-sbmt" class="btn">Continue As
+                                    Guest
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}

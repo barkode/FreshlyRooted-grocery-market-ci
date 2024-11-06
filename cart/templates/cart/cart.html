@@ -142,18 +142,20 @@
                                 <div class="subtotal-line">
                                     <b class="stt-name">Subtotal <span
                                             class="sub">({{ product_count }}&nbsp;items)</span></b>
-                                    <span class="stt-price">${{ total|floatformat:2 }}</span>
+                                    <span class="stt-price"><span
+                                            class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ total|floatformat:2 }}</span>
                                 </div>
                                 <div class="subtotal-line">
                                     <b class="stt-name">Shipping</b>
-                                    <span class="stt-price">${{ delivery|floatformat:2 }}</span>
+                                    <span class="stt-price"><span
+                                            class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ delivery|floatformat:2 }}</span>
                                 </div>
                                 <div class="subtotal-line">
                                     <b class="stt-name">Total</b>
                                     <span class="stt-price">${{ grand_total|floatformat:2 }}</span>
                                 </div>
                                 <div class="btn-checkout">
-                                    <a href="#" class="btn checkout">Check out</a>
+                                    <a href="{% url 'checkout:checkout' %}" class="btn checkout">Check out</a>
                                 </div>
                                 <div class="biolife-progress-bar">
                                     <table>
