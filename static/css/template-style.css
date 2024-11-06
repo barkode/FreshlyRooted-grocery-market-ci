@@ -236,11 +236,11 @@ select option{
 /* BIOLIFE ICON */
 @font-face {
     font-family: 'biolife';
-    src: url('../fonts/biolifebbd0.eot?t4lhqt');
-    src: url('../fonts/biolifebbd0.eot?t4lhqt#iefix') format('embedded-opentype'),
-         url('../fonts/biolifebbd0.ttf?t4lhqt') format('truetype'),
-         url('../fonts/biolifebbd0.woff?t4lhqt') format('woff'),
-         url('../fonts/biolifebbd0.svg?t4lhqt#biolife') format('svg');
+    src: url('../tmp/fonts/biolifebbd0.eot?t4lhqt');
+    src: url('../tmp/fonts/biolifebbd0.eot?t4lhqt#iefix') format('embedded-opentype'),
+         url('../tmp/fonts/biolifebbd0.ttf?t4lhqt') format('truetype'),
+         url('../tmp/fonts/biolifebbd0.woff?t4lhqt') format('woff'),
+         url('../tmp/fonts/biolifebbd0.svg?t4lhqt#biolife') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -759,7 +759,7 @@ body{
     width: 100%;
 }
 .hero-background{
-    background-image: url('../images/hero_bg.jpg');
+    background-image: url('../tmp/images/hero_bg.jpg');
     height: 194px;
     background-position: center;
     background-repeat: no-repeat;
@@ -2615,7 +2615,7 @@ body.open-mobile-search .header-area.layout-02{
     display: block;
     font-size: 0;
     line-height: 0;
-    background-image: url('../images/home-02/bgrd-newsletter.jpg');
+    background-image: url('../tmp/images/home-02/bgrd-newsletter.jpg');
     height: 315px;
     padding-top: 86px;
     background-repeat: no-repeat;
@@ -2727,7 +2727,7 @@ body.open-mobile-search .header-area.layout-02{
     width: 100%;
 }
 .newsletter-block_popup-layout{
-    background-image: url('../images/bg-newsletter.jpg');
+    background-image: url('../tmp/images/bg-newsletter.jpg');
     display: block;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -3160,7 +3160,7 @@ body.open-mobile-search .header-area.layout-02{
     top: 0;
     left: 0;
     right: 0;
-    background-image: url('../images/home-01/bg_header-01.png');
+    background-image: url('../tmp/images/home-01/bg_header-01.png');
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-transition: all 350ms ease;
@@ -3240,10 +3240,10 @@ body:not(.open-overlay) .header-area.layout-01{
     z-index: 20;
 }
 .background-mega-01{
-    background: url("../images/megamenu/vegetable-mega-bg.png");
+    background: url("../tmp/images/megamenu/vegetable-mega-bg.png");
 }
 .background-mega-02{
-    background: url("../images/megamenu/megamenu-bg-02.jpg");
+    background: url("../tmp/images/megamenu/megamenu-bg-02.jpg");
 }
 .max-width-270{
     max-width: 270px;
@@ -3522,7 +3522,7 @@ body.open-overlay #overlay{
 }
 .product-atts .atts-item .img-color,
 .sidebar .wgt-content .color-list li a .img-color{
-    background: url('../images/color_bg1.jpg');
+    background: url('../tmp/images/color_bg1.jpg');
     background-size: cover;
 }
 .sumary-product .product-attribute .product-atts .atts-item ul.color-list span.color-02,
@@ -5048,7 +5048,7 @@ body.open-overlay #overlay{
     color: #ffbc53;
 }
 .background-top-banner-for-shopping{
-    background: url(../images/top_banner_shopping_cart.png);
+    background: url(../tmp/images/top_banner_shopping_cart.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -5867,7 +5867,7 @@ body.open-overlay #overlay{
     clear: both;
 }
 .welcome-us-block{
-    background: url("../images/about-us/bn01.jpg");
+    background: url("../tmp/images/about-us/bn01.jpg");
     background-position: center bottom;
     /*height: 499px;*/
     height: 555px;
@@ -6067,7 +6067,7 @@ body.open-overlay #overlay{
     position: relative;
 }
 .testimonial-block .testml-elem .desc::before{
-    content: url("../images/about-us/double-quotes.png");
+    content: url("../tmp/images/about-us/double-quotes.png");
     width: 20px;
     height: 16px;
     font-size: 0;
@@ -6222,7 +6222,7 @@ body.open-overlay #overlay{
     margin: 0 0 30px;
 }
 .single-post-contain .post-content blockquote::before{
-    content: url(../images/blogpost/double-quote.png);
+    content: url(../tmp/images/blogpost/double-quote.png);
     display: block;
     opacity: 0.1;
     filter: alpha(opacity=10);
@@ -6784,7 +6784,7 @@ body.open-overlay #overlay{
 }
 .slider-opt03__layout01 .media{
     z-index: 10;
-    background-image: url('../images/home-03/slide-01.jpg');
+    background-image: url('../tmp/images/home-03/slide-01.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -6891,14 +6891,14 @@ body.open-overlay #overlay{
     color: #ffffff !important;
 }
 .slider-opt03__layout01.mode-02 .media{
-    background-image: url('../images/home-02/main-slide-01.jpg');
+    background-image: url('../tmp/images/home-02/main-slide-01.jpg');
     height: 955px;
 }
 .slider-opt03__layout01.mode-02.slide-bgr-02 .media{
-    background-image: url('../images/home-02/main-slide-02.jpg');
+    background-image: url('../tmp/images/home-02/main-slide-02.jpg');
 }
 .slider-opt03__layout01.mode-02.slide-bgr-03 .media{
-    background-image: url('../images/home-02/main-slide-03.jpg');
+    background-image: url('../tmp/images/home-02/main-slide-03.jpg');
 }
 .slider-opt03__layout01.mode-02 .buttons .btn-thin{
     color: #ffffff;
@@ -6907,24 +6907,24 @@ body.open-overlay #overlay{
     height: 1072px;
 }
 .slider-opt03__layout01.slide-bgr-mode03-01 .media{
-     background-image: url('../images/home-01/main-slide-01.jpg');
+     background-image: url('../tmp/images/home-01/main-slide-01.jpg');
  }
 .slider-opt03__layout01.slide-bgr-mode03-02 .media{
-    background-image: url('../images/home-01/main-slide-02.jpg');
+    background-image: url('../tmp/images/home-01/main-slide-02.jpg');
 }
 .slider-opt03__layout01.slide-bgr-mode03-03 .media{
-    background-image: url('../images/home-01/main-slide-03.jpg');
+    background-image: url('../tmp/images/home-01/main-slide-03.jpg');
 }
 .slider-opt03__layout02 .media{
     z-index: 10;
-    background-image: url('../images/home-03/green-slide-01.jpg');
+    background-image: url('../tmp/images/home-03/green-slide-01.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     height: 560px;
 }
 .slider-opt03__layout02 .media.background-geen-02{
-    background-image: url('../images/home-03/green-slide-02.jpg');
+    background-image: url('../tmp/images/home-03/green-slide-02.jpg');
 }
 .slider-opt03__layout02 .text-content{
     display: inline-block;
@@ -6992,7 +6992,7 @@ body.open-overlay #overlay{
 }
 .slider-opt04__layout01 .media{
     z-index: 10;
-    background-image: url('../images/home-04/main_slide.jpg');
+    background-image: url('../tmp/images/home-04/main_slide.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -7050,13 +7050,13 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     color: #333333;
 }
 .slider-opt04__layout01.first-slide .media{
-    background-image: url('../images/home-04/light-main_slide_01.jpg');
+    background-image: url('../tmp/images/home-04/light-main_slide_01.jpg');
 }
 .slider-opt04__layout01.second-slide .media{
-    background-image: url('../images/home-04/light-main_slide_02.jpg');
+    background-image: url('../tmp/images/home-04/light-main_slide_02.jpg');
 }
 .slider-opt04__layout01.third-slide .media{
-    background-image: url('../images/home-04/light-main_slide_03.jpg');
+    background-image: url('../tmp/images/home-04/light-main_slide_03.jpg');
 }
 .slider-opt04__layout01.light-version .text-content .first-line{
     color: #666666;
@@ -7073,7 +7073,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     overflow: hidden;
     font-size: 0;
     line-height: 1;
-    background: url("../images/home-05/main-slide.jpg");
+    background: url("../tmp/images/home-05/main-slide.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -7387,7 +7387,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     font-size: 0;
     line-height: 0;
     clear: both;
-    background-image: url(../images/home-01/bn-special-03-sample.jpg);
+    background-image: url(../tmp/images/home-01/bn-special-03-sample.jpg);
     background-position: center center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -7778,12 +7778,12 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
 }
 .tab-head__sample-layout .tab-element .tab-link:hover,
 .tab-head__sample-layout .active .tab-link{
-    background: url("../images/bg_tab-v4.png");
+    background: url("../tmp/images/bg_tab-v4.png");
     color: #ffffff;
 }
 .tab-head__sample-layout.type-02 .tab-element .tab-link:hover,
 .tab-head__sample-layout.type-02 .active .tab-link{
-    background: url("../images/bg_tab-v1.png");
+    background: url("../tmp/images/bg_tab-v1.png");
 }
 .biolife-banner__promotion{
     display: block;
@@ -7871,7 +7871,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     display: inline-block;
     width: 100%;
     height: 710px;
-    background-image: url("../images/home-03/bg_banner_pomotion_org.png");
+    background-image: url("../tmp/images/home-03/bg_banner_pomotion_org.png");
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center top;
@@ -7939,7 +7939,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     z-index: 2;
     width: 670px;
     height: 535px;
-    background-image: url(../images/home-03/slomotion_02_bg.png);
+    background-image: url(../tmp/images/home-03/slomotion_02_bg.png);
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -7999,7 +7999,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     display: block;
     clear: both;
     height: 451px;
-    background: url("../images/home-03/promotion_bg_green-version.jpg");
+    background: url("../tmp/images/home-03/promotion_bg_green-version.jpg");
     border-bottom: 1px solid #e6e6e6;
     background-position: center center;
     background-size: cover;
@@ -8068,7 +8068,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
 .biolife-banner__promotion4{
     display: block;
     clear: both;
-    background: url('../images/home-04/banner-promotion01.jpg');
+    background: url('../tmp/images/home-04/banner-promotion01.jpg');
     background-position: center center;
     background-size: cover;
     height: 650px;
@@ -8178,7 +8178,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
 .biolife-banner__promotion5 .banner-contain .media{
     display: block;
     height: 630px;
-    background-image: url('../images/home-02/banner-promotion-5.jpg');
+    background-image: url('../tmp/images/home-02/banner-promotion-5.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -8237,7 +8237,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
 .biolife-banner__promotion6 .banner-contain .media{
     display: block;
     height: 769px;
-    background-image: url('../images/home-01/bn-promotion-6.png');
+    background-image: url('../tmp/images/home-01/bn-promotion-6.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -8357,7 +8357,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     font-size: 40px;
     color: #ffffff;
     line-height: 1;
-    background-image: url(../images/home-01/bg_bold-title.png);
+    background-image: url(../tmp/images/home-01/bg_bold-title.png);
     background-repeat: no-repeat;
     background-size: cover;
     min-width: 314px;
@@ -8719,7 +8719,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
 .biolife-banner__style-01{
     display: block;
     height: 207px;
-    background-image: url(../images/home-03/biolife-banner__style-01.jpg);
+    background-image: url(../tmp/images/home-03/biolife-banner__style-01.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8784,7 +8784,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     margin: 14px 0 0;
 }
 .biolife-banner__style-15{
-    background: url("../images/home-05/bn_style-15.jpg");
+    background: url("../tmp/images/home-05/bn_style-15.jpg");
     height: 200px;
     background-size: cover;
 }
@@ -9930,26 +9930,26 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     display: inline-block;
     height: 375px;
     width: 100%;
-    background-image: url('../images/home-02/banner-grid-02.jpg');
+    background-image: url('../tmp/images/home-02/banner-grid-02.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
 }
 .biolife-banner__grid .media-contain.media-01{
-    background-image: url('../images/home-02/banner-grid-01.jpg');
+    background-image: url('../tmp/images/home-02/banner-grid-01.jpg');
     height: 750px;
 }
 .biolife-banner__grid .media-contain.media-03{
-    background-image: url('../images/home-02/banner-grid-03.jpg');
+    background-image: url('../tmp/images/home-02/banner-grid-03.jpg');
 }
 .biolife-banner__grid .media-contain.media-04{
-    background-image: url('../images/home-02/banner-grid-04.jpg');
+    background-image: url('../tmp/images/home-02/banner-grid-04.jpg');
 }
 .biolife-banner__grid .media-contain.media-05{
-    background-image: url('../images/home-02/banner-grid-05.jpg');
+    background-image: url('../tmp/images/home-02/banner-grid-05.jpg');
 }
 .biolife-banner__grid .media-contain.media-06{
-    background-image: url('../images/home-02/banner-grid-06.jpg');
+    background-image: url('../tmp/images/home-02/banner-grid-06.jpg');
     height: 750px;
     background-position: center center;
 }
@@ -9964,22 +9964,22 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../images/home-01/bn_grid_01.png);
+    background-image: url(../tmp/images/home-01/bn_grid_01.png);
 }
 .biolife-banner__grid.type-02.bn-elm-02 .banner-contain .cat-name{
-    background-image: url(../images/home-01/bn_grid_02.png);
+    background-image: url(../tmp/images/home-01/bn_grid_02.png);
 }
 .biolife-banner__grid.type-02.bn-elm-03 .banner-contain .cat-name{
-    background-image: url(../images/home-01/bn_grid_03.png);
+    background-image: url(../tmp/images/home-01/bn_grid_03.png);
 }
 .biolife-banner__grid.type-02.bn-elm-04 .banner-contain .cat-name{
-    background-image: url(../images/home-01/bn_grid_04.png);
+    background-image: url(../tmp/images/home-01/bn_grid_04.png);
 }
 .biolife-banner__grid.type-02.bn-elm-05 .banner-contain .cat-name{
-    background-image: url(../images/home-01/bn_grid_05.png);
+    background-image: url(../tmp/images/home-01/bn_grid_05.png);
 }
 .biolife-banner__grid.type-02.bn-elm-06 .banner-contain .cat-name{
-    background-image: url(../images/home-01/bn_grid_06.png);
+    background-image: url(../tmp/images/home-01/bn_grid_06.png);
 }
 
 .biolife-banner__detail-product .text-content{
@@ -10614,7 +10614,7 @@ body.open-quickview-block .biolife-quickview-block{
 * 404 Page                      *
  ===============================*/
 .page-404{
-    background-image: url(../images/404-bg.jpg);
+    background-image: url(../tmp/images/404-bg.jpg);
     background-position: center center;
     margin-top: 15px;
 }
@@ -13603,7 +13603,7 @@ body.open-quickview-block .biolife-quickview-block{
     /*********************************************/
     .tab-head__sample-layout.bg-tab-v5 .tab-element .tab-link:hover,
     .tab-head__sample-layout.bg-tab-v5 .active .tab-link{
-        background: url("../images/bg_tab-v5.png");
+        background: url("../tmp/images/bg_tab-v5.png");
         color: #222222;
     }
     .header-area.layout-05 .header-middle{
@@ -13629,7 +13629,7 @@ body.open-quickview-block .biolife-quickview-block{
         color: #dd6b0c;
     }
     .tab-head__icon-top-layout.background-tab-include .biolife-icon{
-        background-image: url(../images/home-01/tab-bg-01.png);
+        background-image: url(../tmp/images/home-01/tab-bg-01.png);
         display: inline-block;
         width: 106px;
         text-align: center;
@@ -13640,13 +13640,13 @@ body.open-quickview-block .biolife-quickview-block{
         margin-bottom: 3px;
     }
     .tab-head__icon-top-layout.background-tab-include .elm-02 .biolife-icon{
-        background-image: url(../images/home-01/tab-bg-02.png);
+        background-image: url(../tmp/images/home-01/tab-bg-02.png);
     }
     .tab-head__icon-top-layout.background-tab-include .elm-03 .biolife-icon{
-        background-image: url(../images/home-01/tab-bg-03.png);
+        background-image: url(../tmp/images/home-01/tab-bg-03.png);
     }
     .tab-head__icon-top-layout.background-tab-include .elm-04 .biolife-icon{
-        background-image: url(../images/home-01/tab-bg-04.png);
+        background-image: url(../tmp/images/home-01/tab-bg-04.png);
     }
     .tab-head__icon-top-layout.background-tab-include .active .biolife-icon{
         opacity: 1;
