@@ -16,20 +16,21 @@
                         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                             <h3 class="box-title">Your cart items</h3>
                             {% if cart_items %}
-                                <form class="shopping-cart-form" action="#" method="post">
-                                    {% csrf_token %}
-                                    <table class="shop_table cart-form">
-                                        <thead>
-                                        <tr>
-                                            <th class="product-name">Product Name</th>
-                                            <th class="product-sku">Product SKU</th>
-                                            <th class="product-price">Price</th>
-                                            <th class="product-quantity">Quantity</th>
-                                            <th class="product-subtotal">Total</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        {% for item in cart_items %}
+                                <table class="shop_table cart-table">
+                                    <thead>
+                                    <tr>
+                                        <th class="product-name">Product Name</th>
+                                        <th class="product-sku">Product SKU</th>
+                                        <th class="product-price">Price</th>
+                                        <th class="product-quantity">Quantity</th>
+                                        <th class="product-subtotal">Total</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for item in cart_items %}
+                                        <form method="post" action="{% url 'cart:adjust_cart' item.item_id %}"
+                                              class="cart-form">
+                                            {% csrf_token %}
                                             <tr class="cart-item">
                                                 <td class="product-thumbnail" data-title="Product Name">
                                                     <span class="prd-thumb">
@@ -52,10 +53,13 @@
                                                         {{ item.product.name }}
                                                     </a>
                                                     <div class="action">
-                                                        <a href="#" class="edit"><i class="fa fa-pencil"
-                                                                                    aria-hidden="true"></i></a>
-                                                        <a href="#" class="remove"><i class="fa fa-trash-o"
-                                                                                      aria-hidden="true"></i></a>
+                                                        <a class="edit update-item">
+                                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                        </a>
+                                                        <a class="remove delete-item"
+                                                           data-item_id="remove_{{ item.item_id }}">
+                                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                        </a>
                                                     </div>
                                                 </td>
                                                 <td class="prd-sku" data-title="Product SKU">
@@ -89,12 +93,16 @@
                                                             <input type="text" name="quantity"
                                                                    value="{{ item.quantity }}"
                                                                    data-max_value="20"
-                                                                   data-min_value="1" data-step="1">
-                                                            <a href="#" class="qty-btn btn-up"><i class="fa fa-caret-up"
-                                                                                                  aria-hidden="true"></i></a>
-                                                            <a href="#" class="qty-btn btn-down"><i
-                                                                    class="fa fa-caret-down"
-                                                                    aria-hidden="true"></i></a>
+                                                                   data-min_value="1"
+                                                                   data-item_id="{{ item.item_id }}"
+                                                                   data-step="1"
+                                                                   id="id_qty_{{ item.item_id }}">
+                                                            <a class="qty-btn btn-up">
+                                                                <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                            </a>
+                                                            <a class="qty-btn btn-down">
+                                                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -108,23 +116,22 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                        {% endfor %}
-
-                                        </tbody>
-                                        <tfoot>
-                                        <tr class="cart_item wrap-buttons">
-                                            <td class="wrap-btn-control" colspan="4">
-                                                <a href="{% url 'products:products' %}" class="btn back-to-shop">Back to
-                                                    Shop</a>
-                                                <button class="btn btn-update" type="submit" disabled>update</button>
-                                                <button class="btn btn-clear" type="reset" id="clearCartBtn">
-                                                    clear all
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        </tfoot>
-                                    </table>
-                                </form>
+                                        </form>
+                                    {% endfor %}
+                                    </tbody>
+                                    <tfoot>
+                                    <tr class="cart_item wrap-buttons">
+                                        <td class="wrap-btn-control" colspan="4">
+                                            <a href="{% url 'products:products' %}" class="btn back-to-shop">
+                                                Back to Shop
+                                            </a>
+                                            <button class="btn btn-clear" type="reset" id="clearCartBtn">
+                                                clear all
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tfoot>
+                                </table>
                             {% else %}
                                 <h2>Your bag is empty.</h2>
                             {% endif %}
@@ -192,7 +199,6 @@
             e.preventDefault();
 
             if (confirm('Are you sure you want to clear your cart?')) {
-                // Додаємо анімацію перед очищенням
                 const cartItems = document.querySelectorAll('.cart-item');
 
                 cartItems.forEach((item, index) => {
@@ -202,11 +208,58 @@
                         item.style.transform = 'translateX(100px)';
                     }, index * 100);
                 });
-
-                // Переходимо на URL очищення після завершення анімації
                 setTimeout(() => {
                     window.location.href = '{% url 'cart:clear_cart' %}';
                 }, cartItems.length * 100 + 500);
             }
-        });</script>
+        });
+
+        document.querySelectorAll('.update-item').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const form = document.querySelector('.cart-form');
+                if (form) {
+                    form.submit();
+                }
+            });
+        });
+
+        // Remove item and reload on click
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', async (e) => {
+                // Prevent default action
+                e.preventDefault();
+
+                // Get necessary data
+                const csrfToken = "{{ csrf_token }}";
+                const itemId = button.id.split('remove_')[1];
+                {#const productSize = button.dataset.product_size;#}
+                const url = `/cart/remove/${itemId}/`;
+
+                // Create form data
+                const formData = new FormData();
+                formData.append('csrfmiddlewaretoken', csrfToken);
+                {#formData.append('product_size', productSize);#}
+
+                try {
+                    // Send POST request
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    // Handle response
+                    if (response.ok) {
+                        location.reload();
+                    } else {
+                        console.error('Failed to remove item:', response.statusText);
+                    }
+                } catch (error) {
+                    console.error('Error removing item:', error);
+                }
+            });
+        });
+
+
+    </script>
 {% endblock %}

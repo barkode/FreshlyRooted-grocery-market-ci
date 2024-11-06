@@ -64,7 +64,6 @@ document.getElementById('clearCartBtn').addEventListener('click', function (e) {
     e.preventDefault();
 
     if (confirm('Are you sure you want to clear your cart?')) {
-        // Додаємо анімацію перед очищенням
         const cartItems = document.querySelectorAll('.cart-item');
 
         cartItems.forEach((item, index) => {
@@ -80,4 +79,51 @@ document.getElementById('clearCartBtn').addEventListener('click', function (e) {
             window.location.href = "{% url 'cart:clear_cart' %}";
         }, cartItems.length * 100 + 500);
     }
+});
+
+// Update quantity on click
+document.querySelectorAll('.update-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const form = link.previousElementSibling.querySelector('.update-form');
+        if (form) {
+            form.submit();
+        }
+    });
+});
+
+// Update quantity on click
+document.querySelectorAll('.update-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const form = link.previousElementSibling;
+        form.submit();
+    });
+});
+
+// Remove item and reload on click
+document.querySelectorAll('.remove-item').forEach(button => {
+    button.addEventListener('click', async (e) => {
+        const csrfToken = "{{ csrf_token }}";
+        const itemId = button.id.split('remove_')[1];
+        const productSize = button.dataset.product_size;
+        const url = `/cart/remove/${itemId}/`;
+
+        const formData = new FormData();
+        formData.append('csrfmiddlewaretoken', csrfToken);
+        formData.append('product_size', productSize);
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                location.reload();
+            } else {
+                console.error('Error removing item:', response.statusText);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    });
 });
