@@ -33,7 +33,7 @@ windowElement.addEventListener('load', () => {
 });
 
 document.addEventListener('click', (e) => {
-    // Проверяем, что клик был по кнопке qty-btn внутри qty-input
+
     if (!e.target.closest('.qty-input .qty-btn')) return;
 
     e.preventDefault();
@@ -60,70 +60,73 @@ document.addEventListener('click', (e) => {
     }
 });
 
-document.getElementById('clearCartBtn').addEventListener('click', function (e) {
-    e.preventDefault();
 
-    if (confirm('Are you sure you want to clear your cart?')) {
-        const cartItems = document.querySelectorAll('.cart-item');
-
-        cartItems.forEach((item, index) => {
-            setTimeout(() => {
-                item.style.transition = 'all 0.5s ease';
-                item.style.opacity = '0';
-                item.style.transform = 'translateX(100px)';
-            }, index * 100);
-        });
-
-        // Переходимо на URL очищення після завершення анімації
-        setTimeout(() => {
-            window.location.href = "{% url 'cart:clear_cart' %}";
-        }, cartItems.length * 100 + 500);
-    }
-});
-
-// Update quantity on click
-document.querySelectorAll('.update-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-        const form = link.previousElementSibling.querySelector('.update-form');
-        if (form) {
-            form.submit();
-        }
-    });
-});
-
-// Update quantity on click
-document.querySelectorAll('.update-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-        const form = link.previousElementSibling;
-        form.submit();
-    });
-});
-
-// Remove item and reload on click
-document.querySelectorAll('.remove-item').forEach(button => {
-    button.addEventListener('click', async (e) => {
-        const csrfToken = "{{ csrf_token }}";
-        const itemId = button.id.split('remove_')[1];
-        const productSize = button.dataset.product_size;
-        const url = `/cart/remove/${itemId}/`;
-
-        const formData = new FormData();
-        formData.append('csrfmiddlewaretoken', csrfToken);
-        formData.append('product_size', productSize);
-
-        try {
-            const response = await fetch(url, {
-                method: 'POST',
-                body: formData
+const clearCartBtn = document.getElementById('clearCartBtn');
+if (clearCartBtn) {
+    clearCartBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (confirm('Are you sure you want to clear your cart?')) {
+            const cartItems = document.querySelectorAll('.cart-item');
+            cartItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.transition = 'all 0.5s ease';
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateX(100px)';
+                }, index * 100);
             });
-
-            if (response.ok) {
-                location.reload();
-            } else {
-                console.error('Error removing item:', response.statusText);
-            }
-        } catch (error) {
-            console.error('Error:', error);
+            setTimeout(() => {
+                window.location.href = '{% url '
+                cart:clear_cart
+                ' %}';
+            }, cartItems.length * 100 + 500);
         }
     });
-});
+}
+const updateItemsList = document.querySelectorAll('.update-item');
+if (updateItemsList.length > 0) {
+    updateItemsList.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const form = document.querySelector('.cart-form');
+            if (form) {
+                form.submit();
+            }
+        });
+    });
+}
+
+const deleteItemsList = document.querySelectorAll('.delete-item');
+if (deleteItemsList.length > 0) {
+    deleteItemsList.forEach(link => {
+        link.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const csrfToken = "{{ csrf_token }}";
+            const itemId = link.dataset.item_id.split('remove_')[1];
+            // Validate itemId
+            if (!itemId) {
+                console.error('Invalid item ID');
+                return;
+            }
+            const url = `/cart/remove/${itemId}/`;
+            // Create form data
+            const formData = new FormData();
+            formData.append('csrfmiddlewaretoken', csrfToken);
+            try {
+                // Send POST request
+                const response = await fetch(url, {
+                    method: 'POST',
+                    body: formData
+                });
+                // Handle response
+                if (response.ok) {
+                    location.reload();
+                } else {
+                    console.error('Failed to remove item:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Error removing item:', error);
+            }
+        });
+    });
+}
+
