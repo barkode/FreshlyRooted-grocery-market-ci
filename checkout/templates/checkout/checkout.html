@@ -100,7 +100,7 @@
                         </div>
                     </fieldset>
                     <fieldset class="px-3">
-                        <legend class="fieldset-label small text-black px-2 w-auto">Payment </legend>
+                        <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                         <!-- A Stripe card element will go here -->
                         <div class="mb-3" id="card-element"></div>
                         <!-- Used to display form errors -->
@@ -153,169 +153,75 @@
                     <!--checkout progress box-->
                     <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
                         <div class="checkout-progress-wrap">
-                            <ul class="steps">
-                                <form action="#" name="frm-login" method="post">
-                                    {% csrf_token %}
-                                    <li>
-                                        <div class="checkout-act detail">
-                                            <h3 class="title-box">Detail</h3>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkout-act">
-                                            <div class="box-content">
-                                                <div class="login-on-checkout">
-                                                    <p class="form-row">
-                                                        {{ order_form.full_name | as_crispy_field }}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkout-act">
-                                            <div class="box-content">
-                                                <div class="login-on-checkout">
-                                                    <p class="form-row">
-                                                        {{ order_form.email | as_crispy_field }}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkout-act">
-                                            <div class="box-content">
-                                                <div class="login-on-checkout">
-                                                    <p class="form-row">
-                                                        {{ order_form.phone_number | as_crispy_field }}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkout-act">
-                                            <div class="box-content">
-                                                <div class="login-on-checkout">
-                                                    <p class="form-row">
-                                                        {{ order_form.street_address1 | as_crispy_field }}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkout-act">
-                                            <div class="box-content">
-                                                <div class="login-on-checkout">
-                                                    <p class="form-row">
-                                                        {{ order_form.street_address2 | as_crispy_field }}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkout-act">
-                                            <div class="box-content">
-                                                <div class="login-on-checkout">
-                                                    <p class="form-row">
-                                                        {{ order_form.town_or_city | as_crispy_field }}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkout-act">
-                                            <div class="box-content">
-                                                <div class="login-on-checkout">
-                                                    <p class="form-row">
-                                                        {{ order_form.county | as_crispy_field }}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkout-act">
-                                            <div class="box-content">
-                                                <div class="login-on-checkout">
-                                                    <p class="form-row">
-                                                        {{ order_form.postcode | as_crispy_field }}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkout-act">
-                                            <div class="box-content">
-                                                <div class="login-on-checkout">
-                                                    <p class="form-row">
-                                                        {{ order_form.country | as_crispy_field }}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="checkout-act">
-                                            <div class="checkout-act detail">
-                                                <h3 class="title-box">Payment</h3>
-                                            </div>
-                                            <div class="box-content">
-                                                <div class="login-on-checkout">
-                                                    <p class="form-row">
-                                                        <!-- A Stripe card element will go here -->
-                                                    <div class="mb-3" id="card-element"></div>
-                                                    <!-- Used to display form errors -->
-                                                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                                                    <!-- Pass the client secret to the view so we can get the payment intent id -->
-                                                    <input type="hidden" value="{{ client_secret }}"
-                                                           name="client_secret">
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <div class="form-check form-check-inline float-right mr-0">
-                                        {% if user.is_authenticated %}
-                                            <label class="form-check-label" for="id-save-info">Save this delivery
-                                                information to my profile</label>
-                                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info"
-                                                   name="save-info" checked>
-                                        {% else %}
-                                            <label class="form-check-label" for="id-save-info">
-                                                <a class="text-info" href="{% url 'account_signup' %}">Create an
-                                                    account</a> or
-                                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save
-                                                this information
-                                            </label>
-                                        {% endif %}
+                            <form action="#" name="frm-login" method="post">
+                                {% csrf_token %}
+                                <div class="checkout-act detail">
+                                    <h3 class="title-box">Detail</h3>
+                                </div>
+                                <div class="box-content login-on-checkout form-row">
+                                    <div>
+                                        {{ order_form.full_name | as_crispy_field }}
                                     </div>
-                                    <div class="login-on-checkout btn-section-checkout">
-                                        <div class="form-row">
-                                            <button type="button" class="btn"
-                                                    onclick="location.href='{% url 'cart:view_cart' %}'">
-                                                Return to Cart
-                                            </button>
-                                        </div>
-                                        <div class="form-row">
-                                            <button type="button" class="btn"
-                                                    onclick="location.href='{% url 'checkout:checkout' %}'">Complete
-                                                Order
-                                            </button>
-
-                                        </div>
-
+                                    <div>
+                                        {{ order_form.email | as_crispy_field }}
                                     </div>
-                                </form>
-                            </ul>
+                                    <div>
+                                        {{ order_form.phone_number | as_crispy_field }}
+                                    </div>
+                                    <div>
+                                        {{ order_form.street_address1 | as_crispy_field }}
+                                    </div>
+                                    <div>
+                                        {{ order_form.street_address2 | as_crispy_field }}
+                                    </div>
+                                    <div>
+                                        {{ order_form.town_or_city | as_crispy_field }}
+                                    </div>
+                                    <div>
+                                        {{ order_form.county | as_crispy_field }}
+                                    </div>
+                                    <div>
+                                        {{ order_form.postcode | as_crispy_field }}
+                                    </div>
+                                    <div>
+                                        {{ order_form.country | as_crispy_field }}
+                                    </div>
+                                </div>
+                                <div class="checkout-act detail">
+                                    <h3 class="title-box">Payment</h3>
+                                </div>
+                                <div class="box-content login-on-checkout form-row">
+                                    <!-- A Stripe card element will go here -->
+                                    <div class="mb-3" id="card-element"></div>
+                                    <!-- Used to display form errors -->
+                                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                                    <!-- Pass the client secret to the view so we can get the payment intent id -->
+                                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                                </div>
+                                <div class="form-check form-check-inline float-right mr-0">
+                                    {% if user.is_authenticated %}
+                                        <label class="form-check-label" for="id-save-info">Save this delivery
+                                            information to my profile</label>
+                                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info"
+                                               name="save-info" checked>
+                                    {% else %}
+                                        <label class="form-check-label" for="id-save-info">
+                                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a>
+                                            or
+                                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this
+                                            information
+                                        </label>
+                                    {% endif %}
+                                </div>
+                                <div class="login-on-checkout btn-section-checkout form-row">
+                                    <button type="button" class="btn"
+                                            onclick="location.href='{% url 'cart:view_cart' %}'">Return to Cart
+                                    </button>
+                                    <button type="submit" class="btn">Complete Order</button>
+                                </div>
+                            </form>
                         </div>
-
-
+                    </div>
 
                     <!--Order Summary-->
                     <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 sm-padding-top-48px sm-margin-bottom-0 xs-margin-bottom-15px">
