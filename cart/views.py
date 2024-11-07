@@ -1,6 +1,5 @@
 from django.contrib import messages
 from django.shortcuts import get_object_or_404, HttpResponse, redirect, render, reverse
-from urllib3 import request
 
 from products.models import Product
 
