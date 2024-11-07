@@ -8,7 +8,7 @@ from .models import About
 # Create your views here.
 
 
-def about_us(request):
+def about_contact(request):
     """
     Renders the most recent information on the website author
     and allows user collaboration requests.
@@ -39,6 +39,14 @@ def about_us(request):
 
     return render(
         request,
-        "about/index.html",
+        "about/contact.html",
         {"about": about, "collaborate_form": collaborate_form},
     )
+def about_privacy_policy(request):
+    return render(request, "about/privacy_policy.html")
+
+def about_return_policy(request):
+    return render(request, "about/return_policy.html")
+
+def about_us(request):
+    return render(request, "about/about.html")

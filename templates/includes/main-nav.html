@@ -53,12 +53,20 @@
         </li>
 
         <!-- Contact link -->
-        <li class="nav-item d-block">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'about:about' %}"
-               id="contact-link">
-                Contact
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="{% url 'about:about' %}" class="dropdown-item">About Us</a>
+                <a href="{% url 'about:contact' %}" class="dropdown-item">Contact</a>
+                <a href="{% url 'about:privacy' %}" class="dropdown-item">Privacy Policy</a>
+                <a href="{% url 'about:return' %}" class="dropdown-item">Return Policy</a>
+            </div>
         </li>
+
+
     </ul>
 </div>
 
