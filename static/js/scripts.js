@@ -1,8 +1,8 @@
 // Scroll to top
-
+const btnScrollTop = document.querySelector('.btn-scroll-top');
 window.addEventListener('scroll', () => {
-    const btnScrollTop = document.querySelector('.btn-scroll-top');
-    if (windowElement.scrollY >= 800) {
+
+    if (window.scrollY >= 800) {
         btnScrollTop.classList.add('showUp');
     } else {
         btnScrollTop.classList.remove('showUp');
@@ -19,7 +19,6 @@ btnScrollTop.addEventListener('click', () => {
 // Preload handle
 window.addEventListener('load', () => {
     const preLoader = document.querySelector('.loading');
-    console.log('Preloader loaded');
     if (preLoader) {
         console.log('Preloader found');
         preLoader.style.transition = 'opacity 0.8s';

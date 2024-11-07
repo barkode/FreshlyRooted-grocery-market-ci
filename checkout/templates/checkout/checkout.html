@@ -8,7 +8,7 @@
 {% endblock %}
 
 
-{% block content_1 %}
+{% block content-1 %}
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -305,7 +305,7 @@
     </div>
 {% endblock %}
 
-{% block postloadjs %}
+{% block postload_js %}
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
