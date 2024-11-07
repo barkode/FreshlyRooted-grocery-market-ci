@@ -493,7 +493,7 @@ This schema was generated using [lucid.app](https://lucid.app/).
 My website is designed to be responsive, adapting smoothly to different screen sizes and device types. This is achieved
 through the use of CSS media queries with Bootstrap's breakpoints, ensuring an optimal user experience on all devices.
 
-| Breackpoint       | Class | Dimensions |
+| Breakpoint        | Class | Dimensions |
 |-------------------|-------|------------|
 | X-Small           | None  | < 576px    |
 | Small             | sm    | ≥ 576px    |
