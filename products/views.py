@@ -1,12 +1,10 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.contrib.messages.views import SuccessMessageMixin
-from django.db import IntegrityError
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.shortcuts import get_object_or_404, redirect, render, reverse
-from django.views.generic import DeleteView, UpdateView
+from django.utils.http import urlencode
 
 from favorites.models import Favorites
 from .forms import ProductForm
@@ -21,7 +19,6 @@ def all_products(request):
 	categories = None
 	sort = None
 	direction = None
-	brand = None
 
 	if user.is_authenticated:
 		favorites, created = Favorites.objects.get_or_create(user=user)
@@ -45,12 +42,12 @@ def all_products(request):
 
 		if 'category' in request.GET:
 			categories = request.GET['category']
-			print("Before", categories)
+
 			if categories:
 				categories = categories.split(',')
 				if categories[0] == 'all':
 					categories = Category.objects.values_list('slug', flat=True)
-					print("After if", categories)
+
 				products = products.filter(category__slug__in=categories)
 				categories = Category.objects.filter(slug__in=categories)
 
@@ -65,12 +62,27 @@ def all_products(request):
 
 	current_sorting = f'{sort}_{direction}'
 
+	paginator = Paginator(products, 12)
+	page = request.GET.get('page')
+
+	try:
+		products_paginated = paginator.page(page)
+	except PageNotAnInteger:
+		products_paginated = paginator.page(1)
+	except EmptyPage:
+		products_paginated = paginator.page(paginator.num_pages)
+
+	get_params = request.GET.copy()
+	if 'page' in get_params:
+		del get_params['page']
+
 	context = {
-		'products': products,
+		'products': products_paginated,
 		'search_term': query,
 		'current_categories': categories,
 		'current_sorting': current_sorting,
 		"favorites": favorites,
+		'get_params': urlencode(get_params),
 		}
 
 	return render(request, 'products/products.html', context)
