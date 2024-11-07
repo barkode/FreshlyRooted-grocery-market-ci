@@ -1,9 +1,9 @@
 import unittest
-from unittest.mock import patch
 
-from blog.models import Post
 from django.contrib.auth.models import User
 from django.test import TestCase
+
+from blog.models import Post
 
 
 class PostModelTest(TestCase):
