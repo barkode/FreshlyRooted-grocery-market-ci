@@ -52,7 +52,7 @@ def add_favorites(request, product_id):
 
 
 # View to remove a product from the user's wishlist
-def remove_wishlist(request, product_id):
+def remove_favorites(request, product_id):
 	if not request.user.is_authenticated:
 		messages.error(
 			request, "Sorry, you need to be logged in to edit your Favorites."
