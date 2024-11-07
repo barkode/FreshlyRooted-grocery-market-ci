@@ -3,15 +3,6 @@ from django.contrib import admin
 from .models import About, CollaborateRequest
 
 
-@admin.register(About)
-class AboutAdmin(admin.ModelAdmin):
-    """
-    Adds rich-text editing of content in admin
-    """
-
-    summernote_fields = ("content",)
-
-
 @admin.register(CollaborateRequest)
 class CollaborateRequestAdmin(admin.ModelAdmin):
     """
@@ -22,3 +13,5 @@ class CollaborateRequestAdmin(admin.ModelAdmin):
         "message",
         "read",
     )
+
+admin.site.register(About)
