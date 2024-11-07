@@ -156,7 +156,24 @@
 {% block postload_js %}
     <script type="text/javascript">
         $('.toast').toast('show');
-        
+
+        /*Scroll to top*/
+        $btn_scroll_top = $('.btn-scroll-top');
+        if ($btn_scroll_top.length) {
+            window.on('scroll', function () {
+                if (window.scrollTop() >= 800) {
+                    $btn_scroll_top.addClass('showUp');
+                } else {
+                    $btn_scroll_top.removeClass('showUp');
+                }
+            });
+            $btn_scroll_top.on('click', function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 1500);
+            });
+        }
+
     </script>
 {% endblock %}
 
