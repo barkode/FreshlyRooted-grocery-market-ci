@@ -32,7 +32,7 @@ urlpatterns = [
     path("checkout/", include("checkout.urls", namespace="checkout")),
     path("blog/", include("blog.urls", namespace="blog")),
     path("about/", include("about.urls", namespace="about")),
-    path('wishlist/', include('favorites.urls', namespace='favorites')),
+    path('favorites/', include('favorites.urls', namespace='favorites')),
 ]
 
 if settings.DEBUG:

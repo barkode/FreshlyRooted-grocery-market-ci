@@ -61,3 +61,21 @@
         </li>
     </ul>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(dropdown => {
+            [ 'mouseenter', 'mouseleave' ].forEach(event => {
+                dropdown.addEventListener(event, () => {
+                    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                    const navLink = dropdown.querySelector('.nav-link');
+
+                    dropdownMenu.classList.toggle('show', event === 'mouseenter');
+                    navLink.classList.toggle('hover-underline', event === 'mouseenter');
+                });
+            });
+        });
+    });
+</script>

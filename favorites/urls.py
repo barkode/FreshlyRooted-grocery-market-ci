@@ -6,7 +6,7 @@ app_name = "favorites"
 
 urlpatterns = [
 	path("", views.view_favorites, name="favorites"),
-	path("add_wishlist/<int:product_id>/",
+	path("add_favorites/<int:product_id>/",
 	     views.add_favorites,
 	     name="add_favorites"),
 	path(

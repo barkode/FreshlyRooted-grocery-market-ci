@@ -11,7 +11,7 @@ from .models import Favorites
 def view_favorites(request):
 	if not request.user.is_authenticated:
 		messages.error(
-			request, "Sorry, you need to be logged in to add to your Wishlist."
+			request, "Sorry, you need to be logged in to add to your Favorites."
 			)
 		return redirect(reverse("account_login"))
 
@@ -46,12 +46,12 @@ def add_favorites(request, product_id):
 		fav_lst.products.add(product)
 		messages.info(request, f"{product.name} has been added to your Favorites!")  # noqa
 
-	redirect_url = request.META.get("HTTP_REFERER", reverse("products"))
+	redirect_url = request.META.get("HTTP_REFERER", reverse("products:products"))
 
 	return HttpResponseRedirect(redirect_url)
 
 
-# View to remove a product from the user's wishlist
+# View to remove a product from the user's favorites
 def remove_favorites(request, product_id):
 	if not request.user.is_authenticated:
 		messages.error(
@@ -65,16 +65,16 @@ def remove_favorites(request, product_id):
 	fav_lst.products.remove(product)
 	messages.info(request, f"{product.name} has been removed from your Favorites!")  # noqa
 
-	redirect_url = request.META.get("HTTP_REFERER", reverse("products"))
+	redirect_url = request.META.get("HTTP_REFERER", reverse("products:products"))
 
 	return HttpResponseRedirect(redirect_url)
 
 
-# View to clear all products from the user's wishlist
+# View to clear all products from the user's favorites
 def clear_favorites(request):
 	if not request.user.is_authenticated:
 		messages.error(
-			request, "Sorry, you need to be logged in to edit your Wishlist."
+			request, "Sorry, you need to be logged in to edit your Favorites."
 			)
 		return redirect(reverse("account_login"))
 
@@ -86,6 +86,6 @@ def clear_favorites(request):
 		fav_lst.products.remove(product)
 
 	fav_lst.products.remove(product)
-	messages.info(request, "Wishlist cleared!")
+	messages.info(request, "Favorites list cleared!")
 
 	return redirect(reverse("favorites:view_favorites"))
