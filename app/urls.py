@@ -30,6 +30,8 @@ urlpatterns = [
     path("profile/", include("profiles.urls", namespace="profiles")),
     path("cart/", include("cart.urls", namespace="cart")),
     path("checkout/", include("checkout.urls", namespace="checkout")),
+    path("blog/", include("blog.urls", namespace="blog")),
+    path("about/", include("about.urls", namespace="about")),
 ]
 
 if settings.DEBUG:

@@ -89,8 +89,8 @@ INSTALLED_APPS = [
     "home",
     "products",
     "cart",
-    # "blog",
-    # "about",
+    "blog",
+    "about",
     "checkout",
     "profiles",
 ]

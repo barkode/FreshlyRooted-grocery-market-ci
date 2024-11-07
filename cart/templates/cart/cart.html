@@ -2,6 +2,10 @@
 {% load static %}
 {% load cart_tags %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -109,7 +113,7 @@
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <a href="{% url 'products:products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
@@ -142,7 +146,7 @@
             var csrfToken = "{{ csrf_token }}";
             var itemId = $(this).attr('id').split('remove_')[1];
             var size = $(this).data('product_size');
-            var url = `/bag/remove/${itemId}/`;
+            var url = `/cart/remove/${itemId}/`;
             var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
 
             $.post(url, data)

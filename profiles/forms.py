@@ -1,4 +1,5 @@
 from django import forms
+
 from .models import UserProfile
 
 
@@ -20,6 +21,11 @@ class UserProfileForm(forms.ModelForm):
             "default_street_address1": "Street Address 1",
             "default_street_address2": "Street Address 2",
             "default_county": "County, State or Locality",
+            "default_city": "City, Town or Village",
+            "default_profile_image": "Profile Image",
+            "default_bio": "User Bio",
+            "default_location": "User Location",
+            "default_birth_date": "Birth Date",
         }
 
         self.fields["default_phone_number"].widget.attrs["autofocus"] = True
