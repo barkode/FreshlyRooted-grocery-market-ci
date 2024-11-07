@@ -1,272 +1,154 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 {% load cart_tags %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
+    <div class="overlay"></div>
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font mb-4">Shopping Bag</h2>
+                <hr>
+            </div>
+        </div>
 
-    <div class="page-contain shopping-cart">
-
-        <!-- Main content -->
-        <div id="main-content" class="main-content">
-            <div class="container">
-
-                <!--Cart Table-->
-                <div class="shopping-cart-container">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-                            <h3 class="box-title">Your cart items</h3>
-                            {% if cart_items %}
-                                <table class="shop_table cart-table">
-                                    <thead>
-                                    <tr>
-                                        <th class="product-name">Product Name</th>
-                                        <th class="product-sku">Product SKU</th>
-                                        <th class="product-price">Price</th>
-                                        <th class="product-quantity">Quantity</th>
-                                        <th class="product-subtotal">Total</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    {% for item in cart_items %}
-                                        <form method="post" action="{% url 'cart:adjust_cart' item.item_id %}"
-                                              class="cart-form" name="cart_form" id="cart_form_{{ item.item_id }}">
-                                            {% csrf_token %}
-                                            <tr class="cart-item">
-                                                <td class="product-thumbnail" data-title="Product Name">
-                                                    <span class="prd-thumb">
-                                                        <figure>
-                                                            {% if item.product.image %}
-                                                                <img src="{{ item.product.image.url }}"
-                                                                     alt="{{ item.product.name }}" width="113"
-                                                                     height="113">
-                                                            {% else %}
-                                                                <img class="card-img-top img-fluid"
-                                                                     src="{% static 'images/noimage.png' %}"
-                                                                     alt="{{ item.product.name }}" width="113"
-                                                                     height="113">
-
-                                                            {% endif %}
-                                                        </figure>
-                                                    </span>
-                                                    <a class="prd-name"
-                                                       href="{% url 'products:products' %}{{ item.product.id }}">
-                                                        {{ item.product.name }}
-                                                    </a>
-                                                    <div class="action">
-                                                        <a class="edit update-item">
-                                                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                                        </a>
-                                                        <a class="remove delete-item"
-                                                           data-item_id="remove_{{ item.item_id }}">
-                                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                                <td class="prd-sku" data-title="Product SKU">
-                                                    <div class="prd-name">{{ item.product.sku|upper }}</div>
-                                                </td>
-                                                <td class="product-price" data-title="Price">
-                                                    <div class="price price-contain">
-                                                        {% if item.product.discount > 0 %}
-                                                            <ins><span class="price-amount"><span
-                                                                    class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ item.product.sell_price }}</span>
-                                                            </ins>
-                                                            <del><span class="price-amount"><span
-                                                                    class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ item.product.price }}</span>
-                                                            </del>
-                                                            <ins><span
-                                                                    class="price-amount"> &nbsp;/&nbsp;{{ item.product.measurement.abbreviation }}</span>
-                                                            </ins>
-                                                        {% else %}
-                                                            <ins><span class="price-amount"><span
-                                                                    class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ item.product.sell_price }}</span>
-                                                            </ins>
-                                                            <ins><span
-                                                                    class="price-amount"> &nbsp;/&nbsp;{{ item.product.measurement.abbreviation }}</span>
-                                                            </ins>
-                                                        {% endif %}
-                                                    </div>
-                                                </td>
-                                                <td class="product-quantity" data-title="Quantity">
-                                                    <div class="quantity-box type1">
-                                                        <div class="qty-input">
-                                                            <input type="text"
-                                                                   name="quantity"
-                                                                   value="{{ item.quantity }}"
-                                                                   data-max_value="99"
-                                                                   data-min_value="1"
-                                                                   data-item_id="{{ item.item_id }}"
-                                                                   data-step="1"
-                                                                   id="id_qty_{{ item.item_id }}">
-                                                            <a class="qty-btn btn-up">
-                                                                <i class="fa fa-caret-up" aria-hidden="true"></i>
-                                                            </a>
-                                                            <a class="qty-btn btn-down">
-                                                                <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="product-subtotal" data-title="Total">
-                                                    <div class="price price-contain">
-
-                                                        <ins><span class="price-amount"><span
-                                                                class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ item.product.sell_price|multiply:item.quantity|floatformat:2 }}</span>
-                                                        </ins>
-
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </form>
-                                    {% endfor %}
-                                    </tbody>
-                                    <tfoot>
-                                    <tr class="cart_item wrap-buttons">
-                                        <td class="wrap-btn-control" colspan="4">
-                                            <a href="{% url 'products:products' %}" class="btn back-to-shop">
-                                                Back to Shop
-                                            </a>
-                                            <button class="btn btn-clear" type="reset" id="clearCartBtn">
-                                                clear all
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    </tfoot>
-                                </table>
-                            {% else %}
-                                <h2>Your bag is empty.</h2>
-                            {% endif %}
-                        </div>
-                        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                            <div class="shpcart-subtotal-block">
-                                <div class="subtotal-line">
-                                    <b class="stt-name">Subtotal <span
-                                            class="sub">({{ product_count }}&nbsp;items)</span></b>
-                                    <span class="stt-price"><span
-                                            class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ total|floatformat:2 }}</span>
-                                </div>
-                                <div class="subtotal-line">
-                                    <b class="stt-name">Shipping</b>
-                                    <span class="stt-price"><span
-                                            class="currencySymbol">{{ item.product.currency.symbol }} </span>{{ delivery|floatformat:2 }}</span>
-                                </div>
-                                <div class="subtotal-line">
-                                    <b class="stt-name">Total</b>
-                                    <span class="stt-price">${{ grand_total|floatformat:2 }}</span>
-                                </div>
-                                <div class="btn-checkout">
-                                    <a href="{% url 'checkout:checkout' %}" class="btn checkout">Check out</a>
-                                </div>
-                                <div class="biolife-progress-bar">
-                                    <table>
-                                        <tr>
-                                            <td class="first-position">
-                                                <span class="index">$0</span>
-                                            </td>
-                                            <td class="mid-position">
-                                                <div class="progress">
-                                                    <div class="progress-bar" role="progressbar"
-                                                         style="width: {{ progress_percentage|floatformat:0 }}%"
-                                                         aria-valuenow="{{ progress_percentage|floatformat:0 }}"
-                                                         aria-valuemin="0"
-                                                         aria-valuemax="100"
-                                                    >
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="last-position">
-                                                <span class="index">${{ free_delivery_threshold }}</span>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <p class="pickup-info"><b>Free Pickup</b> is available as soon as today More about
-                                    shipping and pickup</p>
+        <div class="row">
+            <div class="col">
+                {% if cart_items %}
+                    <div class="d-block d-md-none">
+                        <div class="row">
+                            <div class="col">
+                                {% include "cart/cart-total.html" %}
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col">
+                                {% include "cart/checkout-buttons.html" %}
+                                <p class="text-muted mb-5">A summary of your bag contents is below</p>
+                            </div>
+                        </div>
+                        {% for item in cart_items %}
+                            <div class="row">
+                                <div class="col-12 col-sm-6 mb-2">
+                                    {% include "cart/product-image.html" %}
+                                </div>
+                                <div class="col-12 col-sm-6 mb-2">
+                                    {% include "cart/product-info.html" %}
+                                </div>
+                                <div class="col-12 col-sm-6 order-sm-last">
+                                    <p class="my-0">Price Each: ${{ item.product.price }}</p>
+                                    <p><strong>Subtotal: </strong>${{ item.product.price | multiply:item.quantity }}</p>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    {% include "cart/quantity-form.html" %}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="btt-button shadow-sm rounded-0 border border-black">
+                            <a class="btt-link d-flex h-100">
+                                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                    <div class="table-responsive rounded d-none d-md-block">
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                            <tr>
+                                <th scope="col">Product Info</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                            </thead>
 
+                            {% for item in cart_items %}
+                                <tr>
+                                    <td class="p-3 w-25">
+                                        {% include "cart/product-image.html" %}
+                                    </td>
+                                    <td class="py-3">
+                                        {% include "cart/product-info.html" %}
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">${{ item.product.price }}</p>
+                                    </td>
+                                    <td class="py-3 w-25">
+                                        {% include "cart/quantity-form.html" %}
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">${{ item.product.price | multiply:item.quantity }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-5 text-right">
+                                    {% include "cart/cart-total.html" %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                    {% include "cart/checkout-buttons.html" %}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                {% else %}
+                    <p class="lead mb-5">Your bag is empty.</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>
-
 {% endblock %}
 
-{#TODO: Delete this part before deploy production#}
-
 {% block postload_js %}
-{#    {{ block.super }}#}
-{#    <script>#}
-{#        document.addEventListener("DOMContentLoaded", () => {#}
-{#            const clearCartBtn = document.getElementById('clearCartBtn');#}
-{#            if (clearCartBtn) {#}
-{#                clearCartBtn.addEventListener('click', function (e) {#}
-{#                    e.preventDefault();#}
-{#                    if (confirm('Are you sure you want to clear your cart?')) {#}
-{#                        const cartItems = document.querySelectorAll('.cart-item');#}
-{#                        cartItems.forEach((item, index) => {#}
-{#                            setTimeout(() => {#}
-{#                                item.style.transition = 'all 0.5s ease';#}
-{#                                item.style.opacity = '0';#}
-{#                                item.style.transform = 'translateX(100px)';#}
-{#                            }, index * 100);#}
-{#                        });#}
-{#                        setTimeout(() => {#}
-{#                            window.location.href = '{% url 'cart:clear_cart' %}';#}
-{#                        }, cartItems.length * 100 + 500);#}
-{#                    }#}
-{#                });#}
-{#            }#}
-{#            const updateItemsList = document.querySelectorAll('.update-item');#}
-{#            if (updateItemsList.length > 0) {#}
-{#                updateItemsList.forEach(link => {#}
-{#                    link.addEventListener('click', (e) => {#}
-{#                        e.preventDefault();#}
-{#                        const form = document.querySelector('.cart-form');#}
-{#                        if (form) {#}
-{#                            form.submit();#}
-{#                        }#}
-{#                    });#}
-{#                });#}
-{#            }#}
-{##}
-{#            const deleteItemsList = document.querySelectorAll('.delete-item');#}
-{#            if (deleteItemsList.length > 0) {#}
-{#                deleteItemsList.forEach(link => {#}
-{#                    link.addEventListener('click', async (e) => {#}
-{#                        e.preventDefault();#}
-{#                        const csrfToken = "{{ csrf_token }}";#}
-{#                        const itemId = link.dataset.item_id.split('remove_')[1];#}
-{#                        // Validate itemId#}
-{#                        if (!itemId) {#}
-{#                            console.error('Invalid item ID');#}
-{#                            return;#}
-{#                        }#}
-{#                        const url = `/cart/remove/${itemId}/`;#}
-{#                        // Create form data#}
-{#                        const formData = new FormData();#}
-{#                        formData.append('csrfmiddlewaretoken', csrfToken);#}
-{#                        try {#}
-{#                            // Send POST request#}
-{#                            const response = await fetch(url, {#}
-{#                                method: 'POST',#}
-{#                                body: formData#}
-{#                            });#}
-{#                            // Handle response#}
-{#                            if (response.ok) {#}
-{#                                location.reload();#}
-{#                            } else {#}
-{#                                console.error('Failed to remove item:', response.statusText);#}
-{#                            }#}
-{#                        } catch (error) {#}
-{#                            console.error('Error removing item:', error);#}
-{#                        }#}
-{#                    });#}
-{#                });#}
-{#            }#}
-{#        });#}
-{##}
-{##}
-{#    </script>#}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('.btt-link').click(function (e) {
+            window.scrollTo(0, 0)
+        })
+    </script>
+    {% include 'products/includes/quantity_input_script.html' %}
+
+    <script type="text/javascript">
+        // Update quantity on click
+        $('.update-link').click(function (e) {
+            var form = $(this).prev('.update-form');
+            form.submit();
+        })
+
+        // Remove item and reload on click
+        $('.remove-item').click(function (e) {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var size = $(this).data('product_size');
+            var url = `/bag/remove/${itemId}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+
+            $.post(url, data)
+                .done(function () {
+                    location.reload();
+                });
+        })
+    </script>
 {% endblock %}
