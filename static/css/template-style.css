@@ -236,11 +236,11 @@ select option{
 /* BIOLIFE ICON */
 @font-face {
     font-family: 'biolife';
-    src: url('../tmp/fonts/biolifebbd0.eot?t4lhqt');
-    src: url('../tmp/fonts/biolifebbd0.eot?t4lhqt#iefix') format('embedded-opentype'),
-         url('../tmp/fonts/biolifebbd0.ttf?t4lhqt') format('truetype'),
-         url('../tmp/fonts/biolifebbd0.woff?t4lhqt') format('woff'),
-         url('../tmp/fonts/biolifebbd0.svg?t4lhqt#biolife') format('svg');
+    src: url('static/fonts/biolifebbd0.eot?t4lhqt');
+    src: url('static/fonts/biolifebbd0.eot?t4lhqt#iefix') format('embedded-opentype'),
+         url('static/fonts/biolifebbd0.ttf?t4lhqt') format('truetype'),
+         url('static/fonts/biolifebbd0.woff?t4lhqt') format('woff'),
+         url('static/fonts/biolifebbd0.svg?t4lhqt#biolife') format('svg');
     font-weight: normal;
     font-style: normal;
 }
