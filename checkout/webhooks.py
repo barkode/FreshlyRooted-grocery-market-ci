@@ -11,7 +11,16 @@ import stripe
 @require_POST
 @csrf_exempt
 def webhook(request):
-    """Listen for webhooks from Stripe"""
+    """
+    Args:
+        request: The HttpRequest object containing the webhook data from Stripe.
+
+    Returns:
+        HttpResponse: A response object indicating the result of webhook processing.
+
+    Handles incoming Stripe webhook events by validating the event signature,
+    determining the event type, and dispatching the event to the appropriate handler function.
+    """
     # Setup
     wh_secret = settings.STRIPE_WH_SECRET
     stripe.api_key = settings.STRIPE_SECRET_KEY
