@@ -327,3 +327,18 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 }
+
+/* Fvorites */
+
+.favorites-badge {
+    position: absolute;
+    font-size: 1.25em;
+    left: 20px;
+    top: 15px;
+    font-weight: normal;
+    color: black;
+}
+
+.favorites-icon {
+    color: black;
+}

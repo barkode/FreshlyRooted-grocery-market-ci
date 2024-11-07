@@ -54,6 +54,16 @@
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
+                                {% if product in favorites.products.all %}
+                                    <a href="{% url 'favorites:remove_favorites' product.id %}" aria-label="Remove product from Favorites">
+                                        <div class="wishlist-badge"><i class="fa-regular fa-heart"></i></div>
+                                    </a>
+                                {% else %}
+                                    <a href="{% url 'favorites:add_favorites' product.id %}" aria-label="Add product to Favorites">
+                                        <div class="wishlist-badge"><i class="fa-regular fa-heart"></i></div>
+                                    </a>
+                                {% endif %}
+
                                 {% if product.image %}
                                 <a href="{% url 'products:product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
