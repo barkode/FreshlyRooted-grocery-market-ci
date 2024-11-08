@@ -588,60 +588,191 @@ and user interactions
 
 ## E-Commerce Business Model
 
+Freshly Rooted Online Market operates as an e-commerce platform specializing in the sale of dairy, organic foods, meals,
+and all-natural products. The business model is crafted to deliver a seamless and personalized shopping experience,
+catering to health-conscious consumers and food enthusiasts.
+
+Key components of the Freshly Rooted Online Market business model include:
+
 1. **Direct-to-Consumer Sales**
+
+Freshly Rooted offers a wide array of natural and organic products directly to customers, eliminating the need for
+intermediaries. This approach allows for competitive pricing, improved profit margins, and a tailored shopping
+experience.
 
 2. **Diverse Product Range**
 
+The market stocks an extensive selection of products, including fresh dairy, organic fruits and vegetables, ready-to-eat
+meals, and a variety of all-natural pantry staples. Additionally, it offers eco-friendly household items and wellness
+products to complement a healthy lifestyle.
+
 3. **Digital Marketing and SEO**
+
+Freshly Rooted employs a range of digital marketing strategies, such as search engine optimization (SEO), content
+marketing, social media engagement, and targeted email campaigns, to attract and retain customers while enhancing online
+visibility.
 
 4. **Logistics and Fulfillment**
 
+The business prioritizes efficient inventory management, order processing, and delivery logistics to ensure timely and
+reliable shipping. Strategic partnerships with local and national delivery services help maintain a smooth fulfilment
+process.
+
 5. **Customer Engagement and Retention**
+
+Freshly Rooted fosters a community of health-conscious consumers by offering personalized product recommendations,
+exclusive recipes, nutritional tips, and a loyalty program. These efforts aim to build long-term customer relationships
+and encourage repeat purchases.
+
+This business model enables Freshly Rooted Online Market to reach a wide audience, minimize overhead costs, and provide
+a convenient, enjoyable shopping experience for customers seeking high-quality, natural products.
+
+[Back to top](#contents)
 
 ## Marketing Strategies
 
 ### Search Engine Optimisation
 
+To enhance Freshly Rooted Online Market's visibility and ranking on Google, a comprehensive SEO strategy was developed
+using QuestionDB to identify relevant keywords for meta tags, alt texts, and content elements.
+
+Based on this research, a mix of short and long-tail keywords were selected to target both specific and broad search
+queries:
+
+- organic food online
+- buy natural products
+- best organic market
+- fresh dairy delivery
+- all-natural meals
+- organic fruits and vegetables
+- eco-friendly household items
+- wellness products online
+- healthy meal kits
+- natural product store
+
+These keywords are strategically integrated into the website's content to enhance search engine visibility and attract
+a diverse audience of health-conscious consumers and food enthusiasts.
+
+[Back to top](#contents)
+
 ### SEO Strategies
 
-1. **Effective Use of Headings:**
+To optimize Freshly Rooted Online Market's website for search engines, several strategies are employed to enhance
+visibility and improve ranking on Google:
 
-2. **Keyword Emphasis:**
+**Effective Use of Headings:**
 
-3. **Image Optimization:**
+- Utilize <span> for the market title in the header/navigation, and strategically place `<h1>` tags with relevant
+  keywords
+  to enhance keyword prominence.
+- Incorporate `<h2>` tags for promotional keywords to improve search relevance.
 
-4. **Optimize External Links:**
+**Keyword Emphasis:**
 
-5. **Sitemap Inclusion:**
+- Use the `<strong>` HTML element to highlight important short and long-tail keywords throughout the content. This not
+  only
+  provides visual emphasis but also signals their semantic importance to search engines.
 
-6. **Control Search Engine Crawling:**
+**Image Optimization:**
 
-7. **Template Blocks for Meta Descriptions:**
+- Apply keyword-rich and descriptive alt texts and filenames to all images, ensuring they are relevant to the content
+  and improve searchability.
+
+**Optimize External Links:**
+
+- Add the `rel="noopener nofollow"` attribute to social media and external links, which prevents search engines from
+  considering these links when evaluating the site's ranking.
+
+**Sitemap Inclusion:**
+
+- Generate and include a sitemap.xml file to guide search engine crawlers in indexing the site effectively.
+
+**Control Search Engine Crawling:**
+
+- Use a robots.txt file to manage and control the behavior of search engine bots while they crawl the site.
+
+**Template Blocks for Meta Descriptions:**
+
+- Using {% block metadesc %} in Django templates is a good practice for maintaining a clean, organized, and SEO-friendly
+  codebase. It balances flexibility and maintainability while providing a good structure for dynamic content.
+
+These strategies will be continuously refined and improved over time, aiming to increase the market's ranking on Google
+and attract more organic traffic to the website.
+
+[Back to top](#contents)
 
 ### Social Media
 
+Freshly Rooted Online Market will leverage Facebook as a primary platform for engaging with its audience and promoting
+its range of organic and natural products. The strategy includes the following key components:
+
 1. **Content Sharing:**
+
+- Post a variety of content, including product highlights, new arrivals, promotions, health tips, and behind-the-scenes
+  looks at Freshly Rooted. This keeps the audience informed and engaged.
 
 2. **Community Engagement:**
 
+- Foster a sense of community by encouraging interactions through comments, likes, and shares. Respond promptly to
+  customer inquiries and feedback to build relationships and trust.
+
 3. **Promotional Campaigns:**
+
+- Run targeted ad campaigns to reach potential customers based on their interests, demographics, and browsing behavior.
+  Highlight special offers, product bundles, and exclusive events to drive traffic to the website.
 
 4. **Events and Announcements:**
 
+- Use Facebook Events to promote special promotions, product launches, and other events. Keep followers updated on
+  important announcements and market news.
+
 5. **User-Generated Content:**
 
+- Encourage customers to share their experiences, reviews, and photos with Freshly Rooted products. Feature
+  user-generated
+  content to build credibility and create a more personal connection with the audience.
+
 6. **Analytics and Insights:**
+
+- Monitor Facebook Insights to track the performance of posts, ads, and overall engagement. Use this data to refine the
+  strategy, optimize content, and improve outreach efforts.
 
 ![Facebook]()
 
 ### Newsletter Marketing
 
+Freshly Rooted Online Market will use Mailchimp to manage and send newsletters to keep subscribers updated and engaged.
+Here’s how it will work:
+
 1. **Build Subscriber List
+
+- Collect email addresses through sign-up forms on the website and social media. Organize subscribers into groups for
+  targeted messaging.
+
 2. **Create Content
+
+- Design newsletters with product highlights, special offers, and market updates using Mailchimp’s easy-to-use
+  templates.
+
 3. **Schedule Newsletters
+
+- Plan regular newsletters (e.g., weekly or monthly) to keep customers informed and interested.
+
 4. **Automate Emails
+
+- Set up automated emails to welcome new subscribers, thank customers after purchases, and send personalized product
+  recommendations.
+
 5. **Track Results
+
+- Monitor how newsletters perform with Mailchimp’s reports on open rates, clicks, and other key metrics. Use this
+  information to improve future emails.
+
 6. **Test and Personalize
+
+- Test different email elements to see what works best and personalize content based on subscriber preferences.
+  Using Mailchimp helps Freshly Rooted Online Market stay connected with customers, promote new products and events, and
+  drive traffic to the online store.
 
 [Back to top](#contents)
 
