@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
               integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
               crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
@@ -37,6 +38,7 @@
     {% endblock %}
 
     {% block core_js %}
+        <script src="{% static 'js/cookieconsent-config.js' %}"></script>
         <script src="https://kit.fontawesome.com/fc6c0d9a84.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
                 integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -49,6 +51,8 @@
                 crossorigin="anonymous"></script>
         <!-- Stripe -->
         <script src="https://js.stripe.com/v3/"></script>
+
+
     {% endblock %}
 
     {% block extra_js %}
@@ -158,16 +162,21 @@
 
 {% block page_header %}
 {% endblock %}
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+{% block footer %}
+    {% include 'includes/footer.html' %}
 
-{% block content %}
 {% endblock %}
-
-{% block footer %}{% endblock %}
 
 {% block copyright %}{% endblock %}
 
 {% block postload_js %}
-    <script type="text/javascript">
+    <script src="{% static 'js/mailchimp.js' %}"></script>
+
+    <script type=" text/javascript">
         $('.toast').toast('show');
 
         /*Scroll to top*/
