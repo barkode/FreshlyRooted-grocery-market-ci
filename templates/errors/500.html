@@ -1,6 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
+{% block extra_title %}ERROR 500{% endblock %}
+
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
 {% block content %}
 
 
@@ -13,9 +26,9 @@
                 <div class="row">
 
                     <div class="content-404">
-                        <h1 class="heading">404</h1>
-                        <h2 class="title">Oops! That page can't be found.</h2>
-                        <p>Sorry, but the page you are looking for is not found. Please, make sure you have typed the current URL.</p>
+                        <h1 class="heading">500</h1>
+                        <h2 class="title">Internal Server Error.</h2>
+                        <p>Sorry, something went wrong on our servers. We are working to fix the problem. Please try again later.</p>
                         <a class="button" href="{% url 'home:home' %}">Go to Home</a>
                     </div>
 
