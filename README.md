@@ -995,11 +995,29 @@ summary of their order. It includes the following elements:
 Django Admin Portal allows superuser to manage content and users of the website. The admin view is customized to reflect
 the scope of this project.
 
-![Django Admin Portal](/docs/readme-md/features/admin-view.png)
+![Django Admin Portal](/docs/images/admin.png)
 
 [Back to top](#contents)
 
 ### Future Features
+
+1. Personalized Product Recommendations: Utilize customer browsing and purchase history to suggest products based on
+   individual preferences. A recommendation engine can analyze user behavior to offer personalized suggestions for
+   various
+   categories like dairy, organic foods, and all-natural products.
+2. Supplier Spotlight & Interviews: Feature weekly or monthly spotlights on suppliers, including interviews or Q&A
+   sessions. This can be paired with product promotions or sales to drive engagement and educate customers about the
+   origins of their food.
+3. Gift Cards & Wishlist Sharing: Enable users to purchase digital gift cards and share their wishlists with friends and
+   family. This feature would be especially popular during holiday seasons or special occasions.
+4. Loyalty Program: Introduce a loyalty program where users earn points for purchases, writing reviews, or referring
+   friends. Points can be redeemed for discounts or free products.
+5. Subscription Boxes: Offer subscription boxes that deliver curated selections of products based on user preferences.
+   These could be monthly or quarterly, including exclusive items or seasonal specialties.
+6. Product Previews & Sample Tastes: Allow users to preview product details or receive sample tastes before purchasing,
+   engaging potential buyers and encouraging them to complete the purchase.
+7. Referral Program: Implement a referral program that rewards users for referring new customers. Offer discounts or
+   points for successful referrals that lead to purchases.
 
 [Back to top](#contents)
 
