@@ -812,9 +812,23 @@ heartfelt message that emphasizes the brand's commitment to natural living and c
 
 ### Customer Information
 
+The footer of the Freshly Rooted Online Market website includes essential links to "Shipping & Returns," "Privacy
+Policy," and "Terms of Service," providing users with crucial information about the site's policies. The Shipping &
+Returns page details the delivery process, including shipping fees and return policies for dairy, organic foods, meals,
+and all-natural products, ensuring customers understand how to manage their orders. The Privacy Policy explains how user
+data is collected, stored, and utilized, offering transparency and assurance regarding data protection practices. The
+Terms of Service page outlines the legal agreement between users and the site, establishing the rules and guidelines for
+using the website. Together, these pages offer a comprehensive understanding of the site's operations and user rights,
+fostering trust and clarity.
+
+![Privacy Policy](docs/images/privacy.png)
+![Return Policy](docs/images/return.png)
+
 [Back to top](#contents)
 
-### About
+### Contact
+
+![Contact](docs/images/contact.png)
 
 [Back to top](#contents)
 
@@ -906,9 +920,6 @@ heartfelt message that emphasizes the brand's commitment to natural living and c
 
 [Back to top](#contents)
 
-#### Coupons
-
-[Back to top](#contents)
 
 #### Orders
 
