@@ -1,3 +1,4 @@
+{% load static %}
 <!--footer start-->
 <footer>
     <div class="footer-wrap">
@@ -5,14 +6,24 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <h3>BE THE FIRST TO KNOW</h3>
-                    <p>Get all the latest information on Triedge Services, Events, Jobs
-                        and Fairs. Sign up for our newsletter today.</p>
+                    <p>Get all the latest information on Freshly Rooted.
+                        Sign up for our newsletter today.</p>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <form class="newsletter">
-                        <input type="text" placeholder="Email Address">
-                        <button class="newsletter_submit_btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+                    <form class="newsletter"
+                          action="https://gmail.us15.list-manage.com/subscribe/post?u=e7ba08a26172c2b00089cd131&amp;id=282d38345f&amp;f_id=00539de1f0"
+                          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                          target="_self" novalidate="">
+                        <input type="email" placeholder="Email Address" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" >
+                        <button class="newsletter_submit_btn" type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
+                    {#                    <form action="https://gmail.us15.list-manage.com/subscribe/post?u=e7ba08a26172c2b00089cd131&amp;id=282d38345f&amp;f_id=00539de1f0"#}
+                    {#                          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"#}
+                    {#                          class="validate newsletter" target="_self" novalidate="">#}
+                    {#                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" placeholder="Email Address">#}
+                    {#                        <button class="newsletter_submit_btn" type="submit"><i class="fas fa-paper-plane"></i></button>#}
+                    {#                    </form>#}
+
 
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -55,10 +66,9 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-6">
 
-                        <div class="footer-logo"><img src="http://localhost/lrn/img/footer_logo.png" alt="logo">
+                        <div class="footer-logo"><img src="{% static 'images/freshly-rooted-logo.png' %}"
+                                                      alt="Freshly Rooted logo" height="150" width="150">
                         </div>
-                        <p>Your one-stop career platform to find Jobs, Internships, Professional Trainings, Projects,
-                            and Volunteering Opportunities.</p>
                     </div>
                     <div class="col-md-2 col-sm-6">
                         <h3>Quick LInks</h3>
@@ -113,7 +123,9 @@
         <div class="row">
             {# code fromt https://ordinarycoders.com/blog/article/bootstrap-footers#}
             <div class="container-fluid">
-                <div class="copyright"> Copyright 2024 | NOT FOR COMMERCIAL USE. It was created for educational purposes.</div>
+                <div class="copyright"> Copyright 2024 | NOT FOR COMMERCIAL USE. It was created for educational
+                    purposes.
+                </div>
             </div>
 
         </div>

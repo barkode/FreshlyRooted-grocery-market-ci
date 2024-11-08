@@ -18,6 +18,9 @@ body {
 
 main {
 	flex: 1 0 auto;
+	position: relative;
+	background-color: #e6f0dc;
+	padding-bottom: 30px;
 }
 
 footer {
@@ -291,9 +294,25 @@ input[name='q']::placeholder {
 	}
 
 	.header-container {
-		padding-top: 180px;
+		padding-top: 164px;
+	}
+
+	.hero-text {
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		right: -50%;
+		transform: translate(-50%, -50%);
 	}
 }
+
+/* .hero-text { */
+/* 	position: absolute; */
+/* 	z-index: 1; */
+/* 	top: 0; */
+/* 	left: 0; */
+/* } */
+
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
@@ -357,12 +376,6 @@ input[name='q']::placeholder {
 	color: black;
 }
 
-.hero-text {
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	left: 0;
-}
 
 /*
   =========================================================================================
@@ -563,7 +576,7 @@ footer .first_class p, footer .first_class h3 {
 }
 
 footer {
-	background: #333333;
+	background: #9a6735;
 }
 
 footer .newsletter input[type="text"] {
@@ -660,7 +673,6 @@ footer li {
 
 .card {
 	border: none;
-	background-color: transparent;
 }
 
 .image-container {
@@ -732,7 +744,12 @@ footer li {
 
 .post-link:hover,
 .page-link {
-	color: #e84610;
+	color: #9a6735;
+}
+
+.page-item.active .page-link {
+	background-color: #55883b;
+	border-color: #c1e899;
 }
 
 .post-title {
@@ -814,4 +831,24 @@ footer li {
 
 #id_default_country option:first-child {
 	color: #aab7c4;
+}
+
+.free-delivery-banner {
+	background-color: #55883b;
+}
+
+.freshly-logo-container {
+	position: absolute;
+	z-index: 12121;
+	top: 50%;
+	left: 15%;
+}
+input[type='email']{
+	width: 100%;
+	background: #ffffff;
+	color: #333333;
+	border: 1px solid #222222;
+	padding: 14px 20px;
+	border-radius: 50px;
+	margin-top: 12px;
 }
