@@ -1,8 +1,8 @@
 # FreshlyRooted Market
 
-![Main Image]()
+![Main Image](docs/images/main.png)
 
-### [Deployed Link]()
+### [Deployed Link](https://freshly-rooted-market-190d6a54a9aa.herokuapp.com/)
 
 # Contents
 
@@ -782,9 +782,31 @@ Here’s how it will work:
 
 ### Header
 
+The header of the Freshly Rooted Online Market site is designed to be both functional and aesthetically pleasing. It
+showcases a vibrant logo and an intuitive navigation menu, with direct links to the shopping cart, wishlist, and account
+settings for seamless access, whether you're logged in or just exploring as a guest. Logged-in users benefit from a
+dropdown menu offering additional options such as order management, profile settings, and purchase history. The sleek
+design incorporates a green accent for interactive elements, ensuring excellent contrast and accessibility. Built with
+Bootstrap, the header adapts effortlessly to various screen sizes, providing a user-friendly experience on both mobile
+and desktop devices. Consistent use of icons and fonts throughout the site ensures a unified and polished appearance.
+
+![Header](docs/images/header.png)
+
+![User Menu](docs/images/header-user.png)
+
 [Back to top](#contents)
 
 ### Footer
+
+The footer of the Freshly Rooted Online Market website is thoughtfully divided into three sections to enhance user
+experience. The first section offers a warm welcome message, accompanied by icons for accepted payment methods and links
+to social media platforms, encouraging community engagement. The second section provides easy access to shop categories
+and policy information, allowing users to explore dairy, organic foods, meals, and all-natural products, as well as
+review important legal details. The final section invites users to subscribe to the newsletter, ensuring they receive
+the latest updates and special offers. The footer is designed to be both practical and inviting, concluding with a
+heartfelt message that emphasizes the brand's commitment to natural living and community connection.
+
+![Footer](docs/images/footer.png)
 
 [Back to top](#contents)
 
