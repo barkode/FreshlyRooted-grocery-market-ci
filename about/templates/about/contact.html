@@ -51,38 +51,36 @@
                     </div>
                     <!-- Contact Form Section -->
                 </div>
-                <div class="col-12 contact-form-container">
+                <div class="col-12 contact-form-container py-5">
                     <div class="contact-form">
-                        <div class="section-heading">
+                        <div class="section-heading mb-5">
                             <h2 class="mt-3">Get In Touch With Us</h2>
                             <div class="line"></div>
                         </div>
                         <!-- Contact Form -->
-                        <form action="{% url 'about:contact' %}" method="POST">
-                            {% csrf_token %}
-                            <div class="row">
+                        <form action="/about/" method="POST">
+                            <input type="hidden" name="csrfmiddlewaretoken"
+                                   value="deTx70EFHcnqLZ8CTQuemFmn6RF4SgyhBIIeZjwHTiFSgik4KkUYEuKQ1Ikc4Ppn">
+                            <div class="row gy-4"> <!-- Додано gy-4 для відступів між рядками -->
                                 <div class="col-lg-6">
-                                    <input type="text" name="name" class="form-control mb-30 border-black"
-                                           placeholder="Name"
-                                           required>
+                                    <input type="text" name="name" class="form-control mb-4 border-black"
+                                           placeholder="Name" required>
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="email" name="email" class="form-control mb-30 border-black"
-                                           placeholder="Email"
-                                           required>
+                                    <input type="email" name="email" class="form-control mb-4 border-black"
+                                           placeholder="Email" required>
                                 </div>
                                 <div class="col-12">
-                                <textarea name="message" class="form-control mb-30 message border-black"
-                                          placeholder="Message"
-                                          required></textarea>
+                                    <textarea name="message" class="form-control mb-4 message border-black"
+                                              placeholder="Message" required></textarea>
                                 </div>
-                                <div class="col-12 text-center">
+                                <div class="col-12 text-center mt-4"> <!-- Збільшено відступ зверху -->
                                     <button type="submit"
-                                            class="btn btn-black btn-lg product-btn text-shadow mt-1 rounded-0">Send
-                                        Message
+                                            class="btn btn-black btn-lg product-btn text-shadow mt-3 rounded-0">
+                                        Send Message
                                     </button>
                                 </div>
-                                <div id="messages" class="hide"></div>
+                                <div id="messages" class="hide mt-4"></div>
                             </div>
                         </form>
                     </div>
