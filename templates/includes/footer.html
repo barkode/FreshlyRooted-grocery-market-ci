@@ -27,24 +27,29 @@
                                         class="fab fa-facebook-f"></i></a>
 
                                 </li>
-                                <li class="round-btn btn-linkedin"><a href="https://www.linkedin.com/in/kostiantyn-krysenko/"><i class="fab fa-linkedin-in"
-                                                                                  aria-hidden="true"></i></a>
+                                <li class="round-btn btn-linkedin"><a
+                                        href="https://www.linkedin.com/in/kostiantyn-krysenko/"><i
+                                        class="fab fa-linkedin-in"
+                                        aria-hidden="true"></i></a>
 
                                 </li>
                                 <li class="round-btn btn-twitter"><a href="https://x.com"><i class="fab fa-twitter"
-                                                                                 aria-hidden="true"></i></a>
+                                                                                             aria-hidden="true"></i></a>
 
                                 </li>
-                                <li class="round-btn btn-instagram"><a href="https://instagram.com"><i class="fab fa-instagram"
-                                                                                   aria-hidden="true"></i></a>
+                                <li class="round-btn btn-instagram"><a href="https://instagram.com"><i
+                                        class="fab fa-instagram"
+                                        aria-hidden="true"></i></a>
 
                                 </li>
-                                <li class="round-btn btn-envelop"><a href="mailto:info@freshlyrooted.com"><i class="fa fa-envelope"
-                                                                                 aria-hidden="true"></i></a>
+                                <li class="round-btn btn-envelop"><a href="mailto:info@freshlyrooted.com"><i
+                                        class="fa fa-envelope"
+                                        aria-hidden="true"></i></a>
 
                                 </li>
-                                <li class="round-btn btn-github"><a href="https://github.com/barkode"><i class="fa-brands fa-github"
-                                                                                 aria-hidden="true"></i></a>
+                                <li class="round-btn btn-github"><a href="https://github.com/barkode"><i
+                                        class="fa-brands fa-github"
+                                        aria-hidden="true"></i></a>
 
                                 </li>
                             </div>
@@ -71,41 +76,44 @@
                             </li>
                             <li><a href="{% url 'about:contact' %}">Contact</a>
                             </li>
+                            <li><a href="{% url 'blog:home' %}">Blog</a>
+                            </li>
                             <li><a href="{% url 'about:privacy' %}">Privacy Policy</a>
                             </li>
                             <li><a href="{% url 'about:return' %}">Return Policy</a>
                             </li>
-                            <li><a href="#" target="_blank">Terms &amp; Conditions</a>
-                            </li>
-                            <li><a href="#" target="_blank">Privacy Policy</a>
-                            </li>
-                            <li><a href="#">Sitemap</a>
-                            </li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <h3>OUR SERVICES</h3>
+                        <h3>USER links</h3>
                         <ul class="footer-category">
-                            <li><a href="#">Fresher Jobs</a>
+                            <li><a href="{% url 'account_signup' %}">Register</a>
                             </li>
-                            <li><a href="#">InternEdge - Internships &amp; Projects </a>
+                            {% if user.is_authenticated %}
+                                <li><a href="{% url 'account_logout' %}">Logout</a>
+                                </li>
+                            {% else %}
+                                <li><a href="{% url 'account_login' %}">Login</a>
+                                </li>
+                            {% endif %}
+                            <li><a href="{% url 'profiles:profile' %}">Profile</a>
                             </li>
-                            <li><a href="#">Resume Edge - Resume Writing Services</a>
-                            </li>
-                            <li><a href="#">Readers Galleria - Curated Library</a>
-                            </li>
-                            <li><a href="#">Trideus - Campus Ambassadors</a>
+                            <li><a href="{% url 'cart:view_cart' %}">Cart</a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <h3>triedge Events</h3>
+                        <h3>External Links</h3>
                         <ul class="footer-links">
-                            <li><a href="#">Triedge Events</a>
+                            <li><a href="https://www.cooksinfo.com/" target="_blank" rel="noreferrer noopener">Cook's
+                                Info</a>
                             </li>
-
-                            <li><a href="#">Jobs &AMP; Internship Fair 2019</a>
+                            <li><a href="https://www.gutenberg.org/ebooks/33748" target="_blank"
+                                   rel="noreferrer noopener">The Kitchen Encyclopedia</a>
+                            </li>
+                            <li><a href="https://www.hse.ie/eng/about/who/healthwellbeing/our-priority-programmes/heal/healthy-eating-guidelines/" target="_blank"
+                                   rel="noreferrer noopener">Healthy Eating Guidelines - HSE.ie</a>
                             </li>
                         </ul>
                     </div>
