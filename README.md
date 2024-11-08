@@ -493,6 +493,19 @@ making it suitable for a wide range of design projects.
 
 ### Images
 
+Our visual content comes from two primary sources:
+**Leonardo AI**
+- All images generated through Leonardo AI are provided under permissive free licenses
+- These images can be legally used in commercial projects
+- No attribution requirements
+- Full compliance with copyright regulations
+**Amazon**
+- Product images sourced from Amazon's platform
+- Used for reference and demonstration purposes only
+- Non-commercial usage
+- No revenue generation from these images
+This combination of sources ensures legal compliance while maintaining high-quality visual content throughout our platform.
+
 [Back to top](#contents)
 
 ### Responsiveness
