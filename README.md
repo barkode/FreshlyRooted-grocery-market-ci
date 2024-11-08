@@ -47,19 +47,13 @@
         * [Customer Information](#customer-information)
         * [Contact](#contact)
         * [User Account Pages](#user-account-pages)
-            * [Signup Page](#signup-page)
+            * [Register Page](#register-page)
             * [Log In Page](#log-in-page)
-            * [Log Out Page](#log-out-page)
+            * [Logout Page](#logout-page)
         * [Profile Page](#profile-page)
-            * [Account Information](#account-information)
-            * [Order History](#order-history)
             * [User Favorites](#user-favorites)
-            * [Account Security](#account-security)
         * [All Products](#all-products)
         * [Product Details](#product-details)
-        * [Reviews](#reviews)
-        * [Search Results](#search-results)
-        * [Special Offers](#special-offers)
         * [Shopping Cart](#shopping-cart)
         * [Checkout](#checkout)
         * [Order Confirmation](#order-confirmation)
@@ -1401,16 +1395,30 @@ _Any changes required to the website, they can be made, committed and pushed to 
 - [Humanize](https://pypi.org/project/humanize/): Used for turning a number into a fuzzy human-readable duration ("3
   minutes ago")
 
+* [dj-database-url](https://pypi.org/project/dj-database-url/) - A package used to utilize DATABASE_URL environment
+  variable.
+* [django-countries](https://pypi.org/project/django-countries/) - Django application used to provide country
+  choices for use with forms, and a country field for models.
+* [gunicorn](https://gunicorn.org/) - A Python WSGI HTTP Server for UNIX.
+* [psycopg2](https://pypi.org/project/psycopg2/) - A PostgreSQL database adapter.
+* [boto3](https://pypi.org/project/boto3/) - An Amazon Web Services (AWS) software development kit (SDK) used
+  to connect to the S3 bucket
+* [Black](https://pypi.org/project/black/) - A Python code formatter.
+* [django storages](https://django-storages.readthedocs.io/en/latest/) - Collection of custom storage backends for
+  Django.
+* [stripe](https://pypi.org/project/stripe/) - A Python library for Stripe’s API.
+
 [Back to top](#contents)
 
 ### Programs
 
-- [Balsamiq](https://balsamiq.com/): Wireframing tool used to generate wireframe images, allowing for quick and easy
+- [Balsamiq](https://balsamiq.com/) - Wireframing tool used to generate wireframe images, allowing for quick and easy
   visualization of the application's layout and design.
-- [Bootstrap](https://getbootstrap.com): CSS framework used for developing responsiveness and styling, offering a wide
+- [Bootstrap](https://getbootstrap.com) - CSS framework used for developing responsiveness and styling, offering a wide
   range of pre-designed components and utilities.
-- [Google Chrome](https://developer.chrome.com/docs/devtools/): Used for overall development and tweaking, including
+- [Google Chrome](https://developer.chrome.com/docs/devtools/)  Used for overall development and tweaking, including
   testing responsiveness, debugging, and performance profiling.
+- [VSCode](https://code.visualstudio.com/) - Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.
 
 [Back to top](#contents)
 
@@ -1427,6 +1435,15 @@ _Any changes required to the website, they can be made, committed and pushed to 
 ## Credits
 
 [Back to top](#contents)
+
+### Acknowledgements
+
+
+- I would also like to express my thanks to the Code Institute tutors who are always on hand to offer help and support.
+- I want to thank my tutor Marko Tot for his daily care and help. For the desire to create a favorable atmosphere for learning and creativity.
+- I would also like to thank the entire Code Institute and Kerry College for giving me the opportunity to study and participate in this project.
+- Finally, thanks to my fellow students on Slack as this is a valuable community for help and guidance.
+
 
 ## Disclaimer
 
