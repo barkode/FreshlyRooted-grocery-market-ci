@@ -1,3 +1,5 @@
+from lib2to3.fixes.fix_input import context
+
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render, reverse
@@ -26,9 +28,13 @@ class PostList(generic.ListView):
 	:template:`blog/index.html`
 	"""
 	queryset = Post.objects.filter(status=1)
+	paginate_by = 12
 	template_name = "blog/index.html"
-	paginate_by = 6
 
+	def get_context_data(self, **kwargs):
+		context=super().get_context_data(**kwargs)
+		context['total_posts'] = self.queryset.count()
+		return context
 
 def post_detail(request, slug):
 	"""
