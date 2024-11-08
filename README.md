@@ -466,7 +466,7 @@ This schema was generated using [lucid.app](https://lucid.app/).
 <details>
 <summary>Finish database diagram</summary>
 
-![Database Schema]()
+![Database Schema](docs/images/finish-database-diagram.png)
 
 </details>
 
@@ -485,8 +485,9 @@ making it suitable for a wide range of design projects.
 [Back to top](#contents)
 
 ### Colour Scheme
+[A site for inspiration](https://piktochart.com/blog/green-color-palette-combinations/)
 
-![Coolors Scheme]()
+![Coolors Scheme](docs/images/color.png)
 
 [Back to top](#contents)
 
