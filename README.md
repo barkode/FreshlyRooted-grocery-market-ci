@@ -45,10 +45,9 @@
         * [Header](#header)
         * [Footer](#footer)
         * [Customer Information](#customer-information)
-        * [About](#about)
-        * [Landing Page](#landing-page)
+        * [Contact](#contact)
         * [User Account Pages](#user-account-pages)
-            * [Sign Up Page](#sign-up-page)
+            * [Signup Page](#signup-page)
             * [Log In Page](#log-in-page)
             * [Log Out Page](#log-out-page)
         * [Profile Page](#profile-page)
@@ -68,7 +67,6 @@
             * [Dashboard](#dashboard)
             * [Products](#products)
             * [Categories](#categories)
-            * [Coupons](#coupons)
             * [Orders](#orders)
         * [Custom Error Pages](#custom-error-pages)
     * [Django Admin Portal](#django-admin-portal)
@@ -832,47 +830,82 @@ fostering trust and clarity.
 
 [Back to top](#contents)
 
-### Landing Page
-
-[Back to top](#contents)
-
 ### User Account Pages
 
+The user account pages at Freshly Rooted Online Market are designed to provide a seamless and secure experience for
+managing user access, enhancing the overall user journey on the site.
+
 [Back to top](#contents)
 
-#### Sign Up Page
+#### Register Page
+
+The Register page offers a straightforward and user-friendly form where users can create an account by entering their
+email, first name, last name, and password. The form is designed with responsiveness in mind, ensuring it is accessible
+and easy to use on any device. By focusing on a user-centric design, the Register page facilitates quick and hassle-free
+registration, encouraging new users to join the community and explore a world of dairy, organic foods, meals, and
+all-natural products.
+
+After registration, users receive a message indicating that their email address needs to be verified, and a verification
+email is sent to them to complete the process.
+
+![Registration](docs/images/register.png)
 
 [Back to top](#contents)
 
 #### Log In Page
 
+The Log In page at Freshly Rooted Online Market provides a simple and secure method for existing users to access their
+accounts. It features clearly labeled fields for entering a username and password, along with a prominent login button
+to facilitate easy access. The design of the page aligns with the site's overall aesthetic, ensuring a cohesive and
+seamless user experience. Additionally, options for password recovery and account assistance are readily available,
+enhancing user convenience and support.
+
+![Login](docs/images/login.png)
+![Login Sucsess](docs/images/login-susccess-toast.png   )
+
 [Back to top](#contents)
 
-#### Log Out Page
+#### Logout Page
+
+The Logout page at Freshly Rooted Online Market confirms a successful logout from the user's account. It features a
+concise message indicating that the user has been logged out, ensuring clarity and reassurance. The design is
+minimalistic, reinforcing the action taken and offering clear options to either continue exploring the site or log in
+again. This straightforward approach helps maintain a seamless user experience, even after logging out.
+
+![Logout](docs/images/logout.png)
 
 [Back to top](#contents)
 
 ### Profile Page
 
-[Back to top](#contents)
+The user profile page at Freshly Rooted Online Market offers a personalized experience for logged-in users, featuring a
+sidebar with quick links to manage account information, view order history, access the wishlist, change the password, or
+delete the account. The main content area displays personal details and shipping information, with convenient options to
+edit both via modals. Users can update their first name and last name under personal details, as well as their phone
+number, address, and country under shipping information. The layout is clean and intuitive, making it easy for users to
+manage their profiles efficiently and effectively.
 
-#### Account Information
-
-[Back to top](#contents)
-
-#### Order History
+![Profile](docs/images/profile.png)
 
 [Back to top](#contents)
 
 #### User Favorites
 
-[Back to top](#contents)
-
-#### Account Security
+![Favorites](docs/images/favorites-1.png)
+![Favorites](docs/images/favorites.png)
 
 [Back to top](#contents)
 
 ### All Products
+
+The All Products page at Freshly Rooted Online Market includes an advanced filtering system for searching products by
+categories such as dairy, organic foods, meals, and all-natural products. Users can refine their search using filters
+for product type, brand, and price range. Additionally, results can be sorted by name or price to help users find
+exactly what they need. Each product is displayed in a grid format, featuring images, titles, and pricing details. Users
+also have the option to add items to their wishlist or directly to the shopping cart, enhancing the shopping experience
+with convenience and efficiency.
+
+![All Products](docs/images/all-products.png)
 
 [Back to top](#contents)
 
@@ -919,7 +952,6 @@ fostering trust and clarity.
 #### Categories
 
 [Back to top](#contents)
-
 
 #### Orders
 
