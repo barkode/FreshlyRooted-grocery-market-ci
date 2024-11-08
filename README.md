@@ -536,31 +536,53 @@ and data. It involves verifying the identity of a user through various means, su
 services.
 Allauth is a popular Django package that simplifies the implementation of user authentication. It provides a
 comprehensive suite of features, including:
+
 - Social Authentication: Allows users to log in using their social media accounts, such as Facebook, Google, or Twitter.
 - Email Verification: Ensures that users verify their email addresses before gaining full access to the application.
 - Account Management: Offers tools for password reset, account confirmation, and user profile management.
-Allauth is highly customizable, making it easy to integrate with existing Django projects and tailor the authentication
-process to specific needs.
+  Allauth is highly customizable, making it easy to integrate with existing Django projects and tailor the
+  authentication
+  process to specific needs.
 
 [Back to top](#contents)
 
 ### Password Management
 
-Django Allauth is a versatile authentication library that not only handles user authentication but also provides comprehensive password management features. These features are designed to enhance security and improve user experience:
-- Password Reset: Allauth includes a built-in password reset mechanism. Users can request a password reset link, which is sent to their registered email address. This link allows them to securely set a new password.
-- Password Change: Authenticated users can change their passwords directly from their account settings. This feature ensures that users can update their credentials regularly to maintain security.
-- Password Strength Validation: Allauth can be configured to enforce password strength policies. This includes setting minimum length requirements and ensuring the use of a mix of characters to create strong passwords.
-- Email Verification: Before allowing password changes or resets, Allauth can require users to verify their email addresses. This adds an extra layer of security by ensuring that only legitimate users can modify their credentials.
-- Customizable Templates: Allauth provides customizable email templates for password reset and change notifications. This allows developers to tailor the communication to fit the branding and tone of their application.
-By leveraging these features, Django Allauth simplifies the implementation of secure and user-friendly password management in Django applications.
+Django Allauth is a versatile authentication library that not only handles user authentication but also provides
+comprehensive password management features. These features are designed to enhance security and improve user experience:
+
+- Password Reset: Allauth includes a built-in password reset mechanism. Users can request a password reset link, which
+  is sent to their registered email address. This link allows them to securely set a new password.
+- Password Change: Authenticated users can change their passwords directly from their account settings. This feature
+  ensures that users can update their credentials regularly to maintain security.
+- Password Strength Validation: Allauth can be configured to enforce password strength policies. This includes setting
+  minimum length requirements and ensuring the use of a mix of characters to create strong passwords.
+- Email Verification: Before allowing password changes or resets, Allauth can require users to verify their email
+  addresses. This adds an extra layer of security by ensuring that only legitimate users can modify their credentials.
+- Customizable Templates: Allauth provides customizable email templates for password reset and change notifications.
+  This allows developers to tailor the communication to fit the branding and tone of their application.
+  By leveraging these features, Django Allauth simplifies the implementation of secure and user-friendly password
+  management in Django applications.
 
 [Back to top](#contents)
 
 ### Form Validation
 
+If incorrect or empty data is added to a form, the form won't submit, and a warning will appear to the user informing
+them which field raised the error.
+
 [Back to top](#contents)
 
 ### Database Security
+
+To enhance security and prevent unauthorized access, sensitive information such as the database URL and secret key is
+stored in an `.env` file. This approach ensures that these critical credentials are not exposed in the codebase,
+especially before pushing to GitHub.
+Additionally, Cross-Site Request Forgery (CSRF) tokens are implemented on all forms across the site. CSRF tokens are a
+crucial security measure that helps protect against malicious attempts to perform actions on behalf of authenticated
+users without their consent.
+By incorporating these practices, the application maintains a robust security posture, safeguarding both the database
+and user interactions
 
 [Back to top](#contents)
 
