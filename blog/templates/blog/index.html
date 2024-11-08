@@ -133,7 +133,7 @@
                                     </a>
                                 {% else %}
                                     <a href="{% url 'blog:post_detail' post.slug %}">
-                                        <img class="card-img-top img-fluid" src=" {{ post.featured_image.url }}"
+                                        <img class="card-img-top img-fluid" src=" {{ post.featured_image }}"
                                              alt="{{ post.title }}">
                                     </a>
                                 {% endif %}
