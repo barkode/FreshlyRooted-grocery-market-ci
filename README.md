@@ -911,29 +911,52 @@ with convenience and efficiency.
 
 ### Product Details
 
-[Back to top](#contents)
+The Product Details page at Freshly Rooted Online Market provides comprehensive information about each item, ensuring
+users can make informed purchasing decisions.
+Users can easily adjust the quantity they wish to purchase and add the product to their shopping cart or favorites.
 
-### Reviews
-
-[Back to top](#contents)
-
-### Search Results
-
-[Back to top](#contents)
-
-### Special Offers
+![Product Details](docs/images/detail-product.png)
 
 [Back to top](#contents)
 
 ### Shopping Cart
 
+![Shopping Cart](docs/images/shopping-cart.png)
 [Back to top](#contents)
 
 ### Checkout
 
+The Checkout page at Freshly Rooted Online Market provides a comprehensive and secure platform for customers to finalize
+their purchases. It allows users to review their order in detail, including product specifics, pricing, delivery fees,
+and the total payment amount. Customers can input their delivery information and securely enter their payment details
+through Stripe, a trusted payment processing service.
+
+The page offers a clear breakdown of costs, with the option to apply discount codes for additional savings. Users can
+also choose to save their delivery information for future purchases, streamlining the checkout process for subsequent
+orders. The page integrates with various tools to ensure a smooth and efficient checkout experience, and it is designed
+using Bootstrap to maintain a responsive layout and consistent styling across all devices. This thoughtful design
+ensures that customers can complete their transactions with ease and confidence.
+
+![Checkout](docs/images/checkout.png)
+
 [Back to top](#contents)
 
 ### Order Confirmation
+
+The Order Confirmation page at Freshly Rooted Online Market is designed to thank the customer and provide a detailed
+summary of their order. It includes the following elements:
+
+- Thank You Message: A warm message expressing gratitude for the customer's purchase.
+- Order Number and Date: Clearly displayed for easy reference.
+- Itemized Order Details: A breakdown of the products purchased, including quantities and individual prices.
+- Delivery and Billing Addresses: Both addresses are shown to confirm the correct delivery and billing information.
+- Payment Information: Includes the order total, any discounts applied, delivery costs, and the grand total.
+- Continue Shopping Button: Encourages customers to explore more products and check out the latest offers, ensuring a
+  smooth post-purchase experience.
+  The page is designed to be user-friendly and informative, providing all necessary details in a clear and concise
+  manner.
+
+![Checkout](docs/images/checkout-confirmation.png)
 
 [Back to top](#contents)
 
@@ -958,6 +981,12 @@ with convenience and efficiency.
 [Back to top](#contents)
 
 ### Custom Error Pages
+
+- 400 Bad Request - The platform is unable to process this request.
+- 403 Page Forbidden - It seems user trying to access restricted content. Please log out and sign in to the appropriate
+  account.
+- 404 Page Not Found - The page user is looking for doesn't exist.
+- 500 Server Error - The platform is currently experiencing technical difficulties and cannot process this request.
 
 [Back to top](#contents)
 
