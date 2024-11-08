@@ -737,7 +737,7 @@ its range of organic and natural products. The strategy includes the following k
 - Monitor Facebook Insights to track the performance of posts, ads, and overall engagement. Use this data to refine the
   strategy, optimize content, and improve outreach efforts.
 
-![Facebook]()
+![Facebook](docs/images/facebook.png)
 
 ### Newsletter Marketing
 
