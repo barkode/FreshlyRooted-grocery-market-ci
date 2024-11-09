@@ -14,4 +14,5 @@ class CollaborateRequestAdmin(admin.ModelAdmin):
         "read",
     )
 
+
 admin.site.register(About)

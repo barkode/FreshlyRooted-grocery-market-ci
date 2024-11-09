@@ -42,11 +42,15 @@ def about_contact(request):
         "about/contact.html",
         {"about": about, "collaborate_form": collaborate_form},
     )
+
+
 def about_privacy_policy(request):
     return render(request, "about/privacy_policy.html")
 
+
 def about_return_policy(request):
     return render(request, "about/return_policy.html")
+
 
 def about_us(request):
     return render(request, "about/about.html")

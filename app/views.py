@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 def custom_400(request, exception):
     """
     Handles 400 Bad Request error.
@@ -12,6 +13,7 @@ def custom_400(request, exception):
     Renders and returns the 400 error page (errors/400.html) with a 400 HTTP status.
     """
     return render(request, "errors/400.html", status=400)
+
 
 def custom_403(request, exception):
     """
@@ -26,6 +28,7 @@ def custom_403(request, exception):
     """
     return render(request, "errors/403.html", status=403)
 
+
 def custom_404(request, exception):
     """
     custom_404 is a Django view function that handles 404 errors.
@@ -38,6 +41,7 @@ def custom_404(request, exception):
     HttpResponse object rendering the 'errors/404.html' template with a 404 status code.
     """
     return render(request, "errors/404.html", status=404)
+
 
 def custom_500(request):
     """
@@ -52,5 +56,3 @@ def custom_500(request):
         HttpResponse object rendering the "500.html" template with a 500 status code.
     """
     return render(request, "errors/500.html", status=500)
-
-

@@ -1,37 +1,71 @@
 from django.contrib import admin
 
-from .models import Category, Measurement, MeasurementType, Product, ProductMessage, Shipping, Currency
+from .models import (
+    Category,
+    Currency,
+    Measurement,
+    MeasurementType,
+    Product,
+    ProductMessage,
+    Shipping,
+)
+
 
 # Register your models here.
 
+
 class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
-    list_display = ('name', 'friendly_name',)
-    ordering = ('name', 'friendly_name',)
-
+    list_display = (
+        "name",
+        "friendly_name",
+    )
+    ordering = (
+        "name",
+        "friendly_name",
+    )
 
 
 class MeasurementAdmin(admin.ModelAdmin):
-    list_display = ('name', 'abbreviation', 'measurement_type',)
-
+    list_display = (
+        "name",
+        "abbreviation",
+        "measurement_type",
+    )
 
 
 class MeasurementTypeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'measurement_type',)
+    list_display = (
+        "name",
+        "measurement_type",
+    )
 
 
 class ProductAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
-    list_display = ('sku', 'name', 'category', 'price', 'rating', 'image',)
-    ordering = ('sku', 'name', 'category', 'rating',)
-
+    list_display = (
+        "sku",
+        "name",
+        "category",
+        "price",
+        "rating",
+        "image",
+    )
+    ordering = (
+        "sku",
+        "name",
+        "category",
+        "rating",
+    )
 
 
 class ProductMessageAdmin(admin.ModelAdmin):
     pass
 
+
 class ShippingAdmin(admin.ModelAdmin):
     pass
+
 
 class CurrencyAdmin(admin.ModelAdmin):
     pass
