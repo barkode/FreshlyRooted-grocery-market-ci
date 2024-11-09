@@ -86,6 +86,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     "storages",
+    "cookie_consent",
     "home",
     "products",
     "cart",
@@ -125,11 +126,11 @@ TEMPLATES = [
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
+                "django.contrib.auth.context_processors.auth",
                 "django.template.context_processors.debug",
                 "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.contrib.messages.context_processors.messages",
                 "django.template.context_processors.media",
+                "django.contrib.messages.context_processors.messages",
                 "cart.contexts.cart_contents",
             ],
             "builtins": [
@@ -235,7 +236,7 @@ if USE_STORAGE:
     AWS_S3_OBJECT_PARAMETERS = {
         "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
         "CacheControl": "max-age=94608000",
-        }
+    }
     # S3 Configuration
     AWS_STORAGE_BUCKET_NAME = getenv("AWS_STORAGE_BUCKET_NAME")
     AWS_S3_REGION_NAME = getenv("AWS_S3_REGION_NAME")

@@ -24,20 +24,20 @@ from . import views
 
 urlpatterns = [
     path("", include("home.urls", namespace="home")),
-    path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
-    path("products/", include("products.urls", namespace="products")),
-    path("profile/", include("profiles.urls", namespace="profiles")),
+    path("admin/", admin.site.urls),
+    path("about/", include("about.urls", namespace="about")),
+    path("blog/", include("blog.urls", namespace="blog")),
     path("cart/", include("cart.urls", namespace="cart")),
     path("checkout/", include("checkout.urls", namespace="checkout")),
-    path("blog/", include("blog.urls", namespace="blog")),
-    path("about/", include("about.urls", namespace="about")),
+    path("cookies/", include("cookie_consent.urls")),
     path("favorites/", include("favorites.urls", namespace="favorites")),
+    path("products/", include("products.urls", namespace="products")),
+    path("profile/", include("profiles.urls", namespace="profiles")),
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler400 = views.custom_400
 handler403 = views.custom_403
