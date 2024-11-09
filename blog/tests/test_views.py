@@ -40,4 +40,4 @@ class TestBlogViews(TestCase):
             reverse("post_detail", args=["blog-title"]), post_data
         )
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b"Comment submitted and awaiting approval", response.content)
+        self.assertIn(b"Submitted and awaiting approval", response.content)

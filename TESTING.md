@@ -159,7 +159,6 @@ The python files have all been passed through [PEP8 CI Online](https://pep8ci.he
 | blog      | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-admin-py.png)</details>               |
 | blog      | test_views.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-views-py.png)</details>          |
 | blog      | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-models-py.png)</details>         |
-| blog      | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-forms-py.png)</details>          |
 | cart      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-views-py.png)</details>               |
 | cart      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-urls-py.png)</details>                |
 | cart      | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-models-py.png)</details>              |
@@ -167,7 +166,7 @@ The python files have all been passed through [PEP8 CI Online](https://pep8ci.he
 | cart      | test_context.py    | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-test-contest-py.png)</details>        |
 | checkout  | webhooks.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-webhooks-py.png)</details>        |
 | checkout  | webhook_handler.py | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-webhook-handler-py.png)</details> |
-| checkout  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-imgcheckaout-views.png)</details>              |
+| checkout  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkaout-views.png)</details>             |
 | checkout  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-urls-py.png)</details>            |
 | checkout  | signals.py         | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-signals-py.png)</details>         |
 | checkout  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-models-py.png)</details>          |
@@ -196,7 +195,7 @@ The python files have all been passed through [PEP8 CI Online](https://pep8ci.he
 | profiles  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-models-py.png)</details>          |
 | profiles  | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-forms-py.png)</details>           |
 | profiles  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-test-forms.png)</details>         |
-| main      | custom_storages.py | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-custom-storages.png)</details>    |
+| main      | custom_storages.py | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/main-custom-storages.png)</details>        |
 
 </details><br/>
 
