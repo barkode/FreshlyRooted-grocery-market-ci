@@ -1,123 +1,136 @@
 from django.contrib import messages
-from django.shortcuts import get_object_or_404, HttpResponse, redirect, render, reverse
-
+from django.shortcuts import (
+    get_object_or_404,
+    HttpResponse,
+    redirect,
+    render,
+    reverse,
+)
 from products.models import Product
 
 
 def view_cart(request):
-    """A view that renders the cart contents page"""
-
+    """A view that renders the cart contents page."""
     return render(request, "cart/cart.html")
 
 
 def add_to_cart(request, item_id):
-    """Add a quantity of the specified product to the shopping cart"""
-
+    """Add a quantity of the specified product to the shopping cart."""
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get("quantity", "1"))
     redirect_url = request.POST.get("redirect_url")
-    size = None
-    if "product_size" in request.POST:
-        size = request.POST["product_size"]
+    size = request.POST.get("product_size")
     cart = request.session.get("cart", {})
 
-    if size:
-        if item_id in list(cart.keys()):
-            if size in cart[item_id]["items_by_size"].keys():
-                cart[item_id]["items_by_size"][size] += quantity
-                messages.success(
-                    request,
-                    (
-                        f"Updated size {size.upper()} "
-                        f"{product.name} quantity to "
-                        f'{cart[item_id]["items_by_size"][size]}'
-                    ),
-                )
-            else:
-                cart[item_id]["items_by_size"][size] = quantity
-                messages.success(
-                    request,
-                    f"Added size {size.upper()} " f"{product.name} to your cart",
-                )
-        else:
-            cart[item_id] = {"items_by_size": {size: quantity}}
+    def add_or_update_cart_with_size(product, item_id, size, quantity):
+        """Helper function to add or update cart items with size."""
+        if size in cart[item_id]["items_by_size"]:
+            cart[item_id]["items_by_size"][size] += quantity
             messages.success(
-                request, f"Added size {size.upper()} " f"{product.name} to your cart"
+                request,
+                f"Updated size {size.upper()} {product.name} quantity to "
+                f"{cart[item_id]['items_by_size'][size]}",
             )
-    else:
-        if item_id in list(cart.keys()):
+        else:
+            cart[item_id]["items_by_size"][size] = quantity
+            messages.success(
+                request, f"Added size {size.upper()} {product.name} to your cart"
+            )
+
+    def add_or_update_cart_without_size(product, item_id, quantity):
+        """Helper function to add or update cart items without size."""
+        if item_id in cart:
             cart[item_id] += quantity
             messages.success(
-                request, f"Updated {product.name} " f"quantity to {cart[item_id]}"
+                request, f"Updated {product.name} quantity to {cart[item_id]}"
             )
         else:
             cart[item_id] = quantity
             messages.success(request, f"Added {product.name} to your cart")
+
+    if size:
+        if item_id in cart:
+            add_or_update_cart_with_size(product, item_id, size, quantity)
+        else:
+            cart[item_id] = {"items_by_size": {size: quantity}}
+            messages.success(
+                request, f"Added size {size.upper()} {product.name} to your cart"
+            )
+    else:
+        add_or_update_cart_without_size(product, item_id, quantity)
 
     request.session["cart"] = cart
     return redirect(redirect_url)
 
 
 def adjust_cart(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
+    """Adjust the quantity of the specified product to the specified amount."""
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get("quantity"))
-    size = None
-    if "product_size" in request.POST:
-        size = request.POST["product_size"]
+    size = request.POST.get("product_size")
     cart = request.session.get("cart", {})
+
+    def update_cart_size(product, item_id, size, quantity):
+        """Helper function to update cart items with size."""
+        cart[item_id]["items_by_size"][size] = quantity
+        messages.success(
+            request,
+            f"Updated size {size.upper()} {product.name} quantity to "
+            f"{cart[item_id]['items_by_size'][size]}",
+        )
+
+    def remove_size_from_cart(product, item_id, size):
+        """Helper function to remove sized items from cart."""
+        del cart[item_id]["items_by_size"][size]
+        if not cart[item_id]["items_by_size"]:
+            cart.pop(item_id)
+        messages.success(
+            request, f"Removed size {size.upper()} {product.name} from your cart"
+        )
+
+    def update_cart_without_size(product, item_id, quantity):
+        """Helper function to update cart items without size."""
+        cart[item_id] = quantity
+        messages.success(request, f"Updated {product.name} quantity to {cart[item_id]}")
+
+    def remove_item_from_cart(product, item_id):
+        """Helper function to remove items from cart."""
+        cart.pop(item_id)
+        messages.success(request, f"Removed {product.name} from your cart")
 
     if size:
         if quantity > 0:
-            cart[item_id]["items_by_size"][size] = quantity
-            messages.success(
-                request,
-                (
-                    f"Updated size {size.upper()} "
-                    f"{product.name} quantity to "
-                    f'{cart[item_id]["items_by_size"][size]}'
-                ),
-            )
+            update_cart_size(product, item_id, size, quantity)
         else:
-            del cart[item_id]["items_by_size"][size]
-            if not cart[item_id]["items_by_size"]:
-                cart.pop(item_id)
-            messages.success(
-                request,
-                f"Removed size {size.upper()} " f"{product.name} from your cart",
-            )
+            remove_size_from_cart(product, item_id, size)
     else:
         if quantity > 0:
-            cart[item_id] = quantity
-            messages.success(
-                request, f"Updated {product.name} " f"quantity to {cart[item_id]}"
-            )
+            update_cart_without_size(product, item_id, quantity)
         else:
-            cart.pop(item_id)
-            messages.success(request, f"Removed {product.name} " f"from your cart")
+            remove_item_from_cart(product, item_id)
 
     request.session["cart"] = cart
     return redirect(reverse("cart:view_cart"))
 
 
 def remove_from_cart(request, item_id):
-    """Remove the item from the shopping cart"""
-
+    """Remove the item from the shopping cart."""
     try:
         product = get_object_or_404(Product, pk=item_id)
-        size = None
-        if "product_size" in request.POST:
-            size = request.POST["product_size"]
+        size = request.POST.get("product_size")
         cart = request.session.get("cart", {})
 
-        if size:
+        def remove_item_size(cart, item_id, size):
+            """Helper function to remove sized items."""
             del cart[item_id]["items_by_size"][size]
             if not cart[item_id]["items_by_size"]:
                 cart.pop(item_id)
             messages.success(
-                request,
-                f"Removed size {size.upper()} " f"{product.name} from your cart",
+                request, f"Removed size {size.upper()} {product.name} from your cart"
             )
+
+        if size:
+            remove_item_size(cart, item_id, size)
         else:
             cart.pop(item_id)
             messages.success(request, f"Removed {product.name} from your cart")
@@ -131,13 +144,12 @@ def remove_from_cart(request, item_id):
 
 
 def clear_cart(request):
-    """Remove all items from the shopping cart"""
+    """Remove all items from the shopping cart."""
     try:
         cart = request.session.get("cart", {})
         cart.clear()
         request.session["cart"] = cart
         messages.success(request, "Your cart has been cleared")
-
         return redirect(reverse("cart:view_cart"))
 
     except Exception as e:

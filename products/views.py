@@ -58,10 +58,10 @@ def all_products(request):
                 return redirect(reverse("products"))
 
             queries = (
-                    Q(name__icontains=query)
-                    | Q(description__icontains=query)
-                    | Q(category__name__icontains=query)
-                    | Q(category__friendly_name__icontains=query)
+                Q(name__icontains=query)
+                | Q(description__icontains=query)
+                | Q(category__name__icontains=query)
+                | Q(category__friendly_name__icontains=query)
             )
             products = products.filter(queries)
 
@@ -88,7 +88,7 @@ def all_products(request):
         "current_sorting": current_sorting,
         "favorites": favorites,
         "get_params": urlencode(get_params),
-        }
+    }
 
     return render(request, "products/products.html", context)
 
@@ -101,7 +101,7 @@ def product_detail(request, product_id):
         template = "products/product_detail.html"
         context = {
             "product": product,
-            }
+        }
         return render(request, template, context)
     else:
         user = request.user
@@ -111,7 +111,7 @@ def product_detail(request, product_id):
         context = {
             "product": product,
             "favorites": favorites,
-            }
+        }
         return render(request, template, context)
 
 
@@ -131,14 +131,14 @@ def add_product(request):
         else:
             messages.error(
                 request, "Failed to add product. Please ensure the form is valid."
-                )
+            )
     else:
         form = ProductForm()
 
     template = "products/add_product.html"
     context = {
         "form": form,
-        }
+    }
 
     return render(request, template, context)
 
@@ -160,7 +160,7 @@ def edit_product(request, product_id):
         else:
             messages.error(
                 request, "Failed to update product. Please ensure the form is valid."
-                )
+            )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f"You are editing {product.name}")
@@ -169,7 +169,7 @@ def edit_product(request, product_id):
     context = {
         "form": form,
         "product": product,
-        }
+    }
 
     return render(request, template, context)
 

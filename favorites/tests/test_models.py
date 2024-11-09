@@ -10,7 +10,7 @@ from products.models import Product
 
 class FavoritesModelTest(TestCase):
     def setUp(self):
-        self.user = User.objects.create_user(username="testuser", password="12345")
+        self.user = User.objects.create_user(username="tusr", password="12345")
         self.product1 = Product.objects.create(
             name="Product 1", description="Product 1 description"
         )
