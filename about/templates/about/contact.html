@@ -58,10 +58,9 @@
                             <div class="line"></div>
                         </div>
                         <!-- Contact Form -->
-                        <form action="/about/" method="POST">
-                            <input type="hidden" name="csrfmiddlewaretoken"
-                                   value="deTx70EFHcnqLZ8CTQuemFmn6RF4SgyhBIIeZjwHTiFSgik4KkUYEuKQ1Ikc4Ppn">
-                            <div class="row gy-4"> <!-- Додано gy-4 для відступів між рядками -->
+                        <form action="{% url 'about:contact' %}" method="POST">
+                            {% csrf_token %}    
+                            <div class="row gy-4">
                                 <div class="col-lg-6">
                                     <input type="text" name="name" class="form-control mb-4 border-black"
                                            placeholder="Name" required>
@@ -74,7 +73,7 @@
                                     <textarea name="message" class="form-control mb-4 message border-black"
                                               placeholder="Message" required></textarea>
                                 </div>
-                                <div class="col-12 text-center mt-4"> <!-- Збільшено відступ зверху -->
+                                <div class="col-12 text-center mt-4">
                                     <button type="submit"
                                             class="btn btn-black btn-lg product-btn text-shadow mt-3 rounded-0">
                                         Send Message
