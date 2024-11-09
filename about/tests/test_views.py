@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
-from .models import About
-from .forms import CollaborateForm
+from about.models import About
+from about.forms import CollaborateForm
 
 
 # Create your tests here.
