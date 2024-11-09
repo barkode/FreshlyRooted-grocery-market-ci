@@ -75,37 +75,37 @@ This is the process which was followed of validating an HTML file by direct inpu
 
 <summary>HTML Validation Results</summary>
 
-| File Name             | Pass | View Result                                                | Notes                                                                                                                                                                                             |
-|-----------------------|------|------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| index.html            | ⛔    | [Result](docs/test-img/header-1.png)                       |                                                                                                                                                                                                   |
-| product-list.html     | ⛔    | [Result](docs/test-img/all-prod.png)                       |                                                                                                                                                                                                   |
-| search-results.html   | ✅    | ![Result](/docs/test-img/search-results-htmlchecker.png)   |                                                                                                                                                                                                   |
-| edit-product.html     |      | ![Result](/docs/test-img/edit-product-htmlchecker.png)     |                                                                                                                                                                                                   |
-| add-product.html      | ✅    | ![Result](/docs/test-img/add-product-htmlchecker.png)      |                                                                                                                                                                                                   |
-| admin-summary.html    | ✅    | ![Result](/docs/test-img/admin-summary-htmlchecker.png)    |                                                                                                                                                                                                   |
-| manage-author.html    | ✅    | ![Result](/docs/test-img/manage-author-htmlchecker.png)    |                                                                                                                                                                                                   |
-| manage-genre.html     | ✅    | ![Result](/docs/test-img/manage-genre-htmlchecker.png)     |                                                                                                                                                                                                   |
-| manage-coupon.html    |      | ![Result](/docs/test-img/manage-coupon-htmlchecker.png)    | It intermittently throws an error for dropdown selection for percentage option. Based on online research there seems to be an ongoing html issue. All html code is updated to meet the standards. |
-| manage-category.html  | ✅    | ![Result](/docs/test-img/manage-category-htmlchecker.png)  |                                                                                                                                                                                                   |
-| manage-orders.html    | ✅    | ![Result](/docs/test-img/manage-orders-htmlchecker.png)    |                                                                                                                                                                                                   |
-| dashboard.html        | ✅    | ![Result](/docs/test-img/dashboard-htmlchecker.png)        |                                                                                                                                                                                                   |
-| profile.html          | ✅    | ![Result](/docs/test-img/profile-htmlchecker.png)          |                                                                                                                                                                                                   |
-| my-orders.html        | ✅    | ![Result](/docs/test-img/user-orders-htmlchecker.png)      |                                                                                                                                                                                                   |
-| wishlist.html         | ✅    | ![Result](/docs/test-img/user-favourites-htmlchecker.png)  |                                                                                                                                                                                                   |
-| change-password.html  | ✅    | ![Result](/docs/test-img/change-password-htmlchecker.png)  |                                                                                                                                                                                                   |
-| delete-modal.html     | ✅    | ![Result](/docs/test-img/profile-delete-htmlchecker.png)   |                                                                                                                                                                                                   |
-| product-detail.html   | ✅    | ![Result](/docs/test-img/product-details-htmlchecker.png)  |                                                                                                                                                                                                   |
-| about.html            | ✅    | ![Result](/docs/test-img/about-htmlchecker.png)            |                                                                                                                                                                                                   |
-| special-offers.html   | ✅    | ![Result](/docs/test-img/offers-htmlchecker.png)           |                                                                                                                                                                                                   |
-| signup.html           | ✅    | ![Result](/docs/test-img/sign-up-htmlchecker.png)          |                                                                                                                                                                                                   |
-| login.html            | ✅    | ![Result](/docs/test-img/login-htmlchecker.png)            |                                                                                                                                                                                                   |
-| logout.html           | ✅    | ![Result](/docs/test-img/logout-htmlchecker.png)           |                                                                                                                                                                                                   |
-| cart.html             | ✅    | ![Result](/docs/test-img/cart-htmlchecker.png)             |                                                                                                                                                                                                   |
-| checkout-success.html | ✅    | ![Result](/docs/test-img/success-htmlchecker.png)          |                                                                                                                                                                                                   |
-| checkout.html         | ✅    | ![Result](/docs/test-img/checkout-htmlchecker.png)         |                                                                                                                                                                                                   |
-| shipping-returns.html | ✅    | ![Result](/docs/test-img/shipping-returns-htmlchecker.png) |                                                                                                                                                                                                   |
-| privacy-policy.html   | ✅    | ![Result](/docs/test-img/privacy-policy-htmlchecker.png)   |                                                                                                                                                                                                   |
-| terms-of-service.html | ✅    | ![Result](/docs/test-img/terms-htmlchecker.png)            |                                                                                                                                                                                                   |
+| File Name             | Pass | Notes | View Result                                                |
+|-----------------------|------|-------|------------------------------------------------------------|
+| index.html            | ⛔    |       | [Result](docs/test-img/header-1.png)                       |
+| product-list.html     | ⛔    |       | [Result](docs/test-img/all-prod.png)                       |
+| search-results.html   | ✅    |       | ![Result](/docs/test-img/search-results-htmlchecker.png)   |
+| edit-product.html     |      |       | ![Result](/docs/test-img/edit-product-htmlchecker.png)     |       
+| add-product.html      | ✅    |       | ![Result](/docs/test-img/add-product-htmlchecker.png)      |       
+| admin-summary.html    | ✅    |       | ![Result](/docs/test-img/admin-summary-htmlchecker.png)    |       
+| manage-author.html    | ✅    |       | ![Result](/docs/test-img/manage-author-htmlchecker.png)    |       
+| manage-genre.html     | ✅    |       | ![Result](/docs/test-img/manage-genre-htmlchecker.png)     |       
+| manage-coupon.html    |      |       | ![Result](/docs/test-img/manage-coupon-htmlchecker.png)    |
+| manage-category.html  | ✅    |       | ![Result](/docs/test-img/manage-category-htmlchecker.png)  |       
+| manage-orders.html    | ✅    |       | ![Result](/docs/test-img/manage-orders-htmlchecker.png)    |       
+| dashboard.html        | ✅    |       | ![Result](/docs/test-img/dashboard-htmlchecker.png)        |       
+| profile.html          | ✅    |       | ![Result](/docs/test-img/profile-htmlchecker.png)          |       
+| my-orders.html        | ✅    |       | ![Result](/docs/test-img/user-orders-htmlchecker.png)      |       
+| wishlist.html         | ✅    |       | ![Result](/docs/test-img/user-favourites-htmlchecker.png)  |       
+| change-password.html  | ✅    |       | ![Result](/docs/test-img/change-password-htmlchecker.png)  |       
+| delete-modal.html     | ✅    |       | ![Result](/docs/test-img/profile-delete-htmlchecker.png)   |       
+| product-detail.html   | ✅    |       | ![Result](/docs/test-img/product-details-htmlchecker.png)  |       |
+| about.html            | ✅    |       | ![Result](/docs/test-img/about-htmlchecker.png)            |       
+| special-offers.html   | ✅    |       | ![Result](/docs/test-img/offers-htmlchecker.png)           |       
+| signup.html           | ✅    |       | ![Result](/docs/test-img/sign-up-htmlchecker.png)          |       
+| login.html            | ✅    |       | ![Result](/docs/test-img/login-htmlchecker.png)            |       
+| logout.html           | ✅    |       | ![Result](/docs/test-img/logout-htmlchecker.png)           |       
+| cart.html             | ✅    |       | ![Result](/docs/test-img/cart-htmlchecker.png)             |       
+| checkout-success.html | ✅    |       | ![Result](/docs/test-img/success-htmlchecker.png)          |      
+| checkout.html         | ✅    |       | ![Result](/docs/test-img/checkout-htmlchecker.png)         |       
+| shipping-returns.html | ✅    |       | ![Result](/docs/test-img/shipping-returns-htmlchecker.png) |       
+| privacy-policy.html   | ✅    |       | ![Result](/docs/test-img/privacy-policy-htmlchecker.png)   |       
+| terms-of-service.html | ✅    |       | ![Result](/docs/test-img/terms-htmlchecker.png)            |       
 
 </details>
 
@@ -123,7 +123,7 @@ accessibility.
 
 </details>
 
-### JavaScript
+### JavaSc|ript
 
 No major errors were found when validating JavaScript through [Jshint](https://jshint.com/).
 
@@ -134,67 +134,67 @@ No major errors were found when validating JavaScript through [Jshint](https://j
 
 </details>
 
-### Python
+### Pytho|n
 
 The python files have all been passed through [PEP8 CI Online](https://pep8ci.herokuapp.com/)
 
 <details><summary><b>PEP8 Test Results</b></summary>
 
-| App Name  | File Name          | Pass | View Result                                                                                               |
-|-----------|--------------------|------|-----------------------------------------------------------------------------------------------------------|
-| about     | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-views-py.png)</details>              |
-| about     | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-urls-py.png)</details>               |
-| about     | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-models-py.png)</details>             |
-| about     | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-forms-py.png)</details>              |
-| about     | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-admin-py.png)</details>              |
-| about     | test_views.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-test-viewers-py.png)</details>       |
-| about     | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-test-forms-py.png)</details>         |
-| app       | settings.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/settings-py.png)</details>                 |
-| app       | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/testing-urls-py-main-app.png)</details>    |
-| app       | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-py-main-app.png)</details>           |
-| blog      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-views-py.png)</details>               |
-| blog      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-urls-py.png)</details>                |
-| blog      | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-models-py.png)</details>              |
-| blog      | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-forms-py.png)</details>               |
-| blog      | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-admin-py.png)</details>               |
-| blog      | test_views.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-views-py.png)</details>          |
-| blog      | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-models-py.png)</details>         |
-| cart      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-views-py.png)</details>               |
-| cart      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-urls-py.png)</details>                |
-| cart      | contexts.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-context-py.png)</details>             |
-| cart      | test_context.py    | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-test-contest-py.png)</details>        |
-| checkout  | webhooks.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-webhooks-py.png)</details>        |
-| checkout  | webhook_handler.py | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-webhook-handler-py.png)</details> |
-| checkout  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkaout-views.png)</details>             |
-| checkout  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-urls-py.png)</details>            |
-| checkout  | signals.py         | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-signals-py.png)</details>         |
-| checkout  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-models-py.png)</details>          |
-| checkout  | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-forms-py.png)</details>           |
-| checkout  | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-admin-py.png)</details>           |
-| checkout  | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-test-models-py.png)</details>     |
-| checkout  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-test-forms-py.png)</details>      |
-| favorites | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-views-py.png)</details>          |
-| favorites | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-urls-py.png)</details>           |
-| favorites | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-models-py.png)</details>         |
-| favorites | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-admin-py.png)</details>          |
-| favorites | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-test-models-py.png)</details>    |
-| home      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/home-views-py.png)</details>               |
-| home      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/home-urls-py.png)</details>                |
-| products  | widgets.py         | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-widgets-py.png)</details>         |
-| products  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-views-py.png)</details>           |
-| products  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-urls-py.png)</details>            |
-| products  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-models-py.png)</details>          |
-| products  | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-forms-py.png)</details>           |
-| products  | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-admin-py.png)</details>           |
-| products  | test_views.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-test-views-py.png)</details>      |
-| products  | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/productstest-models-py.png)</details>      |
-| products  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-test-forms-py.png)</details>      |
-| profiles  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-views-py.png)</details>           |
-| profiles  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-urls-py.png)</details>            |
-| profiles  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-models-py.png)</details>          |
-| profiles  | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-forms-py.png)</details>           |
-| profiles  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-test-forms.png)</details>         |
-| main      | custom_storages.py | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/main-custom-storages.png)</details>        |
+| App Name  | File Name          | Pass | Notes | View Result                                                                                               |
+|-----------|--------------------|------|-------|-----------------------------------------------------------------------------------------------------------|
+| about     | views.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-views-py.png)</details>              |
+| about     | urls.py            | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-urls-py.png)</details>               |
+| about     | models.py          | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-models-py.png)</details>             |
+| about     | forms.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-forms-py.png)</details>              |
+| about     | admin.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-admin-py.png)</details>              |
+| about     | test_views.py      | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-test-viewers-py.png)</details>       |
+| about     | test_forms.py      | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-test-forms-py.png)</details>         |
+| app       | settings.py        | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/settings-py.png)</details>                 |
+| app       | urls.py            | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/testing-urls-py-main-app.png)</details>    |
+| app       | views.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-py-main-app.png)</details>           |
+| blog      | views.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-views-py.png)</details>               |
+| blog      | urls.py            | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-urls-py.png)</details>                |
+| blog      | models.py          | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-models-py.png)</details>              |
+| blog      | forms.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-forms-py.png)</details>               |
+| blog      | admin.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-admin-py.png)</details>               |
+| blog      | test_views.py      | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-views-py.png)</details>          |
+| blog      | test_models.py     | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-models-py.png)</details>         |
+| cart      | views.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-views-py.png)</details>               |
+| cart      | urls.py            | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-urls-py.png)</details>                |
+| cart      | contexts.py        | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-context-py.png)</details>             |
+| cart      | test_context.py    | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-test-contest-py.png)</details>        |
+| checkout  | webhooks.py        | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-webhooks-py.png)</details>        |
+| checkout  | webhook_handler.py | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-webhook-handler-py.png)</details> |
+| checkout  | views.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkaout-views.png)</details>             |
+| checkout  | urls.py            | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-urls-py.png)</details>            |
+| checkout  | signals.py         | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-signals-py.png)</details>         |
+| checkout  | models.py          | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-models-py.png)</details>          |
+| checkout  | forms.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-forms-py.png)</details>           |
+| checkout  | admin.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-admin-py.png)</details>           |
+| checkout  | test_models.py     | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-test-models-py.png)</details>     |
+| checkout  | test_forms.py      | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-test-forms-py.png)</details>      |
+| favorites | views.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-views-py.png)</details>          |
+| favorites | urls.py            | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-urls-py.png)</details>           |
+| favorites | models.py          | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-models-py.png)</details>         |
+| favorites | admin.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-admin-py.png)</details>          |
+| favorites | test_models.py     | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-test-models-py.png)</details>    |
+| home      | views.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/home-views-py.png)</details>               |
+| home      | urls.py            | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/home-urls-py.png)</details>                |
+| products  | widgets.py         | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-widgets-py.png)</details>         |
+| products  | views.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-views-py.png)</details>           |
+| products  | urls.py            | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-urls-py.png)</details>            |
+| products  | models.py          | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-models-py.png)</details>          |
+| products  | forms.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-forms-py.png)</details>           |
+| products  | admin.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-admin-py.png)</details>           |
+| products  | test_views.py      | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-test-views-py.png)</details>      |
+| products  | test_models.py     | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/productstest-models-py.png)</details>      |
+| products  | test_forms.py      | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-test-forms-py.png)</details>      |
+| profiles  | views.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-views-py.png)</details>           |
+| profiles  | urls.py            | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-urls-py.png)</details>            |
+| profiles  | models.py          | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-models-py.png)</details>          |
+| profiles  | forms.py           | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-forms-py.png)</details>           |
+| profiles  | test_forms.py      | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-test-forms.png)</details>         |
+| main      | custom_storages.py | ✅    |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/main-custom-storages.png)</details>        |
 
 </><br/>
 
