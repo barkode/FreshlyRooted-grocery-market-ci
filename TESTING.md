@@ -2,7 +2,7 @@
 
 Return back to the [README.md](README.md) file.
 
-![Main Image]()
+![Main Image](docs/images/main.png)
 
 # Contents
 
@@ -140,64 +140,63 @@ The python files have all been passed through [PEP8 CI Online](https://pep8ci.he
 
 <details><summary><b>PEP8 Test Results</b></summary>
 
-| App Name  | File Name          | Pass | View Result                                                                                            |
-|-----------|--------------------|------|--------------------------------------------------------------------------------------------------------|
-| about     | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-views-py.png)</details>           |
-| about     | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-urls-py.png)</details>            |
-| about     | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-models-py.png)</details>          |
-| about     | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-forms-py.png)</details>           |
-| about     | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-admin-py.png)</details>           |
-| about     | test_views.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/settings-py.png)</details>              |
-| about     | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/settings-py.png)</details>              |
-| app       | settings.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/settings-py.png)</details>              |
-| app       | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/testing-urls-py-main-app.png)</details> |
-| app       | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-py-main-app.png)</details>        |
-| blog      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/bag-tools-py.png)</details>             |
-| blog      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-views-cart-py.png)</details>       |
-| blog      | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-cart-py.png)</details>             |
-| blog      | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/contexts-cart-py.png)</details>         |
-| blog      | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-views-cart-py.png)</details>       |
-| blog      | test_views.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-cart-py.png)</details>             |
-| blog      | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/contexts-cart-py.png)</details>         |
-| blog      | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/contexts-cart-py.png)</details>         |
-| cart      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/urls-cart-py.png)</details>             |
-| cart      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-cart-py.png)</details>            || cart     | bag_tools.py       | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/bag-tools-py.png)</details>             |
-| cart      | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-views-cart-py.png)</details>       |
-| cart      | contexts.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-cart-py.png)</details>             |
-| cart      | test_context.py    | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/contexts-cart-py.png)</details>         |
-| cart      | context.py         | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/urls-cart-py.png)</details>             |
-| checkout  | webhooks.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-forms-checkout-py.png)</details>   |
-| checkout  | webhook_handler.py | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-models-checkout-py.png)</details>  |
-| checkout  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/admin-checkout-py.png)</details>        |
-| checkout  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-checkout-py.png)</details>         |
-| checkout  | signals.py         | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/forms-checkout-py.png)</details>        |
-| checkout  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/models-checkout-py.png)</details>       |
-| checkout  | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/signals-checkout-py.png)</details>      |
-| checkout  | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/urls-checkout-py.png)</details>         |
-| checkout  | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-checkout-py.png)</details>        |
-| checkout  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/handler-checkout-py.png)</details>      |
-| favorites | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-core-py.png)</details>             |
-| favorites | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/urls-core-py.png)</details>             |
-| favorites | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-core-py.png)</details>            |
-| favorites | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-core-py.png)</details>            |
-| favorites | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-core-py.png)</details>            |
-| home      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-core-py.png)</details>            |
-| home      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-core-py.png)</details>            |
-| home      | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-core-py.png)</details>            |
-| products  | widgets.py         | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/query-products-py.png)</details>        |
-| products  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-models-products-py.png)</details>  |
-| products  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-views-products-py.png)</details>   |
-| products  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/admin-products-py.png)</details>        |
-| products  | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-products-py.png)</details>         |
-| products  | test_views.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/filters-products-py.png)</details>      |
-| products  | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/forms-products-py.png)</details>        |
-| products  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/mixins-products-py.png)</details>       |
-| profiles  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/models-products-py.png)</details>       |
-| profiles  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/urls-products-py.png)</details>         |
-| profiles  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-products-py.png)</details>        |
-| profiles  | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/admin-prof-py.png)</details>            |
-| profiles  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-prof-py.png)</details>             |
-| main      | custom_storages.py | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-prof-py.png)</details>             |
+| App Name  | File Name          | Pass | View Result                                                                                               |
+|-----------|--------------------|------|-----------------------------------------------------------------------------------------------------------|
+| about     | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-views-py.png)</details>              |
+| about     | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-urls-py.png)</details>               |
+| about     | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-models-py.png)</details>             |
+| about     | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-forms-py.png)</details>              |
+| about     | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-admin-py.png)</details>              |
+| about     | test_views.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-test-viewers-py.png)</details>       |
+| about     | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-test-forms-py.png)</details>         |
+| app       | settings.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/settings-py.png)</details>                 |
+| app       | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/testing-urls-py-main-app.png)</details>    |
+| app       | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-py-main-app.png)</details>           |
+| blog      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-views-py.png)</details>               |
+| blog      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-urls-py.png)</details>                |
+| blog      | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-models-py.png)</details>              |
+| blog      | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-forms-py.png)</details>               |
+| blog      | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-admin-py.png)</details>               |
+| blog      | test_views.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-views-py.png)</details>          |
+| blog      | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-models-py.png)</details>         |
+| blog      | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-forms-py.png)</details>          |
+| cart      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-views-py.png)</details>               |
+| cart      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-urls-py.png)</details>                |
+| cart      | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-models-py.png)</details>              |
+| cart      | contexts.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-context-py.png)</details>             |
+| cart      | test_context.py    | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-test-contest-py.png)</details>        |
+| checkout  | webhooks.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-webhooks-py.png)</details>        |
+| checkout  | webhook_handler.py | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-webhook-handler-py.png)</details> |
+| checkout  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-imgcheckaout-views.png)</details>              |
+| checkout  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-urls-py.png)</details>            |
+| checkout  | signals.py         | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-signals-py.png)</details>         |
+| checkout  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-models-py.png)</details>          |
+| checkout  | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-forms-py.png)</details>           |
+| checkout  | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-admin-py.png)</details>           |
+| checkout  | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-test-models-py.png)</details>     |
+| checkout  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-test-forms-py.png)</details>      |
+| favorites | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-views-py.png)</details>          |
+| favorites | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-urls-py.png)</details>           |
+| favorites | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-models-py.png)</details>         |
+| favorites | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-admin-py.png)</details>          |
+| favorites | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-test-models-py.png)</details>    |
+| home      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/home-views-py.png)</details>               |
+| home      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/home-urls-py.png)</details>                |
+| home      | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/home-models-py.png)</details>              |
+| products  | widgets.py         | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-widgets-py.png)</details>         |
+| products  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-views-py.png)</details>           |
+| products  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-urls-py.png)</details>            |
+| products  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-models-py.png)</details>          |
+| products  | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-admin-py.png)</details>           |
+| products  | test_views.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-test-views-py.png)</details>      |
+| products  | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/productstest-models-py.png)</details>      |
+| products  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-test-forms-py.png)</details>      |
+| profiles  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-views-py.png)</details>           |
+| profiles  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-urls-py.png)</details>            |
+| profiles  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-models-py.png)</details>          |
+| profiles  | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-forms-py.png)</details>           |
+| profiles  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-test-forms.png)</details>         |
+| main      | custom_storages.py | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-custom-storages.png)</details>    |
 
 </details><br/>
 

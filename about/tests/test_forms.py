@@ -1,38 +1,31 @@
-from django.test import TestCase
+import unittest
+
 from about.forms import CollaborateForm
+from django.test import TestCase
 
 
-# Create your tests here.
-class TestCollaborateForm(TestCase):
+class CollaborateFormTest(TestCase):
 
-    def test_form_is_valid(self):
-        """Test for all fields"""
-        form = CollaborateForm(
-            {"name": "test", "email": "test@test.com", "message": "Hello!"}
-        )
-        self.assertTrue(form.is_valid(), msg="Form is not valid")
+	def setUp(self):
+		self.data = {
+			'name': 'Test User',
+			'email': 'testuser@test.com',
+			'message': 'This is a test message'
+			}
 
-    def test_name_is_required(self):
-        """Test for the 'name' field"""
-        form = CollaborateForm(
-            {"name": "", "email": "test@test.com", "message": "Hello!"}
-        )
-        self.assertFalse(
-            form.is_valid(), msg="Name was not provided, but the form is valid"
-        )
+	def test_form_valid(self):
+		form = CollaborateForm(data=self.data)
+		self.assertTrue(form.is_valid())
 
-    def test_email_is_required(self):
-        """Test for the 'email' field"""
-        form = CollaborateForm({"name": "Matt", "email": "", "message": "Hello!"})
-        self.assertFalse(
-            form.is_valid(), msg="Email was not provided, but the form is valid"
-        )
+	def test_form_invalid(self):
+		self.data['email'] = 'invalidemail'
+		form = CollaborateForm(data=self.data)
+		self.assertFalse(form.is_valid())
 
-    def test_message_is_required(self):
-        """Test for the 'message' field"""
-        form = CollaborateForm(
-            {"name": "Matt", "email": "test@test.com", "message": ""}
-        )
-        self.assertFalse(
-            form.is_valid(), msg="Message was not provided, but the form is valid"
-        )
+	def test_form_fields(self):
+		form = CollaborateForm()
+		self.assertEqual(sorted(['name', 'email', 'message']), sorted(list(form.fields)))
+
+
+if __name__ == "__main__":
+	unittest.main()

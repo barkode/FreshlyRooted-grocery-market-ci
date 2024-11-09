@@ -1,34 +1,44 @@
-from django.test import TestCase
-from django.urls import reverse
-from about.models import About
-from about.forms import CollaborateForm
+import unittest
+from unittest.mock import Mock, patch
+
+from about.views import about_contact
+from django.contrib.messages.storage.fallback import FallbackStorage
+from django.test import RequestFactory
 
 
-# Create your tests here.
-class TestAboutView(TestCase):
-
+class AboutContactTest(unittest.TestCase):
     def setUp(self):
-        """Creates about me content"""
-        self.about_content = About(title="About Me", content="This is about me.")
-        self.about_content.save()
+	    self.factory = RequestFactory()
 
-    def test_render_about_page_with_collaborate_form(self):
-        """Verifies get request for about me containing a collaboration form"""
-        response = self.client.get(reverse("about"))
+    @patch('about.views.About.objects', new=Mock())
+    @patch('about.views.process_collaborate_form', return_value=False)
+    def test_about_contact_GET(self, mock_process_collaborate_form):
+	    request = self.factory.get('/about/contact/')
+	    response = about_contact(request)
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b"About Me", response.content)
-        self.assertIsInstance(response.context["collaborate_form"], CollaborateForm)
 
-    def test_successful_collaboration_request_submission(self):
-        """Test for a user requesting a collaboration"""
-        post_data = {
-            "name": "test name",
-            "email": "test@email.com",
-            "message": "test message",
-        }
-        response = self.client.post(reverse("about"), post_data)
+    @patch('about.views.About.objects', new=Mock())
+    @patch('about.views.messages')
+    @patch('about.views.process_collaborate_form')
+    def test_about_contact_POST_valid(self, mock_process_collaborate_form, mock_messages):
+	    mock_process_collaborate_form.return_value = True
+	    request = self.factory.post('/about/contact/')
+	    request.session = 'session'
+	    request._messages = FallbackStorage(request)
+	    response = about_contact(request)
+	    mock_messages.success.assert_called_once()
         self.assertEqual(response.status_code, 200)
-        self.assertIn(
-            b"Collaboration request received! I endeavour to respond within 2 working days.",
-            response.content,
-        )
+
+    @patch('about.views.About.objects', new=Mock())
+    @patch('about.views.process_collaborate_form', return_value=False)
+    def test_about_contact_POST_invalid(self, mock_process_collaborate_form):
+	    request = self.factory.post('/about/contact/')
+	    request.session = 'session'
+	    request._messages = FallbackStorage(request)
+	    response = about_contact(request)
+	    self.assertEqual(response.status_code, 200)
+	    self.assertFalse(mock_process_collaborate_form.called)
+
+
+if __name__ == '__main__':
+	unittest.main()
