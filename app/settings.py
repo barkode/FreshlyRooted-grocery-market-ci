@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-import os
+from os import getenv
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -25,25 +25,25 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+SECRET_KEY = getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "False").lower() == "true"
+DEBUG = getenv("DEBUG", "False").lower() == "true"
 
 # DEVELOPMENT Settings
-DEVELOPMENT = os.getenv("DEVELOPMENT", "False").lower() == "true"
+DEVELOPMENT = getenv("DEVELOPMENT", "False").lower() == "true"
 
-# LOGING variable
-IS_LOGGING = os.getenv("IS_LOGGING", "False").lower() == "true"
+# LOGING variable. Default "False"
+IS_LOGGING = getenv("IS_LOGGING", "False").lower() == "true"
 
-# Use external storage parameter
-USE_STORAGE = os.getenv("USE_STORAGE", "False").lower() == "true"
+# Use external storage parameter default "False"
+USE_STORAGE = getenv("USE_STORAGE", "False").lower() == "true"
 
-# Use external database
-USE_DATABASE = os.getenv("USE_DATABASE", "False").lower() == "true"
+# Use external database default "False"
+USE_DATABASE = getenv("USE_DATABASE", "False").lower() == "true"
 
-# Site ID
-SITE_ID = int(os.getenv("SITE_ID", "1"))
+# Site ID default 1
+SITE_ID = int(getenv("SITE_ID", "1"))
 
 
 if DEVELOPMENT:
@@ -59,16 +59,16 @@ if DEVELOPMENT:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
     DEFAULT_FROM_EMAIL = "freshrooted@example.com"
 else:
-    ALLOWED_HOSTS = list(os.getenv("ALLOWED_HOSTS").split(";"))
-    CSRF_TRUSTED_ORIGINS = list(os.getenv("CSRF_TRUSTED_ORIGINS").split(";"))
+    ALLOWED_HOSTS = list(getenv("ALLOWED_HOSTS").split(";"))
+    CSRF_TRUSTED_ORIGINS = list(getenv("CSRF_TRUSTED_ORIGINS").split(";"))
     # Email settings
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-    EMAIL_HOST = os.getenv("EMAIL_HOST", "smtp.gmail.com")
-    EMAIL_PORT = int(os.getenv("EMAIL_PORT", "587"))
+    EMAIL_HOST = getenv("EMAIL_HOST", "smtp.gmail.com")
+    EMAIL_PORT = int(getenv("EMAIL_PORT", "587"))
     EMAIL_USE_TLS = True
-    EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
-    EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
-    DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL")
+    EMAIL_HOST_USER = getenv("EMAIL_HOST_USER")
+    EMAIL_HOST_PASSWORD = getenv("EMAIL_HOST_PASSWORD")
+    DEFAULT_FROM_EMAIL = getenv("DEFAULT_FROM_EMAIL")
 
 # Application definition
 
@@ -85,7 +85,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "crispy_forms",
     "crispy_bootstrap5",
-    "storages",
+    # "storages",
     "home",
     "products",
     "cart",
@@ -137,8 +137,7 @@ TEMPLATES = [
                 "crispy_forms.templatetags.crispy_forms_field",
             ],
             "libraries": {
-                "breadcrumb_tags": "templatetags.breadcrumb_tags",
-                "cart_tools_tags": "cart.templatetags.cart_tags",
+                "cart_tags": "cart.templatetags.cart_tags",
             },
         },
     },
@@ -147,7 +146,7 @@ TEMPLATES = [
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
+    # Needed to log in by username in Django admin, regardless of `allauth`
     "django.contrib.auth.backends.ModelBackend",
     # `allauth` specific authentication methods, such as login by email
     "allauth.account.auth_backends.AuthenticationBackend",
@@ -172,11 +171,11 @@ if USE_DATABASE:
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql_psycopg2",
-            "NAME": os.getenv("DATABASE_NAME"),
-            "USER": os.getenv("DATABASE_USER"),
-            "PASSWORD": os.getenv("DATABASE_PASSWORD"),
-            "HOST": os.getenv("DATABASE_HOST"),
-            "PORT": int(os.getenv("DATABASE_PORT", "5432")),
+            "NAME": getenv("DATABASE_NAME"),
+            "USER": getenv("DATABASE_USER"),
+            "PASSWORD": getenv("DATABASE_PASSWORD"),
+            "HOST": getenv("DATABASE_HOST"),
+            "PORT": int(getenv("DATABASE_PORT", "5432")),
         }
     }
 else:
@@ -208,7 +207,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = os.getenv("LANGUAGE_CODE", "en-us")
+LANGUAGE_CODE = getenv("LANGUAGE_CODE", "en-us")
 
 TIME_ZONE = "UTC"
 
@@ -219,9 +218,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (BASE_DIR / "static",)
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
@@ -233,49 +232,32 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # AWS and white settings
 if USE_STORAGE:
-    MIDDLEWARE.insert(0, "utils.storage_check_middleware.StorageCheckMiddleware")
-else:
-    # WhiteNoise for development
-    INSTALLED_APPS.insert(0, "whitenoise.runserver_nostatic")
-    MIDDLEWARE.insert(2, "whitenoise.middleware.WhiteNoiseMiddleware")
-    STORAGES = {
-        "default": {
-            "BACKEND": "django.core.files.storage.FileSystemStorage",
-        },
-        "staticfiles": {
-            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-        },
-    }
-    STATIC_ROOT = BASE_DIR / "staticfiles"
-    STATIC_URL = "/static/"
-    MEDIA_URL = "/media/"
-    MEDIA_ROOT = BASE_DIR / "media"  # Set the local media root
+    AWS_S3_OBJECT_PARAMETERS = {
+        "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
+        "CacheControl": "max-age=94608000",
+        }
+    # S3 Configuration
+    AWS_STORAGE_BUCKET_NAME = getenv("AWS_STORAGE_BUCKET_NAME")
+    AWS_S3_REGION_NAME = getenv("AWS_S3_REGION_NAME")
+    AWS_ACCESS_KEY_ID = getenv("AWS_ACCESS_KEY_ID")
+    AWS_SECRET_ACCESS_KEY = getenv("AWS_SECRET_ACCESS_KEY")
+    AWS_S3_CUSTOM_DOMAIN = (
+        f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+    )
+
+    # Static and Media files settings
+    STATICFILES_STORAGE = "custom_storages.StaticStorage"
+    STATICFILES_DIRECTORY = "static"
+    DEFAULT_FILE_STORAGE = "custom_storages.MediaStorage"
+    MEDIAFILES_DIRECTORY = "media"
+    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_DIRECTORY}/"
+    MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_DIRECTORY}/"
+
 
 # Stripe settings
 FREE_DELIVERY_THRESHOLD = 75
 STANDARD_DELIVERY_PERCENTAGE = 12
 STRIPE_CURRENCY = "eur"
-STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY", None)
-STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", None)
-STRIPE_WH_SECRET = os.getenv("STRIPE_WH_SECRET", None)
-
-# Add logging settings
-if IS_LOGGING:
-    LOGGING = {
-        "version": 1,
-        "disable_existing_loggers": False,
-        "handlers": {
-            "file": {
-                "level": "INFO",  # Logging level (INFO, DEBUG, ERROR)
-                "class": "logging.FileHandler",
-                "filename": os.path.join(BASE_DIR, "logs/storage_check.log"),
-            },
-        },
-        "loggers": {
-            "storage_check": {
-                "handlers": ["file"],
-                "level": "INFO",
-                "propagate": False,
-            },
-        },
-    }
+STRIPE_PUBLIC_KEY = getenv("STRIPE_PUBLIC_KEY", None)
+STRIPE_SECRET_KEY = getenv("STRIPE_SECRET_KEY", None)
+STRIPE_WH_SECRET = getenv("STRIPE_WH_SECRET", None)
