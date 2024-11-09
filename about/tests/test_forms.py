@@ -1,11 +1,9 @@
 import unittest
-
-from about.forms import CollaborateForm
 from django.test import TestCase
+from about.forms import CollaborateForm  # перевірте шлях
 
 
 class CollaborateFormTest(TestCase):
-
 	def setUp(self):
 		self.data = {
 			"name": "Test User",
