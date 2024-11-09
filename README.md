@@ -1074,17 +1074,17 @@ To integrate AWS, follow steps:
     - Click "Add Statement" and "Generate Policy."
     - Copy the generated policy and paste it into the "Bucket Policy Editor":
 
-   ``` json 
+   ```json 
    {
      "Version": "2012-10-17",
      "Statement": [
-       {
-         "Effect": "Allow",
-         "Principal": "*",
-         "Action": "s3:GetObject",
-         "Resource": "arn:aws:s3:::your-bucket-name/*"
-       }
-     ]
+          {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::your-bucket-name/*"
+        }
+      ]
    }
     ```
 
@@ -1276,7 +1276,6 @@ DEBUG = False
 DEVELOPMENT = False
 USE_STORAGE = True
 USE_DATABASE = True
-IS_LOGGING = False
 LANGUAGE_CODE = 'en-us'
 SITE_ID = 1
 DJANGO_SECRET_KEY = 'your-secret-key'
@@ -1294,9 +1293,6 @@ AWS_STORAGE_BUCKET_NAME = 'your-bucket-name'
 AWS_S3_REGION_NAME = 'us-west-2'
 AWS_ACCESS_KEY_ID = 'your-access-key-id'
 AWS_SECRET_ACCESS_KEY = 'your-secret-access-key'
-CLOUDINARY_CLOUD_NAME = 'your-cloud-name'
-CLOUDINARY_API_KEY = 'your-cloudinary-api-key'
-CLOUDINARY_API_SECRET = 'your-cloudinary-api-secret'
 EMAIL_HOST = 'smtp.example.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'user@example.com'
@@ -1417,7 +1413,8 @@ _Any changes required to the website, they can be made, committed and pushed to 
   range of pre-designed components and utilities.
 - [Google Chrome](https://developer.chrome.com/docs/devtools/)  Used for overall development and tweaking, including
   testing responsiveness, debugging, and performance profiling.
-- [VSCode](https://code.visualstudio.com/) - Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.
+- [VSCode](https://code.visualstudio.com/) - Visual Studio Code is a code editor redefined and optimized for building
+  and debugging modern web and cloud applications.
 
 [Back to top](#contents)
 
@@ -1437,12 +1434,12 @@ _Any changes required to the website, they can be made, committed and pushed to 
 
 ### Acknowledgements
 
-
 - I would also like to express my thanks to the Code Institute tutors who are always on hand to offer help and support.
-- I want to thank my tutor Marko Tot for his daily care and help. For the desire to create a favorable atmosphere for learning and creativity.
-- I would also like to thank the entire Code Institute and Kerry College for giving me the opportunity to study and participate in this project.
+- I want to thank my tutor Marko Tot for his daily care and help. For the desire to create a favorable atmosphere for
+  learning and creativity.
+- I would also like to thank the entire Code Institute and Kerry College for giving me the opportunity to study and
+  participate in this project.
 - Finally, thanks to my fellow students on Slack as this is a valuable community for help and guidance.
-
 
 ## Disclaimer
 
