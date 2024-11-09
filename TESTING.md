@@ -6,22 +6,26 @@ Return back to the [README.md](README.md) file.
 
 # Contents
 
-- [Testing](#testing)
-- [Contents](#contents)
-    - [Responsiveness Tests](#responsiveness-tests)
-    - [Code Validation](#code-validation)
-        - [HTML](#html)
-        - [CSS](#css)
-        - [JavaScript](#javascript)
-        - [Python](#python)
-        - [Python (Unit Testing)](#python-unit-testing)
-    - [Manual Testing](#manual-testing)
-    - [Role-based Restrictions](#role-based-restrictions)
-    - [Bugs](#bugs)
-    - [Browser Compatibility](#browser-compatibility)
-    - [User Story Testing](#user-story-testing)
-    - [Lighthouse Testing](#lighthouse-testing)
-    - [Accessibility Testing](#accessibility-testing)
+<!-- TOC -->
+
+* [Testing](#testing)
+* [Contents](#contents)
+    * [Responsiveness Tests](#responsiveness-tests)
+    * [Code Validation](#code-validation)
+        * [HTML](#html)
+        * [CSS](#css)
+        * [JavaScript](#javascript)
+        * [Python](#python)
+        * [Python (Unit Testing)](#python-unit-testing)
+    * [Manual Testing](#manual-testing)
+    * [Role-based Restrictions](#role-based-restrictions)
+    * [Bugs](#bugs)
+    * [Browser Compatibility](#browser-compatibility)
+    * [User Story Testing](#user-story-testing)
+    * [Lighthouse Testing](#lighthouse-testing)
+    * [Accessibility Testing](#accessibility-testing)
+
+<!-- TOC -->
 
 ## Responsiveness Tests
 
@@ -71,37 +75,37 @@ This is the process which was followed of validating an HTML file by direct inpu
 
 <summary>HTML Validation Results</summary>
 
-| File Name             | Pass | View Result                                                              | Notes                                                                                                                                                                                             |
-|-----------------------|------|--------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| index.html            | ⛔    | [Result](docs/test-img/header-1.png)                                     |                                                                                                                                                                                                   |
-| product-list.html     | ⛔    | [Result](docs/test-img/all-prod.png)                                     |                                                                                                                                                                                                   |
-| search-results.html   | ✅    | ![Result](/docs/testing-md/validations/search-results-htmlchecker.png)   |                                                                                                                                                                                                   |
-| edit-product.html     |      | ![Result](/docs/testing-md/validations/edit-product-htmlchecker.png)     |                                                                                                                                                                                                   |
-| add-product.html      | ✅    | ![Result](/docs/testing-md/validations/add-product-htmlchecker.png)      |                                                                                                                                                                                                   |
-| admin-summary.html    | ✅    | ![Result](/docs/testing-md/validations/admin-summary-htmlchecker.png)    |                                                                                                                                                                                                   |
-| manage-author.html    | ✅    | ![Result](/docs/testing-md/validations/manage-author-htmlchecker.png)    |                                                                                                                                                                                                   |
-| manage-genre.html     | ✅    | ![Result](/docs/testing-md/validations/manage-genre-htmlchecker.png)     |                                                                                                                                                                                                   |
-| manage-coupon.html    |      | ![Result](/docs/testing-md/validations/manage-coupon-htmlchecker.png)    | It intermittently throws an error for dropdown selection for percentage option. Based on online research there seems to be an ongoing html issue. All html code is updated to meet the standards. |
-| manage-category.html  | ✅    | ![Result](/docs/testing-md/validations/manage-category-htmlchecker.png)  |                                                                                                                                                                                                   |
-| manage-orders.html    | ✅    | ![Result](/docs/testing-md/validations/manage-orders-htmlchecker.png)    |                                                                                                                                                                                                   |
-| dashboard.html        | ✅    | ![Result](/docs/testing-md/validations/dashboard-htmlchecker.png)        |                                                                                                                                                                                                   |
-| profile.html          | ✅    | ![Result](/docs/testing-md/validations/profile-htmlchecker.png)          |                                                                                                                                                                                                   |
-| my-orders.html        | ✅    | ![Result](/docs/testing-md/validations/user-orders-htmlchecker.png)      |                                                                                                                                                                                                   |
-| wishlist.html         | ✅    | ![Result](/docs/testing-md/validations/user-favourites-htmlchecker.png)  |                                                                                                                                                                                                   |
-| change-password.html  | ✅    | ![Result](/docs/testing-md/validations/change-password-htmlchecker.png)  |                                                                                                                                                                                                   |
-| delete-modal.html     | ✅    | ![Result](/docs/testing-md/validations/profile-delete-htmlchecker.png)   |                                                                                                                                                                                                   |
-| product-detail.html   | ✅    | ![Result](/docs/testing-md/validations/product-details-htmlchecker.png)  |                                                                                                                                                                                                   |
-| about.html            | ✅    | ![Result](/docs/testing-md/validations/about-htmlchecker.png)            |                                                                                                                                                                                                   |
-| special-offers.html   | ✅    | ![Result](/docs/testing-md/validations/offers-htmlchecker.png)           |                                                                                                                                                                                                   |
-| signup.html           | ✅    | ![Result](/docs/testing-md/validations/sign-up-htmlchecker.png)          |                                                                                                                                                                                                   |
-| login.html            | ✅    | ![Result](/docs/testing-md/validations/login-htmlchecker.png)            |                                                                                                                                                                                                   |
-| logout.html           | ✅    | ![Result](/docs/testing-md/validations/logout-htmlchecker.png)           |                                                                                                                                                                                                   |
-| cart.html             | ✅    | ![Result](/docs/testing-md/validations/cart-htmlchecker.png)             |                                                                                                                                                                                                   |
-| checkout-success.html | ✅    | ![Result](/docs/testing-md/validations/success-htmlchecker.png)          |                                                                                                                                                                                                   |
-| checkout.html         | ✅    | ![Result](/docs/testing-md/validations/checkout-htmlchecker.png)         |                                                                                                                                                                                                   |
-| shipping-returns.html | ✅    | ![Result](/docs/testing-md/validations/shipping-returns-htmlchecker.png) |                                                                                                                                                                                                   |
-| privacy-policy.html   | ✅    | ![Result](/docs/testing-md/validations/privacy-policy-htmlchecker.png)   |                                                                                                                                                                                                   |
-| terms-of-service.html | ✅    | ![Result](/docs/testing-md/validations/terms-htmlchecker.png)            |                                                                                                                                                                                                   |
+| File Name             | Pass | View Result                                                | Notes                                                                                                                                                                                             |
+|-----------------------|------|------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| index.html            | ⛔    | [Result](docs/test-img/header-1.png)                       |                                                                                                                                                                                                   |
+| product-list.html     | ⛔    | [Result](docs/test-img/all-prod.png)                       |                                                                                                                                                                                                   |
+| search-results.html   | ✅    | ![Result](/docs/test-img/search-results-htmlchecker.png)   |                                                                                                                                                                                                   |
+| edit-product.html     |      | ![Result](/docs/test-img/edit-product-htmlchecker.png)     |                                                                                                                                                                                                   |
+| add-product.html      | ✅    | ![Result](/docs/test-img/add-product-htmlchecker.png)      |                                                                                                                                                                                                   |
+| admin-summary.html    | ✅    | ![Result](/docs/test-img/admin-summary-htmlchecker.png)    |                                                                                                                                                                                                   |
+| manage-author.html    | ✅    | ![Result](/docs/test-img/manage-author-htmlchecker.png)    |                                                                                                                                                                                                   |
+| manage-genre.html     | ✅    | ![Result](/docs/test-img/manage-genre-htmlchecker.png)     |                                                                                                                                                                                                   |
+| manage-coupon.html    |      | ![Result](/docs/test-img/manage-coupon-htmlchecker.png)    | It intermittently throws an error for dropdown selection for percentage option. Based on online research there seems to be an ongoing html issue. All html code is updated to meet the standards. |
+| manage-category.html  | ✅    | ![Result](/docs/test-img/manage-category-htmlchecker.png)  |                                                                                                                                                                                                   |
+| manage-orders.html    | ✅    | ![Result](/docs/test-img/manage-orders-htmlchecker.png)    |                                                                                                                                                                                                   |
+| dashboard.html        | ✅    | ![Result](/docs/test-img/dashboard-htmlchecker.png)        |                                                                                                                                                                                                   |
+| profile.html          | ✅    | ![Result](/docs/test-img/profile-htmlchecker.png)          |                                                                                                                                                                                                   |
+| my-orders.html        | ✅    | ![Result](/docs/test-img/user-orders-htmlchecker.png)      |                                                                                                                                                                                                   |
+| wishlist.html         | ✅    | ![Result](/docs/test-img/user-favourites-htmlchecker.png)  |                                                                                                                                                                                                   |
+| change-password.html  | ✅    | ![Result](/docs/test-img/change-password-htmlchecker.png)  |                                                                                                                                                                                                   |
+| delete-modal.html     | ✅    | ![Result](/docs/test-img/profile-delete-htmlchecker.png)   |                                                                                                                                                                                                   |
+| product-detail.html   | ✅    | ![Result](/docs/test-img/product-details-htmlchecker.png)  |                                                                                                                                                                                                   |
+| about.html            | ✅    | ![Result](/docs/test-img/about-htmlchecker.png)            |                                                                                                                                                                                                   |
+| special-offers.html   | ✅    | ![Result](/docs/test-img/offers-htmlchecker.png)           |                                                                                                                                                                                                   |
+| signup.html           | ✅    | ![Result](/docs/test-img/sign-up-htmlchecker.png)          |                                                                                                                                                                                                   |
+| login.html            | ✅    | ![Result](/docs/test-img/login-htmlchecker.png)            |                                                                                                                                                                                                   |
+| logout.html           | ✅    | ![Result](/docs/test-img/logout-htmlchecker.png)           |                                                                                                                                                                                                   |
+| cart.html             | ✅    | ![Result](/docs/test-img/cart-htmlchecker.png)             |                                                                                                                                                                                                   |
+| checkout-success.html | ✅    | ![Result](/docs/test-img/success-htmlchecker.png)          |                                                                                                                                                                                                   |
+| checkout.html         | ✅    | ![Result](/docs/test-img/checkout-htmlchecker.png)         |                                                                                                                                                                                                   |
+| shipping-returns.html | ✅    | ![Result](/docs/test-img/shipping-returns-htmlchecker.png) |                                                                                                                                                                                                   |
+| privacy-policy.html   | ✅    | ![Result](/docs/test-img/privacy-policy-htmlchecker.png)   |                                                                                                                                                                                                   |
+| terms-of-service.html | ✅    | ![Result](/docs/test-img/terms-htmlchecker.png)            |                                                                                                                                                                                                   |
 
 </details>
 
@@ -134,10 +138,61 @@ No major errors were found when validating JavaScript through [Jshint](https://j
 
 The python files have all been passed through [PEP8 CI Online](https://pep8ci.herokuapp.com/)
 
-<details>
-<summary>PEP8 Test Results</summary>
+<details><summary><b>PEP8 Test Results</b></summary>
 
-</details>
+| App Name  | File Name          | Pass | View Result                                                                                            |
+|-----------|--------------------|------|--------------------------------------------------------------------------------------------------------|
+| app       | settings.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/settings-py.png)</details>              |
+| app       | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/testing-urls-py-main-app.png)</details> |
+| app       | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-py-main-app.png)</details>        |
+| blog      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/bag-tools-py.png)</details>             |
+| blog      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-views-cart-py.png)</details>       |
+| blog      | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-cart-py.png)</details>             |
+| blog      | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/contexts-cart-py.png)</details>         |
+| blog      | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-views-cart-py.png)</details>       |
+| blog      | test_views.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-cart-py.png)</details>             |
+| blog      | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/contexts-cart-py.png)</details>         |
+| blog      | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/contexts-cart-py.png)</details>         |
+| cart      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/urls-cart-py.png)</details>             |
+| cart      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-cart-py.png)</details>            || cart     | bag_tools.py       | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/bag-tools-py.png)</details>             |
+| cart      | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-views-cart-py.png)</details>       |
+| cart      | contexts.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-cart-py.png)</details>             |
+| cart      | test_context.py    | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/contexts-cart-py.png)</details>         |
+| cart      | context.py         | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/urls-cart-py.png)</details>             |
+| checkout  | webhooks.py        | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-forms-checkout-py.png)</details>   |
+| checkout  | webhook_handler.py | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-models-checkout-py.png)</details>  |
+| checkout  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/admin-checkout-py.png)</details>        |
+| checkout  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-checkout-py.png)</details>         |
+| checkout  | signals.py         | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/forms-checkout-py.png)</details>        |
+| checkout  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/models-checkout-py.png)</details>       |
+| checkout  | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/signals-checkout-py.png)</details>      |
+| checkout  | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/urls-checkout-py.png)</details>         |
+| checkout  | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-checkout-py.png)</details>        |
+| checkout  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/handler-checkout-py.png)</details>      |
+| favorites | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-core-py.png)</details>             |
+| favorites | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/urls-core-py.png)</details>             |
+| favorites | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-core-py.png)</details>            |
+| favorites | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-core-py.png)</details>            |
+| favorites | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-core-py.png)</details>            |
+| home      | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-core-py.png)</details>            |
+| home      | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-core-py.png)</details>            |
+| home      | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-core-py.png)</details>            |
+| products  | widgets.py         | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/query-products-py.png)</details>        |
+| products  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-models-products-py.png)</details>  |
+| products  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/test-views-products-py.png)</details>   |
+| products  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/admin-products-py.png)</details>        |
+| products  | admin.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-products-py.png)</details>         |
+| products  | test_views.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/filters-products-py.png)</details>      |
+| products  | test_models.py     | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/forms-products-py.png)</details>        |
+| products  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/mixins-products-py.png)</details>       |
+| profiles  | views.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/models-products-py.png)</details>       |
+| profiles  | urls.py            | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/urls-products-py.png)</details>         |
+| profiles  | models.py          | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-products-py.png)</details>        |
+| profiles  | forms.py           | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/admin-prof-py.png)</details>            |
+| profiles  | test_forms.py      | ✅    | <details><summary>Screenshot</summary>![Result](/docs/test-img/apps-prof-py.png)</details>             |
+
+</details><br/>
+
 
 [Back to top](#contents)
 
