@@ -2,8 +2,8 @@ asgiref==3.8.1
 astroid==3.3.5
 asttokens==2.4.1
 black==24.10.0
-boto3==1.35.55
-botocore==1.35.55
+boto3==1.35.57
+botocore==1.35.57
 certifi==2024.8.30
 charset-normalizer==3.4.0
 click==8.1.7
@@ -13,7 +13,7 @@ crispy-bootstrap5==2024.10
 decorator==5.1.1
 dill==0.3.9
 Django==4.2.16
-django-allauth==65.1.0
+django-allauth==65.2.0
 django-cloudinary-storage==0.3.0
 django-countries==7.6.1
 django-crispy-forms==2.3
@@ -28,7 +28,7 @@ jedi==0.19.1
 jmespath==1.0.1
 matplotlib-inline==0.1.7
 mccabe==0.7.0
-packaging==24.1
+packaging==24.2
 parso==0.8.4
 pathspec==0.12.1
 pillow==11.0.0
