@@ -94,17 +94,12 @@ This is the process which was followed of validating an HTML file by direct inpu
 | profile page mobile         | :white_check_mark: | From crispy forms | ![Result](/docs/test-img/profile-page-mobile-html.png)         |       
 | favorites page desktop      | :white_check_mark: |                   | ![Result](/docs/test-img/favorites-page-desktop-html.png)      |       
 | favorites page mobile       | :white_check_mark: |                   | ![Result](/docs/test-img/favorites-page-mobile-html.png)       |       |
-| about.html                  | :white_check_mark: |                   | ![Result](/docs/test-img/about-htmlchecker.png)                |       
-| special-offers.html         | :white_check_mark: |                   | ![Result](/docs/test-img/offers-htmlchecker.png)               |       
-| signup.html                 | :white_check_mark: |                   | ![Result](/docs/test-img/sign-up-htmlchecker.png)              |       
-| login.html                  | :white_check_mark: |                   | ![Result](/docs/test-img/login-htmlchecker.png)                |       
-| logout.html                 | :white_check_mark: |                   | ![Result](/docs/test-img/logout-htmlchecker.png)               |       
-| cart.html                   | :white_check_mark: |                   | ![Result](/docs/test-img/cart-htmlchecker.png)                 |       
-| checkout-success.html       | :white_check_mark: |                   | ![Result](/docs/test-img/success-htmlchecker.png)              |      
-| checkout.html               | :white_check_mark: |                   | ![Result](/docs/test-img/checkout-htmlchecker.png)             |       
-| shipping-returns.html       | :white_check_mark: |                   | ![Result](/docs/test-img/shipping-returns-htmlchecker.png)     |       
-| privacy-policy.html         | :white_check_mark: |                   | ![Result](/docs/test-img/privacy-policy-htmlchecker.png)       |       
-| terms-of-service.html       | :white_check_mark: |                   | ![Result](/docs/test-img/terms-htmlchecker.png)                |       
+| logout page desktop         | :white_check_mark: |                   | ![Result](/docs/test-img/logout-page-desktop-html.png)         |       
+| logout page mobile          | :white_check_mark: |                   | ![Result](/docs/test-img/logout-page-mobile-html.png)          |       
+| register page desktop       | :white_check_mark: |                   | ![Result](/docs/test-img/register-page-desktop-html.png)       |       
+| register page mobile        | :white_check_mark: |                   | ![Result](/docs/test-img/register-page-desktop-html.png)       |       
+| login page desktop          | :white_check_mark: |                   | ![Result](/docs/test-img/login-page-desktop-html.png)          |       
+| login page mobile           | :white_check_mark: |                   | ![Result](/docs/test-img/login-page-mobile-html.png)           |       
 
 </details>
 
@@ -119,6 +114,12 @@ accessibility.
 <details>
 
 <summary>CSS Validation Results</summary>
+
+| File Name     | Pass               | View Result                                                |
+|---------------|--------------------|------------------------------------------------------------|
+| base.css      | :white_check_mark: | ![Result](docs/test-img/base-file-validation-css.png)      |
+| favorites.css | :white_check_mark: | ![Result](/docs/test-img/favorites-file-validaton-css.png) |
+| checkout.css  | :white_check_mark: | ![Result](/docs/test-img/checkout-file-validation-css.png) |
 
 </details>
 
