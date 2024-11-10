@@ -25,9 +25,10 @@ def view_favorites(request):
     favorites, created = Favorites.objects.get_or_create(user=user.user)
 
     template_name = "favorites/favorites.html"
-    import favorites
 
     context = {"favorites": favorites}
+
+    print(context)
 
     return render(request, template_name, context)
 
