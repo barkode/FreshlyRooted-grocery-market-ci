@@ -30,8 +30,6 @@ jedi==0.19.1
 jmespath==1.0.1
 matplotlib-inline==0.1.7
 mccabe==0.7.0
-mypy==1.13.0
-mypy-extensions==1.0.0
 packaging==24.2
 parso==0.8.4
 pathspec==0.12.1

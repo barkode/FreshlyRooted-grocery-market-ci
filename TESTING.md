@@ -72,37 +72,39 @@ This is the process which was followed of validating an HTML file by direct inpu
 
 <summary>HTML Validation Results</summary>
 
-| File Name                   | Pass               | Notes | View Result                                                    |
-|-----------------------------|--------------------|-------|----------------------------------------------------------------|
-| home page desktop           | :white_check_mark: |       | [Result](docs/test-img/home-page-desktop-html.png)             |
-| home page mobile            | :x:                |       | [Result](docs/test-img/home-page-mobile-html.png)              |
-| products page desktop       | :white_check_mark: |       | ![Result](/docs/test-img/product-page-desktop-html.png)        |
-| products page mobile        | :white_check_mark: |       | ![Result](/docs/test-img/product-page-mobile-html.png)         |       
-| blog page desktop           | :white_check_mark: |       | ![Result](/docs/test-img/blog-page-desktop-html.png)           |       
-| blog page mobile            | :white_check_mark: |       | ![Result](/docs/test-img/blog-page-desktop-html.png)           |       
-| contact page desktop        | :white_check_mark: |       | ![Result](/docs/test-img/contact-page-desktop-html.png)        |       
-| contact page mobile         | :white_check_mark: |       | ![Result](/docs/test-img/contact-page-desktop-html.png)        |       
-| privacy policy page desktop | :white_check_mark: |       | ![Result](/docs/test-img/privacy-policy-page-desktop-html.png) |       
-| privacy policy page mobile  | :white_check_mark: |       | ![Result](/docs/test-img/privacy-policy-page-mobile-html.png)  |       
-| return policy page desktop  | :white_check_mark: |       | ![Result](/docs/test-img/return-policy-page-desktop-html.png)  |
-| return policy page mobile   | :white_check_mark: |       | ![Result](/docs/test-img/return-policy-page-mobile-html.png)   |       
-| cart page desktop           | :white_check_mark: |       | ![Result](/docs/test-img/cart-page-desktop-html.png)           |       
-| cart page mobile            | :white_check_mark: |       | ![Result](/docs/test-img/cart-page-mobile-html.png)            |       
-| change-password.html        | :white_check_mark: |       | ![Result](/docs/test-img/change-password-htmlchecker.png)      |       
-| profile.html                | :white_check_mark: |       | ![Result](/docs/test-img/profile-htmlchecker.png)              |       
-| delete-modal.html           | :white_check_mark: |       | ![Result](/docs/test-img/profile-delete-htmlchecker.png)       |       
-| product-detail.html         | :white_check_mark: |       | ![Result](/docs/test-img/product-details-htmlchecker.png)      |       |
-| about.html                  | :white_check_mark: |       | ![Result](/docs/test-img/about-htmlchecker.png)                |       
-| special-offers.html         | :white_check_mark: |       | ![Result](/docs/test-img/offers-htmlchecker.png)               |       
-| signup.html                 | :white_check_mark: |       | ![Result](/docs/test-img/sign-up-htmlchecker.png)              |       
-| login.html                  | :white_check_mark: |       | ![Result](/docs/test-img/login-htmlchecker.png)                |       
-| logout.html                 | :white_check_mark: |       | ![Result](/docs/test-img/logout-htmlchecker.png)               |       
-| cart.html                   | :white_check_mark: |       | ![Result](/docs/test-img/cart-htmlchecker.png)                 |       
-| checkout-success.html       | :white_check_mark: |       | ![Result](/docs/test-img/success-htmlchecker.png)              |      
-| checkout.html               | :white_check_mark: |       | ![Result](/docs/test-img/checkout-htmlchecker.png)             |       
-| shipping-returns.html       | :white_check_mark: |       | ![Result](/docs/test-img/shipping-returns-htmlchecker.png)     |       
-| privacy-policy.html         | :white_check_mark: |       | ![Result](/docs/test-img/privacy-policy-htmlchecker.png)       |       
-| terms-of-service.html       | :white_check_mark: |       | ![Result](/docs/test-img/terms-htmlchecker.png)                |       
+| File Name                   | Pass               | Notes             | View Result                                                    |
+|-----------------------------|--------------------|-------------------|----------------------------------------------------------------|
+| home page desktop           | :white_check_mark: |                   | ![Result](docs/test-img/home-page-desktop-html.png)            |
+| home page mobile            | :white_check_mark: |                   | ![Result](docs/test-img/home-page-mobile-html.png)             |
+| products page desktop       | :white_check_mark: |                   | ![Result](/docs/test-img/product-page-desktop-html.png)        |
+| products page mobile        | :white_check_mark: |                   | ![Result](/docs/test-img/product-page-mobile-html.png)         |       
+| blog page desktop           | :white_check_mark: |                   | ![Result](/docs/test-img/blog-page-desktop-html.png)           |       
+| blog page mobile            | :white_check_mark: |                   | ![Result](/docs/test-img/blog-page-mobile-html.png)            |       
+| blog post page desktop      | :white_check_mark: |                   | ![Result](/docs/test-img/blog-post-page-desktop-html.png)      |       
+| blog post page mobile       | :white_check_mark: |                   | ![Result](/docs/test-img/blog-post-page-mobile-html.png)       |       
+| contact page desktop        | :white_check_mark: |                   | ![Result](/docs/test-img/contact-page-desktop-html.png)        |       
+| contact page mobile         | :white_check_mark: |                   | ![Result](/docs/test-img/contact-page-mobile-html.png)         |       
+| privacy policy page desktop | :white_check_mark: |                   | ![Result](/docs/test-img/privacy-policy-page-desktop-html.png) |       
+| privacy policy page mobile  | :white_check_mark: |                   | ![Result](/docs/test-img/privacy-policy-page-mobile-html.png)  |       
+| return policy page desktop  | :white_check_mark: |                   | ![Result](/docs/test-img/return-policy-page-desktop-html.png)  |
+| return policy page mobile   | :white_check_mark: |                   | ![Result](/docs/test-img/return-policy-page-mobile-html.png)   |       
+| cart page desktop           | :white_check_mark: |                   | ![Result](/docs/test-img/cart-page-desktop-html.png)           |       
+| cart page mobile            | :white_check_mark: |                   | ![Result](/docs/test-img/cart-page-mobile-html.png)            |       
+| profile page desktop        | :white_check_mark: | From crispy forms | ![Result](/docs/test-img/profile-page-desktop-html.png)        |       
+| profile page mobile         | :white_check_mark: | From crispy forms | ![Result](/docs/test-img/profile-page-mobile-html.png)         |       
+| favorites page desktop      | :white_check_mark: |                   | ![Result](/docs/test-img/favorites-page-desktop-html.png)      |       
+| favorites page mobile       | :white_check_mark: |                   | ![Result](/docs/test-img/favorites-page-mobile-html.png)       |       |
+| about.html                  | :white_check_mark: |                   | ![Result](/docs/test-img/about-htmlchecker.png)                |       
+| special-offers.html         | :white_check_mark: |                   | ![Result](/docs/test-img/offers-htmlchecker.png)               |       
+| signup.html                 | :white_check_mark: |                   | ![Result](/docs/test-img/sign-up-htmlchecker.png)              |       
+| login.html                  | :white_check_mark: |                   | ![Result](/docs/test-img/login-htmlchecker.png)                |       
+| logout.html                 | :white_check_mark: |                   | ![Result](/docs/test-img/logout-htmlchecker.png)               |       
+| cart.html                   | :white_check_mark: |                   | ![Result](/docs/test-img/cart-htmlchecker.png)                 |       
+| checkout-success.html       | :white_check_mark: |                   | ![Result](/docs/test-img/success-htmlchecker.png)              |      
+| checkout.html               | :white_check_mark: |                   | ![Result](/docs/test-img/checkout-htmlchecker.png)             |       
+| shipping-returns.html       | :white_check_mark: |                   | ![Result](/docs/test-img/shipping-returns-htmlchecker.png)     |       
+| privacy-policy.html         | :white_check_mark: |                   | ![Result](/docs/test-img/privacy-policy-htmlchecker.png)       |       
+| terms-of-service.html       | :white_check_mark: |                   | ![Result](/docs/test-img/terms-htmlchecker.png)                |       
 
 </details>
 

@@ -27,7 +27,7 @@ def all_products(request):
 
     if request.GET:
         if "sort" in request.GET:
-            sortkey = request.GET["sort"]
+            sortkey = request.GET["sort"].strip("[]")
             sort = sortkey
             if sortkey == "name":
                 sortkey = "lower_name"
@@ -35,22 +35,25 @@ def all_products(request):
             elif sortkey == "category":
                 sortkey = "category__name"
             if "direction" in request.GET:
-                direction = request.GET["direction"]
+                direction = request.GET["direction"].strip("[]")
                 if direction == "desc":
                     sortkey = f"-{sortkey}"
             products = products.order_by(sortkey)
 
         if "category" in request.GET:
             categories = request.GET["category"]
-
+            print(categories)
             if categories:
-                categories = categories.split(",")
+                print("BEFORE SPLIT", categories)
+                categories = categories.strip("[]").split(",")
+                print("AFTER SPLIT", categories)
                 if categories[0] == "all":
                     categories = Category.objects.values_list("slug", flat=True)
+                    print("AFTER IF==ALL", categories)
 
                 products = products.filter(category__slug__in=categories)
                 categories = Category.objects.filter(slug__in=categories)
-
+        print("AFTER ALL IF", categories)
         if "q" in request.GET:
             query = request.GET["q"]
             if not query:
@@ -89,6 +92,8 @@ def all_products(request):
         "favorites": favorites,
         "get_params": urlencode(get_params),
     }
+    print("get_params", get_params)
+    print("CONTEXT", context)
 
     return render(request, "products/products.html", context)
 
@@ -127,7 +132,7 @@ def add_product(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, "Successfully added product!")
-            return redirect(reverse("product_detail", args=[product.id]))
+            return redirect(reverse("product:product_detail", args=[product.id]))
         else:
             messages.error(
                 request, "Failed to add product. Please ensure the form is valid."
@@ -148,7 +153,7 @@ def add_product(request):
 def edit_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, "Sorry, only store owners can do that.")
-        return redirect(reverse("home"))
+        return redirect(reverse("home:home"))
 
     product = get_object_or_404(Product, pk=product_id)
     if request.method == "POST":
@@ -156,7 +161,7 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, "Successfully updated product!")
-            return redirect(reverse("product_detail", args=[product.id]))
+            return redirect(reverse("products:product_detail", args=[product.id]))
         else:
             messages.error(
                 request, "Failed to update product. Please ensure the form is valid."
@@ -179,9 +184,9 @@ def edit_product(request, product_id):
 def delete_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, "Sorry, only store owners can do that.")
-        return redirect(reverse("home"))
+        return redirect(reverse("home:home"))
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, "Product deleted!")
-    return redirect(reverse("products"))
+    return redirect(reverse("products:products"))

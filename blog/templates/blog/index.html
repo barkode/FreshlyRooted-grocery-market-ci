@@ -94,7 +94,7 @@
 
 {% block postload_js %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('.btt-link').click(function (e) {
             window.scrollTo(0, 0)
         })
@@ -147,9 +147,9 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <inst><span class="lead mb-0 text-left font-weight-bold">
+                                            <span class="lead mb-0 text-left font-weight-bold">
                                                     {{ post.title }}
-                                                </span></inst>
+                                                </span>
                                         </div>
                                     </div>
                                 </div>
