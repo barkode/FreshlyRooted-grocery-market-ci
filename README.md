@@ -7,88 +7,90 @@
 # Contents
 
 <!-- TOC -->
+
 * [FreshlyRooted Market](#freshlyrooted-market)
     * [Deployed Link](#deployed-link)
 * [Contents](#contents)
-  * [Agile Methodology](#agile-methodology)
-    * [Overview](#overview)
-    * [MoSCoW Prioritization](#moscow-prioritization)
-    * [GitHub Projects](#github-projects)
-    * [EPICS](#epics)
-    * [User Stories](#user-stories)
-      * [Developer Stories](#developer-stories)
-      * [Shopper Stories](#shopper-stories)
-      * [Site User Stories](#site-user-stories)
-      * [Store Owner Stories](#store-owner-stories)
-  * [Website Goals and Objectives](#website-goals-and-objectives)
-  * [Target Audience](#target-audience)
-  * [Wireframes](#wireframes)
-  * [Database Schema](#database-schema)
-  * [Design Choices](#design-choices)
-    * [Typography](#typography)
-    * [Colour Scheme](#colour-scheme)
-    * [Images](#images)
-    * [Responsiveness](#responsiveness)
-  * [Security Measures and Protective Design](#security-measures-and-protective-design)
-    * [User Authentication](#user-authentication)
-    * [Password Management](#password-management)
-    * [Form Validation](#form-validation)
-    * [Database Security](#database-security)
-  * [E-Commerce Business Model](#e-commerce-business-model)
-  * [Marketing Strategies](#marketing-strategies)
-    * [Search Engine Optimisation](#search-engine-optimisation)
-    * [SEO Strategies](#seo-strategies)
-    * [Social Media](#social-media)
-    * [Newsletter Marketing](#newsletter-marketing)
-  * [Features](#features)
-    * [Header](#header)
-    * [Footer](#footer)
-    * [Customer Information](#customer-information)
-    * [Contact](#contact)
-    * [User Account Pages](#user-account-pages)
-      * [Register Page](#register-page)
-      * [Log In Page](#log-in-page)
-      * [Logout Page](#logout-page)
-    * [Profile Page](#profile-page)
-      * [User Favorites](#user-favorites)
-    * [All Products](#all-products)
-    * [Product Details](#product-details)
-    * [Shopping Cart](#shopping-cart)
-    * [Checkout](#checkout)
-    * [Order Confirmation](#order-confirmation)
-    * [Product Management](#product-management)
-      * [Dashboard](#dashboard)
-      * [Products](#products)
-      * [Categories](#categories)
-      * [Orders](#orders)
-    * [Custom Error Pages](#custom-error-pages)
-  * [Django Admin Portal](#django-admin-portal)
-    * [Future Features](#future-features)
-  * [Deployment](#deployment)
-    * [AWS Cloud Service](#aws-cloud-service)
-      * [Create and Configure an S3 Bucket](#create-and-configure-an-s3-bucket)
-      * [Configure IAM (Identity and Access Management)](#configure-iam-identity-and-access-management)
-      * [Final AWS Setup and Heroku Integration](#final-aws-setup-and-heroku-integration)
-    * [Stripe](#stripe)
-      * [Steps for Stripe Integration](#steps-for-stripe-integration)
-      * [Testing Stripe Payments](#testing-stripe-payments)
-    * [GMAIL](#gmail)
-      * [Steps for Gmail Integration](#steps-for-gmail-integration)
-      * [Security and Compliance](#security-and-compliance)
-    * [Deployment Process with Heroku](#deployment-process-with-heroku)
-    * [To fork the project](#to-fork-the-project)
-    * [To clone the project](#to-clone-the-project)
-  * [Testing](#testing)
-  * [Technology](#technology)
-    * [Languages](#languages)
-    * [Frameworks](#frameworks)
-    * [Python Libraries](#python-libraries)
-    * [Programs](#programs)
-    * [Payment Service](#payment-service)
-    * [Cloud Storage](#cloud-storage)
-  * [Credits](#credits)
-    * [Acknowledgements](#acknowledgements)
-  * [Disclaimer](#disclaimer)
+    * [Agile Methodology](#agile-methodology)
+        * [Overview](#overview)
+        * [MoSCoW Prioritization](#moscow-prioritization)
+        * [GitHub Projects](#github-projects)
+        * [EPICS](#epics)
+        * [User Stories](#user-stories)
+            * [Developer Stories](#developer-stories)
+            * [Shopper Stories](#shopper-stories)
+            * [Site User Stories](#site-user-stories)
+            * [Store Owner Stories](#store-owner-stories)
+    * [Website Goals and Objectives](#website-goals-and-objectives)
+    * [Target Audience](#target-audience)
+    * [Wireframes](#wireframes)
+    * [Database Schema](#database-schema)
+    * [Design Choices](#design-choices)
+        * [Typography](#typography)
+        * [Colour Scheme](#colour-scheme)
+        * [Images](#images)
+        * [Responsiveness](#responsiveness)
+    * [Security Measures and Protective Design](#security-measures-and-protective-design)
+        * [User Authentication](#user-authentication)
+        * [Password Management](#password-management)
+        * [Form Validation](#form-validation)
+        * [Database Security](#database-security)
+    * [E-Commerce Business Model](#e-commerce-business-model)
+    * [Marketing Strategies](#marketing-strategies)
+        * [Search Engine Optimisation](#search-engine-optimisation)
+        * [SEO Strategies](#seo-strategies)
+        * [Social Media](#social-media)
+        * [Newsletter Marketing](#newsletter-marketing)
+    * [Features](#features)
+        * [Header](#header)
+        * [Footer](#footer)
+        * [Customer Information](#customer-information)
+        * [Contact](#contact)
+        * [User Account Pages](#user-account-pages)
+            * [Register Page](#register-page)
+            * [Log In Page](#log-in-page)
+            * [Logout Page](#logout-page)
+        * [Profile Page](#profile-page)
+            * [User Favorites](#user-favorites)
+        * [All Products](#all-products)
+        * [Product Details](#product-details)
+        * [Shopping Cart](#shopping-cart)
+        * [Checkout](#checkout)
+        * [Order Confirmation](#order-confirmation)
+        * [Product Management](#product-management)
+            * [Dashboard](#dashboard)
+            * [Products](#products)
+            * [Categories](#categories)
+            * [Orders](#orders)
+        * [Custom Error Pages](#custom-error-pages)
+    * [Django Admin Portal](#django-admin-portal)
+        * [Future Features](#future-features)
+    * [Deployment](#deployment)
+        * [AWS Cloud Service](#aws-cloud-service)
+            * [Create and Configure an S3 Bucket](#create-and-configure-an-s3-bucket)
+            * [Configure IAM (Identity and Access Management)](#configure-iam-identity-and-access-management)
+            * [Final AWS Setup and Heroku Integration](#final-aws-setup-and-heroku-integration)
+        * [Stripe](#stripe)
+            * [Steps for Stripe Integration](#steps-for-stripe-integration)
+            * [Testing Stripe Payments](#testing-stripe-payments)
+        * [GMAIL](#gmail)
+            * [Steps for Gmail Integration](#steps-for-gmail-integration)
+            * [Security and Compliance](#security-and-compliance)
+        * [Deployment Process with Heroku](#deployment-process-with-heroku)
+        * [To fork the project](#to-fork-the-project)
+        * [To clone the project](#to-clone-the-project)
+    * [Testing](#testing)
+    * [Technology](#technology)
+        * [Languages](#languages)
+        * [Frameworks](#frameworks)
+        * [Python Libraries](#python-libraries)
+        * [Programs](#programs)
+        * [Payment Service](#payment-service)
+        * [Cloud Storage](#cloud-storage)
+    * [Credits](#credits)
+        * [Acknowledgements](#acknowledgements)
+    * [Disclaimer](#disclaimer)
+
 <!-- TOC -->
 
 ## Agile Methodology
@@ -100,7 +102,7 @@ toward well-defined goals. It’s particularly effective in software development
 through the combined efforts of self-organizing, cross-functional teams. Agile emphasizes delivering frequent,
 incremental updates that improve quality and enable rapid response to changing needs.
 
-[Back to Top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### MoSCoW Prioritization
 
@@ -108,7 +110,7 @@ The MoSCoW prioritization technique is a framework used to evaluate the importan
 tasks. It organizes items into four categories: Must Have, Should Have, Could Have, and Won't Have. This method supports
 efficient time management by ensuring that the most critical features are prioritized and completed before others.
 
-[Back to Top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### GitHub Projects
 
@@ -121,7 +123,7 @@ efficient team collaboration and streamlined project oversight.
 
 [Link to Kanban Board](https://github.com/users/barkode/projects/8/views/1)
 
-[Back to Top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### EPICS
 
@@ -143,7 +145,7 @@ significant component of the platform's development, ensuring all necessary func
 - [EPIC 13: Quality Assurance and Documentation](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/78)
 - [EPIC 14 : Error Handling and Custom Error Pages](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/82)
 
-[Back to Top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ---
 
@@ -154,7 +156,7 @@ prioritizing a seamless experience. The platform will facilitate content creatio
 profiles, and enable interactive opportunities. The following user stories capture the core functionalities and their
 purpose, guiding the development toward a user-centered solution.
 
-[Back to Top](#contents)
+[Back to Top](#contents) :top: :top:
 
 #### Developer Stories
 
@@ -207,7 +209,7 @@ purpose, guiding the development toward a user-centered solution.
   that user stories are thoroughly tested** so that they **meet acceptance criteria and deliver the expected
   functionality**.
 
-[Back to Top](#contents)
+[Back to Top](#contents) :top: :top:
 
 #### Shopper Stories
 
@@ -292,7 +294,7 @@ purpose, guiding the development toward a user-centered solution.
   to **see a custom 500 error page when there is a server error** so that **I know the issue is on the site and not on
   my end, with steps on what to do next**.
 
-[Back to Top](#contents)
+[Back to Top](#contents) :top: :top:
 
 #### Site User Stories
 
@@ -321,7 +323,7 @@ purpose, guiding the development toward a user-centered solution.
 - [#64](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/64) - As a **Site User**, I want to be able to
   **navigate the platform smoothly** so that I can **intuitively locate relevant sections and features**.
 
-[Back to Top](#contents)
+[Back to Top](#contents) :top: :top:
 
 #### Store Owner Stories
 
@@ -347,7 +349,7 @@ purpose, guiding the development toward a user-centered solution.
 - [#52](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/52) - As a **Store Owner**, I want to be able
   to **manage the duration of each discount** so that **promotions are only active for specified times**.
 
-[Back to Top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ---
 
@@ -376,7 +378,7 @@ purpose, guiding the development toward a user-centered solution.
     - Create channels for users to provide feedback, report issues, and suggest enhancements.
     - Actively respond to user feedback and integrate improvements to continually refine the platform.
 
-[Back to Top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ## Target Audience
 
@@ -402,7 +404,7 @@ and loved ones, emphasizing nutrition, taste, and ingredient transparency.
 **Foodies Seeking Quality Ingredients** - Home cooks and culinary enthusiasts who value premium ingredients and enjoy
 exploring fresh, unique, and high-quality foods to enhance their cooking experience.
 
-[Back to Top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ## Wireframes
 
@@ -439,7 +441,7 @@ live version of the platform to enhance usability and functionality.
 </details>
 
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ## Database Schema
 
@@ -461,7 +463,7 @@ This schema was generated using [lucid.app](https://lucid.app/).
 
 </details>
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ## Design Choices
 
@@ -473,7 +475,7 @@ Summer" in Polish.
 Lato has become one of the most popular web fonts due to its excellent balance of professionalism and approachability,
 making it suitable for a wide range of design projects.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Colour Scheme
 
@@ -481,7 +483,7 @@ making it suitable for a wide range of design projects.
 
 ![Coolors Scheme](docs/images/color.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Images
 
@@ -500,7 +502,7 @@ Our visual content comes from two primary sources:
   This combination of sources ensures legal compliance while maintaining high-quality visual content throughout our
   platform.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Responsiveness
 
@@ -516,7 +518,7 @@ through the use of CSS media queries with Bootstrap's breakpoints, ensuring an o
 | Extra Large       | xl    | ≥ 1200px   |
 | Extra extra Large | xxl   | ≥ 1400px   |
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ## Security Measures and Protective Design
 
@@ -535,7 +537,7 @@ comprehensive suite of features, including:
   authentication
   process to specific needs.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Password Management
 
@@ -555,14 +557,14 @@ comprehensive password management features. These features are designed to enhan
   By leveraging these features, Django Allauth simplifies the implementation of secure and user-friendly password
   management in Django applications.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Form Validation
 
 If incorrect or empty data is added to a form, the form won't submit, and a warning will appear to the user informing
 them which field raised the error.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Database Security
 
@@ -575,7 +577,7 @@ users without their consent.
 By incorporating these practices, the application maintains a robust security posture, safeguarding both the database
 and user interactions
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ## E-Commerce Business Model
 
@@ -618,7 +620,7 @@ and encourage repeat purchases.
 This business model enables Freshly Rooted Online Market to reach a wide audience, minimize overhead costs, and provide
 a convenient, enjoyable shopping experience for customers seeking high-quality, natural products.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ## Marketing Strategies
 
@@ -644,7 +646,7 @@ queries:
 These keywords are strategically integrated into the website's content to enhance search engine visibility and attract
 a diverse audience of health-conscious consumers and food enthusiasts.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### SEO Strategies
 
@@ -690,7 +692,7 @@ visibility and improve ranking on Google:
 These strategies will be continuously refined and improved over time, aiming to increase the market's ranking on Google
 and attract more organic traffic to the website.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Social Media
 
@@ -765,11 +767,11 @@ Here’s how it will work:
   Using Mailchimp helps Freshly Rooted Online Market stay connected with customers, promote new products and events, and
   drive traffic to the online store.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ## Features
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Header
 
@@ -785,7 +787,7 @@ and desktop devices. Consistent use of icons and fonts throughout the site ensur
 
 ![User Menu](docs/images/header-user.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Footer
 
@@ -799,7 +801,7 @@ heartfelt message that emphasizes the brand's commitment to natural living and c
 
 ![Footer](docs/images/footer.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Customer Information
 
@@ -815,20 +817,20 @@ fostering trust and clarity.
 ![Privacy Policy](docs/images/privacy.png)
 ![Return Policy](docs/images/return.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Contact
 
 ![Contact](docs/images/contact.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### User Account Pages
 
 The user account pages at Freshly Rooted Online Market are designed to provide a seamless and secure experience for
 managing user access, enhancing the overall user journey on the site.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 #### Register Page
 
@@ -843,7 +845,7 @@ email is sent to them to complete the process.
 
 ![Registration](docs/images/register.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 #### Log In Page
 
@@ -856,7 +858,7 @@ enhancing user convenience and support.
 ![Login](docs/images/login.png)
 ![Login Sucsess](docs/images/login-susccess-toast.png   )
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 #### Logout Page
 
@@ -867,7 +869,7 @@ again. This straightforward approach helps maintain a seamless user experience, 
 
 ![Logout](docs/images/logout.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Profile Page
 
@@ -880,14 +882,14 @@ manage their profiles efficiently and effectively.
 
 ![Profile](docs/images/profile.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 #### User Favorites
 
 ![Favorites](docs/images/favorites-1.png)
 ![Favorites](docs/images/favorites.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### All Products
 
@@ -900,7 +902,7 @@ with convenience and efficiency.
 
 ![All Products](docs/images/all-products.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Product Details
 
@@ -910,12 +912,12 @@ Users can easily adjust the quantity they wish to purchase and add the product t
 
 ![Product Details](docs/images/detail-product.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Shopping Cart
 
 ![Shopping Cart](docs/images/shopping-cart.png)
-[Back to top](#contents)
+[Back to Top](#contents) :top: :top:
 
 ### Checkout
 
@@ -932,7 +934,7 @@ ensures that customers can complete their transactions with ease and confidence.
 
 ![Checkout](docs/images/checkout.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### Order Confirmation
 
@@ -951,27 +953,27 @@ summary of their order. It includes the following elements:
 
 ![Checkout](docs/images/checkout-confirmation.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### Product Management
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 #### Dashboard
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 #### Products
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 #### Categories
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 #### Orders
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### Custom Error Pages
 
@@ -981,7 +983,7 @@ summary of their order. It includes the following elements:
 - 404 Page Not Found - The page user is looking for doesn't exist.
 - 500 Server Error - The platform is currently experiencing technical difficulties and cannot process this request.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ## Django Admin Portal
 
@@ -990,7 +992,7 @@ the scope of this project.
 
 ![Django Admin Portal](/docs/images/admin.png)
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### Future Features
 
@@ -1012,11 +1014,11 @@ the scope of this project.
 7. Referral Program: Implement a referral program that rewards users for referring new customers. Offer discounts or
    points for successful referrals that lead to purchases.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ## Deployment
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### AWS Cloud Service
 
@@ -1097,7 +1099,7 @@ To integrate AWS, follow steps:
       the warning prompt.
     - If the edit option is disabled, ensure the "Object Ownership" settings have ACLs enabled.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 #### Configure IAM (Identity and Access Management)
 
@@ -1140,7 +1142,7 @@ To integrate AWS, follow steps:
     - Select "Programmatic Access" and add the user to your group.
     - Download the CSV file containing the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 #### Final AWS Setup and Heroku Integration
 
@@ -1158,11 +1160,11 @@ To integrate AWS, follow steps:
     - Ensure all sensitive information (like AWS credentials) is securely stored and not hard-coded into your source
       code.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### Stripe
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 #### Steps for Stripe Integration
 
@@ -1191,7 +1193,7 @@ To integrate AWS, follow steps:
         - This will generate a new key:
         - **STRIPE_WH_SECRET**: Your Webhook Signing Secret (starts with `wh`).
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 #### Testing Stripe Payments
 
@@ -1209,11 +1211,11 @@ To integrate AWS, follow steps:
     - Ensure all Stripe API keys and Webhook Signing Secrets are stored securely, and never hard-code them in your
       source code.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### GMAIL
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 #### Steps for Gmail Integration
 
@@ -1244,14 +1246,14 @@ To integrate AWS, follow steps:
         - **EMAIL_HOST_USER**: Your Gmail address (e.g., `your-email@gmail.com`)
         - **EMAIL_HOST_PASSWORD**: The 16-character app password generated from Gmail.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 #### Security and Compliance
 
 - Ensure that your Gmail credentials, especially the app password, are stored securely and not hard-coded in your source
   code. Consider using environment variables or a secure secrets manager for this purpose.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### Deployment Process with Heroku
 
@@ -1314,7 +1316,7 @@ DEFAULT_FROM_EMAIL = 'webmaster@localhost'
 Additionally, verify that the `DEBUG` setting is set to `False`, and the `requirements.txt` and `Procfile` are up to
 date and committed to GitHub.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### To fork the project
 
@@ -1331,7 +1333,7 @@ modifications to the copy can be performed without compromising the original rep
 
 - To copy the repository to your **GitHub** account, click the button.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### To clone the project
 
@@ -1351,13 +1353,13 @@ modifications to the copy can be performed without compromising the original rep
 
 _Any changes required to the website, they can be made, committed and pushed to GitHub._
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ## Testing
 
 [TESTING.md](TESTING.md) file.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ## Technology
 
@@ -1369,14 +1371,14 @@ _Any changes required to the website, they can be made, committed and pushed to 
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS 'CSS')
 - [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript 'JS')
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### Frameworks
 
 - [Django](https://www.djangoproject.com/): Django is the main Python framework used in the development of this project.
   It provides a robust and scalable architecture for building web applications.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### Python Libraries
 
@@ -1403,7 +1405,7 @@ _Any changes required to the website, they can be made, committed and pushed to 
   Django.
 * [stripe](https://pypi.org/project/stripe/) - A Python library for Stripe’s API.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### Programs
 
@@ -1416,7 +1418,7 @@ _Any changes required to the website, they can be made, committed and pushed to 
 - [VSCode](https://code.visualstudio.com/) - Visual Studio Code is a code editor redefined and optimized for building
   and debugging modern web and cloud applications.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### Payment Service
 
@@ -1426,11 +1428,11 @@ _Any changes required to the website, they can be made, committed and pushed to 
 
 - [Amazon Web Service S3](https://aws.amazon.com/s3/) was used to store all static and media files in production.
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ## Credits
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:
 
 ### Acknowledgements
 
@@ -1449,4 +1451,4 @@ been made to properly credit and reference all images, data, and materials used.
 been obtained through free and accessible sources in accordance with usage agreements, ensuring that all content is
 responsibly sourced._
 
-[Back to top](#contents)
+[Back to Top](#contents) :top:

@@ -30,9 +30,6 @@ Return back to the [README.md](README.md) file.
 ## Responsiveness Tests
 
 I adopted a mobile-first strategy and verified all modifications using the DevTools in Google Chrome and Microsoft Edge.
-For testing the deployed versions, I utilized external websites
-like [Responsive Design Checker](https://responsivedesignchecker.com/)
-and [Am I Responsive](https://ui.dev/amiresponsive) to obtain a unified view across various device breakpoints.
 
 Additionally, I used
 the [Google Chrome Mobile Simulator extension](https://chromewebstore.google.com/detail/mobile-simulator-responsi/ckejmhbmlajgoklhgbapkiccekfoccmk)
@@ -123,7 +120,7 @@ accessibility.
 
 </details>
 
-### JavaSc|ript
+### JavaScript
 
 No major errors were found when validating JavaScript through [Jshint](https://jshint.com/).
 
@@ -134,7 +131,7 @@ No major errors were found when validating JavaScript through [Jshint](https://j
 
 </details>
 
-### Pytho|n
+### Python
 
 The python files have all been passed through [PEP8 CI Online](https://pep8ci.herokuapp.com/)
 
@@ -196,7 +193,7 @@ The python files have all been passed through [PEP8 CI Online](https://pep8ci.he
 | profiles  | test_forms.py      | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-test-forms.png)</details>         |
 | main      | custom_storages.py | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/main-custom-storages.png)</details>        |
 
-</><br/>
+</details><br/>
 
 [Back to top](#contents) :top:
 
@@ -269,40 +266,40 @@ No major issues identified.
     <tbody>    
         <tr>
             <td>Home</td>
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✗</td> 
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✗</td>
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✗</td> 
+            <td>:white_chec k_mark:</td> 
+            <td>:white_chec k_mark:</td> 
+            <td>:white_check_mark:</td> 
+            <td>:white_check_mark:</td> 
+            <td>:✗:</td> 
+            <td>:white_chec k_mark:</td> 
+            <td>:white_chec k_mark:</td> 
+            <td>:white_check_mark:</td> 
+            <td>:white_check_mark:</td> 
+            <td>:✗:</td>
+            <td>:white_chec k_mark:</td> 
+            <td>:white_chec k_mark:</td> 
+            <td>:white_check_mark:</td> 
+            <td>:white_check_mark:</td> 
+            <td>:✗:</td> 
             <td>Test issue on Safari</td>
         </tr>
         <tr>
-            <td>Contact</td>
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✗</td> 
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✗</td> 
-            <td>✓</td>
-            <td>✓</td> 
-            <td>✓</td> 
-            <td>✗</td> 
-            <td>✓</td> 
-            <td>✓</td> 
+            <td>Contact</td >
+            <td>:white_check_mark:</td> 
+            <td>:white_check_mark:</td> 
+            <td>:white_check_mark:</td> 
+            <td>:✗:</td> 
+            <td>:white_chec k_mark:</td> 
+            <td>:white_chec k_mark:</td> 
+            <td>:white_chec k_mark:</td> 
+            <td>:white_chec k_mark:</td> 
+            <td>:white_chec k_mark:</td> 
+            <td>:white_chec k_mark:</td>
+            <td> :white_check_mark:</td> 
+            <td>:white_check_mark:</td> 
+            <td>:✗:</td> 
+             <td>:white_chec k_mark:</td> 
+            <td>:white_check_mark:</td> 
             <td>Issue on Opera in Tablet</td>
         </tr>
     </tbody>
