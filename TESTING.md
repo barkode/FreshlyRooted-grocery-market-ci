@@ -132,6 +132,11 @@ No major errors were found when validating JavaScript through [Jshint](https://j
 
 <summary>JavaScript Validation Results</summary>
 
+| File Name    | Pass               | View Result                                                  |
+|--------------|--------------------|--------------------------------------------------------------|
+| countryfield | :white_check_mark: | ![Result](docs/test-img/countryfield-file-validation-js.png) |
+| blog         | :white_check_mark: | ![Result](/docs/test-img/blog-file-validaton-js.png)         |
+
 </details>
 
 ### Python
