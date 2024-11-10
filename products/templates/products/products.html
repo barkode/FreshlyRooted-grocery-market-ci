@@ -172,44 +172,77 @@
             </div>
         </div>
         {% if products.paginator.num_pages > 1 %}
+            
             <nav aria-label="Page navigation">
                 <ul class="pagination justify-content-center">
                     {% if products.has_previous %}
                         <li class="page-item">
-                            <a class="page-link" href="?page=
-                                    {{ products.previous_page_number }}{% if get_params %}&{{ get_params }}{% endif %}"
-                               aria-label="Previous">
-                                <span aria-hidden="true">&laquo; PREV</span>
-                            </a>
+                            <a class="page-link"
+                               href="?page={{ products.previous_page_number }}{% if params %}&{{ params }}{% endif %}">Previous</a>
                         </li>
                     {% endif %}
-
                     {% for num in products.paginator.page_range %}
-                        {% if products.number == num %}
+                        {% if num == products.number %}
                             <li class="page-item active">
                                 <span class="page-link">{{ num }}</span>
                             </li>
-                        {% else %}
+                        {% elif num > products.number|add:'-3' and num < products.number|add:'3' %}
                             <li class="page-item">
                                 <a class="page-link"
-                                   href="?page={{ num }}{% if get_params %}&{{ get_params }}{% endif %}">{{ num }}</a>
+                                   href="?page={{ num }}{% if params %}&{{ params }}{% endif %}">{{ num }}</a>
                             </li>
                         {% endif %}
                     {% endfor %}
-
                     {% if products.has_next %}
                         <li class="page-item">
-                            <a class="page-link" href="?page=
-                                    {{ products.next_page_number }}{% if get_params %}&{{ get_params }}{% endif %}"
-                               aria-label="Next">
-                                <span aria-hidden="true">NEXT &raquo;</span>
-                            </a>
+                            <a class="page-link"
+                               href="?page=
+                                       {{ products.next_page_number }}{% if params %}&{{ params }}{% endif %}">Next</a>
                         </li>
+
                     {% endif %}
                 </ul>
             </nav>
-
         {% endif %}
+
+        {#        {% if products.paginator.num_pages > 1 %}#}
+        {#            <nav aria-label="Page navigation">#}
+        {#                <ul class="pagination justify-content-center">#}
+        {#                    {% if products.has_previous %}#}
+        {#                        <li class="page-item">#}
+        {#                            <a class="page-link" href="?page={{ products.previous_page_number }}"#}
+        {#                               aria-label="Previous">#}
+        {#                                <span aria-hidden="true">&laquo; PREV</span>#}
+        {#                            </a>#}
+        {#                        </li>#}
+        {#                    {% endif %}#}
+        {##}
+        {#                    {% for num in products.paginator.page_range %}#}
+        {#                        {% if products.number == num %}#}
+        {#                            <li class="page-item active">#}
+        {#                                <span class="page-link">{{ num }}</span>#}
+        {#                            </li>#}
+        {#                        {% else %}#}
+        {#                            <li class="page-item">#}
+        {#                                <a class="page-link"#}
+        {#                                   href="?page={{ products.next_page_number }}">{{ num }}</a>#}
+        {#                            </li>#}
+        {#                        {% endif %}#}
+        {#                    {% endfor %}#}
+        {##}
+        {#                    {% if products.has_next %}#}
+        {#                        <li class="page-item">#}
+        {#                            <a class="page-link" href="?page=#}
+        {#                                    {{ products.next_page_number }}{% if get_params %}&{{ get_params }}{% endif %}"#}
+        {#                               aria-label="Next">#}
+        {#                                <span aria-hidden="true">NEXT &raquo;</span>#}
+        {#                            </a>#}
+        {#                        </li>#}
+        {#                    {% endif %}#}
+        {#                </ul>#}
+        {#            </nav>#}
+        {##}
+        {#        {% endif %}#}
     </div>
     <div class="btn-scroll-top btt-button shadow-sm rounded-0 border border-black">
         <a class="btt-link d-flex h-100">
@@ -222,7 +255,7 @@
 
 {% block postload_js %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('.btt-link').click(function (e) {
             window.scrollTo(0, 0)
         })

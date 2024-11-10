@@ -27,33 +27,27 @@ def all_products(request):
 
     if request.GET:
         if "sort" in request.GET:
-            sortkey = request.GET["sort"].strip("[]")
+            sortkey = request.GET["sort"]
             sort = sortkey
             if sortkey == "name":
                 sortkey = "lower_name"
                 products = products.annotate(lower_name=Lower("name"))
             elif sortkey == "category":
                 sortkey = "category__name"
+
             if "direction" in request.GET:
-                direction = request.GET["direction"].strip("[]")
+                direction = request.GET["direction"]
                 if direction == "desc":
                     sortkey = f"-{sortkey}"
             products = products.order_by(sortkey)
 
         if "category" in request.GET:
             categories = request.GET["category"]
-            print(categories)
             if categories:
-                print("BEFORE SPLIT", categories)
-                categories = categories.strip("[]").split(",")
-                print("AFTER SPLIT", categories)
-                if categories[0] == "all":
-                    categories = Category.objects.values_list("slug", flat=True)
-                    print("AFTER IF==ALL", categories)
-
+                categories = categories.split(",")
                 products = products.filter(category__slug__in=categories)
                 categories = Category.objects.filter(slug__in=categories)
-        print("AFTER ALL IF", categories)
+
         if "q" in request.GET:
             query = request.GET["q"]
             if not query:
@@ -64,36 +58,35 @@ def all_products(request):
                 Q(name__icontains=query)
                 | Q(description__icontains=query)
                 | Q(category__name__icontains=query)
-                | Q(category__friendly_name__icontains=query)
             )
             products = products.filter(queries)
 
     current_sorting = f"{sort}_{direction}"
 
-    paginator = Paginator(products, 12)
+    items_per_page = 12
+    paginator = Paginator(products, items_per_page)
     page = request.GET.get("page")
 
     try:
-        products_paginated = paginator.page(page)
+        products = paginator.page(page)
     except PageNotAnInteger:
-        products_paginated = paginator.page(1)
+        products = paginator.page(1)
     except EmptyPage:
-        products_paginated = paginator.page(paginator.num_pages)
+        products = paginator.page(paginator.num_pages)
 
-    get_params = request.GET.copy()
-    if "page" in get_params:
-        del get_params["page"]
+    get_copy = request.GET.copy()
+    if "page" in get_copy:
+        del get_copy["page"]
+    params = urlencode(get_copy, doseq=True)
 
     context = {
-        "products": products_paginated,
+        "products": products,
         "search_term": query,
         "current_categories": categories,
         "current_sorting": current_sorting,
         "favorites": favorites,
-        "get_params": urlencode(get_params),
+        "params": params,
     }
-    print("get_params", get_params)
-    print("CONTEXT", context)
 
     return render(request, "products/products.html", context)
 
