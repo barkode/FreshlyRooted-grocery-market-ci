@@ -57,11 +57,6 @@
         * [Shopping Cart](#shopping-cart)
         * [Checkout](#checkout)
         * [Order Confirmation](#order-confirmation)
-        * [Product Management](#product-management)
-            * [Dashboard](#dashboard)
-            * [Products](#products)
-            * [Categories](#categories)
-            * [Orders](#orders)
         * [Custom Error Pages](#custom-error-pages)
     * [Django Admin Portal](#django-admin-portal)
         * [Future Features](#future-features)
@@ -102,7 +97,7 @@ toward well-defined goals. It’s particularly effective in software development
 through the combined efforts of self-organizing, cross-functional teams. Agile emphasizes delivering frequent,
 incremental updates that improve quality and enable rapid response to changing needs.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### MoSCoW Prioritization
 
@@ -110,7 +105,7 @@ The MoSCoW prioritization technique is a framework used to evaluate the importan
 tasks. It organizes items into four categories: Must Have, Should Have, Could Have, and Won't Have. This method supports
 efficient time management by ensuring that the most critical features are prioritized and completed before others.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### GitHub Projects
 
@@ -123,7 +118,7 @@ efficient team collaboration and streamlined project oversight.
 
 [Link to Kanban Board](https://github.com/users/barkode/projects/8/views/1)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### EPICS
 
@@ -145,7 +140,7 @@ significant component of the platform's development, ensuring all necessary func
 - [EPIC 13: Quality Assurance and Documentation](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/78)
 - [EPIC 14 : Error Handling and Custom Error Pages](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/82)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ---
 
@@ -156,7 +151,7 @@ prioritizing a seamless experience. The platform will facilitate content creatio
 profiles, and enable interactive opportunities. The following user stories capture the core functionalities and their
 purpose, guiding the development toward a user-centered solution.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 #### Developer Stories
 
@@ -209,7 +204,7 @@ purpose, guiding the development toward a user-centered solution.
   that user stories are thoroughly tested** so that they **meet acceptance criteria and deliver the expected
   functionality**.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 #### Shopper Stories
 
@@ -284,17 +279,17 @@ purpose, guiding the development toward a user-centered solution.
   *remove items from my favorites** so that I can **manage the list and only keep items I’m interested in**.
 - [#57](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/57) - As a **Shopper**, I want **my favorites
   list to be saved to my user account** so that I can **access it across multiple devices**.
-- [#79](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/79) - As a **Shopper**, I want be able to *
+- [#79](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/79) - As a **Shopper**, I want to be able to *
   *see a user-friendly 404 error page when a page is not found**, so that I **understand the page doesn’t exist and can
   easily navigate back to the main site**.
 - [#80](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/80) - As a **Shopper**, I want to be able to *
   *see a custom 403 error page if I attempt to access a restricted area** so that **I understand why I cannot access the
   page and can be redirected to relevant areas**.
-- [#81](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/81) - As a As a **Shopper**, I want to be able
+- [#81](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/81) - As a **Shopper**, I want to be able
   to **see a custom 500 error page when there is a server error** so that **I know the issue is on the site and not on
   my end, with steps on what to do next**.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 #### Site User Stories
 
@@ -323,7 +318,7 @@ purpose, guiding the development toward a user-centered solution.
 - [#64](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/64) - As a **Site User**, I want to be able to
   **navigate the platform smoothly** so that I can **intuitively locate relevant sections and features**.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 #### Store Owner Stories
 
@@ -349,7 +344,7 @@ purpose, guiding the development toward a user-centered solution.
 - [#52](https://github.com/barkode/FreshlyRooted-grocery-market-ci/issues/52) - As a **Store Owner**, I want to be able
   to **manage the duration of each discount** so that **promotions are only active for specified times**.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ---
 
@@ -378,7 +373,7 @@ purpose, guiding the development toward a user-centered solution.
     - Create channels for users to provide feedback, report issues, and suggest enhancements.
     - Actively respond to user feedback and integrate improvements to continually refine the platform.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ## Target Audience
 
@@ -404,7 +399,7 @@ and loved ones, emphasizing nutrition, taste, and ingredient transparency.
 **Foodies Seeking Quality Ingredients** - Home cooks and culinary enthusiasts who value premium ingredients and enjoy
 exploring fresh, unique, and high-quality foods to enhance their cooking experience.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ## Wireframes
 
@@ -441,7 +436,7 @@ live version of the platform to enhance usability and functionality.
 </details>
 
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ## Database Schema
 
@@ -463,7 +458,7 @@ This schema was generated using [lucid.app](https://lucid.app/).
 
 </details>
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ## Design Choices
 
@@ -475,7 +470,7 @@ Summer" in Polish.
 Lato has become one of the most popular web fonts due to its excellent balance of professionalism and approachability,
 making it suitable for a wide range of design projects.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Colour Scheme
 
@@ -483,7 +478,7 @@ making it suitable for a wide range of design projects.
 
 ![Coolors Scheme](docs/images/color.png)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Images
 
@@ -502,7 +497,7 @@ Our visual content comes from two primary sources:
   This combination of sources ensures legal compliance while maintaining high-quality visual content throughout our
   platform.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Responsiveness
 
@@ -518,7 +513,7 @@ through the use of CSS media queries with Bootstrap's breakpoints, ensuring an o
 | Extra Large       | xl    | ≥ 1200px   |
 | Extra extra Large | xxl   | ≥ 1400px   |
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ## Security Measures and Protective Design
 
@@ -537,7 +532,7 @@ comprehensive suite of features, including:
   authentication
   process to specific needs.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Password Management
 
@@ -557,14 +552,14 @@ comprehensive password management features. These features are designed to enhan
   By leveraging these features, Django Allauth simplifies the implementation of secure and user-friendly password
   management in Django applications.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Form Validation
 
 If incorrect or empty data is added to a form, the form won't submit, and a warning will appear to the user informing
 them which field raised the error.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Database Security
 
@@ -577,7 +572,7 @@ users without their consent.
 By incorporating these practices, the application maintains a robust security posture, safeguarding both the database
 and user interactions
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ## E-Commerce Business Model
 
@@ -620,7 +615,7 @@ and encourage repeat purchases.
 This business model enables Freshly Rooted Online Market to reach a wide audience, minimize overhead costs, and provide
 a convenient, enjoyable shopping experience for customers seeking high-quality, natural products.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ## Marketing Strategies
 
@@ -646,7 +641,7 @@ queries:
 These keywords are strategically integrated into the website's content to enhance search engine visibility and attract
 a diverse audience of health-conscious consumers and food enthusiasts.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### SEO Strategies
 
@@ -692,7 +687,7 @@ visibility and improve ranking on Google:
 These strategies will be continuously refined and improved over time, aiming to increase the market's ranking on Google
 and attract more organic traffic to the website.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Social Media
 
@@ -767,11 +762,11 @@ Here’s how it will work:
   Using Mailchimp helps Freshly Rooted Online Market stay connected with customers, promote new products and events, and
   drive traffic to the online store.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ## Features
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Header
 
@@ -787,7 +782,7 @@ and desktop devices. Consistent use of icons and fonts throughout the site ensur
 
 ![User Menu](docs/images/header-user.png)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Footer
 
@@ -801,7 +796,7 @@ heartfelt message that emphasizes the brand's commitment to natural living and c
 
 ![Footer](docs/images/footer.png)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Customer Information
 
@@ -817,20 +812,20 @@ fostering trust and clarity.
 ![Privacy Policy](docs/images/privacy.png)
 ![Return Policy](docs/images/return.png)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Contact
 
 ![Contact](docs/images/contact.png)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### User Account Pages
 
 The user account pages at Freshly Rooted Online Market are designed to provide a seamless and secure experience for
 managing user access, enhancing the overall user journey on the site.
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 #### Register Page
 
@@ -845,7 +840,7 @@ email is sent to them to complete the process.
 
 ![Registration](docs/images/register.png)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 #### Log In Page
 
@@ -858,7 +853,7 @@ enhancing user convenience and support.
 ![Login](docs/images/login.png)
 ![Login Sucsess](docs/images/login-susccess-toast.png   )
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 #### Logout Page
 
@@ -869,7 +864,7 @@ again. This straightforward approach helps maintain a seamless user experience, 
 
 ![Logout](docs/images/logout.png)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Profile Page
 
@@ -882,14 +877,14 @@ manage their profiles efficiently and effectively.
 
 ![Profile](docs/images/profile.png)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 #### User Favorites
 
 ![Favorites](docs/images/favorites-1.png)
 ![Favorites](docs/images/favorites.png)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### All Products
 
@@ -902,7 +897,7 @@ with convenience and efficiency.
 
 ![All Products](docs/images/all-products.png)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Product Details
 
@@ -912,12 +907,12 @@ Users can easily adjust the quantity they wish to purchase and add the product t
 
 ![Product Details](docs/images/detail-product.png)
 
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Shopping Cart
 
 ![Shopping Cart](docs/images/shopping-cart.png)
-[Back to Top](#contents) :top: :top:
+[Back to Top](#contents) :top:
 
 ### Checkout
 
@@ -952,26 +947,6 @@ summary of their order. It includes the following elements:
   manner.
 
 ![Checkout](docs/images/checkout-confirmation.png)
-
-[Back to Top](#contents) :top:
-
-### Product Management
-
-[Back to Top](#contents) :top:
-
-#### Dashboard
-
-[Back to Top](#contents) :top:
-
-#### Products
-
-[Back to Top](#contents) :top:
-
-#### Categories
-
-[Back to Top](#contents) :top:
-
-#### Orders
 
 [Back to Top](#contents) :top:
 
@@ -1432,7 +1407,20 @@ _Any changes required to the website, they can be made, committed and pushed to 
 
 ## Credits
 
-[Back to Top](#contents) :top:
+- [ABACUS.AI](https://abacus.ai/)
+- [Leonardo.AI](https://leonardo.ai/)
+- [Amazon](https://www.amazon.com/)
+- [CodePen](https://codepen.io/pen/)
+- [Automated Testing Tutorial](https://www.youtube.com/watch?v=qwypH3YvMKc&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM)
+- [Django Documentation](https://docs.djangoproject.com/en/4.2/)
+- [Dev Community](https://dev.to/lindaojo/how-to-improve-lighthouse-score-accessibility-514e)
+- [Boostrap Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [Dennis Ivy - Python Django 7 Hour Course](https://www.youtube.com/watch?v=PtQiiknWUcI)
+- [StackOverflow](https://stackoverflow.com/ "StackOverflow")
+- [Project Portfolio-4 channel on Slack](https://slack.com/intl/en-ie/ "Slack")
+- [Django Forum](https://forum.djangoproject.com/)
+- [ChatGPT](https://openai.com/chatgpt/overview/)
+- [Back to Top](#contents) :top:
 
 ### Acknowledgements
 
