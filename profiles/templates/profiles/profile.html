@@ -2,10 +2,6 @@
 {% load crispy_forms_filters %}
 {% load static %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
-{% endblock %}
-
 {% block extra_title %}Profile{% endblock %}
 
 
@@ -82,5 +78,5 @@
 
 {% block postload_js %}
     {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/../../../static/js/countryfield.js' %}"></script>
+    <script src="{% static 'js/countryfield.js' %}"></script>
 {% endblock %}

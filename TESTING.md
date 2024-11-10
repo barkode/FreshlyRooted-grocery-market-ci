@@ -72,37 +72,37 @@ This is the process which was followed of validating an HTML file by direct inpu
 
 <summary>HTML Validation Results</summary>
 
-| File Name             | Pass               | Notes | View Result                                                |
-|-----------------------|--------------------|-------|------------------------------------------------------------|
-| index.html            | :x:                |       | [Result](docs/test-img/header-1.png)                       |
-| product-list.html     | :x:                |       | [Result](docs/test-img/all-prod.png)                       |
-| search-results.html   | :white_check_mark: |       | ![Result](/docs/test-img/search-results-htmlchecker.png)   |
-| edit-product.html     | :white_check_mark: |       | ![Result](/docs/test-img/edit-product-htmlchecker.png)     |       
-| add-product.html      | :white_check_mark: |       | ![Result](/docs/test-img/add-product-htmlchecker.png)      |       
-| admin-summary.html    | :white_check_mark: |       | ![Result](/docs/test-img/admin-summary-htmlchecker.png)    |       
-| manage-author.html    | :white_check_mark: |       | ![Result](/docs/test-img/manage-author-htmlchecker.png)    |       
-| manage-genre.html     | :white_check_mark: |       | ![Result](/docs/test-img/manage-genre-htmlchecker.png)     |       
-| manage-orders.html    | :white_check_mark: |       | ![Result](/docs/test-img/manage-orders-htmlchecker.png)    |       
-| dashboard.html        | :white_check_mark: |       | ![Result](/docs/test-img/dashboard-htmlchecker.png)        |       
-| manage-coupon.html    | :white_check_mark: |       | ![Result](/docs/test-img/manage-coupon-htmlchecker.png)    |
-| manage-category.html  | :white_check_mark: |       | ![Result](/docs/test-img/manage-category-htmlchecker.png)  |       
-| my-orders.html        | :white_check_mark: |       | ![Result](/docs/test-img/user-orders-htmlchecker.png)      |       
-| wishlist.html         | :white_check_mark: |       | ![Result](/docs/test-img/user-favourites-htmlchecker.png)  |       
-| change-password.html  | :white_check_mark: |       | ![Result](/docs/test-img/change-password-htmlchecker.png)  |       
-| profile.html          | :white_check_mark: |       | ![Result](/docs/test-img/profile-htmlchecker.png)          |       
-| delete-modal.html     | :white_check_mark: |       | ![Result](/docs/test-img/profile-delete-htmlchecker.png)   |       
-| product-detail.html   | :white_check_mark: |       | ![Result](/docs/test-img/product-details-htmlchecker.png)  |       |
-| about.html            | :white_check_mark: |       | ![Result](/docs/test-img/about-htmlchecker.png)            |       
-| special-offers.html   | :white_check_mark: |       | ![Result](/docs/test-img/offers-htmlchecker.png)           |       
-| signup.html           | :white_check_mark: |       | ![Result](/docs/test-img/sign-up-htmlchecker.png)          |       
-| login.html            | :white_check_mark: |       | ![Result](/docs/test-img/login-htmlchecker.png)            |       
-| logout.html           | :white_check_mark: |       | ![Result](/docs/test-img/logout-htmlchecker.png)           |       
-| cart.html             | :white_check_mark: |       | ![Result](/docs/test-img/cart-htmlchecker.png)             |       
-| checkout-success.html | :white_check_mark: |       | ![Result](/docs/test-img/success-htmlchecker.png)          |      
-| checkout.html         | :white_check_mark: |       | ![Result](/docs/test-img/checkout-htmlchecker.png)         |       
-| shipping-returns.html | :white_check_mark: |       | ![Result](/docs/test-img/shipping-returns-htmlchecker.png) |       
-| privacy-policy.html   | :white_check_mark: |       | ![Result](/docs/test-img/privacy-policy-htmlchecker.png)   |       
-| terms-of-service.html | :white_check_mark: |       | ![Result](/docs/test-img/terms-htmlchecker.png)            |       
+| File Name                   | Pass               | Notes | View Result                                                    |
+|-----------------------------|--------------------|-------|----------------------------------------------------------------|
+| home page desktop           | :white_check_mark: |       | [Result](docs/test-img/home-page-desktop-html.png)             |
+| home page mobile            | :x:                |       | [Result](docs/test-img/home-page-mobile-html.png)              |
+| products page desktop       | :white_check_mark: |       | ![Result](/docs/test-img/product-page-desktop-html.png)        |
+| products page mobile        | :white_check_mark: |       | ![Result](/docs/test-img/product-page-mobile-html.png)         |       
+| blog page desktop           | :white_check_mark: |       | ![Result](/docs/test-img/blog-page-desktop-html.png)           |       
+| blog page mobile            | :white_check_mark: |       | ![Result](/docs/test-img/blog-page-desktop-html.png)           |       
+| contact page desktop        | :white_check_mark: |       | ![Result](/docs/test-img/contact-page-desktop-html.png)        |       
+| contact page mobile         | :white_check_mark: |       | ![Result](/docs/test-img/contact-page-desktop-html.png)        |       
+| privacy policy page desktop | :white_check_mark: |       | ![Result](/docs/test-img/privacy-policy-page-desktop-html.png) |       
+| privacy policy page mobile  | :white_check_mark: |       | ![Result](/docs/test-img/privacy-policy-page-mobile-html.png)  |       
+| return policy page desktop  | :white_check_mark: |       | ![Result](/docs/test-img/return-policy-page-desktop-html.png)  |
+| return policy page mobile   | :white_check_mark: |       | ![Result](/docs/test-img/return-policy-page-mobile-html.png)   |       
+| cart page desktop           | :white_check_mark: |       | ![Result](/docs/test-img/cart-page-desktop-html.png)           |       
+| cart page mobile            | :white_check_mark: |       | ![Result](/docs/test-img/cart-page-mobile-html.png)            |       
+| change-password.html        | :white_check_mark: |       | ![Result](/docs/test-img/change-password-htmlchecker.png)      |       
+| profile.html                | :white_check_mark: |       | ![Result](/docs/test-img/profile-htmlchecker.png)              |       
+| delete-modal.html           | :white_check_mark: |       | ![Result](/docs/test-img/profile-delete-htmlchecker.png)       |       
+| product-detail.html         | :white_check_mark: |       | ![Result](/docs/test-img/product-details-htmlchecker.png)      |       |
+| about.html                  | :white_check_mark: |       | ![Result](/docs/test-img/about-htmlchecker.png)                |       
+| special-offers.html         | :white_check_mark: |       | ![Result](/docs/test-img/offers-htmlchecker.png)               |       
+| signup.html                 | :white_check_mark: |       | ![Result](/docs/test-img/sign-up-htmlchecker.png)              |       
+| login.html                  | :white_check_mark: |       | ![Result](/docs/test-img/login-htmlchecker.png)                |       
+| logout.html                 | :white_check_mark: |       | ![Result](/docs/test-img/logout-htmlchecker.png)               |       
+| cart.html                   | :white_check_mark: |       | ![Result](/docs/test-img/cart-htmlchecker.png)                 |       
+| checkout-success.html       | :white_check_mark: |       | ![Result](/docs/test-img/success-htmlchecker.png)              |      
+| checkout.html               | :white_check_mark: |       | ![Result](/docs/test-img/checkout-htmlchecker.png)             |       
+| shipping-returns.html       | :white_check_mark: |       | ![Result](/docs/test-img/shipping-returns-htmlchecker.png)     |       
+| privacy-policy.html         | :white_check_mark: |       | ![Result](/docs/test-img/privacy-policy-htmlchecker.png)       |       
+| terms-of-service.html       | :white_check_mark: |       | ![Result](/docs/test-img/terms-htmlchecker.png)                |       
 
 </details>
 
@@ -137,61 +137,61 @@ The python files have all been passed through [PEP8 CI Online](https://pep8ci.he
 
 <details><summary><b>PEP8 Test Results</b></summary>
 
-| App Name  | File Name          | Pass               | Notes | View Result                                                                                               |
-|-----------|--------------------|--------------------|-------|-----------------------------------------------------------------------------------------------------------|
-| about     | views.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-views-py.png)</details>              |
-| about     | urls.py            | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-urls-py.png)</details>               |
-| about     | models.py          | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-models-py.png)</details>             |
-| about     | forms.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-forms-py.png)</details>              |
-| about     | admin.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-admin-py.png)</details>              |
-| about     | test_views.py      | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-test-viewers-py.png)</details>       |
-| about     | test_forms.py      | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-test-forms-py.png)</details>         |
-| app       | settings.py        | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/settings-py.png)</details>                 |
-| app       | urls.py            | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/testing-urls-py-main-app.png)</details>    |
-| app       | views.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-py-main-app.png)</details>           |
-| blog      | views.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-views-py.png)</details>               |
-| blog      | urls.py            | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-urls-py.png)</details>                |
-| blog      | models.py          | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-models-py.png)</details>              |
-| blog      | forms.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-forms-py.png)</details>               |
-| blog      | admin.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-admin-py.png)</details>               |
-| blog      | test_views.py      | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-views-py.png)</details>          |
-| blog      | test_models.py     | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-models-py.png)</details>         |
-| cart      | views.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-views-py.png)</details>               |
-| cart      | urls.py            | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-urls-py.png)</details>                |
-| cart      | contexts.py        | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-context-py.png)</details>             |
-| cart      | test_context.py    | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-test-contest-py.png)</details>        |
-| checkout  | webhooks.py        | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-webhooks-py.png)</details>        |
-| checkout  | webhook_handler.py | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-webhook-handler-py.png)</details> |
-| checkout  | views.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkaout-views.png)</details>             |
-| checkout  | urls.py            | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-urls-py.png)</details>            |
-| checkout  | signals.py         | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-signals-py.png)</details>         |
-| checkout  | models.py          | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-models-py.png)</details>          |
-| checkout  | forms.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-forms-py.png)</details>           |
-| checkout  | admin.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-admin-py.png)</details>           |
-| checkout  | test_models.py     | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-test-models-py.png)</details>     |
-| checkout  | test_forms.py      | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-test-forms-py.png)</details>      |
-| favorites | views.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-views-py.png)</details>          |
-| favorites | urls.py            | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-urls-py.png)</details>           |
-| favorites | models.py          | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-models-py.png)</details>         |
-| favorites | admin.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-admin-py.png)</details>          |
-| favorites | test_models.py     | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-test-models-py.png)</details>    |
-| home      | views.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/home-views-py.png)</details>               |
-| home      | urls.py            | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/home-urls-py.png)</details>                |
-| products  | widgets.py         | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-widgets-py.png)</details>         |
-| products  | views.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-views-py.png)</details>           |
-| products  | urls.py            | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-urls-py.png)</details>            |
-| products  | models.py          | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-models-py.png)</details>          |
-| products  | forms.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-forms-py.png)</details>           |
-| products  | admin.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-admin-py.png)</details>           |
-| products  | test_views.py      | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-test-views-py.png)</details>      |
-| products  | test_models.py     | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/productstest-models-py.png)</details>      |
-| products  | test_forms.py      | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-test-forms-py.png)</details>      |
-| profiles  | views.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-views-py.png)</details>           |
-| profiles  | urls.py            | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-urls-py.png)</details>            |
-| profiles  | models.py          | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-models-py.png)</details>          |
-| profiles  | forms.py           | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-forms-py.png)</details>           |
-| profiles  | test_forms.py      | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-test-forms.png)</details>         |
-| main      | custom_storages.py | :white_check_mark: |       | <details><summary>Screenshot</summary>![Result](/docs/test-img/main-custom-storages.png)</details>        |
+| App Name  | File Name          | Pass               | Notes                                                      | View Result                                                                                               |
+|-----------|--------------------|--------------------|------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| about     | views.py           | :white_check_mark: | The string is longer than 79 characters. Unable to reduce. | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-views-py.png)</details>              |
+| about     | urls.py            | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-urls-py.png)</details>               |
+| about     | models.py          | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-models-py.png)</details>             |
+| about     | forms.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-forms-py.png)</details>              |
+| about     | admin.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-admin-py.png)</details>              |
+| about     | test_views.py      | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-test-viewers-py.png)</details>       |
+| about     | test_forms.py      | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/about-test-forms-py.png)</details>         |
+| app       | settings.py        | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/settings-py.png)</details>                 |
+| app       | urls.py            | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/testing-urls-py-main-app.png)</details>    |
+| app       | views.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/views-py-main-app.png)</details>           |
+| blog      | views.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-views-py.png)</details>               |
+| blog      | urls.py            | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-urls-py.png)</details>                |
+| blog      | models.py          | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-models-py.png)</details>              |
+| blog      | forms.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-forms-py.png)</details>               |
+| blog      | admin.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-admin-py.png)</details>               |
+| blog      | test_views.py      | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-views-py.png)</details>          |
+| blog      | test_models.py     | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/blog-test-models-py.png)</details>         |
+| cart      | views.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-views-py.png)</details>               |
+| cart      | urls.py            | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-urls-py.png)</details>                |
+| cart      | contexts.py        | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-context-py.png)</details>             |
+| cart      | test_context.py    | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/cart-test-contest-py.png)</details>        |
+| checkout  | webhooks.py        | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-webhooks-py.png)</details>        |
+| checkout  | webhook_handler.py | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-webhook-handler-py.png)</details> |
+| checkout  | views.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkaout-views.png)</details>             |
+| checkout  | urls.py            | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-urls-py.png)</details>            |
+| checkout  | signals.py         | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-signals-py.png)</details>         |
+| checkout  | models.py          | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-models-py.png)</details>          |
+| checkout  | forms.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-forms-py.png)</details>           |
+| checkout  | admin.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-admin-py.png)</details>           |
+| checkout  | test_models.py     | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-test-models-py.png)</details>     |
+| checkout  | test_forms.py      | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/checkout-test-forms-py.png)</details>      |
+| favorites | views.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-views-py.png)</details>          |
+| favorites | urls.py            | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-urls-py.png)</details>           |
+| favorites | models.py          | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-models-py.png)</details>         |
+| favorites | admin.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-admin-py.png)</details>          |
+| favorites | test_models.py     | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/favorites-test-models-py.png)</details>    |
+| home      | views.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/home-views-py.png)</details>               |
+| home      | urls.py            | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/home-urls-py.png)</details>                |
+| products  | widgets.py         | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-widgets-py.png)</details>         |
+| products  | views.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-views-py.png)</details>           |
+| products  | urls.py            | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-urls-py.png)</details>            |
+| products  | models.py          | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-models-py.png)</details>          |
+| products  | forms.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-forms-py.png)</details>           |
+| products  | admin.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-admin-py.png)</details>           |
+| products  | test_views.py      | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-test-views-py.png)</details>      |
+| products  | test_models.py     | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/productstest-models-py.png)</details>      |
+| products  | test_forms.py      | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/products-test-forms-py.png)</details>      |
+| profiles  | views.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-views-py.png)</details>           |
+| profiles  | urls.py            | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-urls-py.png)</details>            |
+| profiles  | models.py          | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-models-py.png)</details>          |
+| profiles  | forms.py           | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-forms-py.png)</details>           |
+| profiles  | test_forms.py      | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/profiles-test-forms.png)</details>         |
+| main      | custom_storages.py | :white_check_mark: |                                                            | <details><summary>Screenshot</summary>![Result](/docs/test-img/main-custom-storages.png)</details>        |
 
 </details><br/>
 

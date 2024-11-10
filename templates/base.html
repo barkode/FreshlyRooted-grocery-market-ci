@@ -88,14 +88,14 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                        <a class="text-black nav-link" href="#" id="user-options-nav" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options-nav">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'products:add_product' %}" class="dropdown-item">Product
@@ -179,7 +179,7 @@
     {% block postload_js %}
         <script src="{% static 'js/mailchimp.js' %}"></script>
 
-        <script type=" text/javascript">
+        <script>
             $('.toast').toast('show');
 
             /*Scroll to top*/
