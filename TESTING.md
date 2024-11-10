@@ -35,7 +35,6 @@ Return back to the [README.md](README.md) file.
     * [Epic: Product Management](#epic-product-management)
     * [Epic: Order Management](#epic-order-management)
     * [Epic: Customer Service](#epic-customer-service)
-    * [Acceptance Criteria Examples](#acceptance-criteria-examples)
         * [Product Management](#product-management)
         * [Customer Features](#customer-features)
         * [Admin Dashboard](#admin-dashboard-1)

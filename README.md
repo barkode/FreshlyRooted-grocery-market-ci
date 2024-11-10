@@ -1420,7 +1420,9 @@ _Any changes required to the website, they can be made, committed and pushed to 
 - [Project Portfolio-4 channel on Slack](https://slack.com/intl/en-ie/ "Slack")
 - [Django Forum](https://forum.djangoproject.com/)
 - [ChatGPT](https://openai.com/chatgpt/overview/)
-- [Back to Top](#contents) :top:
+- [CodeInstitute](https://codeinstitute.net/) Boutique Ado project as boilerplate and good django manual.
+
+[Back to Top](#contents) :top:
 
 ### Acknowledgements
 
