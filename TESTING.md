@@ -42,21 +42,21 @@ different breakpoints.
 
 Test Results:
 
-| Size | Device Example     | Navigation | Element Alignments | Content Placement | Functionality | Notes |
-|------|--------------------|------------|--------------------|-------------------|---------------|-------|
-| sm   | Samsung Galaxy S20 | &check;    | &check;            | &check;           | &check;       |       |
-| sm   | iPhone 11 PRO      | &check;    | &check;            | &check;           | &check;       |       |
-| sm   | iPhone 13 PRO MAX  | &check;    | &check;            | &check;           | &check;       |       |
-| md   | iPad MINI          | &check;    | &check;            | &check;           | &check;       |       |
-| md   | Galaxy Tab S7      | &check;    | &check;            | &check;           | &check;       |       |
-| md   | iPad Air           | &check;    | &check;            | &check;           | &check;       |       |
-| lg   | iPad Pro           | &check;    | &check;            | &check;           | &check;       |       |
-| xl   | Mackbook Air       | &check;    | &check;            | &check;           | &check;       |       |
-| xl   | HP Stream Laptop   | &check;    | &check;            | &check;           | &check;       |       |
-| xxl  | Dell Lattitude     | &check;    | &check;            | &check;           | &check;       |       |
-| xxl  | Desktop            | &check;    | &check;            | &check;           | &check;       |       |
+| Size | Device Example     | Navigation            | Element Alignments    | Content Placement     | Functionality         | Notes |
+|------|--------------------|-----------------------|-----------------------|-----------------------|-----------------------|-------|
+| sm   | Samsung Galaxy S20 | ✅:white_check_mark:   | ✅:white_check_mark:   | ✅:white_check_mark:   | ✅:white_check_mark:   |       |
+| sm   | iPhone 11 PRO      | ✅:white_check_mark:   | ✅ :white_check_mark:  | ✅  :white_check_mark: | ✅ :white_check_mark:  |       |
+| sm   | iPhone 13 PRO MAX  | ✅:white_check_mark:   | ✅ :white_check_mark:  | ✅  :white_check_mark: | ✅ :white_check_mark:  |       |
+| md   | iPad MINI          | ✅:white_check_mark:   | ✅ :white_check_mark:  | ✅ :white_check_mark:  | ✅  :white_check_mark: |       |
+| md   | Galaxy Tab S7      | ✅:white_check_mark:   | ✅  :white_check_mark: | ✅ :white_check_mark:  | ✅ :white_check_mark:  |       |
+| md   | iPad Air           | ✅ :white_check_mark:  | ✅ :white_check_mark:  | ✅  :white_check_mark: | ✅ :white_check_mark:  |       |
+| lg   | iPad Pro           | ✅:white_check_mark:   | ✅  :white_check_mark: | ✅  :white_check_mark: | ✅ :white_check_mark:  |       |
+| xl   | Mackbook Air       | ✅ :white_check_mark:  | ✅ :white_check_mark:  | ✅  :white_check_mark: | ✅  :white_check_mark: |       |
+| xl   | HP Stream Laptop   | ✅ :white_check_mark:  | ✅ :white_check_mark:  | ✅  :white_check_mark: | ✅ :white_check_mark:  |       |
+| xxl  | Dell Lattitude     | ✅  :white_check_mark: | ✅ :white_check_mark:  | ✅  :white_check_mark: | ✅  :white_check_mark: |       |
+| xxl  | Desktop            | ✅  :white_check_mark: | ✅  :white_check_mark: | ✅  :white_check_mark: | ✅ :white_check_mark:  |       |
 
-[Back to top](#contents)
+[Back to top](#contents) :top:
 
 ## Code Validation
 
@@ -315,6 +315,7 @@ No major issues identified.
 ## Lighthouse Testing
 
 <details>
+
 <summary>Lighthouse Test Results</summary>
 
 </details>
