@@ -23,8 +23,17 @@ main {
 	padding-bottom: 30px;
 }
 
+.hero-text {
+	display: none;
+}
+
 footer {
 	flex-shrink: 0;
+}
+
+footer > .row {
+	margin-left: 0;
+	margin-right: 0;
 }
 
 /* from Bulma */
@@ -121,6 +130,11 @@ a.category-badge > span.badge:hover {
 
 input[name='q']::placeholder {
 	color: #aab7c4;
+}
+
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -298,20 +312,13 @@ input[name='q']::placeholder {
 	}
 
 	.hero-text {
+		display: block;
 		position: absolute;
 		z-index: 1;
 		top: 50%;
 		left: 50%;
-		/* transform: translate(-50%, -50%); */
 	}
 }
-
-/* .hero-text { */
-/* 	position: absolute; */
-/* 	z-index: 1; */
-/* 	top: 0; */
-/* 	left: 0; */
-/* } */
 
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -319,6 +326,7 @@ input[name='q']::placeholder {
 	.header-container {
 		padding-top: 116px;
 	}
+
 
 	body {
 		height: calc(100vh - 116px);
@@ -636,6 +644,14 @@ footer li {
 }
 
 @media (max-width: 768px) {
+
+	.hero-text {
+		position: absolute;
+		z-index: 1;
+		top: 30%;
+		right: 0%;
+	}
+
 	.footer-wrap h3 {
 		margin-top: 27px;
 	}
