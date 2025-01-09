@@ -4,7 +4,7 @@ from unittest.mock import Mock
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.test import TestCase
-from favorites.models import Favorites
+from wishlist.models import Favorites
 from products.models import Product
 
 

@@ -6,7 +6,7 @@ from django.db.models.functions import Lower
 from django.shortcuts import get_object_or_404, redirect, render, reverse
 from django.utils.http import urlencode
 
-from favorites.models import Favorites
+from wishlist.models import Favorites
 from .forms import ProductForm
 from .models import Category, Product
 
@@ -84,7 +84,7 @@ def all_products(request):
         "search_term": query,
         "current_categories": categories,
         "current_sorting": current_sorting,
-        "favorites": favorites,
+        "wishlist": favorites,
         "params": params,
     }
 
@@ -108,7 +108,7 @@ def product_detail(request, product_id):
         template = "products/product_detail.html"
         context = {
             "product": product,
-            "favorites": favorites,
+            "wishlist": favorites,
         }
         return render(request, template, context)
 

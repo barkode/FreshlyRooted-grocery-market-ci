@@ -13,7 +13,7 @@ from profiles.models import UserProfile
 from .models import Favorites
 
 
-# View to display the user's favorites list
+# View to display the user's wishlist list
 def view_favorites(request):
     if not request.user.is_authenticated:
         messages.error(
@@ -24,16 +24,16 @@ def view_favorites(request):
     user = get_object_or_404(UserProfile, user=request.user)
     favorites, created = Favorites.objects.get_or_create(user=user.user)
 
-    template_name = "favorites/favorites.html"
+    template_name = "wishlist/wishlist.html"
 
-    context = {"favorites": favorites}
+    context = {"wishlist": favorites}
 
     print(context)
 
     return render(request, template_name, context)
 
 
-# View to add a product to the user's favorites list
+# View to add a product to the user's wishlist list
 def add_favorites(request, product_id):
     if not request.user.is_authenticated:
         messages.error(
@@ -60,7 +60,7 @@ def add_favorites(request, product_id):
     return HttpResponseRedirect(redirect_url)
 
 
-# View to remove a product from the user's favorites
+# View to remove a product from the user's wishlist
 def remove_favorites(request, product_id):
     if not request.user.is_authenticated:
         messages.error(
@@ -81,7 +81,7 @@ def remove_favorites(request, product_id):
     return HttpResponseRedirect(redirect_url)
 
 
-# View to clear all products from the user's favorites
+# View to clear all products from the user's wishlist
 def clear_favorites(request):
     if not request.user.is_authenticated:
         messages.error(
@@ -99,4 +99,4 @@ def clear_favorites(request):
     fav_lst.products.remove(product)
     messages.info(request, "Favorites list cleared!")
 
-    return redirect(reverse("favorites:view_favorites"))
+    return redirect(reverse("wishlist:view_favorites"))

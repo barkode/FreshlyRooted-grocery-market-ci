@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 from django.test import RequestFactory
 from products.models import Category, Product
 from products.views import all_products
-from favorites.models import Favorites
+from wishlist.models import Favorites
 
 
 class AllProductsTest(unittest.TestCase):

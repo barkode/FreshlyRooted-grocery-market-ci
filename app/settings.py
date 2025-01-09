@@ -94,7 +94,7 @@ INSTALLED_APPS = [
     "about",
     "checkout",
     "profiles",
-    "favorites",
+    "wishlist",
 ]
 
 MIDDLEWARE = [
