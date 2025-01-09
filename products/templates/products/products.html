@@ -80,12 +80,12 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 {% if product in favorites.products.all %}
-                                    <a href="{% url 'favorites:remove_favorites' product.id %}"
+                                    <a href="{% url 'wishlist:remove_favorites' product.id %}"
                                        aria-label="Remove product from Favorites">
                                         <div class="favorites-badge"><i class="fa-regular fa-heart"></i></div>
                                     </a>
                                 {% else %}
-                                    <a href="{% url 'favorites:add_favorites' product.id %}"
+                                    <a href="{% url 'wishlist:add_favorites' product.id %}"
                                        aria-label="Add product to Favorites">
                                         <div class="favorites-badge"><i class="fa fa-heart"></i></div>
                                     </a>

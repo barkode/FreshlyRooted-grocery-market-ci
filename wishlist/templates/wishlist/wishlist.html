@@ -27,7 +27,7 @@
         <div class="container mb-5">
             {% if favorites.products.exists %}
                 <!-- Clear favorites link -->
-                <p class="text-center"><a href="{% url 'favorites:clear_favorites' %}" class="text-uppercase">Clear
+                <p class="text-center"><a href="{% url 'wishlist:clear_favorites' %}" class="text-uppercase">Clear
                     Favorites</a></p>
                 <div class="row">
                     <div class="col-12">
@@ -85,7 +85,7 @@
                             <!-- Remove Product link -->
                             <div class="favorites mb-3" data-label="Remove Product:">
                                 Remove Product:
-                                <a href="{% url 'favorites:remove_favorites' product.id %}?next={% url 'favorites:favorites' %}"
+                                <a href="{% url 'wishlist:remove_favorites' product.id %}?next={% url 'wishlist:wishlist' %}"
                                    aria-label="Link to Remove Product">
                                     <i class="fa-solid fa-trash-can text-danger"></i>
                                 </a>
@@ -166,7 +166,7 @@
                                 </td>
                                 <!-- Remove Product link -->
                                 <td class="favorites" data-label="Remove Product:">
-                                    <a href="{% url 'favorites:remove_favorites' product.id %}?next={% url 'favorites:favorites' %}"
+                                    <a href="{% url 'wishlist:remove_favorites' product.id %}?next={% url 'wishlist:wishlist' %}"
                                        aria-label="Link to Remove Product">
                                         <i class="fa-solid fa-trash-can text-danger"></i>
                                     </a>
