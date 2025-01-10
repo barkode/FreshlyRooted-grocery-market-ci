@@ -26,7 +26,7 @@ class TestBlogViews(TestCase):
 
     def test_render_post_detail_page_with_comment_form(self):
         """Verifies a single blog post containing a comment form is returned"""
-        response = self.client.get(reverse("post_detail", args=["blog-title"]))
+        response = self.client.get(reverse("blog:post_detail", args=["blog-title"]))
         self.assertEqual(response.status_code, 200)
         self.assertIn(b"Blog title", response.content)
         self.assertIn(b"Blog content", response.content)
@@ -37,7 +37,7 @@ class TestBlogViews(TestCase):
         self.client.login(username="myUsername", password="myPassword")
         post_data = {"body": "This is a test comment."}
         response = self.client.post(
-            reverse("post_detail", args=["blog-title"]), post_data
+            reverse("blog:post_detail", args=["blog-title"]), post_data
         )
         self.assertEqual(response.status_code, 200)
         self.assertIn(b"Submitted and awaiting approval", response.content)
