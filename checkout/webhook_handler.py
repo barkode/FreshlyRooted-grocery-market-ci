@@ -12,9 +12,6 @@ from profiles.models import UserProfile
 from .models import Order, OrderLineItem
 
 
-# pylint: disable=locally-disabled, no-member
-
-
 class StripeWebhookHandler:
     """
     Handles Stripe Webhooks
