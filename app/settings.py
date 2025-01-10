@@ -123,6 +123,7 @@ TEMPLATES = [
             BASE_DIR / "templates/allauth",
             BASE_DIR / "home/templates/home",
             BASE_DIR / "products/templates/products",
+            BASE_DIR / "profile/templates/profile",
         ],
         "APP_DIRS": True,
         "OPTIONS": {

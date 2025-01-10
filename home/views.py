@@ -6,7 +6,7 @@ from django.contrib import messages
 
 # View for rendering the home page
 def index(request):
-    return render(request, 'home/index.html')
+    return render(request, "home/index.html")
 
 
 # View for rendering the privacy policy page
@@ -37,7 +37,7 @@ def contact(request):
                 request,
                 "Thank you, your email has been sent. We will contact you shortly.",
             )
-            return redirect("contact")
+            return redirect("home:contact")
         else:
             messages.error(
                 request, "Form submission failed. Please check the form and try again."
