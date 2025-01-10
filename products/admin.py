@@ -1,72 +1,80 @@
 from django.contrib import admin
-from .models import Product, Category, Brand, ProductVariant, Reviews
-from django_summernote.admin import SummernoteModelAdmin
+
+from .models import (
+    Category,
+    Currency,
+    Measurement,
+    MeasurementType,
+    Product,
+    ProductMessage,
+    Shipping,
+)
 
 
-class ProductVariantInline(admin.StackedInline):
-    model = ProductVariant
-    extra = 1
-
-
-class ProductAdmin(SummernoteModelAdmin, admin.ModelAdmin):
-
-    search_fields = [
-        "name",
-    ]
-
-    list_display = (
-        "name",
-        "category",
-        "price",
-        "sale_price",
-        "rating",
-        "brand",
-        "on_sale",
-        "created_on",
-        "country_origin",
-    )
-    summernote_fields = ("materials",)
-    list_editable = ("on_sale",)
-
-    ordering = ("name",)
+# Register your models here.
 
 
 class CategoryAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ("name",)}
     list_display = (
-        "friendly_name",
         "name",
-    )
-
-
-class ProductVariantAdmin(admin.ModelAdmin):
-    list_display = (
-        "product",
-        "men_shoe_size",
-        "women_shoe_size",
-        "stock_quantity",
-    )
-
-
-class BrandAdmin(admin.ModelAdmin):
-    list_display = (
         "friendly_name",
+    )
+    ordering = (
         "name",
+        "friendly_name",
     )
 
 
-class ReviewsAdmin(admin.ModelAdmin):
+class MeasurementAdmin(admin.ModelAdmin):
     list_display = (
-        "product",
-        "user",
-        "title",
-        "review",
-        "created_on",
-        "updated_on",
+        "name",
+        "abbreviation",
+        "measurement_type",
     )
 
 
-admin.site.register(Product, ProductAdmin)
+class MeasurementTypeAdmin(admin.ModelAdmin):
+    list_display = (
+        "name",
+        "measurement_type",
+    )
+
+
+class ProductAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ("name",)}
+    list_display = (
+        "sku",
+        "name",
+        "category",
+        "price",
+        "rating",
+        "image",
+    )
+    ordering = (
+        "sku",
+        "name",
+        "category",
+        "rating",
+    )
+
+
+class ProductMessageAdmin(admin.ModelAdmin):
+    pass
+
+
+class ShippingAdmin(admin.ModelAdmin):
+    pass
+
+
+class CurrencyAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Currency, CurrencyAdmin)
+admin.site.register(ProductMessage, ProductMessageAdmin)
+admin.site.register(Shipping, ShippingAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(ProductVariant, ProductVariantAdmin)
-admin.site.register(Brand, BrandAdmin)
-admin.site.register(Reviews, ReviewsAdmin)
+admin.site.register(Measurement, MeasurementAdmin)
+admin.site.register(MeasurementType, MeasurementTypeAdmin)
+admin.site.register(Product, ProductAdmin)

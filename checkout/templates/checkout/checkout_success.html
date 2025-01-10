@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block extra_css %}
-    <!-- Include additional CSS styles for this specific template -->
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
@@ -15,7 +14,6 @@
 {% endblock %}
 
 {% block content %}
-    <!-- Main content block for the checkout success page -->
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -26,7 +24,7 @@
                 <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
-        <!-- Display order confirmation details in a structured format -->
+
         <div class="row">
             <div class="col-12 col-lg-7">
                 <div class="order-confirmation-wrapper p-2 border">
@@ -64,25 +62,21 @@
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="small mb-0 text-black font-weight-bold">
-                                {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size }}{% endif %}
+                                {{ item.product.name }}{% if item.product_size %} - Size {{ item.product_size|upper }}{% endif %}
                             </p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            {% if item.product.on_sale %}
-                            <p class="small mb-0">{{ item.quantity }} @ &euro;{{ item.product.sale_price }} each</p>
-                            {% else %}
-                            <p class="small mb-0">{{ item.quantity }} @ &euro;{{ item.product.price }} each</p>
-                            {% endif %}
+                            <p class="small mb-0">{{ item.quantity }} @ ${{ item.product.price }} each</p>
                         </div>
                     </div>
                     {% endfor %}
-                    <!-- Delivering To -->
+
                     <div class="row">
                         <div class="col">
                             <small class="text-muted">Delivering To:</small>
                         </div>
                     </div>
-                    <!-- Display delivery address details -->
+
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Full Name</p>
@@ -107,7 +101,7 @@
                             <p class="mb-0 text-black font-weight-bold">Address 2</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">{{ order.street_address2 }}</p>
+                            <p class="mb-0">{{ order.street_address1 }}</p>
                         </div>
                     </div>
                     {% endif %}
@@ -172,7 +166,7 @@
                             <p class="mb-0 text-black font-weight-bold">Order Total</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">&euro;{{ order.order_total|floatformat:2 }}</p>
+                            <p class="mb-0">${{ order.order_total }}</p>
                         </div>
                     </div>
 
@@ -181,7 +175,7 @@
                             <p class="mb-0 text-black font-weight-bold">Delivery</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">&euro;{{ order.delivery_cost|floatformat:2 }}</p>
+                            <p class="mb-0">${{ order.delivery_cost }}</p>
                         </div>
                     </div>
 
@@ -190,7 +184,7 @@
                             <p class="mb-0 text-black font-weight-bold">Grand Total</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">&euro;{{ order.grand_total|floatformat:2 }}</p>
+                            <p class="mb-0">${{ order.grand_total }}</p>
                         </div>
                     </div>
                 </div>
@@ -199,18 +193,18 @@
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
-                    <a href="{% url 'profile:profile' %}" class="btn btn-black rounded-0 my-2">
+                    <a href="{% url 'profiles:profile' %}" class="btn btn-black rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
                         </span>
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
                 {% else %}
-                    <a href="{% url 'products:products' %}??gender=men,women&category=mens_sale,womens_sale" class="btn btn-black rounded-0 my-2">
+                    <a href="{% url 'products:products' %}" class="btn btn-black rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-gifts"></i>
                         </span>
-                        <span class="text-uppercase">Now check out our sale items!</span>
+                        <span class="text-uppercase">Now check out the latest deals!</span>
                     </a>
                 {% endif %}
 			</div>

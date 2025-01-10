@@ -48,7 +48,7 @@
 
                                 </li>
                                 <li class="round-btn btn-github"><a href="https://github.com/barkode"><i
-                                        class="fa fa-github"
+                                        class="fa-brands fa-github"
                                         aria-hidden="true"></i></a>
 
                                 </li>
@@ -74,13 +74,13 @@
                         <ul class="footer-links">
                             <li><a href="{% url 'home:home' %}">Home</a>
                             </li>
-                            <li><a href="{% url 'home:contact' %}">Contact</a>
+                            <li><a href="{% url 'about:contact' %}">Contact</a>
                             </li>
                             <li><a href="{% url 'blog:home' %}">Blog</a>
                             </li>
-                            <li><a href="{% url 'home:privacy_policy' %}">Privacy Policy</a>
+                            <li><a href="{% url 'about:privacy' %}">Privacy Policy</a>
                             </li>
-                            <li><a href="{% url 'home:returns' %}">Return Policy</a>
+                            <li><a href="{% url 'about:return' %}">Return Policy</a>
                             </li>
                         </ul>
                     </div>
@@ -96,7 +96,7 @@
                                 <li><a href="{% url 'account_login' %}">Login</a>
                                 </li>
                             {% endif %}
-                            <li><a href="{% url 'profile:profile' %}">Profile</a>
+                            <li><a href="{% url 'profiles:profile' %}">Profile</a>
                             </li>
                             <li><a href="{% url 'cart:view_cart' %}">Cart</a>
                             </li>
@@ -115,7 +115,7 @@
                             <li>
                                 <a href="https://www.hse.ie/eng/about/who/healthwellbeing/our-priority-programmes/heal/healthy-eating-guidelines/"
                                    target="_blank"
-                                   rel="noreferrer noopener">Healthy Eating Guidelines</a>
+                                   rel="noreferrer noopener">Healthy Eating Guidelines - HSE.ie</a>
                             </li>
                         </ul>
                     </div>
@@ -123,9 +123,9 @@
 
             </div>
         </div>
-        <div>
+        <div class="">
             {# code fromt https://ordinarycoders.com/blog/article/bootstrap-footers#}
-            <div class="container-fluid footer">
+            <div class="container-fluid">
                 <div class="copyright"> Copyright 2024 | NOT FOR COMMERCIAL USE. It was created for educational
                     purposes.
                 </div>

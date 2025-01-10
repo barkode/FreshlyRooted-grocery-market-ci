@@ -1,22 +1,45 @@
-from django.contrib import admin
-from django.urls import path, include
+"""
+URL configuration for app project.
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/4.2/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
+from django.urls import include, path
+
 from . import views
 
 urlpatterns = [
-    path('', include('home.urls', namespace='home')),
-    path('accounts/', include('allauth.urls')),
-    path('products/', include('products.urls', namespace='products')),
-    path('cart/', include('cart.urls', namespace='cart')),
-    path('checkout/', include('checkout.urls', namespace='checkout')),
-    path('profile/', include('profile.urls', namespace='profile')),
-    path('wishlist/', include('wishlist.urls', namespace='wishlist')),
-    path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls', namespace='blog')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path("", include("home.urls", namespace="home")),
+    path("accounts/", include("allauth.urls")),
+    path("admin/", admin.site.urls),
+    path("about/", include("about.urls", namespace="about")),
+    path("blog/", include("blog.urls", namespace="blog")),
+    path("cart/", include("cart.urls", namespace="cart")),
+    path("checkout/", include("checkout.urls", namespace="checkout")),
+    path("cookies/", include("cookie_consent.urls")),
+    path("favorites/", include("favorites.urls", namespace="favorites")),
+    path("products/", include("products.urls", namespace="products")),
+    path("profile/", include("profiles.urls", namespace="profiles")),
+]
 
-handler400 = views.handler400
-handler403 = views.handler403
-handler404 = views.handler404
-handler500 = views.handler500
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler400 = views.custom_400
+handler403 = views.custom_403
+handler404 = views.custom_404
+handler500 = views.custom_500

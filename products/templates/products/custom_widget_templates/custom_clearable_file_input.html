@@ -1,5 +1,4 @@
 {% if widget.is_initial %}
-    <!-- Display initial content if widget has an initial value -->
     <p>{{ widget.initial_text }}:</p>
     <a href="{{ widget.value.url }}">
         <img width="96" height="96" class="rounded shadow-sm" src="{{ widget.value.url }}">
@@ -12,9 +11,7 @@
     {% endif %}<br>
     {{ widget.input_text }}
 {% endif %}
-<!-- File input button with a specified ID and name -->
 <span class="btn btn-black rounded-0 btn-file">
     Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
-<!-- Display filename placeholder with red text -->
 <strong><p class="text-danger" id="filename"></p></strong>

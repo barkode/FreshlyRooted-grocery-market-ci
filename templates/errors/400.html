@@ -1,29 +1,43 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
+
+
+{% block extra_title %}ERROR 400{% endblock %}
+
+
+{% block page_header %}
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
         </div>
     </div>
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <!-- Display the error message for the 400 page -->
-                <h3 class="display-4 logo-font text-black">
-                    ERROR 400! Bad Request. Sorry, your request contains invalid syntax and cannot be fulfilled. Please
-                    check your request and try again
-                </h3>
-                <div class="my-5">
-                    <!-- Provide a link to return to the main shop page -->
-                    <h4>
-                        <a href="{% url 'products' %}"
-                           class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                            Continue Shopping
-                        </a>
-                    </h4>
+{% endblock %}
+
+
+{% block content %}
+
+
+    <!-- Main content -->
+    <div class="page-contain page-404">
+
+        <div id="main-content" class="main-content">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="content-404 text-right">
+                        <h1 class="heading">400</h1>
+                        <h2 class="title">Bad Request</h2>
+                        <p>Sorry, your request contains invalid syntax and cannot be fulfilled. Please check your request and try again.</p>
+                        <a class="button" href="{% url 'home:home' %}">Go to Home</a>
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 {% endblock %}

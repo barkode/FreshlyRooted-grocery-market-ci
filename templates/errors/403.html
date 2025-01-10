@@ -1,29 +1,42 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
+
+{% block extra_title %}ERROR 403{% endblock %}
+
+
+{% block page_header %}
     <div class="container header-container">
         <div class="row">
             <div class="col"></div>
         </div>
     </div>
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <!-- Display the error message for the 403 page -->
-                <h3 class="display-4 logo-font text-black">
-                    ERROR 403! Access Forbidden. Sorry, you don't have permission to access this page. Please make sure
-                    you have the necessary authorization.
-                </h3>
-                <div class="my-5">
-                    <!-- Provide a link to return to the main shop page -->
-                    <h4>
-                        <a href="{% url 'products' %}"
-                           class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                            Continue Shopping
-                        </a>
-                    </h4>
+{% endblock %}
+
+
+{% block content %}
+
+
+    <!-- Main content -->
+    <div class="page-contain page-404">
+
+        <div id="main-content" class="main-content">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="content-404 text-right">
+                        <h1 class="heading">403</h1>
+                        <h2 class="title">Access Forbidden.</h2>
+                        <p>Sorry, you don't have permission to access this page. Please make sure you have the necessary authorization.</p>
+                        <a class="button" href="{% url 'home:home' %}">Go to Home</a>
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 {% endblock %}

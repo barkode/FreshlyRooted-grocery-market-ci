@@ -1421,17 +1421,6 @@ _Any changes required to the website, they can be made, committed and pushed to 
 - [Django Forum](https://forum.djangoproject.com/)
 - [ChatGPT](https://openai.com/chatgpt/overview/)
 - [CodeInstitute](https://codeinstitute.net/) Boutique Ado project as boilerplate and good django manual.
-- [Unsplash.com](https://unsplash.com/) Use for media content
-    - Photo
-      by <a href="https://unsplash.com/@danielcgold?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-      Dan Gold</a>
-      on <a href="https://unsplash.com/photos/macro-shot-of-vegetable-lot-4_jhDO54BYg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-      Unsplash</a>
-    - Photo
-      by <a href="https://unsplash.com/@1981digital?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-      1981 Digital</a>
-      on <a href="https://unsplash.com/photos/a-fruit-and-vegetable-cart-with-produce-in-it-P0NVxSPpVm4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-      Unsplash</a>
 
 [Back to Top](#contents) :top:
 
