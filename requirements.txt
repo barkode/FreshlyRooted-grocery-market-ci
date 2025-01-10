@@ -2,8 +2,9 @@ asgiref==3.8.1
 astroid==3.3.8
 asttokens==3.0.0
 black==24.10.0
-boto3==1.35.95
-botocore==1.35.95
+bleach==6.2.0
+boto3==1.35.96
+botocore==1.35.96
 certifi==2024.12.14
 charset-normalizer==3.4.1
 click==8.1.8
@@ -21,6 +22,7 @@ django-countries==7.6.1
 django-crispy-forms==2.3
 django-humanize==0.1.2
 django-storages==1.14.4
+django-summernote==0.8.20.0
 executing==2.1.0
 gunicorn==23.0.0
 humanize==4.11.0
@@ -49,10 +51,11 @@ setuptools==75.8.0
 six==1.17.0
 sqlparse==0.5.3
 stack-data==0.6.3
-stripe==11.4.1
+stripe==11.5.0b1
 tomlkit==0.13.2
 traitlets==5.14.3
 typing_extensions==4.12.2
 tzdata==2024.2
 urllib3==2.3.0
 wcwidth==0.2.13
+webencodings==0.5.1
