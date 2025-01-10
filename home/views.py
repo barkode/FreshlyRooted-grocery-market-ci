@@ -1,23 +1,52 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from products.models import Product
+from .forms import ContactForm
+from django.contrib import messages
 
-# Create your views here.
+
+# View for rendering the home page
+def index(request):
+    return render(request, 'home/index.html')
 
 
-def home(request):
+# View for rendering the privacy policy page
+def privacy_policy(request):
     """
-    Renders the home page.
+    FAQs Page
+    """
+    return render(request, "home/privacy_policy.html")
 
-    This view handles requests to the home page URL and
-    renders the corresponding HTML template.
 
-    Args:
-        request: The HTTP request object.
+# View for rendering the returns page
+def returns(request):
 
-    Returns:
-        HttpResponse: The rendered home page.
+    return render(request, "home/returns.html")
+
+
+# View for handling the contact form submission
+def contact(request):
+    """
+    View to return Contact Us form
     """
 
-    return render(
-        request,
-        "home/index.html",
-    )
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request,
+                "Thank you, your email has been sent. We will contact you shortly.",
+            )
+            return redirect("contact")
+        else:
+            messages.error(
+                request, "Form submission failed. Please check the form and try again."
+            )
+    else:
+        form = ContactForm()
+
+    context = {
+        "form": form,
+    }
+
+    return render(request, "home/contact.html", context)
