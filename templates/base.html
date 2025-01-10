@@ -62,11 +62,15 @@
 <body>
 <div class="page-wrapper">
     <header class="container-fluid fixed-top">
+        <div id="delivery-banner" class="row text-center">
+            <div class="col text-white free-delivery-banner">
+                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
+            </div>
+        </div>
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left ">
                 <a href="{% url 'home:home' %}" class="nav-link main-logo-link freshly-logo-container">
                     <img src="{% static 'images/logo.png' %}" alt="Freshly Rooted Logo" class="main-logo" width="200">
-                    {#                    <h2 class="logo-font text-black my-0"><strong>Freshly</strong> Rooted</h2>#}
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -137,11 +141,7 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col text-white free-delivery-banner">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
-            </div>
-        </div>
+
     </header>
 
     {% if messages %}

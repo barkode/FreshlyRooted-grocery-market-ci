@@ -1,3 +1,4 @@
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.text import slugify
 
@@ -93,7 +94,11 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True, default="noimage.png")
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     name = models.CharField(max_length=254)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        validators=[MinValueValidator(0), MaxValueValidator(10000)],
+    )
     sku = models.CharField(max_length=254, unique=True)
     stock_quantity = models.PositiveIntegerField()
     last_updated = models.DateTimeField(auto_now=True)
