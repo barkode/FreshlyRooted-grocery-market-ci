@@ -11,42 +11,39 @@ class ProductVariantInline(admin.StackedInline):
 class ProductAdmin(SummernoteModelAdmin, admin.ModelAdmin):
 
     search_fields = [
-        'name',
+        "name",
     ]
 
     list_display = (
-        'name',
-        'gender',
-        'category',
-        'price',
-        'sale_price',
-        'rating',
-        'brand',
-        'on_sale',
-        'created_on',
-        'country_origin',
+        "name",
+        "category",
+        "price",
+        "sale_price",
+        "rating",
+        "brand",
+        "on_sale",
+        "created_on",
+        "country_origin",
     )
     summernote_fields = ("materials",)
-    list_editable = (
-        "on_sale",
-    )
+    list_editable = ("on_sale",)
 
     ordering = ("name",)
 
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
-        'friendly_name',
-        'name',
+        "friendly_name",
+        "name",
     )
 
 
 class ProductVariantAdmin(admin.ModelAdmin):
     list_display = (
-        'product',
-        'men_shoe_size',
-        'women_shoe_size',
-        'stock_quantity',
+        "product",
+        "men_shoe_size",
+        "women_shoe_size",
+        "stock_quantity",
     )
 
 
