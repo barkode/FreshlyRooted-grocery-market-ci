@@ -91,10 +91,11 @@ INSTALLED_APPS = [
     "products",
     "cart",
     "blog",
-    "about",
+    # "about",
     "checkout",
-    "profiles",
+    "profile",
     "wishlist",
+    "django_summernote",
 ]
 
 MIDDLEWARE = [
@@ -138,7 +139,7 @@ TEMPLATES = [
                 "crispy_forms.templatetags.crispy_forms_field",
             ],
             "libraries": {
-                "cart_tags": "cart.templatetags.cart_tags",
+                "cart_tags": "cart.templatetags.cart_tools",
             },
         },
     },
