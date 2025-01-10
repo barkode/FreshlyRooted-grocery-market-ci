@@ -1,0 +1,2326 @@
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "sku": "ORG-APPL-GALA",
+      "name": "Organic Gala Apples",
+      "description": "Crisp and sweet, perfect for snacking or salads. USDA certified organic.",
+      "price": "3.99",
+      "image_url": "",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-gala-apples",
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "sku": "ORG-BROC-FRESH",
+      "name": "Organic Fresh Broccoli",
+      "description": "Farm-fresh organic broccoli crowns. Rich in vitamins and minerals, perfect for healthy cooking.",
+      "price": "2.99",
+      "image_url": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc",
+      "image": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc",
+      "stock_quantity": 150,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-fresh-broccoli",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "category": 3,
+      "sku": "FRESH-STRAW-ORG",
+      "name": "Organic Strawberries",
+      "description": "Sweet and juicy organic strawberries, freshly picked at peak ripeness. Perfect for snacking or desserts.",
+      "price": "4.99",
+      "image_url": "https://images.unsplash.com/photo-1518635017480-d9d458143a41",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "organic-strawberries",
+      "image": "https://images.unsplash.com/photo-1518635017480-d9d458143a41",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "category": 4,
+      "sku": "FRESH-SALMON-WILD",
+      "name": "Wild-Caught Atlantic Salmon",
+      "description": "Premium wild-caught Atlantic salmon fillet. Rich in omega-3 fatty acids and protein.",
+      "price": "18.99",
+      "image_url": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2",
+      "stock_quantity": 75,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "wild-caught-atlantic-salmon",
+      "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "category": 5,
+      "sku": "ORG-EGGS-FREE",
+      "name": "Free-Range Organic Eggs",
+      "description": "Farm-fresh organic eggs from free-range hens. Rich, golden yolks and superior taste.",
+      "price": "5.99",
+      "image_url": "https://images.unsplash.com/photo-1518492104633-130d0cc84637",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 2,
+      "measurement_value": 12.0,
+      "slug": "free-range-organic-eggs",
+      "image": "https://images.unsplash.com/photo-1518492104633-130d0cc84637",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "category": 6,
+      "sku": "ORG-APPLE-RED",
+      "name": "Organic Red Apple",
+      "description": "Crisp and juicy organic red apples. Perfect for snacking or baking.",
+      "price": "1.99",
+      "image_url": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce",
+      "stock_quantity": 250,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-red-apple",
+      "image": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "category": 7,
+      "sku": "FRESH-CHICKEN-BREAST",
+      "name": "Fresh Chicken Breast",
+      "description": "Boneless, skinless chicken breast, perfect for grilling or baking. High in protein and low in fat.",
+      "price": "9.99",
+      "image_url": "https://images.unsplash.com/photo-1589927986089-3581234c1c1c",
+      "stock_quantity": 80,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "fresh-chicken-breast",
+      "image": "https://images.unsplash.com/photo-1589927986089-3581234c1c1c",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "category": 8,
+      "sku": "FRESH-ONION-YELLOW",
+      "name": "Fresh Yellow Onions",
+      "description": "Crisp and flavorful yellow onions, perfect for cooking and seasoning.",
+      "price": "1.49",
+      "image_url": "https://images.unsplash.com/photo-1577301721847-5bcf4d4613df",
+      "stock_quantity": 300,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "fresh-yellow-onions",
+      "image": "https://images.unsplash.com/photo-1577301721847-5bcf4d4613df",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "category": 9,
+      "sku": "PAPAYA-CRISPS",
+      "name": "Papaya Crisps",
+      "description": "Delicious and crunchy papaya crisps, perfect for snacking or adding to salads.",
+      "price": "3.49",
+      "image_url": "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc",
+      "stock_quantity": 120,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 100.0,
+      "slug": "papaya-crisps",
+      "image": "https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "category": 10,
+      "sku": "OATMEAL-ORGANIC",
+      "name": "Organic Oatmeal",
+      "description": "Whole grain organic oatmeal, perfect for a healthy breakfast. High in fiber and nutrients.",
+      "price": "4.99",
+      "image_url": "https://images.unsplash.com/photo-1572441719239-e067b2e2e36d",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "organic-oatmeal",
+      "image": "https://images.unsplash.com/photo-1572441719239-e067b2e2e36d",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+      "category": 11,
+      "sku": "ORG-BANANA",
+      "name": "Organic Banana",
+      "description": "Fresh organic bananas. Perfect for smoothies and snacks.",
+      "price": "1.50",
+      "image_url": "https://images.unsplash.com/photo-1554018901-3ba665177790",
+      "stock_quantity": 230,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-banana",
+      "image": "https://images.unsplash.com/photo-1554018901-3ba665177790",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+      "category": 12,
+      "sku": "ORG-CARROT",
+      "name": "Organic Carrot",
+      "description": "Crunchy organic carrots, perfect for salads and cooking.",
+      "price": "2.49",
+      "image_url": "https://images.unsplash.com/photo-1506808547685-e2ba962ded53",
+      "stock_quantity": 180,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1000.0,
+      "slug": "organic-carrot",
+      "image": "https://images.unsplash.com/photo-1506808547685-e2ba962ded53",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+      "category": 13,
+      "sku": "ORG-AVOCADO",
+      "name": "Organic Avocado",
+      "description": "Ripe organic avocados, perfect for guacamole and salads.",
+      "price": "3.99",
+      "image_url": "https://images.unsplash.com/photo-1511810307173-45a236c58d66",
+      "stock_quantity": 150,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-avocado",
+      "image": "https://images.unsplash.com/photo-1511810307173-45a236c58d66",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+      "category": 14,
+      "sku": "ORG-CAULIFLOWER",
+      "name": "Organic Cauliflower",
+      "description": "Fresh organic cauliflower, perfect for roasting or grilling.",
+      "price": "3.50",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 90,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-cauliflower",
+      "image": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+      "category": 15,
+      "sku": "ORG-PEPPER-RED",
+      "name": "Organic Red Bell Pepper",
+      "description": "Sweet and crunchy organic red bell peppers.",
+      "price": "2.99",
+      "image_url": "https://images.unsplash.com/photo-1577301750287-f5548feed413",
+      "stock_quantity": 85,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-red-bell-pepper",
+      "image": "https://images.unsplash.com/photo-1577301750287-f5548feed413",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+      "category": 16,
+      "sku": "ORG-CUCUMBER",
+      "name": "Organic Cucumber",
+      "description": "Fresh organic cucumbers, perfect for salads or snacking.",
+      "price": "1.99",
+      "image_url": "https://images.unsplash.com/photo-1550258987-190a2d41a8df",
+      "stock_quantity": 70,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-cucumber",
+      "image": "https://images.unsplash.com/photo-1550258987-190a2d41a8df",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+      "category": 17,
+      "sku": "ORG-LETTUCE",
+      "name": "Organic Lettuce",
+      "description": "Crisp and fresh organic lettuce, perfect for salads and sandwiches.",
+      "price": "2.49",
+      "image_url": "https://images.unsplash.com/photo-1601002021150-1c1c1c1c1c1c",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-lettuce",
+      "image": "https://images.unsplash.com/photo-1601002021150-1c1c1c1c1c1c",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+      "category": 18,
+      "sku": "ORG-TOMATO",
+      "name": "Organic Tomato",
+      "description": "Juicy and ripe organic tomatoes, great for salads and sandwiches.",
+      "price": "3.99",
+      "image_url": "https://images.unsplash.com/photo-1567302580007-6cf32727081b",
+      "stock_quantity": 90,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-tomato",
+      "image": "https://images.unsplash.com/photo-1567302580007-6cf32727081b",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+      "category": 19,
+      "sku": "ORG-PEAR",
+      "name": "Organic Pear",
+      "description": "Sweet and juicy organic pears, perfect for snacks and desserts.",
+      "price": "2.99",
+      "image_url": "https://images.unsplash.com/photo-1561043433-aaf687c4cf4f",
+      "stock_quantity": 110,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-pear",
+      "image": "https://images.unsplash.com/photo-1561043433-aaf687c4cf4f",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+      "category": 20,
+      "sku": "ORG-SPINACH",
+      "name": "Organic Spinach",
+      "description": "Fresh and crisp organic spinach, rich in vitamins and minerals.",
+      "price": "4.99",
+      "image_url": "https://images.unsplash.com/photo-1541544181001-59a9f82828d8",
+      "stock_quantity": 80,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "organic-spinach",
+      "image": "https://images.unsplash.com/photo-1541544181001-59a9f82828d8",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+      "category": 21,
+      "sku": "ORG-ZUCCHINI",
+      "name": "Organic Zucchini",
+      "description": "Fresh organic zucchini, perfect for grilling and baking.",
+      "price": "1.99",
+      "image_url": "https://images.unsplash.com/photo-1550258985-6d00b1c1e77c",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-zucchini",
+      "image": "https://images.unsplash.com/photo-1550258985-6d00b1c1e77c",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+      "category": 22,
+      "sku": "ORG-GRAPE",
+      "name": "Organic Grapes",
+      "description": "Sweet and juicy organic grapes, perfect for snacks and desserts.",
+      "price": "3.99",
+      "image_url": "https://images.unsplash.com/photo-1567304557661-92d2c584c108",
+      "stock_quantity": 70,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "organic-grapes",
+      "image": "https://images.unsplash.com/photo-1567304557661-92d2c584c108",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+      "category": 23,
+      "sku": "ORG-BLUEBERRY",
+      "name": "Organic Blueberries",
+      "description": "Fresh and juicy organic blueberries, perfect for smoothies and snacking.",
+      "price": "5.99",
+      "image_url": "https://images.unsplash.com/photo-1561042902-16da746c4d7b",
+      "stock_quantity": 90,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "organic-blueberries",
+      "image": "https://images.unsplash.com/photo-1561042902-16da746c4d7b",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+      "category": 24,
+      "sku": "ORG-POTATO",
+      "name": "Organic Potato",
+      "description": "Fresh and starchy organic potatoes, perfect for baking and cooking.",
+      "price": "2.49",
+      "image_url": "https://images.unsplash.com/photo-1556742042-2b873dd0e87e",
+      "stock_quantity": 185,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1000.0,
+      "slug": "organic-potato",
+      "image": "https://images.unsplash.com/photo-1556742042-2b873dd0e87e",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 25,
+    "fields": {
+      "category": 25,
+      "sku": "ORG-LEMON",
+      "name": "Organic Lemon",
+      "description": "Fresh and tangy organic lemons, perfect for cooking and beverages.",
+      "price": "1.99",
+      "image_url": "https://images.unsplash.com/photo-1571687949920-dbdd0559fbd6",
+      "stock_quantity": 120,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-lemon",
+      "image": "https://images.unsplash.com/photo-1571687949920-dbdd0559fbd6",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 26,
+    "fields": {
+      "category": 26,
+      "sku": "ORG-PEACH",
+      "name": "Organic Peach",
+      "description": "Sweet and juicy organic peaches, perfect for desserts and snacking.",
+      "price": "3.49",
+      "image_url": "https://images.unsplash.com/photo-1530292259256-4ca1e6f45392",
+      "stock_quantity": 80,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-peach"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 27,
+    "fields": {
+      "category": 27,
+      "sku": "ORG-PLUM",
+      "name": "Organic Plum",
+      "description": "Sweet and juicy organic plums, great for snacking and desserts.",
+      "price": "2.99",
+      "image_url": "https://images.unsplash.com/photo-1567304557661-92d2c584d0fd",
+      "stock_quantity": 95,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-plum"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 28,
+    "fields": {
+      "category": 28,
+      "sku": "ORG-AVOCADO",
+      "name": "Organic Avocado",
+      "description": "Creamy and rich organic avocados, perfect for guacamole and toast.",
+      "price": "1.99",
+      "image_url": "https://images.unsplash.com/photo-1556740749-7a1b87b80937",
+      "stock_quantity": 150,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-avocado"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 29,
+    "fields": {
+      "category": 29,
+      "sku": "ORG-CHERRY",
+      "name": "Organic Cherries",
+      "description": "Sweet and juicy organic cherries, great for snacking and baking.",
+      "price": "6.99",
+      "image_url": "https://images.unsplash.com/photo-1567302648101-8194896d9c3c",
+      "stock_quantity": 70,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "organic-cherries"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 30,
+    "fields": {
+      "category": 30,
+      "sku": "ORG-STRAWBERRY",
+      "name": "Organic Strawberries",
+      "description": "Fresh and juicy organic strawberries, great for desserts and snacks.",
+      "price": "4.99",
+      "image_url": "https://images.unsplash.com/photo-1582515073493-ff4670dc36f9",
+      "stock_quantity": 110,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "organic-strawberries"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 31,
+    "fields": {
+      "category": 31,
+      "sku": "ORG-PINEAPPLE",
+      "name": "Organic Pineapple",
+      "description": "Juicy and sweet organic pineapples, perfect for snacks and tropical dishes.",
+      "price": "3.99",
+      "image_url": "https://images.unsplash.com/photo-1571687949920-dbdd0559fbd1",
+      "stock_quantity": 85,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-pineapple"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 32,
+    "fields": {
+      "category": 32,
+      "sku": "ORG-MANGO",
+      "name": "Organic Mango",
+      "description": "Succulent organic mangoes, perfect for fruit salads and smoothies.",
+      "price": "2.49",
+      "image_url": "https://images.unsplash.com/photo-1524594158579-cd5342d73720",
+      "stock_quantity": 75,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-mango"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 33,
+    "fields": {
+      "category": 33,
+      "sku": "ORG-WATERMELON",
+      "name": "Organic Watermelon",
+      "description": "Refreshing organic watermelons, great for summer snacks.",
+      "price": "4.99",
+      "image_url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+      "stock_quantity": 60,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-watermelon"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 34,
+    "fields": {
+      "category": 34,
+      "sku": "ORG-BROCCOLI",
+      "name": "Organic Broccoli",
+      "description": "Fresh and nutritious organic broccoli, perfect for healthy meals.",
+      "price": "1.99",
+      "image_url": "https://images.unsplash.com/photo-1572441714389-df036afa263d",
+      "stock_quantity": 50,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-broccoli"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 35,
+    "fields": {
+      "category": 35,
+      "sku": "ORG-CARROT",
+      "name": "Organic Carrot",
+      "description": "Crunchy and sweet organic carrots, perfect for snacking and cooking.",
+      "price": "2.49",
+      "image_url": "https://images.unsplash.com/photo-157105892bao-15190e74adac",
+      "stock_quantity": 130,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-carrot"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 36,
+    "fields": {
+      "category": 36,
+      "sku": "ORG-BEETROOT",
+      "name": "Organic Beetroot",
+      "description": "Earthy and healthy organic beetroots, perfect for salads and cooking.",
+      "price": "3.49",
+      "image_url": "https://images.unsplash.com/photo-1562140610-6954b805d7d6",
+      "stock_quantity": 95,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-beetroot"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 37,
+    "fields": {
+      "category": 37,
+      "sku": "ORG-CUCUMBER",
+      "name": "Organic Cucumber",
+      "description": "Crisp and cool organic cucumbers, perfect for salads and snacking.",
+      "price": "1.99",
+      "image_url": "https://images.unsplash.com/photo-1572441714389-d001f2f1ca4f",
+      "stock_quantity": 110,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-cucumber"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 38,
+    "fields": {
+      "category": 38,
+      "sku": "ORG-ZUCCHINI",
+      "name": "Organic Zucchini",
+      "description": "Versatile organic zucchini, perfect for cooking and baking.",
+      "price": "2.99",
+      "image_url": "https://images.unsplash.com/photo-1572441714389-e991f2f1cf5f",
+      "stock_quantity": 140,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-zucchini",
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 39,
+    "fields": {
+      "category": 39,
+      "sku": "ORG-SPINACH",
+      "name": "Organic Spinach",
+      "description": "Fresh and healthy organic spinach, perfect for salads and cooking.",
+      "price": "3.49",
+      "image_url": "https://images.unsplash.com/photo-1530243832470-675dd19c648d",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-spinach"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 40,
+    "fields": {
+      "category": 40,
+      "sku": "ORG-PARSNIP",
+      "name": "Organic Parsnip",
+      "description": "Sweet and earthy organic parsnips, perfect for roasting and soups.",
+      "price": "2.29",
+      "image_url": "https://images.unsplash.com/photo-1561059123456-78a7f521c7e3",
+      "stock_quantity": 78,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-parsnip"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 41,
+    "fields": {
+      "category": 41,
+      "sku": "ORG-KALE",
+      "name": "Organic Kale",
+      "description": "Nutrient-rich organic kale, perfect for smoothies and salads.",
+      "price": "3.19",
+      "image_url": "https://images.unsplash.com/photo-1599986671142-287f3a41157b",
+      "stock_quantity": 90,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-kale"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 42,
+    "fields": {
+      "category": 42,
+      "sku": "ORG-PEPPER",
+      "name": "Organic Bell Pepper",
+      "description": "Sweet and crunchy organic bell peppers, perfect for snacking and cooking.",
+      "price": "1.49",
+      "image_url": "https://images.unsplash.com/photo-1556800512-45211e5711c1",
+      "stock_quantity": 120,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-bell-pepper"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 43,
+    "fields": {
+      "category": 43,
+      "sku": "ORG-POTATO",
+      "name": "Organic Potato",
+      "description": "Versatile organic potatoes, perfect for various dishes.",
+      "price": "0.99",
+      "image_url": "https://images.unsplash.com/photo-1562330610-8f11c4a034b1",
+      "stock_quantity": 250,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-potato"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 44,
+    "fields": {
+      "category": 44,
+      "sku": "ORG-TOMATO",
+      "name": "Organic Tomato",
+      "description": "Juicy and flavorful organic tomatoes, perfect for salads and cooking.",
+      "price": "1.29",
+      "image_url": "https://images.unsplash.com/photo-1582515073492-26f2367b8fa4",
+      "stock_quantity": 210,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-tomato"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 45,
+    "fields": {
+      "category": 45,
+      "sku": "ORG-LETTUCE",
+      "name": "Organic Lettuce",
+      "description": "Fresh and crisp organic lettuce, perfect for salads and sandwiches.",
+      "price": "1.09",
+      "image_url": "https://images.unsplash.com/photo-1506806732259-39c2d0268443",
+      "stock_quantity": 180,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-lettuce"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 46,
+    "fields": {
+      "category": 46,
+      "sku": "ORG-AVOCADO",
+      "name": "Organic Avocado",
+      "description": "Creamy organic avocados, perfect for guacamole and salads.",
+      "price": "2.89",
+      "image_url": "https://images.unsplash.com/photo-1524594166737-2fa48ed9f5fc",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-avocado"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 47,
+    "fields": {
+      "category": 47,
+      "sku": "ORG-GRAPE",
+      "name": "Organic Grapes",
+      "description": "Sweet and juicy organic grapes, perfect for snacking and desserts.",
+      "price": "3.99",
+      "image_url": "https://images.unsplash.com/photo-1599986671142-287f3a41157b",
+      "stock_quantity": 70,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-grapes"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 48,
+    "fields": {
+      "category": 48,
+      "sku": "ORG-BLUEBERRY",
+      "name": "Organic Blueberries",
+      "description": "Fresh and sweet organic blueberries, perfect for snacking and baking.",
+      "price": "4.49",
+      "image_url": "https://images.unsplash.com/photo-1563805042-7684bfb99f6f",
+      "stock_quantity": 65,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-blueberries"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 49,
+    "fields": {
+      "category": 49,
+      "sku": "ORG-STRAWBERRY",
+      "name": "Organic Strawberries",
+      "description": "Sweet and juicy organic strawberries, perfect for snacking and baking.",
+      "price": "4.99",
+      "image_url": "https://images.unsplash.com/photo-1530243832470-675dd19c648d",
+      "stock_quantity": 150,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-strawberries"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 50,
+    "fields": {
+      "category": 50,
+      "sku": "ORG-BLACKBERRY",
+      "name": "Organic Blackberries",
+      "description": "Fresh and tart organic blackberries, perfect for snacking and baking.",
+      "price": "4.69",
+      "image_url": "https://images.unsplash.com/photo-1566425361361-24f5b54e457a",
+      "stock_quantity": 95,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-blackberries"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 51,
+    "fields": {
+      "category": 1,
+      "sku": "MIXED-NUTS-PREMIUM",
+      "name": "Premium Mixed Nuts Gift Box",
+      "description": "Luxury assortment of fresh premium nuts including almonds, cashews, pecans, and macadamia nuts. Perfect for gifting or special occasions.",
+      "price": "24.99",
+      "image_url": "https://images.unsplash.com/photo-1606923829579-0cb981a83e2e",
+      "stock_quantity": 50,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "premium-mixed-nuts-gift-box"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 52,
+    "fields": {
+      "category": 2,
+      "sku": "ORG-BROC-FRESH",
+      "name": "Organic Fresh Broccoli",
+      "description": "Farm-fresh organic broccoli crowns. Rich in vitamins and minerals, perfect for healthy cooking.",
+      "price": "2.99",
+      "image_url": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc",
+      "stock_quantity": 150,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-fresh-broccoli"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 53,
+    "fields": {
+      "category": 3,
+      "sku": "FRESH-STRAW-ORG",
+      "name": "Organic Strawberries",
+      "description": "Sweet and juicy organic strawberries, freshly picked at peak ripeness. Perfect for snacking or desserts.",
+      "price": "4.99",
+      "image_url": "https://images.unsplash.com/photo-1518635017480-d9d458143a41",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "organic-strawberries"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 54,
+    "fields": {
+      "category": 4,
+      "sku": "FRESH-SALMON-WILD",
+      "name": "Wild-Caught Atlantic Salmon",
+      "description": "Premium wild-caught Atlantic salmon fillet. Rich in omega-3 fatty acids and protein.",
+      "price": "18.99",
+      "image_url": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2",
+      "stock_quantity": 75,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "wild-caught-atlantic-salmon"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 55,
+    "fields": {
+      "category": 5,
+      "sku": "ORG-EGGS-FREE",
+      "name": "Free-Range Organic Eggs",
+      "description": "Farm-fresh organic eggs from free-range hens. Rich, golden yolks and superior taste.",
+      "price": "5.99",
+      "image_url": "https://images.unsplash.com/photo-1518492104633-130d0cc84637",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 2,
+      "measurement_value": 12.0,
+      "slug": "free-range-organic-eggs"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 56,
+    "fields": {
+      "category": 6,
+      "sku": "FAST-FOOD-BURGER",
+      "name": "Classic Cheeseburger",
+      "description": "Juicy beef patty topped with melted cheese, lettuce, tomato, and special sauce. Served with fries.",
+      "price": "8.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "classic-cheeseburger"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 57,
+    "fields": {
+      "category": 7,
+      "sku": "FRESH-CHICKEN-BREAST",
+      "name": "Fresh Chicken Breast",
+      "description": "Boneless, skinless chicken breast, perfect for grilling or baking. High in protein and low in fat.",
+      "price": "9.99",
+      "image_url": "https://images.unsplash.com/photo-1589927986089-3581234c1c1c",
+      "stock_quantity": 80,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "fresh-chicken-breast"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 58,
+    "fields": {
+      "category": 8,
+      "sku": "FRESH-ONION-YELLOW",
+      "name": "Fresh Yellow Onions",
+      "description": "Crisp and flavorful yellow onions, perfect for cooking and seasoning.",
+      "price": "1.49",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 300,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "fresh-yellow-onions"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 59,
+    "fields": {
+      "category": 9,
+      "sku": "PAPAYA-CRISPS",
+      "name": "Papaya Crisps",
+      "description": "Delicious and crunchy papaya crisps, perfect for snacking or adding to salads.",
+      "price": "3.49",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 120,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 100.0,
+      "slug": "papaya-crisps"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 60,
+    "fields": {
+      "category": 10,
+      "sku": "OATMEAL-ORGANIC",
+      "name": "Organic Oatmeal",
+      "description": "Whole grain organic oatmeal, perfect for a healthy breakfast. High in fiber and nutrients.",
+      "price": "4.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "organic-oatmeal"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 61,
+    "fields": {
+      "category": 11,
+      "sku": "BANANAS-FRESH",
+      "name": "Fresh Bananas",
+      "description": "Sweet and ripe bananas, perfect for snacking or baking.",
+      "price": "0.59",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 300,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "fresh-bananas"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 62,
+    "fields": {
+      "category": 1,
+      "sku": "NUTS-ALMONDS",
+      "name": "Raw Almonds",
+      "description": "High-quality raw almonds, perfect for snacking or baking.",
+      "price": "9.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 150,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "raw-almonds"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 63,
+    "fields": {
+      "category": 2,
+      "sku": "ORG-CARROTS",
+      "name": "Organic Carrots",
+      "description": "Fresh organic carrots, crunchy and sweet. Perfect for salads or snacking.",
+      "price": "1.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "organic-carrots"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 64,
+    "fields": {
+      "category": 3,
+      "sku": "FRESH-RASPBERRIES",
+      "name": "Fresh Raspberries",
+      "description": "Delicious and sweet fresh raspberries, perfect for desserts or snacking.",
+      "price": "5.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 80,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "fresh-raspberries"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 65,
+    "fields": {
+      "category": 4,
+      "sku": "FRESH-TUNA",
+      "name": "Fresh Tuna Steak",
+      "description": "High-quality fresh tuna steak, perfect for grilling or searing.",
+      "price": "16.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 60,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 300.0,
+      "slug": "fresh-tuna-steak"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 66,
+    "fields": {
+      "category": 5,
+      "sku": "BUTTER-ORGANIC",
+      "name": "Organic Butter",
+      "description": "Rich and creamy organic butter, perfect for cooking and baking.",
+      "price": "4.49",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "organic-butter"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 67,
+    "fields": {
+      "category": 6,
+      "sku": "FAST-FOOD-PIZZA",
+      "name": "Pepperoni Pizza",
+      "description": "Delicious pepperoni pizza with a crispy crust and rich cheese.",
+      "price": "12.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 50,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "pepperoni-pizza"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 68,
+    "fields": {
+      "category": 7,
+      "sku": "FRESH-BEEF",
+      "name": "Fresh Ground Beef",
+      "description": "High-quality ground beef, perfect for burgers and meatballs.",
+      "price": "8.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 90,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "fresh-ground-beef"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 69,
+    "fields": {
+      "category": 8,
+      "sku": "FRESH-GARLIC",
+      "name": "Fresh Garlic",
+      "description": "Aromatic fresh garlic, perfect for seasoning and cooking.",
+      "price": "0.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 100.0,
+      "slug": "fresh-garlic"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 70,
+    "fields": {
+      "category": 9,
+      "sku": "PAPAYA-FRESH",
+      "name": "Fresh Papaya",
+      "description": "Sweet and ripe fresh papaya, perfect for smoothies or desserts.",
+      "price": "3.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 150,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "fresh-papaya"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 71,
+    "fields": {
+      "category": 10,
+      "sku": "OATMEAL-APPLE",
+      "name": "Apple Cinnamon Oatmeal",
+      "description": "Delicious apple cinnamon oatmeal, perfect for a quick breakfast.",
+      "price": "3.49",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "apple-cinnamon-oatmeal"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 72,
+    "fields": {
+      "category": 11,
+      "sku": "BANANA-CHIPS",
+      "name": "Banana Chips",
+      "description": "Crunchy and sweet banana chips, perfect for snacking.",
+      "price": "2.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 150.0,
+      "slug": "banana-chips"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 73,
+    "fields": {
+      "category": 1,
+      "sku": "NUTS-PECANS",
+      "name": "Raw Pecans",
+      "description": "High-quality raw pecans, perfect for baking or snacking.",
+      "price": "10.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 80,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "raw-pecans"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 74,
+    "fields": {
+      "category": 2,
+      "sku": "ORG-BEETS",
+      "name": "Organic Beets",
+      "description": "Fresh organic beets, perfect for salads or roasting.",
+      "price": "2.49",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 150,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "organic-beets"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 75,
+    "fields": {
+      "category": 3,
+      "sku": "FRESH-BLUEBERRIES",
+      "name": "Fresh Blueberries",
+      "description": "Sweet and juicy fresh blueberries, perfect for desserts or snacking.",
+      "price": "5.49",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 90,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "fresh-blueberries"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 76,
+    "fields": {
+      "category": 4,
+      "sku": "FRESH-SHRIMP",
+      "name": "Fresh Shrimp",
+      "description": "High-quality fresh shrimp, perfect for grilling or sautéing.",
+      "price": "14.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 70,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "fresh-shrimp"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 77,
+    "fields": {
+      "category": 5,
+      "sku": "BUTTER-ALMOND",
+      "name": "Almond Butter",
+      "description": "Creamy almond butter, perfect for spreading or baking.",
+      "price": "6.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "almond-butter"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 78,
+    "fields": {
+      "category": 6,
+      "sku": "FAST-FOOD-CHICKEN",
+      "name": "Fried Chicken Sandwich",
+      "description": "Crispy fried chicken sandwich with lettuce and mayo.",
+      "price": "9.49",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 60,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "fried-chicken-sandwich"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 79,
+    "fields": {
+      "category": 7,
+      "sku": "FRESH-PORK",
+      "name": "Fresh Pork Chops",
+      "description": "Juicy fresh pork chops, perfect for grilling or baking.",
+      "price": "10.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 80,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "fresh-pork-chops"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 80,
+    "fields": {
+      "category": 8,
+      "sku": "FRESH-LEMONS",
+      "name": "Fresh Lemons",
+      "description": "Fresh lemons, perfect for cooking and beverages.",
+      "price": "0.79",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "fresh-lemons"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 81,
+    "fields": {
+      "category": 9,
+      "sku": "PAPAYA-DRIED",
+      "name": "Dried Papaya",
+      "description": "Sweet and chewy dried papaya, perfect for snacking.",
+      "price": "4.49",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 120,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 150.0,
+      "slug": "dried-papaya"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 82,
+    "fields": {
+      "category": 10,
+      "sku": "OATMEAL-CHOCOLATE",
+      "name": "Chocolate Oatmeal",
+      "description": "Delicious chocolate oatmeal, perfect for a quick breakfast.",
+      "price": "3.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "chocolate-oatmeal"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 83,
+    "fields": {
+      "category": 11,
+      "sku": "BANANA-ORGANIC",
+      "name": "Organic Bananas",
+      "description": "Sweet and ripe organic bananas, perfect for snacking or baking.",
+      "price": "0.79",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 300,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "organic-bananas"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 84,
+    "fields": {
+      "category": 1,
+      "sku": "NUTS-HAZELNUTS",
+      "name": "Raw Hazelnuts",
+      "description": "High-quality raw hazelnuts, perfect for baking or snacking.",
+      "price": "11.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 70,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "raw-hazelnuts"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 85,
+    "fields": {
+      "category": 2,
+      "sku": "ORG-LETTUCE",
+      "name": "Organic Lettuce",
+      "description": "Fresh organic lettuce, perfect for salads and sandwiches.",
+      "price": "1.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "organic-lettuce"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 86,
+    "fields": {
+      "category": 3,
+      "sku": "FRESH-CHERRIES",
+      "name": "Fresh Cherries",
+      "description": "Sweet and juicy fresh cherries, perfect for desserts or snacking.",
+      "price": "6.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 80,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "fresh-cherries"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 87,
+    "fields": {
+      "category": 4,
+      "sku": "FRESH-COD",
+      "name": "Fresh Cod Fillet",
+      "description": "High-quality fresh cod fillet, perfect for baking or frying.",
+      "price": "15.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 60,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 300.0,
+      "slug": "fresh-cod-fillet"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 88,
+    "fields": {
+      "category": 5,
+      "sku": "BUTTER-CREAM",
+      "name": "Whipped Cream",
+      "description": "Light and fluffy whipped cream, perfect for desserts.",
+      "price": "3.49",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "whipped-cream"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 89,
+    "fields": {
+      "category": 6,
+      "sku": "FAST-FOOD-ICECREAM",
+      "name": "Ice Cream Sundae",
+      "description": "Delicious ice cream sundae topped with chocolate sauce and nuts.",
+      "price": "5.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 50,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "ice-cream-sundae"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 90,
+    "fields": {
+      "category": 7,
+      "sku": "FRESH-LAMB",
+      "name": "Fresh Lamb Chops",
+      "description": "Tender fresh lamb chops, perfect for grilling or roasting.",
+      "price": "19.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 40,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "fresh-lamb-chops"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 91,
+    "fields": {
+      "category": 8,
+      "sku": "FRESH-THYME",
+      "name": "Fresh Thyme",
+      "description": "Aromatic fresh thyme, perfect for seasoning and cooking.",
+      "price": "1.29",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 100.0,
+      "slug": "fresh-thyme"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 92,
+    "fields": {
+      "category": 9,
+      "sku": "PAPAYA-SMOOTHIE",
+      "name": "Papaya Smoothie",
+      "description": "Refreshing papaya smoothie, perfect for a healthy drink.",
+      "price": "4.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "papaya-smoothie"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 93,
+    "fields": {
+      "category": 10,
+      "sku": "OATMEAL-PEANUT",
+      "name": "Peanut Butter Oatmeal",
+      "description": "Delicious peanut butter oatmeal, perfect for a quick breakfast.",
+      "price": "3.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "peanut-butter-oatmeal"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 94,
+    "fields": {
+      "category": 11,
+      "sku": "BANANA-CHOCOLATE",
+      "name": "Chocolate Covered Bananas",
+      "description": "Delicious chocolate-covered bananas, perfect for snacking.",
+      "price": "2.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 150.0,
+      "slug": "chocolate-covered-bananas"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 95,
+    "fields": {
+      "category": 1,
+      "sku": "NUTS-PISTACHIOS",
+      "name": "Raw Pistachios",
+      "description": "High-quality raw pistachios, perfect for snacking.",
+      "price": "12.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 70,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "raw-pistachios"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 96,
+    "fields": {
+      "category": 2,
+      "sku": "ORG-SPINACH",
+      "name": "Organic Spinach",
+      "description": "Fresh organic spinach, perfect for salads and cooking.",
+      "price": "2.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 200,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "organic-spinach"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 97,
+    "fields": {
+      "category": 3,
+      "sku": "FRESH-PEACHES",
+      "name": "Fresh Peaches",
+      "description": "Sweet and juicy fresh peaches, perfect for desserts or snacking.",
+      "price": "5.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 80,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "fresh-peaches"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 98,
+    "fields": {
+      "category": 4,
+      "sku": "FRESH-SHRIMP-COOKED",
+      "name": "Cooked Shrimp",
+      "description": "Delicious cooked shrimp, perfect for salads and appetizers.",
+      "price": "16.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 60,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 500.0,
+      "slug": "cooked-shrimp"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 99,
+    "fields": {
+      "category": 5,
+      "sku": "BUTTER-COCONUT",
+      "name": "Coconut Butter",
+      "description": "Creamy coconut butter, perfect for spreading or baking.",
+      "price": "6.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 100,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 250.0,
+      "slug": "coconut-butter"
+      "image": "",
+      "rating": null,
+      "shipping": null,
+      "message": null,
+      "currency": null,
+      "discount": null
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 100,
+    "fields": {
+      "category": 6,
+      "sku": "FAST-FOOD-ICECREAM-SANDWICH",
+      "name": "Ice Cream Sandwich",
+      "description": "Delicious ice cream sandwich with chocolate cookies.",
+      "price": "3.99",
+      "image_url": "https://images.unsplash.com/photo-1601002022025-1c1c1c1c1c1c",
+      "stock_quantity": 50,
+      "added_date": "2024-10-24T00:00:00Z",
+      "measurement": 1,
+      "measurement_value": 1.0,
+      "slug": "ice-cream-sandwich"
+    }
+  }
+]
