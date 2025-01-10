@@ -1,11 +1,9 @@
 from django.contrib import admin
-from .models import Favorites
+from .models import Wishlist
 
 
-# Define the admin configuration for the Favorites model
-
-
-class FavoritesAdmin(admin.ModelAdmin):
+# Define the admin configuration for the Wishlist model
+class WishlistAdmin(admin.ModelAdmin):
 
     search_fields = [
         "user",
@@ -20,5 +18,5 @@ class FavoritesAdmin(admin.ModelAdmin):
     ordering = ("user",)
 
 
-# Register the Favorites model with its corresponding admin configuration
-admin.site.register(Favorites, FavoritesAdmin)
+# Register the Wishlist model with its corresponding admin configuration
+admin.site.register(Wishlist, WishlistAdmin)

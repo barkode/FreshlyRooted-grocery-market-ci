@@ -1,59 +1,53 @@
-from django.contrib import messages
-from django.http import Http404
 from django.shortcuts import (
+    render,
+    redirect,
+    reverse,
     get_object_or_404,
     HttpResponseRedirect,
-    redirect,
-    render,
-    reverse,
 )
+from django.contrib import messages
+from django.http import Http404
 
+from .models import Wishlist
+from profile.models import UserProfile
 from products.models import Product
-from profiles.models import UserProfile
-from .models import Favorites
 
 
-# View to display the user's wishlist list
-def view_favorites(request):
+# View to display the user's wishlist
+def view_wishlist(request):
     if not request.user.is_authenticated:
         messages.error(
-            request, "Sorry, you need to be logged in to add to your Favorites."
+            request, "Sorry, you need to be logged in to add to your Wishlist."
         )
         return redirect(reverse("account_login"))
 
     user = get_object_or_404(UserProfile, user=request.user)
-    favorites, created = Favorites.objects.get_or_create(user=user.user)
+    wishlist, created = Wishlist.objects.get_or_create(user=user.user)
 
     template_name = "wishlist/wishlist.html"
-
-    context = {"wishlist": favorites}
-
-    print(context)
-
+    context = {"wishlist": wishlist}
     return render(request, template_name, context)
 
 
-# View to add a product to the user's wishlist list
-def add_favorites(request, product_id):
+# View to add a product to the user's wishlist
+def add_wishlist(request, product_id):
     if not request.user.is_authenticated:
         messages.error(
-            request, "Sorry, you need to be logged in to add to your Favorites."
+            request, "Sorry, you need to be logged in to add to your Wishlist."
         )
         return redirect(reverse("account_login"))
 
     product = get_object_or_404(Product, pk=product_id)
     try:
-        fav_lst = get_object_or_404(Favorites, user=request.user.id)
+        wishlist = get_object_or_404(Wishlist, user=request.user.id)
     except Http404:
-        fav_lst = Favorites.objects.create(user=request.user)
+        wishlist = Wishlist.objects.create(user=request.user)
 
-    if product in fav_lst.products.all():
-        messages.info(request, f"{product.name} is already on your Favorites!")
+    if product in wishlist.products.all():
+        messages.info(request, f"{product.name} is already on your Wishlist!")
     else:
-        fav_lst.products.add(product)
-        messages.info(
-            request, f"{product.name} has been added to your Favorites!"
-        )  # noqa
+        wishlist.products.add(product)
+        messages.info(request, f"{product.name} has been added to your Wishlist!")  # noqa
 
     redirect_url = request.META.get("HTTP_REFERER", reverse("products:products"))
 
@@ -61,20 +55,18 @@ def add_favorites(request, product_id):
 
 
 # View to remove a product from the user's wishlist
-def remove_favorites(request, product_id):
+def remove_wishlist(request, product_id):
     if not request.user.is_authenticated:
         messages.error(
-            request, "Sorry, you need to be logged in to edit your Favorites."
+            request, "Sorry, you need to be logged in to edit your Wishlist."
         )
         return redirect(reverse("account_login"))
 
     product = get_object_or_404(Product, pk=product_id)
-    fav_lst = Favorites.objects.get(user=request.user)
+    wishlist = Wishlist.objects.get(user=request.user)
 
-    fav_lst.products.remove(product)
-    messages.info(
-        request, f"{product.name} has been removed from your Favorites!"
-    )  # noqa
+    wishlist.products.remove(product)
+    messages.info(request, f"{product.name} has been removed from your Wishlist!")  # noqa
 
     redirect_url = request.META.get("HTTP_REFERER", reverse("products:products"))
 
@@ -82,21 +74,21 @@ def remove_favorites(request, product_id):
 
 
 # View to clear all products from the user's wishlist
-def clear_favorites(request):
+def clear_wishlist(request):
     if not request.user.is_authenticated:
         messages.error(
-            request, "Sorry, you need to be logged in to edit your Favorites."
+            request, "Sorry, you need to be logged in to edit your Wishlist."
         )
         return redirect(reverse("account_login"))
 
-    fav_lst = Favorites.objects.get(user=request.user)
+    wishlist = Wishlist.objects.get(user=request.user)
 
-    products = fav_lst.products.all()
+    products = wishlist.products.all()
 
     for product in products:
-        fav_lst.products.remove(product)
+        wishlist.products.remove(product)
 
-    fav_lst.products.remove(product)
-    messages.info(request, "Favorites list cleared!")
+    wishlist.products.remove(product)
+    messages.info(request, "Wishlist cleared!")
 
-    return redirect(reverse("wishlist:view_favorites"))
+    return redirect(reverse("wishlist:wishlists"))
