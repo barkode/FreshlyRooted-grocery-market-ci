@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_title %}Product Detail{% endblock %}
-
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -14,9 +11,11 @@
 
 {% block content %}
     <div class="overlay"></div>
+    <!-- Main content container -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <!-- Product image container -->
                 <div class="image-container my-5">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
@@ -31,89 +30,334 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
+                <!-- Product details container -->
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
-                    {% if product.discount > 0 %}
-                        <span class="lead mb-0 text-left font-weight-bold">{{ product.currency.symbol }}{{ product.sell_price }}</span>
-                        <del><span
-                                class="lead mb-0 text-left font-weight-bold">{{ product.currency.symbol }}{{ product.price }}</span>
-                        </del>
-                        <span class="lead mb-0 text-left font-weight-bold">&nbsp;/&nbsp;{{ product.measurement.abbreviation }}</span>
-
+                    {% if product.on_sale %}
+                        <!-- Sale price and original price -->
+                        <div class="sale-footer bg-white d-flex flex-row">
+                            <p class="mb-0 pt-3 pb-2">
+                            <span
+                                    class="h6 pr-3 text-left font-weight-bold price-font-original text-decoration-line-through">
+                                &euro;{{ product.price }}</span>
+                            </p>
+                            <p class="mb-0 pt-2 pb-1">
+                            <span class="h5 text-left font-weight-bold price-font text-danger">
+                                &euro;{{ product.sale_price|floatformat:2 }}</span>
+                            </p>
+                        </div>
                     {% else %}
-                        <span class="lead mb-0 text-left font-weight-bold">{{ product.currency.symbol }}{{ product.sell_price }}</span>
-                        <span class="lead mb-0 text-left font-weight-bold">&nbsp;/&nbsp;{{ product.measurement.abbreviation }}</span>
+                        <!-- Regular price -->
+                        <p class="mb-0 pt-3 pb-1"><span class="h5 text-left font-weight-bold price-font">
+                            &euro;{{ product.price }}</span></p>
+                    {% endif %}
+                    {% if product.brand %}
+                        <!-- Brand link -->
+                        <a class="text-muted" href="{% url 'products' %}?brand={{ product.brand.name }}">
+                            <i class="fa-solid fa-copyright"></i> {{ product.brand.friendly_name }}
+                        </a>
                     {% endif %}
                     {% if product.category %}
+                        <!-- Category link -->
                         <p class="small mt-1 mb-0">
-                            <a class="text-muted"
-                               href="{% url 'products:products' %}?category={{ product.category.slug }}">
+                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                                 <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                             </a>
                         </p>
                     {% endif %}
                     {% if product.rating %}
+                        <!-- Product rating -->
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
                     {% if request.user.is_superuser %}
+                        <!-- Admin actions for editing and deleting -->
                         <small class="ml-3">
-                            <a href="{% url 'products:edit_product' product.id %}">Edit</a> |
-                            <a class="text-danger" href="{% url 'products:delete_product' product.id %}">Delete</a>
+                            <a href="{% url 'edit_product' product.id %}"><i class="fa-solid fa-rotate"></i></a> |
+                            <a class="text-danger" href="{% url 'delete_product' product.id %}"><i
+                                    class="fa-solid fa-trash-can"></i></a>
                         </small>
                     {% endif %}
+                    <br>
+                    <!-- Wishlist functionality -->
+                    <div class="d-inline-flex justify-content-center">
+                        {% if wishlist is not None %}
+                            {% if wishlist %}
+                                <!-- Remove from wishlist -->
+                                <a href="{% url 'remove_wishlist' product.id %}"
+                                   aria-label="Remove product from Wishlist">
+                                    <div class="wishlist-icon"><i class="fa-solid fa-heart"></i></div>
+                                </a>
+                                <!-- Add to wishlist -->
+                                <span class="h6 pl-2 d-flex ">  Add to wishlist</span>
+                            {% else %}
+                                <a href="{% url 'add_wishlist' product.id %}" aria-label="Add product to Wishlist">
+                                    <div class="wishlist-icon"><i class="fa-regular fa-heart"></i></div>
+                                </a>
+                                <span class="pl-2 d-flex">  Add to wishlist</span>
+                            {% endif %}
+                        {% else %}
+                            <a href="{% url 'add_wishlist' product.id %}" aria-label="Add product to Wishlist">
+                                <div class="wishlist-icon"><i class="fa-regular fa-heart"></i></div>
+                            </a>
+                            <span class="pl-2 d-flex">  Add to wishlist</span>
+                        {% endif %}
+                    </div>
+                    <!-- Product description -->
                     <p class="mt-3">{{ product.description }}</p>
-                    <form class="form" action="{% url 'cart:add_to_cart' product.id %}" method="POST">
+                    <!-- Product form for adding to bag -->
+                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-                            <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group input-group-{{ product.id }}">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ product.id }}"
-                                                    data-item_id="{{ product.id }}">
+                            {% with product.has_sizes as s %}
+                                {% if s %}
+                                    <!-- Size selection for products with sizes -->
+                                    <div class="col-12 accordion mb-4" id="accordionExample">
+                                        <div class="card borderAccordion">
+                                            <div class="card-header bg-white" id="headingThree">
+                                                <h2 class="mb-0">
+                                                    <button
+                                                            class="btn btn-block d-flex justify-content-between align-items-center pl-0"
+                                                            type="button" data-toggle="collapse"
+                                                            data-target="#collapseThree"
+                                                            aria-expanded="true" aria-controls="collapseThree">
+                                                        <strong>Country Of Origin</strong>
+                                                        <span class="chevron-down"><i
+                                                                class="fa-solid fa-chevron-down"></i></span>
+                                                        <span class="chevron-up" style="display: none;"><i
+                                                                class="fa-solid fa-chevron-up"></i></span>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                                 data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    {{ product.country_origin | safe }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card borderAccordion">
+                                            <div class="card-header bg-white" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-block d-flex justify-content-between align-items-center pl-0"
+                                                            type="button" data-toggle="collapse"
+                                                            data-target="#collapseTwo" aria-expanded="false"
+                                                            aria-controls="collapseTwo">
+                                                        <strong>Materials</strong>
+                                                        <span class="chevron-down"><i
+                                                                class="fa-solid fa-chevron-down"></i></span>
+                                                        <span class="chevron-up" style="display: none;"><i
+                                                                class="fa-solid fa-chevron-up"></i></span>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                                 data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    {{ product.materials | safe }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <p><strong>Size:</strong></p>
+                                        <select class="form-control rounded-0 w-50" name="product_size"
+                                                id='id_product_size'>
+                                            <option value="Four">4</option>
+                                            <option value="Five">5</option>
+                                            <option value="Six" selected>6</option>
+                                            <option value="Seven">7</option>
+                                            <option value="Eight">8</option>
+                                            <option value="Nine">9</option>
+                                            <option value="Ten">10</option>
+                                            <option value="Eleven">11</option>
+                                            <option value="Twelve">12</option>
+                                        </select>
+                                    </div>
+                                {% else %}
+                                    <div class="col-12 accordion mb-4" id="accordionExample">
+                                        <div class="card borderAccordion">
+                                            <div class="card-header bg-white" id="headingThree">
+                                                <h2 class="mb-0">
+                                                    <button
+                                                            class="btn btn-block d-flex justify-content-between align-items-center pl-0"
+                                                            type="button" data-toggle="collapse"
+                                                            data-target="#collapseThree"
+                                                            aria-expanded="true" aria-controls="collapseThree">
+                                                        <strong>Country Of Origin</strong>
+                                                        <span class="chevron-down"><i
+                                                                class="fa-solid fa-chevron-down"></i></span>
+                                                        <span class="chevron-up" style="display: none;"><i
+                                                                class="fa-solid fa-chevron-up"></i></span>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                                 data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    {{ product.country_origin | safe }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card borderAccordion">
+                                            <div class="card-header bg-white" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-block d-flex justify-content-between align-items-center pl-0"
+                                                            type="button" data-toggle="collapse"
+                                                            data-target="#collapseTwo" aria-expanded="false"
+                                                            aria-controls="collapseTwo">
+                                                        <strong>Materials</strong>
+                                                        <span class="chevron-down"><i
+                                                                class="fa-solid fa-chevron-down"></i></span>
+                                                        <span class="chevron-up" style="display: none;"><i
+                                                                class="fa-solid fa-chevron-up"></i></span>
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                                 data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    {{ product.materials | safe }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                <!-- Quantity selection -->
+                                <div class="col-12">
+                                    <p class="mt-3"><strong>Quantity:</strong></p>
+                                    <div class="form-group w-50">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-black rounded-0"
+                                                        data-item_id="{{ product.id }}"
+                                                        id="decrement-qty_{{ product.id }}">
                                                 <span class="icon">
                                                     <i class="fas fa-minus"></i>
                                                 </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
-                                               name="quantity" value="1" min="1" max="99"
-                                               data-item_id="{{ product.id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ product.id }}"
-                                                    data-item_id="{{ product.id }}">
+                                                </button>
+                                            </div>
+                                            <input class="form-control qty_input" type="number"
+                                                   name="quantity" value="1" min="1" max="99"
+                                                   data-item_id="{{ product.id }}"
+                                                   id="id_qty_{{ product.id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-black rounded-0"
+                                                        data-item_id="{{ product.id }}"
+                                                        id="increment-qty_{{ product.id }}">
                                                 <span class="icon">
                                                     <i class="fas fa-plus"></i>
                                                 </span>
-                                            </button>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col{% if s %}-12 mt-2{% endif %}">
-                                <a href="{% url 'products:products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                <!-- Navigation buttons -->
+                                <div class="col{% if s %}-12 mt-2{% endif %}">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
-                                </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5"
-                                       value="Add to Bag">
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        <span class="text-uppercase">Keep Shopping</span>
+                                    </a>
+                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5"
+                                           value="Add to Bag">
+                                </div>
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% endwith %}
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Show Reviews -->
+    <section>
+        <div class="container mb-5">
+            <h3 class="logo-font pt-2 text-center">
+                Customer Reviews
+            </h3>
+            {% for review in reviews %}
+                <div class="col-12 mt-3">
+                    <div class="row mt-3">
+                        <div class="card w-100 text-center border-black">
+                            <div class="review-card card-body">
+                                <h4 class="mb-2">{{ review.title }}</h4>
+                                <p><small class="text-black text-muted p-0"><em>Posted by {{ review.user }} on
+                                    {{ review.created_on }}</em></small></p>
+                                <p class="card-text">{{ review.review }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Update and Delete Review buttons -->
+                {% if user == review.user or user.is_superuser %}
+                    <div class="mb-3 text-center">
+                        <a href="{% url 'update_review' review.id %}" class="btn btn-primary my-2 ml-2">Update
+                            Review</a>
+                        <a href="{% url 'delete_review' review.id %}" class="btn btn-danger my-2 ml-2">Delete Review</a>
+                    </div>
+                {% endif %}
+            {% empty %}
+                <h5 class="font-weight-bold text-black mb-2 mt-3 text-center">Product has no reviews yet!</h5>
+            {% endfor %}
+        </div>
+
+        <!-- Review Form -->
+        {% if user.is_authenticated %}
+            <div id="accordion" class="container review-accordian mx-auto mb-5">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0 text-center">
+                            <button class="btn collapsed btn-black" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="false" aria-controls="collapseOne">
+                                <span class="">Review This Product</span>
+                                <span class="icon "> <i class="fas fa-plus"></i></span>
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body text-center">
+                            <form action="{% url 'add_review' product.id %}" method="POST" class="review-form">
+                                {% csrf_token %}
+                                <h4 class="text-white">Review This Product</h4>
+                                <div>
+                                    Title:
+                                    <input type="text" class="form-control text-black border-black" name="title">
+                                    <br>
+                                    Review:
+                                    <textarea name="review" rows="4" class="form-control border-black"></textarea>
+                                    <br>
+                                    <input type="submit" value="Submit Review" class="btn btn-black rounded-0">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <p class="text-center">Please <a class="link-normal" href="{% url 'account_signup' %}">Register</a> or <a
+                    class="link-normal" href="{% url 'account_login' %}">Login</a> to leave a review.</p>
+        {% endif %}
+
+    </section>
+    <!-- Back to the top button -->
+    <div class="btt-button shadow-sm rounded-0 border border-black bg-white">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>
+    </div>
 {% endblock %}
 
-{% block postload_js %}
+{% block postloadjs %}
     {{ block.super }}
+    <script>
+        $('.btt-link').click(function (e) {
+            window.scrollTo(0, 0)
+        })
+    </script>
     {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}

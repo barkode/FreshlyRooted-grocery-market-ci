@@ -1,0 +1,155 @@
+[
+{
+    "model": "products.measurementtype",
+    "pk": 1,
+    "fields": {
+        "name": "Weight",
+        "description": "",
+        "measurement_type": "Weight"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 2,
+    "fields": {
+        "name": "Volume (Liquids)",
+        "description": "",
+        "measurement_type": "Volume (Liquids)"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 3,
+    "fields": {
+        "name": "Length/Distance",
+        "description": "",
+        "measurement_type": "Length/Distance"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 4,
+    "fields": {
+        "name": "Area",
+        "description": "",
+        "measurement_type": "Area"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 5,
+    "fields": {
+        "name": "Time",
+        "description": "",
+        "measurement_type": "Time"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 6,
+    "fields": {
+        "name": "Temperature",
+        "description": "",
+        "measurement_type": "Temperature"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 7,
+    "fields": {
+        "name": "Count/Quantity",
+        "description": "",
+        "measurement_type": "Count/Quantity"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 8,
+    "fields": {
+        "name": "Energy",
+        "description": "",
+        "measurement_type": "Energy"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 9,
+    "fields": {
+        "name": "Pressure",
+        "description": "",
+        "measurement_type": "Pressure"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 10,
+    "fields": {
+        "name": "Speed",
+        "description": "",
+        "measurement_type": "Speed"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 11,
+    "fields": {
+        "name": "Power",
+        "description": "",
+        "measurement_type": "Power"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 12,
+    "fields": {
+        "name": "Data",
+        "description": "",
+        "measurement_type": "Data"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 13,
+    "fields": {
+        "name": "Density",
+        "description": "",
+        "measurement_type": "Density"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 14,
+    "fields": {
+        "name": "Angles",
+        "description": "",
+        "measurement_type": "Angles"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 15,
+    "fields": {
+        "name": "Currency",
+        "description": "",
+        "measurement_type": "Currency"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 16,
+    "fields": {
+        "name": "Dimensions",
+        "description": "",
+        "measurement_type": "Dimensions"
+    }
+},
+{
+    "model": "products.measurementtype",
+    "pk": 17,
+    "fields": {
+        "name": "Packaging Types",
+        "description": "",
+        "measurement_type": "Packaging Types"
+    }
+}
+]

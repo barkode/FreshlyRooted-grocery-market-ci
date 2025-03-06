@@ -1,0 +1,472 @@
+[
+{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "food_drink",
+        "friendly_name": "FOOD &amp; DRINK",
+        "slug": "food-drink",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+        "name": "household",
+        "friendly_name": "HOUSEHOLD",
+        "slug": "household",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+        "name": "supplements",
+        "friendly_name": "SUPPLEMENTS",
+        "slug": "supplements",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+        "name": "body_beauty",
+        "friendly_name": "BODY &amp; BEAUTY",
+        "slug": "body-beauty",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 6,
+    "fields": {
+        "name": "zero_waste",
+        "friendly_name": "ZERO WASTE",
+        "slug": "zero-waste",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 7,
+    "fields": {
+        "name": "bulk_food",
+        "friendly_name": "BULK FOOD",
+        "slug": "bulk-food",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 8,
+    "fields": {
+        "name": "snacks-treats",
+        "friendly_name": "SNACKS &amp; TREATS",
+        "slug": "snacks-treats",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 9,
+    "fields": {
+        "name": "drinks",
+        "friendly_name": "DRINKS",
+        "slug": "drinks",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 10,
+    "fields": {
+        "name": "food_cupboard",
+        "friendly_name": "FOOD CUPBOARD",
+        "slug": "food-cupboard",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 11,
+    "fields": {
+        "name": "wellness-gifts",
+        "friendly_name": "WELLNESS &amp; GIFTS",
+        "slug": "wellness-gifts",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 12,
+    "fields": {
+        "name": "basics",
+        "friendly_name": "BASICS",
+        "slug": "basics",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 13,
+    "fields": {
+        "name": "offers",
+        "friendly_name": "OFFERS",
+        "slug": "offers",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 14,
+    "fields": {
+        "name": "new",
+        "friendly_name": "NEW",
+        "slug": "new",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 15,
+    "fields": {
+        "name": "food_drink_containers",
+        "friendly_name": "FOOD &amp; DRINK CONTAINERS",
+        "slug": "food-drink-containers",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 16,
+    "fields": {
+        "name": "cleaning_products",
+        "friendly_name": "CLEANING PRODUCTS",
+        "slug": "cleaning-products",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 17,
+    "fields": {
+        "name": "laundry",
+        "friendly_name": "LAUNDRY",
+        "slug": "laundry",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 18,
+    "fields": {
+        "name": "bulk_household",
+        "friendly_name": "BULK HOUSEHOLD",
+        "slug": "bulk-household",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 19,
+    "fields": {
+        "name": "kitchen_items",
+        "friendly_name": "KITCHEN ITEMS",
+        "slug": "kitchen-items",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 20,
+    "fields": {
+        "name": "paper_products",
+        "friendly_name": "PAPER PRODUCTS",
+        "slug": "paper-products",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 21,
+    "fields": {
+        "name": "pet_food_supplies",
+        "friendly_name": "PET FOOD &amp; SUPPLIES",
+        "slug": "pet-food-supplies",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 22,
+    "fields": {
+        "name": "miscellaneous",
+        "friendly_name": "MISCELLANEOUS",
+        "slug": "miscellaneous",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 23,
+    "fields": {
+        "name": "baby_care",
+        "friendly_name": "BABY CARE",
+        "slug": "baby-care",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 24,
+    "fields": {
+        "name": "vitamins",
+        "friendly_name": "VITAMINS",
+        "slug": "vitamins",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 25,
+    "fields": {
+        "name": "minerals",
+        "friendly_name": "MINERALS",
+        "slug": "minerals",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 26,
+    "fields": {
+        "name": "herbal_remedies",
+        "friendly_name": "HERBAL REMEDIES",
+        "slug": "herbal-remedies",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 27,
+    "fields": {
+        "name": "probiotics_enzymes_amino_acids",
+        "friendly_name": "PROBIOTICS, ENZYMES &amp; AMINO ACIDS",
+        "slug": "probiotics-enzymes-amino-acids",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 28,
+    "fields": {
+        "name": "cards_books",
+        "friendly_name": "CARDS &amp; BOOKS",
+        "slug": "cards-books",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 29,
+    "fields": {
+        "name": "incense",
+        "friendly_name": "INCENSE",
+        "slug": "incense",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 30,
+    "fields": {
+        "name": "salt_pipes_neti_pots",
+        "friendly_name": "SALT PIPES &amp; NETI POTS",
+        "slug": "salt-pipes-neti-pots",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 31,
+    "fields": {
+        "name": "ear_candles",
+        "friendly_name": "EAR CANDLES",
+        "slug": "ear-candles",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 32,
+    "fields": {
+        "name": "candles",
+        "friendly_name": "CANDLES",
+        "slug": "candles",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 33,
+    "fields": {
+        "name": "diffusers",
+        "friendly_name": "DIFFUSERS",
+        "slug": "diffusers",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 34,
+    "fields": {
+        "name": "essential_oils",
+        "friendly_name": "ESSENTIAL OILS",
+        "slug": "essential-oils",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 35,
+    "fields": {
+        "name": "gift_vouchers",
+        "friendly_name": "GIFT VOUCHERS",
+        "slug": "gift-vouchers",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 36,
+    "fields": {
+        "name": "gifts",
+        "friendly_name": "GIFTS",
+        "slug": "gifts",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 37,
+    "fields": {
+        "name": "hampers",
+        "friendly_name": "HAMPERS",
+        "slug": "hampers",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 38,
+    "fields": {
+        "name": "toiletries",
+        "friendly_name": "TOILETRIES",
+        "slug": "toiletries",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 39,
+    "fields": {
+        "name": "skin_care",
+        "friendly_name": "SKIN CARE",
+        "slug": "skin-care",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 40,
+    "fields": {
+        "name": "oils_omegas",
+        "friendly_name": "OILS &amp; OMEGAS",
+        "slug": "oils-omegas",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 41,
+    "fields": {
+        "name": "mother_baby",
+        "friendly_name": "MOTHER &amp; BABY",
+        "slug": "mother-baby",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 42,
+    "fields": {
+        "name": "mens_body_care",
+        "friendly_name": "MEN'S BODY CARE",
+        "slug": "mens-body-care",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 43,
+    "fields": {
+        "name": "kids_body_care",
+        "friendly_name": "KIDS BODY CARE",
+        "slug": "kids-body-care",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 44,
+    "fields": {
+        "name": "irish_beauty",
+        "friendly_name": "IRISH BEAUTY",
+        "slug": "irish-beauty",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 45,
+    "fields": {
+        "name": "hair_care",
+        "friendly_name": "HAIR CARE",
+        "slug": "hair-care",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 46,
+    "fields": {
+        "name": "cosmetics",
+        "friendly_name": "COSMETICS",
+        "slug": "cosmetics",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 47,
+    "fields": {
+        "name": "speciality_supplements",
+        "friendly_name": "SPECIALITY SUPPLEMENTS",
+        "slug": "speciality-supplements",
+        "description": ""
+    }
+},
+{
+    "model": "products.category",
+    "pk": 48,
+    "fields": {
+        "name": "family_health",
+        "friendly_name": "FAMILY HEALTH",
+        "slug": "family-health",
+        "description": ""
+    }
+}
+]

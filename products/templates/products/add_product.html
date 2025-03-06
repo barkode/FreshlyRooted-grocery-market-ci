@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_title %}Add Product{% endblock %}
-
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -14,9 +11,11 @@
 
 {% block content %}
     <div class="overlay"></div>
+    <!-- Main content container -->
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
+                <!-- Product add form -->
                 <hr>
                 <h2 class="logo-font mb-4">Product Management</h2>
                 <h5 class="text-muted">Add a Product</h5>
@@ -26,8 +25,7 @@
 
         <div class="row">
             <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'products:add_product' %}" class="form mb-2"
-                      enctype="multipart/form-data">
+                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -37,19 +35,20 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products:products' %}">Cancel</a>
+                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
                         <button class="btn btn-black rounded-0" type="submit">Add Product</button>
                     </div>
                 </form>
-            </div>
+            </div>            
         </div>
     </div>
 {% endblock %}
 
-{% block postload_js %}
+{% block postloadjs %}
     {{ block.super }}
+    <!-- Script for displaying selected image filename -->
     <script>
-        $('#new-image').change(function () {
+        $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];
             $('#filename').text(`Image will be set to: ${file.name}`);
         });

@@ -1,73 +1,68 @@
 <script>
 
-    /* 
-    * Disable +/- buttons outside 1-99 range.
-    * If no size is passed to the function, the parameter will have a value of undefined by default,
-    * which prevents any errors 
-    */
-    function handleEnableDisable(itemId, size) {
-        if (size) {
-            var currentValue = parseInt($(`.size_${itemId}_${size}`).val());
-        } else {
-            var currentValue = parseInt($(`.id_qty_${itemId}`).val());
-        }
+    // Function to handle enabling/disabling of quantity input based on current value
+    function handleEnableDisable(itemId) {
 
-        var minusDisabled = currentValue < 2;
-        var plusDisabled = currentValue > 98;
+        let currentValue = parseInt($(`.id_qty_${itemId}`).val());
 
-        if (size) {
-            $(`.decrement-size_${itemId}_${size}`).prop('disabled', minusDisabled);
-            $(`.increment-size_${itemId}_${size}`).prop('disabled', plusDisabled);
-        } else {
-            $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-            $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled);
-        }
+        let minusDisabled = currentValue < 2;
+   
+        let plusDisabled = currentValue >= 99;
+
+    }
+    
+    // Loop through all quantity input elements and call handleEnableDisable function
+    let allQtyInputs = $('.qty_input');
+    for (let i = 0; i < allQtyInputs.length; i++) {
+        let itemId = $(allQtyInputs[i]).data('item_id');
+        handleEnableDisable(itemId);
+    }
+    
+    // Event listener for quantity input change
+    $('.qty_input').change(function () {
+        let itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
+    });
+
+    // Event listener for quantity input on input event
+    $('.qty_input').on('input', function () {
+    let itemId = $(this).data('item_id');
+    let currentValue = parseInt($(this).val());
+
+    if (currentValue > 99) {
+        $(this).val(99);
     }
 
-    // Ensure proper enabling/disabling of all inputs on page load
-    var allQtyInputs = $('.qty_input');
-    for(var i = 0; i < allQtyInputs.length; i++){
-        var itemId = $(allQtyInputs[i]).data('item_id');
-        var size = $(allQtyInputs[i]).data('size');
-        handleEnableDisable(itemId, size);
-    }
-
-    // Check enable/disable every time the input is changed
-    $('.qty_input').change(function() {
-        var itemId = $(this).data('item_id');
-        var size = $(this).data('size');
-        handleEnableDisable(itemId, size);
+        handleEnableDisable(itemId);
     });
+    
+    // Event listener for increment button click
+    $('.increment-qty').click(function (e) {
+        e.preventDefault();
+        let itemId = $(this).data('item_id');
 
-    // Increment quantity
-    $('.increment-qty').click(function(e) {
-       e.preventDefault();
-       var itemId = $(this).data('item_id');
-       var size = $(this).data('size');
-       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-       if (size) {
-          var allQuantityInputs = $(`.input-group-${itemId} input[data-size='${size}']`);
-       } else {
-          var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
-       }
-       var currentValue = parseInt($(closestInput).val());
-       $(allQuantityInputs).val(currentValue + 1);
-       handleEnableDisable(itemId, size);
-    });
+        let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
 
-    // Decrement quantity
-    $('.decrement-qty').click(function(e) {
-       e.preventDefault();
-       var itemId = $(this).data('item_id');
-       var size = $(this).data('size');
-       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-       if (size) {
-          var allQuantityInputs = $(`.input-group-${itemId} input[data-size='${size}']`);
-       } else {
-          var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
-       }
-       var currentValue = parseInt($(closestInput).val());
-       $(allQuantityInputs).val(currentValue - 1);
-       handleEnableDisable(itemId, size);
+        let currentValue = parseInt($(closestInput).val());
+
+        if (currentValue < 99) {
+            $(closestInput).val(currentValue + 1);
+            handleEnableDisable(itemId);
+        }
     });
-</script>
+    
+    // Event listener for decrement button click
+    $('.decrement-qty').click(function (e) {
+        e.preventDefault();
+        let itemId = $(this).data('item_id');
+
+        let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+
+        let currentValue = parseInt($(closestInput).val());
+
+        if (currentValue > 1) {
+            $(closestInput).val(currentValue - 1);
+            handleEnableDisable(itemId);
+        }
+    });
+    </script>

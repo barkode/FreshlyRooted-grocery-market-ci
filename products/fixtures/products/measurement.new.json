@@ -1,0 +1,262 @@
+[
+{
+    "model": "products.measurement",
+    "pk": 1,
+    "fields": {
+        "name": "kilograms",
+        "abbreviation": "kg",
+        "description": "",
+        "measurement_type": 1
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 2,
+    "fields": {
+        "name": "grams",
+        "abbreviation": "g",
+        "description": "",
+        "measurement_type": 1
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 3,
+    "fields": {
+        "name": "milligrams",
+        "abbreviation": "mg",
+        "description": "",
+        "measurement_type": 1
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 4,
+    "fields": {
+        "name": "Pounds",
+        "abbreviation": "lb",
+        "description": "",
+        "measurement_type": 1
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 5,
+    "fields": {
+        "name": "Ounces",
+        "abbreviation": "oz",
+        "description": "",
+        "measurement_type": 1
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 6,
+    "fields": {
+        "name": "stone",
+        "abbreviation": "st",
+        "description": "",
+        "measurement_type": 1
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 7,
+    "fields": {
+        "name": "carats",
+        "abbreviation": "ct",
+        "description": "",
+        "measurement_type": 1
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 8,
+    "fields": {
+        "name": "Milliliters",
+        "abbreviation": "ml",
+        "description": "",
+        "measurement_type": 2
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 9,
+    "fields": {
+        "name": "Liters",
+        "abbreviation": "l",
+        "description": "",
+        "measurement_type": 2
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 10,
+    "fields": {
+        "name": "Fluid Ounces",
+        "abbreviation": "fl oz",
+        "description": "",
+        "measurement_type": 2
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 11,
+    "fields": {
+        "name": "Cubic Centimeters",
+        "abbreviation": "cm³",
+        "description": "",
+        "measurement_type": 2
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 12,
+    "fields": {
+        "name": "Millimeters",
+        "abbreviation": "mm",
+        "description": "",
+        "measurement_type": 3
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 13,
+    "fields": {
+        "name": "Centimeters",
+        "abbreviation": "cm",
+        "description": "",
+        "measurement_type": 3
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 14,
+    "fields": {
+        "name": "Meters",
+        "abbreviation": "m",
+        "description": "",
+        "measurement_type": 3
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 15,
+    "fields": {
+        "name": "Inches",
+        "abbreviation": "in",
+        "description": "",
+        "measurement_type": 3
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 16,
+    "fields": {
+        "name": "Pieces",
+        "abbreviation": "pcs",
+        "description": "",
+        "measurement_type": 7
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 17,
+    "fields": {
+        "name": "Sets",
+        "abbreviation": "set",
+        "description": "",
+        "measurement_type": 7
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 18,
+    "fields": {
+        "name": "Packs",
+        "abbreviation": "pack",
+        "description": "",
+        "measurement_type": 7
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 19,
+    "fields": {
+        "name": "Dozens",
+        "abbreviation": "doz",
+        "description": "",
+        "measurement_type": 7
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 20,
+    "fields": {
+        "name": "Jars",
+        "abbreviation": "Jars",
+        "description": "Glass or plastic jars (e.g., 500 ml glass jar).",
+        "measurement_type": 17
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 21,
+    "fields": {
+        "name": "Bottles",
+        "abbreviation": "Bottles",
+        "description": "Plastic or glass bottles (e.g., 1-liter plastic bottle).",
+        "measurement_type": 17
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 22,
+    "fields": {
+        "name": "Cans",
+        "abbreviation": "Cans",
+        "description": "Metal cans (e.g., 330 ml soda can).",
+        "measurement_type": 17
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 23,
+    "fields": {
+        "name": "Boxes",
+        "abbreviation": "Boxes",
+        "description": "Cardboard or plastic boxes (e.g., 1 kg cereal box).",
+        "measurement_type": 17
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 24,
+    "fields": {
+        "name": "Pouches",
+        "abbreviation": "Pouches",
+        "description": "Flexible packaging (e.g., 250 g coffee pouch).",
+        "measurement_type": 17
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 25,
+    "fields": {
+        "name": "Tubes",
+        "abbreviation": "Tubes",
+        "description": "For creams, gels, or pastes (e.g., 100 ml toothpaste tube).",
+        "measurement_type": 17
+    }
+},
+{
+    "model": "products.measurement",
+    "pk": 26,
+    "fields": {
+        "name": "Buckets",
+        "abbreviation": "Buckets",
+        "description": "For bulk products (e.g., 5-liter paint bucket).",
+        "measurement_type": 17
+    }
+}
+]
