@@ -14,6 +14,7 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
     featured_image = models.ImageField(null=True, blank=True, default="placeholder")
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)

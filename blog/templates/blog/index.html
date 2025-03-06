@@ -13,6 +13,10 @@
     </div>
 {% endblock %}
 
+{% block extra_js %}
+    <script src="{% static 'js/blog_buttons.js' %}"></script>
+{% endblock %}
+
 {% block content_old %}
     <div class="overlay"></div>
     <div class="container-fluid">
@@ -26,7 +30,7 @@
                                 <div class="card-body">
                                     <div class="image-container">
                                         {% if "placeholder" in post.featured_image.url %}
-                                            <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                                            <img class="card-img-top" src="{% static 'images/no-image.png' %}"
                                                  alt="placeholder pic">
                                         {% else %}
                                             <img class="card-img-top" src=" {{ post.featured_image.url }}"
@@ -38,7 +42,7 @@
                                         <p class="author">Author: {{ post.author }}</p>
                                     </div>
                                 </div>
-                                <a href="{% url 'blog:post_detail' post.slug %}" class="post-link">
+                                <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                     <h2 class="card-title">{{ post.title }}</h2>
                                     <p class="cart-text">{{ post.excerpt }}</p>
                                 </a>
@@ -108,7 +112,7 @@
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Blog</h2>
-                <hr class="w-50 mb-1">
+                <hr class="w-50 mb-1 mx-auto">
             </div>
         </div>
         <div class="row">
@@ -116,7 +120,7 @@
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
-                            <span class="small"><a href="{% url 'products:products' %}">Products Home</a> | </span>
+                            <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
                             {{ total_posts }} Articles
                         </p>
                     </div>
@@ -127,12 +131,12 @@
                             <div class="card h-100 border-0">
 
                                 {% if "placeholder" in post.featured_image %}
-                                    <a href="{% url 'blog:post_detail' post.slug %}">
+                                    <a href="{% url 'post_detail' post.slug %}">
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
                                              alt="{{ post.title }}">
                                     </a>
                                 {% else %}
-                                    <a href="{% url 'blog:post_detail' post.slug %}">
+                                    <a href="{% url 'post_detail' post.slug %}">
                                         <img class="card-img-top img-fluid" src=" {{ post.featured_image }}"
                                              alt="{{ post.title }}">
                                     </a>
