@@ -45,7 +45,6 @@ USE_DATABASE = getenv("USE_DATABASE", "False").lower() == "true"
 # Site ID default 1
 SITE_ID = int(getenv("SITE_ID", "1"))
 
-
 if DEVELOPMENT:
     ALLOWED_HOSTS = [
         "localhost",
@@ -85,16 +84,19 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "crispy_forms",
     "crispy_bootstrap5",
+    "crispy_bootstrap4",
+    "crispy_tailwind",
+    "django_summernote",
     "storages",
     "cookie_consent",
     "home",
     "products",
-    "cart",
-    "blog",
-    "about",
+    "bag",
+    # "blog",
+    # "about",
     "checkout",
     "profiles",
-    "favorites",
+    "wishlist",
 ]
 
 MIDDLEWARE = [
@@ -111,8 +113,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "app.urls"
 
-CRISPY_TEMPLATE_PACK = "bootstrap5"
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+CRISPY_ALLOWED_TEMPLATE_PACKS = ["bootstrap4", "bootstrap5", "tailwind"]
 
 TEMPLATES = [
     {
@@ -131,14 +133,14 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.template.context_processors.media",
                 "django.contrib.messages.context_processors.messages",
-                "cart.contexts.cart_contents",
+                "bag.contexts.bag_contents",
             ],
             "builtins": [
                 "crispy_forms.templatetags.crispy_forms_tags",
                 "crispy_forms.templatetags.crispy_forms_field",
             ],
             "libraries": {
-                "cart_tags": "cart.templatetags.cart_tags",
+                "bag_tags": "bag.templatetags.bag_tools",
             },
         },
     },
@@ -155,10 +157,9 @@ AUTHENTICATION_BACKENDS = [
 
 WSGI_APPLICATION = "app.wsgi.application"
 
-
-ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+ACCOUNT_LOGIN_METHODS = {"username", "email"}
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_EMAIL_VERIFICATION = "none" if DEVELOPMENT else "mandatory"
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
@@ -251,7 +252,6 @@ if USE_STORAGE:
     MEDIAFILES_DIRECTORY = "media"
     STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_DIRECTORY}/"
     MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_DIRECTORY}/"
-
 
 # Stripe settings
 FREE_DELIVERY_THRESHOLD = 75
