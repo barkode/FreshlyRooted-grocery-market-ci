@@ -56,7 +56,7 @@ if DEVELOPMENT:
     ]
     # Email settings
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-    DEFAULT_FROM_EMAIL = "freshrooted@example.com"
+    DEFAULT_FROM_EMAIL = "freshlyrooted2024@gmail.com"
 else:
     ALLOWED_HOSTS = list(getenv("ALLOWED_HOSTS").split(";"))
     CSRF_TRUSTED_ORIGINS = list(getenv("CSRF_TRUSTED_ORIGINS").split(";"))
