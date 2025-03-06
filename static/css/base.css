@@ -817,8 +817,24 @@ footer li {
 	}
 }
 
-/* ====================== HEADER DELIVERY */
+/* =================================== PRODUCT CARD */
+/* Фіксований розмір для карток продуктів */
+.card-img-top .img-fluid .product-card-img {
+	height: 250px !important;
+	object-fit: contain !important;
+	width: 100% !important;
+}
 
-.free-delivery-banner {
-	background-color: #55883b;
+/* Фіксований розмір для детальної сторінки продукту */
+.product-detail-img {
+	height: 400px !important;
+	object-fit: contain !important;
+	width: 100% !important;
+}
+
+/* Фіксований розмір для превью зображень */
+.product-image-preview {
+	height: 96px !important;
+	width: 96px !important;
+	object-fit: cover !important;
 }
