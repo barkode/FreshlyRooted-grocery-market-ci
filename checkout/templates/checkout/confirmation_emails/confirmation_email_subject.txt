@@ -1,1 +1,1 @@
-Freshly Rooted Confirmation for Order Number {{ order.order_number }}
+Performance Footwear Confirmation for Order Number {{ order.order_number }}
