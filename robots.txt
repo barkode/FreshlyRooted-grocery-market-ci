@@ -1,5 +1,7 @@
 User-agent: *
-Disallow: /admin/
 Disallow: /accounts/
-Disallow: /cart/
+Disallow: /bag/
+Disallow: /profiles/
+Disallow: /checkout/
+Disallow: /admin/
 Sitemap: https://freshly-rooted-market-190d6a54a9aa.herokuapp.com/sitemap.xml
