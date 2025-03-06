@@ -818,23 +818,21 @@ footer li {
 }
 
 /* =================================== PRODUCT CARD */
-/* Фіксований розмір для карток продуктів */
+
 .card-img-top .img-fluid .product-card-img {
-	height: 250px !important;
-	object-fit: contain !important;
-	width: 100% !important;
+	height: 250px;
+	object-fit: contain;
+	width: 100%;
 }
 
-/* Фіксований розмір для детальної сторінки продукту */
 .product-detail-img {
-	height: 400px !important;
-	object-fit: contain !important;
-	width: 100% !important;
+	height: 400px;
+	object-fit: contain;
+	width: 100%;
 }
 
-/* Фіксований розмір для превью зображень */
 .product-image-preview {
-	height: 96px !important;
-	width: 96px !important;
-	object-fit: cover !important;
+	height: 96px;
+	width: 96px;
+	object-fit: cover;
 }
