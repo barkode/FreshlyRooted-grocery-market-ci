@@ -5,6 +5,7 @@
 <head>
 
     {% block meta %}
+        <!-- Meta tags for defining document properties -->
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,13 +20,13 @@
         <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
         <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
         <link rel="manifest" href="{% static 'images/favicon/site.webmanifest' %}">
-
     {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
 
     {% block corecss %}
+        <!-- Core CSS styles -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
               integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
               crossorigin="anonymous">
@@ -37,7 +38,8 @@
     {% block extra_css %}
     {% endblock %}
 
-    {% block core_js %}
+    {% block corejs %}
+        <!-- Core JavaScript libraries -->
         <script src="https://kit.fontawesome.com/fc6c0d9a84.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
                 integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -50,157 +52,310 @@
                 crossorigin="anonymous"></script>
         <!-- Stripe -->
         <script src="https://js.stripe.com/v3/"></script>
-
-
     {% endblock %}
 
     {% block extra_js %}
     {% endblock %}
-
-    <title>FreshlyRooted {% block extra_title %}{% endblock %}</title>
+    <!-- Title of the page -->
+    <title>Freshly Rooted {% block extra_title %}{% endblock %}</title>
 </head>
+
 <body>
-<div class="page-wrapper">
-    <header class="container-fluid fixed-top">
-        <div id="delivery-banner" class="row text-center">
-            <div class="col text-white free-delivery-banner">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
-            </div>
+<!-- Header section -->
+<header class="container-fluid fixed-top">
+    <div id="delivery-banner" class="row text-center">
+        <div class="col text-white">
+            <h4 id="carousel-text" class="logo-font my-1">Strive For Greatness!&nbsp;&nbsp;<span class="text-primary"><i
+                    class="fa-solid fa-medal"></i></span></h4>
         </div>
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left ">
-                <a href="{% url 'home:home' %}" class="nav-link main-logo-link freshly-logo-container">
-                    <img src="{% static 'images/logo.png' %}" alt="Freshly Rooted Logo" class="main-logo" width="200">
-                </a>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'products:products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
-                               placeholder="Search our site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
+    </div>
+    <!-- Navigation bar -->
+    <nav class="row navbar navbar-expand-lg navbar-light bg-light shadow ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Main logo and navigation links -->
+            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <h3 class="logo-font text-black my-0"><strong>Freshly<br>Rooted</strong></h3>
+            </a>
+            <!-- Dropdown navigation for different categories -->
+            <ul class="navbar-nav mx-auto ">
+                <!-- FOOD & DRINK -->
+                <li class="nav-item dropdown">
+                    <a class="logo-font font-weight-bold nav-link text-black" href="#" id="all-products-link"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        FOOD & DRINK
+                    </a>
+                    <!-- Dropdown menu for Food and Drink categories -->
+                    <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                        <div class="row">
+                            <div class="col">
+
+                                <h6 class="dropdown-header"></h6>
+                                <a href="{% url 'products' %}?category=food_cupboard" class="dropdown-item">Food
+                                    Cupboard</a>
+                                <a href="{% url 'products' %}?category=drinks" class="dropdown-item">Drinks</a>
+                                <a href="{% url 'products' %}?category=snacks-treats"
+                                   class="dropdown-item">Snacks &amp; Treats</a>
+                                <a href="{% url 'products' %}?category=bulk_food"
+                                   class="dropdown-item">Bulk Food</a>
+                                <a href="{% url 'products' %}?category=zero_waste"
+                                   class="dropdown-item">Zero Waste</a>
+                            </div>
+                            <div class="col">
+                                <h6 class="dropdown-header"></h6>
+                                <a href="{% url 'products' %}?category=food_cupboard,drinks,snacks-treats,bulk_food,zero_waste"
+                                   class="dropdown-item">Show All Items</a>
+                            </div>
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options-nav" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                </li>
+                <!-- HOUSEHOLD -->
+                <li class="nav-item dropdown">
+                    <a class="logo-font font-weight-bold nav-link text-black" href="#" id="clothing-link"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        HOUSEHOLD
+                    </a>
+                    <!-- Dropdown menu for HOUSEHOLD categories -->
+                    <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                        <div class="row">
+                            <div class="col">
+                                <h6 class="dropdown-header"></h6>
+                                <a href="{% url 'products' %}?category=food_drink_containers"
+                                   class="dropdown-item">Food &amp; Drink Containers</a>
+                                <a href="{% url 'products' %}?category=cleaning_products" class="dropdown-item">Cleaning
+                                    Products</a>
+                                <a href="{% url 'products' %}?category=laundry"
+                                   class="dropdown-item">Laundry</a>
+                                <a href="{% url 'products' %}?category=bulk_household"
+                                   class="dropdown-item">Bulk Household</a>
+                                <a href="{% url 'products' %}?category=kitchen_items"
+                                   class="dropdown-item">Kitchen Items</a>
+                                <a href="{% url 'products' %}?category=paper_products"
+                                   class="dropdown-item">Paper Products</a>
+                                <a href="{% url 'products' %}?category=pet_food_supplies"
+                                   class="dropdown-item">Pet Food &amp; Supplies</a>
+                                <a href="{% url 'products' %}?category=miscellaneous"
+                                   class="dropdown-item">Miscellaneous</a>
                             </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options-nav">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="{% url 'products:add_product' %}" class="dropdown-item">Product
-                                        Management</a>
-                                {% endif %}
-                                <a href="{% url 'profiles:profile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'favorites:favorites' %}" class="dropdown-item">My Favorites</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
+                            <div class="col">
+                                <h6 class="dropdown-header"></h6>
+                                <a href="{% url 'products' %}?category=food_drink_containers,cleaning_products,laundry,bulk_household,kitchen_items,paper_products,pet_food_supplies,miscellaneous"
+                                   class="dropdown-item">Show All Items</a>
+                            </div>
                         </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                           href="{% url 'cart:view_cart' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        $0.00
-                                    {% endif %}
-                                </p>
+                    </div>
+                </li>
+                <!-- SUPPLEMENTS -->
+                <li class="nav-item dropdown">
+                    <a class="logo-font font-weight-bold nav-link text-black"
+                       href="#"
+                       id="brand-products-link"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        SUPPLEMENTS
+                    </a>
+                    <!-- Dropdown menu for Supplements -->
+                    <div class="dropdown-menu border-0 " aria-labelledby="all-products-link">
+                        <div class="row">
+                            <div class="col">
+                                <h6 class="dropdown-header"></h6>
+                                <a href="{% url 'products' %}?category=vitamins" class="dropdown-item">Vitamins</a>
+                                <a href="{% url 'products' %}?category=minerals" class="dropdown-item">Minerals</a>
+                                <a href="{% url 'products' %}?category=herbal_remedies" class="dropdown-item">Herbal
+                                    Remedies</a>
+                                <a href="{% url 'products' %}?category=probiotics_enzymes_amino_acids"
+                                   class="dropdown-item">Probiotics, Enzymes &amp; Amino Acids</a>
+                                <a href="{% url 'products' %}?category=oils-omegas" class="dropdown-item">Oils &amp;
+                                    Omegas</a>
+                                <a href="{% url 'products' %}?category=family_health" class="dropdown-item">Family
+                                    Health</a>
                             </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
-            </nav>
-        </div>
+                            <div class="col">
+                                <h6 class="dropdown-header"></h6>
+                                <a href="{% url 'products' %}?category=vitamins,minerals,herbal_remedies,probiotics_enzymes_amino_acids,oils-omegas,family_health"
+                                   class="dropdown-item">Show All Items</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
 
-    </header>
+                <!-- OFFERS -->
 
-    {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
+                <li class="nav-item dropdown">
+                    <a class="logo-font font-weight-bold nav-link text-danger"
+                       href="#"
+                       id="brand-products-link"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        OFFERS
+                    </a>
+                    <!-- Dropdown menu for Supplements -->
+                    <div class="dropdown-menu border-0 " aria-labelledby="all-products-link">
+                        <div class="row">
+                            <div class="col">
+                                <h6 class="dropdown-header"></h6>
+                                <a href="{% url 'products' %}?is_new=True" class="dropdown-item">New</a>
+                            </div>
+                            <div class="col">
+                                <h6 class="dropdown-header"></h6>
+                                <a href="{% url 'products' %}?on_sale=True" class="dropdown-item">Sale</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+            <!-- Search form -->
+            <form method="GET" action="/products/">
+                <div class="input-group w-100">
+                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- User account and shopping bag links -->
+        <ul class="accout-block list-inline list-unstyled text-center text-lg-right my-0">
+            <!-- User account dropdown -->
+            <li class="list-inline-item dropdown">
+                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <div class="text-center">
+                        <div><i class="fas fa-user fa-lg"></i></div>
+                        <p class="my-0">My Account</p>
+                    </div>
+                </a>
+                <!-- Dropdown menu content for user account -->
+                <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                    {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                        {% endif %}
+                        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                     {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
+                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                     {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
-    {% endif %}
+                </div>
+            </li>
+            <!-- Wishlist link (visible if the user is authenticated) -->
+            {% if request.user.is_authenticated %}
+                <li class="list-inline-item">
+                    <a class="text-black nav-link" href="{% url 'wishlist' %}">
+                        <div class="text-center">
+                            <div><i class="fa-solid fa-heart fa-xl"></i></div>
+                            <p class="my-0">
+                                Wishlist
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            {% endif %}
+            <!-- Shopping cart link with total amount -->
+            <li class="list-inline-item">
+                <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link"
+                   href="{% url 'view_bag' %}">
+                    <div class="text-center">
+                        <div><i class="fa-solid fa-cart-shopping"></i></div>
+                        <p class="my-0">
+                            {% if grand_total %}
+                                &euro;{{ grand_total|floatformat:2 }}
+                            {% else %}
+                                &euro;0.00
+                            {% endif %}
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<!-- Display messages as toasts -->
+{% if messages %}
+    <div class="message-container">
+        {% for message in messages %}
+            {% with message.level as level %}
+                {% if level == 40 %}
+                    {% include 'includes/toasts/toast_error.html' %}
+                {% elif level == 30 %}
+                    {% include 'includes/toasts/toast_warning.html' %}
+                {% elif level == 25 %}
+                    {% include 'includes/toasts/toast_success.html' %}
+                {% else %}
+                    {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+            {% endwith %}
+        {% endfor %}
+    </div>
+{% endif %}
 
-    {% block page_header %}
+{% block page_header %}
+{% endblock %}
+
+<!-- Main content section -->
+<main class="content">
+    {% block content %}
     {% endblock %}
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
-    {% block footer %}
-        {% include 'includes/footer.html' %}
+</main>
 
-    {% endblock %}
+<!-- Footer section -->
+{% include 'includes/footer.html' %}
 
-    {% block copyright %}{% endblock %}
+{% block postloadjs %}
+    <!-- Post-load JavaScript for toast display and other functionalities -->
+    <script>
+        $('.toast').toast('show');
+    </script>
+    <!-- Additional JavaScript for changing text in the delivery banner -->
+    <script>
+        $('.btt-link').click(function (e) {
+            window.scrollTo(0, 0);
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            const textArray = [
+                "We stand by our quality – free exchanges for any issues!",
+                "Free replacement for poor quality – satisfaction guaranteed!",
+                "Free delivery on orders over &euro;{{ free_delivery_threshold }}",
+            ];
 
-    {% block postload_js %}
-        <script src="{% static 'js/mailchimp.js' %}"></script>
+            let currentIndex = 0;
+            const delay = 3000;
 
-        <script>
-            $('.toast').toast('show');
-
-            /*Scroll to top*/
-            $btn_scroll_top = $('.btn-scroll-top');
-            if ($btn_scroll_top.length) {
-                window.on('scroll', function () {
-                    if (window.scrollTop() >= 800) {
-                        $btn_scroll_top.addClass('showUp');
-                    } else {
-                        $btn_scroll_top.removeClass('showUp');
-                    }
+            function changeText() {
+                $("#carousel-text").fadeOut(500, function () {
+                    $(this).html(textArray[currentIndex]).fadeIn(500);
                 });
-                $btn_scroll_top.on('click', function () {
-                    $('html, body').animate({
-                        scrollTop: 0
-                    }, 1500);
-                });
+
+                currentIndex = (currentIndex + 1) % textArray.length;
+
+                setTimeout(changeText, delay);
             }
 
-        </script>
-    {% endblock %}
+            changeText();
 
-</div>
+            $(".dropdown").hover(
+                function () {
+                    $(this).find('.dropdown-menu').show();
+                    $(this).find('.nav-link').css('text-decoration', 'underline');
+                    $(this).find('.nav-link').css('text-decoration-color', 'black');
+                },
+                function () {
+                    $(this).find('.dropdown-menu').hide();
+                    $(this).find('.nav-link').css('text-decoration', 'none');
+                }
+            );
+        });
+    </script>
+{% endblock %}
+
 </body>
 </html>

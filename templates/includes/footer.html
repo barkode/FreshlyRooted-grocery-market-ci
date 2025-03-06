@@ -10,12 +10,15 @@
                         Subscribe for our newsletter today.</p>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <form class="newsletter"
+                    <form class="newsletter" id="newsletter-form"
                           action="https://gmail.us15.list-manage.com/subscribe/post?u=e7ba08a26172c2b00089cd131&amp;id=282d38345f&amp;f_id=00539de1f0"
-                          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                          target="_self" novalidate="">
-                        <input type="email" placeholder="Email Address" name="EMAIL" class="required email"
-                               id="mce-EMAIL" required="" value="">
+                          method="post" name="mc-embedded-subscribe-form"
+                          target="_self" novalidate>
+                        <div class="email-field-container">
+                            <input type="email" placeholder="Email Address" name="EMAIL" class="required email"
+                                   id="mce-EMAIL" required value="">
+                            <span class="email-error-message"></span>
+                        </div>
                         <button class="newsletter_submit_btn" type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
@@ -23,32 +26,29 @@
                     <div class="col-md-12">
                         <div class="standard_social_links">
                             <ul>
-                                <li class="round-btn btn-facebook"><a href="https://facebook.com"><i
+                                <li class="round-btn btn-facebook"><a href="https://facebook.com" target="_blank"><i
                                         class="fab fa-facebook-f"></i></a>
 
                                 </li>
                                 <li class="round-btn btn-linkedin"><a
-                                        href="https://www.linkedin.com/in/kostiantyn-krysenko/"><i
-                                        class="fab fa-linkedin-in"
+                                        href="https://www.linkedin.com/in/kostiantyn-krysenko/" target="_blank"><i
+                                        class=" fab fa-linkedin-in"
                                         aria-hidden="true"></i></a>
 
                                 </li>
-                                <li class="round-btn btn-twitter"><a href="https://x.com"><i class="fab fa-twitter"
-                                                                                             aria-hidden="true"></i></a>
+                                <li class="round-btn btn-twitter"><a href="https://x.com" target="_blank"><i class=" fab
+                                                                     fa-twitter"
+                                                                                                             aria-hidden="true"></i></a>
 
                                 </li>
-                                <li class="round-btn btn-instagram"><a href="https://instagram.com"><i
-                                        class="fab fa-instagram"
+                                <li class="round-btn btn-instagram"><a href="https://instagram.com" target="_blank"><i
+                                        class=" fab fa-instagram"
                                         aria-hidden="true"></i></a>
 
                                 </li>
-                                <li class="round-btn btn-envelop"><a href="mailto:freshlyrooted2024@gmail.com"><i
-                                        class="fa fa-envelope"
-                                        aria-hidden="true"></i></a>
-
-                                </li>
-                                <li class="round-btn btn-github"><a href="https://github.com/barkode"><i
-                                        class="fa-brands fa-github"
+                                <li class="round-btn btn-envelop"><a href="mailto:freshlyrooted2024@gmail.com"
+                                                                     target="_blank"><i
+                                        class=" fa fa-envelope"
                                         aria-hidden="true"></i></a>
 
                                 </li>
@@ -72,15 +72,15 @@
                     <div class="col-md-2 col-sm-6">
                         <h3>Quick LInks</h3>
                         <ul class="footer-links">
-                            <li><a href="{% url 'home:home' %}">Home</a>
+                            <li><a href="{% url 'home' %}">Home</a>
                             </li>
-                            <li><a href="{% url 'about:contact' %}">Contact</a>
+                            <li><a href="{% url 'contact' %}">Contact</a>
                             </li>
-                            <li><a href="{% url 'blog:home' %}">Blog</a>
+{#                            <li><a href="{% url 'blog' %}">Blog</a>#}
+                            {#                            </li>#}
+                            <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a>
                             </li>
-                            <li><a href="{% url 'about:privacy' %}">Privacy Policy</a>
-                            </li>
-                            <li><a href="{% url 'about:return' %}">Return Policy</a>
+                            <li><a href="{% url 'returns' %}">Return Policy</a>
                             </li>
                         </ul>
                     </div>
@@ -96,9 +96,9 @@
                                 <li><a href="{% url 'account_login' %}">Login</a>
                                 </li>
                             {% endif %}
-                            <li><a href="{% url 'profiles:profile' %}">Profile</a>
+                            <li><a href="{% url 'profile' %}">Profile</a>
                             </li>
-                            <li><a href="{% url 'cart:view_cart' %}">Cart</a>
+                            <li><a href="{% url 'view_bag' %}">Cart</a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -136,4 +136,34 @@
 
 </footer>
 
-<!--footer end-->
+{% block postloadjs %}
+
+    <script>
+        $(document).ready(function () {
+            $('#newsletter-form').on('submit', function (e) {
+                const emailInput = $('#mce-EMAIL');
+                const errorMessage = $('.email-error-message');
+
+                // Clear previous error messages
+                errorMessage.text('');
+                emailInput.removeClass('error');
+
+                // Check if the email input is empty
+                if (emailInput.val().trim() === '') {
+                    e.preventDefault();
+                    errorMessage.text('Please enter your email address');
+                    emailInput.addClass('error');
+                    return false;
+                }
+
+                // Check if the email is valid
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(emailInput.val())) {
+                    e.preventDefault();
+                    errorMessage.text('Please enter a valid email address');
+                    emailInput.addClass('error');
+                    return false;
+                }
+            });
+        });</script>
+{% endblock %}
